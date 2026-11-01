@@ -1,8 +1,10 @@
 # Hearthbound Lodge — The Old Watch Road
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 The first Lodge rank is playable after returning Oldwatch's forge ember. Read the new Hearthbound Lodge tab at Frostmere's Hunters' Board. Acceptance grants exactly enough repair supplies: 6 wood and 3 iron ingots. Repair three physical markers on existing terrain at the village edge, eastern crossing and eastern ridge, costing 2 wood and 1 iron each. Both existing ridge bristlebacks (wild_9 and wild_10) must be defeated before the final marker can be repaired; earlier defeats count.
 
-Repaired markers visibly light. Return to the board to optionally swear the Outrider oath, receiving 120 gold and a favorite-protected Superior Wardkeeper's Amulet with Vigor named Outrider's Hearth. Existing upgrades apply. Repairs remain if membership is deferred. This restores three markers and clears a road threat; it does not remodel all road terrain or add patrol AI. Waykeeper and Warden remain planned.
+Repaired markers visibly light. Return to the board to optionally swear the Outrider oath, receiving 120 gold and a favorite-protected Superior Wardkeeper's Amulet with Vigor named Outrider's Hearth. Existing upgrades apply. Repairs remain if membership is deferred. This restores three markers and clears a road threat; it does not remodel all road terrain or add patrol AI. The later [Waykeeper](WATERSHED.md) and [Warden](WARDEN.md) chapters are playable.
 
 The hunt-board UI hosts a separate Lodge tab; marker interaction opens the same tab with that marker selected. Hunt claims still require proximity to the original board, so opening another tab at a marker cannot claim hunt rewards remotely. Normal pause/escape handling remains shared with the existing board.
 

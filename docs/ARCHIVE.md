@@ -1,5 +1,7 @@
 # Pinehall — The Missing Atlas
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 Complete Stonewake, then follow the western trail from Frostmere. This chapter can run independently of the Wyrmkeep council. The forest settlement has three enterable houses, a forge, an enchanting altar and a two-chamber ruined archive.
 
 Speak with Mereth of the Veiled Lantern or Aelin of the Briar Coven to accept the investigation. Hear both claims, read the optional archivist testimony, search the two caches, defeat the Bound Archivist, and recover the atlas. Return to the chosen representative and explicitly entrust it to them.
@@ -14,7 +16,7 @@ The Lantern favors controlled study; the Coven favors returning knowledge to the
 
 All three use the existing owned-instance, tempering, enchantment, socket, favorite and salvage systems. Their intrinsic effects remain alongside ordinary enchantments. Memory Shards and Living Resin from finite guardian loot and caches feed the three new forging recipes; the materials can also be sold. Turn-in grants 100 gold and three of each component.
 
-The catalog now contains 133 gear designs, 149 recipes and ten enchantment formulas. There are seventeen normal playable quests in the 51-entry atlas; 34 remain outlines.
+See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability.
 
 ## Preview and limits
 

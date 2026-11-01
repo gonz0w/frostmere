@@ -1,5 +1,7 @@
 # The Keeper’s Last Light
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 `side_hallowcliff` is playable after archive access. Speak to relief pilot Mara near Saltbreak’s southern road. This compact quest uses the existing coastal scene: it adds an old fjord signal and a Hallowcliff relief ship, not a separate Hallowcliff town.
 
 Read the former keeper’s log on the western shore, then repair the ground controls farther north with 2 iron ingots and 1 crystal. Missing either material spends nothing. Use the repaired signal to bring the ship to safe anchor, then return to Mara. The keeper accepted a smuggler’s payment before threats to his family kept the light dark.

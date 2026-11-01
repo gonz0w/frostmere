@@ -1,5 +1,7 @@
 # The Fire We Invite
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 The third Ashen Choir chapter is playable after either Cantor outcome. Ask Sereth about the bound ember. Defeat the existing choir_2 and choir_3 sentinels, then secure the west and east governors. Earlier defeats count. Decide at the new ember cradle beside the northern archive.
 
 The captive ember is a local remnant; this quest does not open the campaign's great furnace or replace its seals. It reuses the sanctuary and existing sentinels, adding two governor interactions and a visible outcome-dependent core/caption. No new world, boss or simulated conquest is added.

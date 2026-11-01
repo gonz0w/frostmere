@@ -1,5 +1,7 @@
 # The Stag Without a Shadow
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 Playable optional Stag Shrine quest after completing Pacts Beneath the Roots. Speak to hunter Fenn beside the southern road (-5, 0, 34). This uses the existing grove, independently of the Coven trials and either woodland pact.
 
 Fenn broke his hunting oath during a hungry winter. Follow a pale voxel stag north along the central path, listening at three stops. Its memories offer forgiveness and an invitation to tend the grove. Return to Fenn for 100 gold, 6 Heartwood and 4 Amber Resin, once only. His future gardening is a dialogue consequence, not an NPC farming simulation.

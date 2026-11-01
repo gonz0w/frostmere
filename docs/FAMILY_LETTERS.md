@@ -13,4 +13,4 @@ Physical conversations and memorial inspection require proximity. Both distinct 
 
 The memorial has a stone plinth, brass inscription and collision. Public resolution changes its visible text to “MARA & OREN / One final watch”; private resolution retains the existing dedication. No new combat encounter is needed.
 
-The atlas now has 23 remaining planned quest outlines.
+See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability.

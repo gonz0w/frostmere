@@ -14,7 +14,7 @@ Press **E** when the nearby prompt appears. **I** opens the bag; the category se
 
 ## Systems
 
-- **145 craftable gear designs** plus eleven refining/ammunition and five consumable recipes: 161 total. Ingredients are spent only on successful operations. Recipes list required station, blueprint and owned/required ingredients.
+- **Gear and supply recipes:** see [current counts](CONTENT_REFERENCE.md). Ingredients are spent only on successful operations. Recipes list required station, blueprint and owned/required ingredients.
 - **Individual ownership:** duplicates have separate instance IDs and upgrades. A single instance cannot occupy two slots. The starter button equips owned matches and never grants free replacements.
 - **Tempering:** Standard → Fine → Superior → Exquisite → Masterwork → Legendary. Each rank adds 2 to existing base damage and/or armor; it does not invent these ratings on jewelry. Costs rise each rank. The final two steps consume Ember Cores for home-world equipment, Aether Shards for Aeralis gear, or Soul Embers for Crucible gear. Accessories without damage/armor can be enchanted but cannot be tempered/socketed.
 - **Ten enchantments:** Might, Fleetfoot, Vigor, Insight, Resolve and Presence each add two points to their attribute. Vigor and Fleetfoot are initially known; enchanted cache gear teaches the remaining formulas when consumed at the table. Applying a formula costs three rune dust and one crystal, replacing the prior enchantment. Aether Attunement adds +3 Intellect / +1 Agility; Infernal Resolve adds +3 Endurance / +1 Strength. These use realm materials and rune dust, listed per formula. No elemental combat procs are implied.
@@ -24,7 +24,7 @@ Press **E** when the nearby prompt appears. **I** opens the bag; the category se
 - **Potions and food:** five recipes restore health, stamina or magicka. Use from Consumables. A full resource keeps the consumable. Combat drains health, Emberbolt spends magicka and sprinting/attacks/blocking spend stamina. F uses a healing draught directly.
 - **Gathering:** two one-time chests and eight renewable spots, with 45–120 second real-time cooldowns. Claims persist across reloads; emptied chests visibly flatten. Nearby prompts show remaining cooldown. Gems are rare finite finds in this first slice, including barrow chests, but can be extracted and reused.
 - **Appearance:** enchanted held gear has small glowing runes, socketed held gear has a colored gem, and tempering reduces weapon material roughness. Armor bonuses are functional; this is not a complete upgrade art pass for every armor piece.
-- **Craft XP:** records crafting activity only. No skill-level unlocks or perk tree yet.
+- **Craft XP:** successful crafting, tempering and enchanting train Crafting and contribute shared perk points. [Skills and perks](SKILLS.md) includes forging and tempering benefits.
 
 ## Workstation coordinates
 
@@ -43,7 +43,7 @@ The UI rechecks physical proximity when performing an action. Inventory browsing
 
 Character save schema v2 keeps equipment, inventory, crafting and gathering progress in one atomic temporary-file/rename write to the existing `user://character-v1.json` path. Legacy v1 equipped items become distinct owned instances, retaining identity and attribute points. A starting material allowance is given to a new/migrated character; loading v2 replaces saved counts rather than granting another allowance. Atlas progress remains separate. Captures and headless tests do not load or alter the real profile.
 
-Combat and authored enemy drops are now playable in Oldwatch Barrow. Three buy/sell shops are now playable. Random loot affixes, use-based skills, repair durability, crafting animations/audio, and full world saves remain future work. There is no inventory weight limit enforcement or economy balance claim yet.
+Authored enemy drops and five [buy/sell shops](SHOPS.md) supply equipment and materials. [Use-based skills](SKILLS.md), crafting sound cues and [session saving](SAVE_RESUME.md) are implemented. Random loot-affix generation, repair durability and inventory weight enforcement are not implemented. Saves restore supported state rather than every transient world event; campaign economy balance remains unverified.
 
 Content lives in `data/crafting.json`; transaction and save rules are in `scripts/character_state.gd`, the interface in `scripts/workshop.gd`, and gathering/station props in `scripts/world.gd`.
 
@@ -69,4 +69,4 @@ An equipped staff adds half its tempered base damage, rounded down, to spell pow
 
 ### Netmender's Band
 
-Either Nets Full of Silver resolution unlocks this Saltbreak ring and grants one Fine, favorited copy. It has two base armor, +2 Endurance/+2 Presence; forge additional copies with two Silver Ingots, two Leather and one Crystal. It supports tempering, enchantment and sockets. The full catalog now contains 146 designs and 162 recipes.
+Either Nets Full of Silver resolution unlocks this Saltbreak ring and grants one Fine, favorited copy. It has two base armor, +2 Endurance/+2 Presence; forge additional copies with two Silver Ingots, two Leather and one Crystal. It supports tempering, enchantment and sockets. See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability.

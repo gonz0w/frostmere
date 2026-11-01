@@ -8,11 +8,11 @@ Open with **C**, or use Character & equipment from the pause menu. C/Escape retu
 - **8 starting playstyles:** Warrior, Berserker, Ranger, Rogue, Mage, Battlemage, Warden, Spellblade. They grant initial attribute bonuses and offer a starter loadout. They do not restrict equipment. Changing playstyle preserves equipment; the starter-gear button equips matching owned pieces.
 - **6 attributes:** Strength, Agility, Endurance, Intellect, Willpower, Presence. Each starts at 10, plus ancestry/playstyle bonuses, up to ten assigned points, and equipped item bonuses. Points can be refunded while experimenting.
 - **9 slots:** head, chest, hands, legs, feet, main hand, off hand, ring, amulet.
-- **145 items:** 62 armor pieces, 58 weapons (including realm and clan designs), six shields, three magical focuses, seven rings and nine amulets.
+- **Equipment catalog:** armor, melee/ranged weapons, shields, focuses, rings and amulets; see [current counts and sources](CONTENT_REFERENCE.md).
 - **Armor families:** cloth, fur, leather, iron, chain, steel, obsidian, crystal. They differ in protection, weight, bonuses, color, and selected geometry details. Mixed sets are supported.
-- **Weapon families:** dagger, sword, war axe, mace, greatsword, battleaxe, bow, staff. Materials: iron, steel, obsidian, crystal. Every family has a procedural voxel model.
+- **Weapon families:** dagger, sword, war axe, mace, greatsword, battleaxe, bow, staff. Materials: iron, steel, obsidian, crystal. Station rifles and infernal machine guns add firearm models. Every family has a procedural block-built model.
 
-Equipment is owned: obtain additional pieces from supply caches and forging. The Collection view shows all 145 designs and remembers discoveries after salvage. Copies have independent tempering, enchantments, gems, names and favorites. See `CRAFTING.md`.
+Equipment is owned: obtain additional pieces from supply caches and forging. The Collection view shows the catalog designs and remembers discoveries after salvage. Copies have independent tempering, enchantments, gems, names and favorites. See `CRAFTING.md`.
 
 ## Equipment rules
 

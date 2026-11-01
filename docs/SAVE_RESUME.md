@@ -1,5 +1,7 @@
 # Save and resume
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 The existing character file now includes an optional session record. Position, active area, first/third-person camera, yaw, pitch, health, magicka, stamina and nearby living enemies' positions/health are written in the same atomic file as equipment, crafting and quest progress. Quest-controlled world changes and defeated/looted actors continue using their existing records. Atlas progress remains in its separate file.
 
 ## Normal play

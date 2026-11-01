@@ -1,5 +1,7 @@
 # Later realm chapters
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 Two original destination slices now run in the same native Mac game. Nordic Frostmere remains the main setting. These are arrival routes with two sentries, a guardian, realm crafting, loot and a return gate—not completed giant chapters. Stonewake now introduces the network in normal play; the campaign prerequisites are connected, while additional realm NPC dialogue and optional quests still need authoring. The First Threshold expedition is now playable and opens Aeralis in normal progression.
 
 ## Timeline
@@ -22,7 +24,7 @@ Normal gates near the Watcher's Stones enforce those prerequisites. Aeralis requ
 | Formula | Aether Attunement: +3 Intellect / +1 Agility | Infernal Resolve: +3 Endurance / +1 Strength |
 | Guardian | Prismwing, the Fractured Wyrm | Furnace Maw |
 
-All 15 added equipment designs use owned instances, tempering, enchanting, gems, favorites, salvage and merchant trading. High-rank tempering consumes the realm's rare material. Attunement grants the realm blueprint family, formula, spell, enchanted weapon and initial materials once. Guardians and sentries provide finite additional loot; farming/replenishing realm resources is not implemented yet. Guardian weapons arrive Superior and favorited. Including the later Wyrmkeep, Pinehall and Saltbreak additions, there are now 133 equipment designs, 149 recipes and ten enchantment formulas.
+All 15 added equipment designs use owned instances, tempering, enchanting, gems, favorites, salvage and merchant trading. High-rank tempering consumes the realm's rare material. Attunement grants the realm blueprint family, formula, spell, enchanted weapon and initial materials once. Guardians and sentries provide finite additional loot; farming/replenishing realm resources is not implemented yet. Guardian weapons arrive Superior and favorited. See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability.
 
 The machine gun fires while LMB is held, one shot every 0.12 seconds, consuming one Infernal Round per shot. Damage uses the normal equipped-weapon stats. The learned forge recipe turns one Cinder Alloy and two Charcoal into 40 rounds, including at home forges. Guns, spells, armor and upgrades remain usable after returning to Frostmere. Preview profiles retain them only until the preview closes.
 
@@ -44,7 +46,7 @@ Preview mode is explicit (`--crystal-preview` or `--hell-preview`), refuses pers
 
 38 realm integration assertions cover story gating, isolated saves, bridge joins, station proximity, spells, held-trigger fire, ammo crafting, portable gear, guardian rewards, save migration, falling and death. Native Metal screenshots are in `build/aeralis-preview.png`, `build/aeralis-map.png`, `build/crucible-preview.png` and `build/crucible-first-person.png`.
 
-The airship and distant islands are scenery. Enemies reuse the existing guard, caster, ranged and boss behaviors with realm loadouts and tuned health/damage. Large optional quest networks, cinematic guardian phases, reload animations and resource farming remain future work. No M1 performance measurement has been made for these additions.
+The airship and distant islands are scenery. Sentries use guard, caster and ranged behaviors. Prismwing and Furnace Maw have dedicated monster attacks, phase changes and animated defeat poses described below. Large optional quest networks, firearm reload animations and repeatable realm-resource farming are not implemented. No M1 performance measurement has been made for these additions.
 
 ## Prismwing monster pass
 
@@ -52,7 +54,7 @@ Aeralis's guardian now uses a large grounded crystal-winged quadruped rig, rathe
 
 The wyrm approaches to twelve metres, raises its wings for a 1.2-second warning and fires five 18-damage crystal projectiles in a fan toward the committed aim direction. Sidestepping during the warning can avoid the volley. At half health, four outer wing crystals disappear, briefly staggering it for 1.6 seconds; subsequent volleys narrow to three projectiles. These are health-driven phases, not separately targetable wing colliders. Encounter health resets restore the intact wing appearance; restored low health triggers the fractured phase. Wings animate but the creature does not fly.
 
-Pausing, realm departure and finisher lock cancel pending volleys. Weak-health finishers, guardian defeat, relic claims, chapter return and saves retain their existing paths. Remaining humanoid sentries are unchanged; the Crucible monster pass remains next.
+Pausing, realm departure and finisher lock cancel pending volleys. Weak-health finishers, guardian defeat, relic claims, chapter return and saves retain their existing paths. The remaining sentries are humanoid; the Crucible uses Furnace Maw, described below.
 
 ## Furnace Maw monster pass
 
@@ -60,7 +62,7 @@ The Crucible guardian now uses a horned six-legged furnace-beast rig. The existi
 
 Within thirteen metres and clear sight, it marks the player's current location with a burning 2.8-metre-radius circle. The location stays fixed during a 1.5-second warning. Remaining inside on impact takes 34 raw damage before normal player defenses; below half health that rises to 46 and the cooldown drops from six seconds to four. Leaving the ring avoids damage. Impact also checks height and line of sight. It can be guarded but not melee-parried. There is one damage application per rupture, with no lingering damage pool.
 
-Menus, realm departure, finisher lock, stagger, retreat and death cancel pending attacks and hide the marker. The warning is transient and not saved. Weak-health finishers and existing campaign completion remain intact. This is the first furnace-beast attack pattern; richer eruption effects, further moves and art refinement remain open.
+Menus, realm departure, finisher lock, stagger, retreat and death cancel pending attacks and hide the marker. The warning is transient and not saved. Weak-health finishers and existing campaign completion remain intact. Ruptures have cosmetic eruption effects; the guardian also has the refined shell, articulated warning and collapse presentation described below. Further encounter expansion is tracked in [issue #13](https://github.com/gonz0w/frostmere/issues/13).
 
 ## Monster impact presentation
 
@@ -113,7 +115,7 @@ The cosmetic effect uses the existing monster-effect lifecycle: menus hide and f
 
 ## Creature corpse silhouettes
 
-Prismwing now rests low with a dropped head, slack jaw and uneven lowered wings. Its four outer feathers remain broken on defeat, including reconstructed saved corpses. Furnace Maw rests on splayed legs with compressed bellows and an open jaw; pending rupture effects are cleared. These are immediate final defeat poses shared by ordinary kills and finishers. Animated transitions into these poses remain open. Existing collision removal, loot identity and defeat persistence are preserved.
+Prismwing now rests low with a dropped head, slack jaw and uneven lowered wings. Its four outer feathers remain broken on defeat, including reconstructed saved corpses. Furnace Maw rests on splayed legs with compressed bellows and an open jaw; pending rupture effects are cleared. These are immediate final defeat poses shared by ordinary kills and finishers. New deaths animate into these poses as described in the following section; saved corpses start in their final pose. Existing collision removal, loot identity and defeat persistence are preserved.
 
 
 ## Animated creature collapse

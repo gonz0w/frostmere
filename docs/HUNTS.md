@@ -17,7 +17,7 @@ Both Mossbound forge recipes unlock with either choice. The blade requires three
 
 An optional hunt record saves acceptance and the selected reward alongside wilderness proof and owned equipment. Older profiles default to an unaccepted contract. Claims recheck proof completion, reward identity and physical board proximity. The selected reward can be claimed once; selling or salvaging it does not reset the claim. Previously earned proofs remain valid.
 
-This is the first equipment-focused hunt from the earlier backlog. Additional contracts, unique encounters and broader side-quest loot remain open. The new designs increase the catalog to 135 equipment items and 151 recipes.
+This is the first equipment-focused hunt from the earlier backlog. Additional contracts, unique encounters and broader side-quest loot remain open. See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability.
 
 ## Colossus encounter
 
@@ -33,7 +33,7 @@ A second tab at the same board offers Rimefang's hunt. The giant quadruped lives
 
 Menus, chapter departure, retreat outside the habitat, stagger, finisher lock and death cancel charge state. Its attack timers remain transient. Enemy wild_12 joins the persistent wilderness/session roster. Older profiles load with this creature undefeated and the optional frost_hunt record unaccepted. Previously earned harvests count even before acceptance.
 
-Harvest grants eight Hide, four Crystal, three Steel Ingots and 100 gold. Returning to the board adds 180 gold, a Fine favorited Rimefang Maul and both forge patterns. The maul has 26 base damage, +3 Strength/+2 Endurance. The Frostmaw Cuirass uses the steel chest armor base with +3 Endurance/+2 Willpower. Maul forge cost: four Steel Ingots, three Crystal, two Hide. Cuirass: three Steel Ingots, six Hide, two Crystal. Both support existing improvement systems. Reward claims require acceptance, real harvest proof and board proximity and cannot repeat. Catalog totals are now 137 equipment designs and 153 recipes.
+Harvest grants eight Hide, four Crystal, three Steel Ingots and 100 gold. Returning to the board adds 180 gold, a Fine favorited Rimefang Maul and both forge patterns. The maul has 26 base damage, +3 Strength/+2 Endurance. The Frostmaw Cuirass uses the steel chest armor base with +3 Endurance/+2 Willpower. Maul forge cost: four Steel Ingots, three Crystal, two Hide. Cuirass: three Steel Ingots, six Hide, two Crystal. Both support existing improvement systems. Reward claims require acceptance, real harvest proof and board proximity and cannot repeat. See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability.
 
 
 ## Rimefang charge animation

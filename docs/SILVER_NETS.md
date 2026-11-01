@@ -11,4 +11,4 @@ The investigation has separate saved silver_stage (0–3) and silver_choice fiel
 
 The net has visible silver coins and a woven grid; the ledger is a separate prop on the cave cache. Secured evidence disappears. Sella and the journal retain the chosen story outcome. Crew recovery is described in dialogue; there is no new refuge interior, escort sequence or simulated harbor economy.
 
-The atlas now has 24 remaining planned quests. Catalog totals: 146 equipment designs and 162 recipes.
+See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability.

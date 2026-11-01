@@ -1,5 +1,7 @@
 # The Wreck on the Black Shore
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 The playable Saltbreak chapter follows **The Missing Atlas**. Take the coastal road southwest of Frostmere. It can advance independently of the council, woodland and observatory branches. Its atlas ID remains `tides`, preserving the existing campaign dependency graph.
 
 ## Expedition
@@ -35,7 +37,7 @@ Only the chosen item's pattern and reward are awarded. Both reports grant 150 go
 
 Double-click **Preview Black Shore.command** to start an isolated post-atlas character with a tempered sword, healing supplies and restoration materials. Both character and atlas saves are disabled. Press E to interact, M for the coastal map, I for inventory/workstations and Escape for audio controls. The chapter uses the existing Nordic exploration/battle score.
 
-The region includes three enterable houses, a dock and fishing boats, layered cliffs, a sea cave, an enclosed wreck, two workstations and a local map. The catalog now contains **133 gear designs, 149 recipes and ten enchantment formulas**; the atlas contains **seventeen normal playable quests and 34 outlines**. Five existing merchant shops remain available elsewhere.
+The region includes three enterable houses, a dock and fishing boats, layered cliffs, a sea cave, an enclosed wreck, two workstations and a local map. See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability. Five existing merchant shops remain available elsewhere.
 
 The proposed 20–30-minute pacing target has not been verified by a timed human playthrough. Encounter balance and exploration pacing still need that playtest; repeatable salvage sources, dynamic weather and a full coastal region are future work.
 

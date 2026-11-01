@@ -1,5 +1,7 @@
 # The Broken Seal
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 After completing Winter Siege, take the caldera service lift at `(12, 0, 34)` south of Frostmere. Wardwright Tovan waits in the underworks with supplies, a forge and an inscription bench.
 
 ## Playable investigation
@@ -11,13 +13,13 @@ After completing Winter Siege, take the caldera service lift at `(12, 0, 34)` so
 5. Defeat the Sealbreaker and bind one ward into the fractured containment seal. The crafted material is consumed once. The ward permanently protects the crossing as a story unlock, without occupying an equipment slot or providing a separate combat resistance effect.
 6. Report to Tovan. This completes `broken_seal` and opens the northern crossing into the existing Crucible chapter in normal progression.
 
-In the Crucible, attune to learn its equipment patterns and Soulfire, defeat all three defenders, loot the Furnace Warden, use the shutdown console on the final terrace, then return through the arrival gate to complete The Last Furnace. Infernal equipment remains usable at home. The return now includes an ending chronicle, a choice of heirloom and continued exploration. The realm remains a compact guardian chapter.
+In the Crucible, attune to learn its equipment patterns and Soulfire, defeat all three defenders, loot the Furnace Maw, use the shutdown console on the final terrace, then return through the arrival gate to complete The Last Furnace. Infernal equipment remains usable at home. The return now includes an ending chronicle, a choice of heirloom and continued exploration. The realm remains a compact guardian chapter.
 
 ## Reward and collection
 
 Reporting grants 220 gold, a favorited Superior Wardkeeper's Amulet of Vigor, its blueprint, and upgrade materials. The amulet has 2 base armor, +3 Endurance and +3 Intellect. It can be forged, tempered, enchanted and socketed through the existing collection systems. Its forge recipe uses the same quantities as the ward; high-rank tempering uses steel, crystal and Ash Glass.
 
-The catalog now contains 133 equipment designs and 149 recipes: 133 gear, eleven material/refining/ammunition and five consumable recipes. Seventeen of 51 atlas quests are playable; 34 remain outlines.
+See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability.
 
 ## Save and preview behavior
 

@@ -1,5 +1,7 @@
 # A Harvest of Amber
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 `side_alderrest` is playable after Stonewake unlocks woodland travel. Herbalist Edda represents Alderrest’s growers at the existing woodland camp; this quest adds a three-tree trial plot, not a separate Alderrest town.
 
 Accept Edda’s investigation, sample the plot east of the central path, prepare a treatment at the camp bench for 3 herbs and 2 water, then apply it to the first tree. Missing materials spend nothing. The treated crown changes to the woodland’s healthy copper foliage. Return to Edda for a permanent decision:

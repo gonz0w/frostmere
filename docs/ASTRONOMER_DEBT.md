@@ -11,4 +11,4 @@ Both outcomes complete the quest once and leave distinct dialogue and journal te
 
 Visible instrument props disappear after recovery. Quest items are recorded as protected evidence, not sellable inventory, and cannot be lost through crafting. Actions require physical proximity and correct subjects; claims cannot repeat or switch after payment. Optional debt_started, debt_instruments and debt_choice fields live in the existing lens save record. Older profiles default to unstarted; inconsistent progress is rejected before applying loaded state.
 
-The atlas now marks side_sunken_lens playable. Twenty-five planned quest outlines remain. This implementation uses the existing excavation sites rather than adding new explorable tomb interiors.
+The atlas marks `side_sunken_lens` playable. See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability. This implementation uses the existing excavation sites rather than adding new explorable tomb interiors.

@@ -1,5 +1,7 @@
 # The Winter Siege
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 Playable after `returning_light`, through the Northwatch supply road at `(0, 0, 34)` south of Frostmere. Northwatch guards Ember Caldera's northern approaches and the supply route into the northern holds. Its restored watchstones have attracted the furnace invasion.
 
 ## Playable route
@@ -26,7 +28,7 @@ This is a compact two-wave defense encounter. Allied combat AI, destructible for
 
 Double-click `Preview Winter Siege.command` for an isolated late-story fixture with completed prerequisite records and Aeralis magic. Character and atlas saving remain disabled for the entire preview session.
 
-The prototype now contains 133 equipment designs, 149 recipes and 17 playable atlas quests out of 51. No new M1 benchmark or human pacing study was performed.
+See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability. No new M1 benchmark or human pacing study was performed.
 
 
 ## Recovery for spent siege repair stock

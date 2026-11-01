@@ -32,7 +32,7 @@ Use Q to cast the selected spell, B to cycle learned spells, or left-click with 
 
 Double-click **Preview Sunken Lens.command** for an isolated post-atlas character. Character and atlas persistence are both disabled. Press E to interact and M for the local map. Existing Nordic exploration/battle music responds to the chapter's enemies.
 
-The prototype now contains **133 gear designs, 149 recipes, ten enchantment formulas and five defined spell abilities** (Chain Lightning remains an equipment-specific ability). Seventeen of the 51 atlas quests are normally playable; 34 remain outlines. The space expedition and its four prerequisite branches are now playable. No timed human pacing or new M1 performance measurement has been made for this chapter.
+See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability. Chain Lightning is an equipment-specific ability in addition to the learned spells. The space expedition and its four prerequisite branches are now playable. No timed human pacing or new M1 performance measurement has been made for this chapter.
 
 ## Optional debt investigation
 

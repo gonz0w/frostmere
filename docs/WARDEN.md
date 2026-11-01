@@ -1,5 +1,7 @@
 # Who Guards the Pass?
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 The Hearthbound Lodge finale is playable after either Waykeeper outcome. Accept the north-pass commission from the Lodge tab at the Hunters' Board, then defeat and harvest the existing Mossbound Colossus. Earlier harvests count. Return to choose a neutral Lodge or control by your already-sworn mountain clan. Independent characters retain the neutral option; the clan option requires an existing clan oath.
 
 Both permanent choices grant Warden rank and 220 gold. Neutral grants a favorite-protected Masterwork Vigor Wardkeeper's Amulet named Warden's Open Hearth. Clan grants a Masterwork Fleet steel bow named Warden's Sworn Watch. Neither changes existing faction standings or closes another quest.

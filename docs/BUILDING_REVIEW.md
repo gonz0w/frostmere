@@ -1,3 +1,5 @@
+> Historical review evidence from September 24, 2026. Local `build/` galleries and reports are not distributed with the source. See [public screenshots](screenshots/README.md) and [GitHub work](https://github.com/gonz0w/frostmere/issues) for current review status.
+
 # Building review #3
 
 The user-approved equipment pass is followed by this architecture checkpoint. Review the existing building roster at `build/building-review/index.html`. Each house/hall has four views, with additional town and destination architecture scenes.

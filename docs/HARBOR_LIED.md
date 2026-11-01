@@ -1,5 +1,7 @@
 # The Harbor That Lied
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 The second Tidemarch Compact quest is playable after the Decksworn oath. Ask Vessa about forged harbor records, compare the departure register, recover the signed false-beacon orders east of the cave exit, and find pilot Tamsin east of the cave. Defeat the existing shore_2 relay raider before arranging watch protection. Earlier defeats count.
 
 The protection interaction relocates Tamsin to the southern lodge doorway, updates her nameplate, closes dialogue and restores control. This is an interaction-resolved relocation, not a walking escort or simulated watch patrol. The original location stops offering her interaction; she remains available at shelter.
