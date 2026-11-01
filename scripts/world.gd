@@ -73,7 +73,9 @@ func _ready() -> void:
 	_crafting_props()
 	atlas.persist = player.character.persist
 	if atlas.persist:
-		atlas.load_from(AtlasState.SAVE_PATH)
+		atlas.load_with_recovery(AtlasState.SAVE_PATH)
+		if atlas.save_store.status == "blocked":
+			atlas.persist=false; player.character.persist=false
 	hud = HUD.new()
 	hud.world = self
 	add_child(hud)

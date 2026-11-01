@@ -17,6 +17,7 @@ func initialize() -> void:
 	if world.player.character.persist: get_tree().auto_accept_quit=false
 	if (world.player.character.persist or "--intro-preview" in OS.get_cmdline_user_args()) and not world.player.character.intro_completed:
 		world.intro.start()
+	world.hud.show_recovery_notice()
 func area() -> String:
 	if world.realms.inside: return world.realms.current
 	for id: String in AREAS:

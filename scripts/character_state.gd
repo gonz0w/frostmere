@@ -1,4 +1,5 @@
 extends RefCounted
+var save_store = preload("res://scripts/save_store.gd").new()
 ## Owned equipment and atomic character/crafting progress.
 signal changed
 signal skills_changed
@@ -208,13 +209,15 @@ func apply_starter() -> void:
 func save_to(path: String) -> bool:
 	if session_provider.is_valid(): session=session_provider.call()
 	var data := {"version": 2, "frost_hunt": frost_hunt, "hunt": hunt, "wilderness": wilderness, "loadouts": loadouts, "skills": skills, "session": session, "finale": finale, "seal": seal, "winter": winter, "threshold": threshold, "convergence": convergence, "choir": choir, "roots": roots, "lens": lens, "shore": shore, "archive": archive, "mountain": mountain, "stonewake": stonewake, "realm_progress": realm_progress, "story_completed": story_completed, "known_spells": known_spells, "active_spell": active_spell, "gold": gold, "merchants": merchants, "adventure": adventure, "inventory": inventory, "materials": materials, "consumables": consumables, "blueprints": blueprints, "formulas": formulas, "discovered": discovered, "claims": claims, "craft_xp": craft_xp, "next_id": next_id, "name": character_name, "origin": origin_id, "archetype": archetype_id, "frame": frame_id, "allocated": allocated, "equipment": equipment}
-	var file := FileAccess.open(path + ".tmp", FileAccess.WRITE)
 	data["intro_completed"] = intro_completed
-	if file == null:
-		return false
-	file.store_string(JSON.stringify(data, "\t"))
-	file.close()
-	return DirAccess.rename_absolute(path + ".tmp", path) == OK
+	return save_store.save(path,JSON.stringify(data,"\t"),Callable(self,"valid_file"),2)
+
+func load_with_recovery(path: String) -> bool:
+	return save_store.load_recover(path, Callable(self,"load_from"), 2)
+
+func valid_file(path: String) -> bool:
+	var candidate = get_script().new()
+	return candidate.load_from(path)
 
 func load_from(path: String) -> bool:
 	if not FileAccess.file_exists(path):

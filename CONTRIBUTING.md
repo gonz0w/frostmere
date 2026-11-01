@@ -53,7 +53,8 @@ python3 tools/run_headless.py --godot godot
 ```
 
 The runner checks the engine version, imports resources, verifies headless save
-isolation, then runs smoke, character and save/session checks. It stops at the
+isolation, then runs smoke, character, save/session, corruption recovery and two-process
+restart checks. It stops at the
 first failure, including zero-exit Godot errors or missing completion markers.
 Each import/suite has a 180-second timeout (override with `--timeout`, at most
 600 seconds). Logs and `results.json` go to ignored `build/ci/`; CI retains them

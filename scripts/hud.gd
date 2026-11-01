@@ -199,10 +199,42 @@ func _build_pause(root: Control) -> void:
 		slider.value_changed.connect(func(value: float): world.audio.set_volume(kind,value))
 	_button(column, "Save adventure", func():
 		if world.session_save.save_now(): world.hud.announce("Adventure saved","Location, resources, equipment and quest progress saved.")
-		elif not world.player.character.persist: world.hud.announce("Preview session","Saving is disabled in this isolated preview."))
+		elif not world.player.character.persist:
+			var recovery:=recovery_message()
+			world.hud.announce("Saving disabled",recovery if not recovery.is_empty() else "Saving is disabled in this isolated preview."))
 	_button(column, "Save and quit", func(): world.session_save.quit_game())
 	_label(column, "WASD Move · Mouse Look · Shift Sprint · Space Jump\nV Camera · E Inspect · H Controls · F3 Performance", 13, INK)
 	pause_panel.visible = false
+
+func recovery_message() -> String:
+	var character_status: String=world.player.character.save_store.status
+	var atlas_status: String=world.atlas.save_store.status
+	if character_status=="blocked" or atlas_status=="blocked":
+		return "A save could not be safely loaded, or was written by a newer version. Character and atlas saving are disabled for this session. Existing files are unchanged. Quit and back up the save folder before repairing files or using the matching game version."
+	if character_status=="recovered" or atlas_status=="recovered":
+		var parts: PackedStringArray=[]
+		if character_status=="recovered": parts.append("character")
+		if atlas_status=="recovered": parts.append("atlas")
+		return "Restored the previous valid "+" and ".join(parts)+" backup. Some recent progress may be missing. Saving can continue; rejected primary files will be preserved with a .corrupt suffix. Character and atlas backups are separate snapshots."
+	return ""
+
+func show_recovery_notice() -> void:
+	var message:=recovery_message()
+	if message.is_empty(): return
+	world.player.set_paused(true)
+	var dialog:=AcceptDialog.new()
+	dialog.title="Save recovery"
+	dialog.dialog_text=message
+	dialog.get_label().autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	dialog.get_label().custom_minimum_size=Vector2(520,130)
+	dialog.min_size=Vector2i(560,220)
+	dialog.ok_button_text="Continue without saving" if not world.player.character.persist else "Continue with recovered save"
+	dialog.add_button("Quit",true,"quit")
+	dialog.custom_action.connect(func(_action: String): get_tree().quit())
+	dialog.confirmed.connect(func(): world.player.set_paused(false); dialog.queue_free())
+	dialog.canceled.connect(func(): world.player.set_paused(false); dialog.queue_free())
+	add_child(dialog)
+	dialog.popup_centered()
 
 func _button(parent: Node, text: String, callback: Callable) -> void:
 	var button := Button.new()

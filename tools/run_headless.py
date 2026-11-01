@@ -10,7 +10,8 @@ ERROR = re.compile(r'SCRIPT ERROR:|ERROR:|\bFAIL(?:\s|:)|failures=[1-9]')
 SUITES = [('ci_isolation', 'ISOLATION_COMPLETE failures=0'),
           ('smoke', 'SMOKE_COMPLETE failures=0'),
           ('characters', 'CHARACTERS_COMPLETE checks=36 failures=0'),
-          ('session_save', 'SESSION_COMPLETE checks=73 failures=0')]
+          ('session_save', 'SESSION_COMPLETE checks=73 failures=0'),
+          ('save_recovery', 'failures=0')]
 
 
 def run_check(name, command, log, timeout, marker=None):
@@ -55,6 +56,8 @@ def main():
     checks.append(version)
     commands = [('import', ['--editor', '--import', '--quit'], None)]
     commands += [(name, ['--script', f'tests/{name}.gd'], marker) for name, marker in SUITES]
+    commands += [('recovery_prepare', ['--script', 'tests/recovery_restart.gd', '--', '--prepare'], 'RECOVERY_RESTART_PREPARED'),
+                 ('recovery_restart', ['--script', 'tests/recovery_restart.gd'], 'RECOVERY_RESTART_COMPLETE failures=0')]
     if version['passed']:
         for name, flags, marker in commands:
             result = run_check(name, [args.godot, '--headless', '--path', str(ROOT)] + flags,
@@ -63,7 +66,7 @@ def main():
             print(f"{name}: {'PASS' if result['passed'] else 'FAIL'}", flush=True)
             if not result['passed']:
                 break
-    success = len(checks) == 6 and all(check['passed'] for check in checks)
+    success = len(checks) == len(commands) + 1 and all(check['passed'] for check in checks)
     (args.logs/'results.json').write_text(json.dumps({'passed': success, 'checks': checks}, indent=2)+'\n')
     print('HEADLESS_CHECKS_PASSED' if success else 'HEADLESS_CHECKS_FAILED (see logs)')
     return 0 if success else 1
