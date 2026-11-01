@@ -193,7 +193,7 @@ func _refresh() -> void:
 	_show_place()
 	_show_faction()
 	_filter_quests()
-	status.text = "Progress could not be saved." if atlas.save_error else "The Oldwatch Survey is complete." if atlas.survey_complete() else "Walking to: " + atlas.waypoint_text() if atlas.waypoint != "" else "New regions, faction membership and most quest lines are planned; no fast travel to unbuilt areas."
+	status.text = "Progress could not be saved." if atlas.save_error else "The Oldwatch Survey is complete." if atlas.survey_complete() else "Walking to: " + atlas.waypoint_text() if atlas.waypoint != "" else "Explore the roads, speak with local guides and follow your journal. Travel to new areas through their world entrances."
 	if world.player.position.y < -20 and not atlas.save_error:
 		status.text = "Oldwatch Barrow · " + world.adventure.objective()
 	if is_instance_valid(world.stonewake) and world.stonewake.available() and world.player.character.stonewake.accepted and not world.player.character.stonewake.rewarded:
@@ -457,7 +457,7 @@ func _show_quest() -> void:
 		quest_text.text+="\n\n[b]Progress[/b]\n"+world.choir.objective()+"\n\nReturn the distress signal for resonance patterns and a Cantor’s Staff. No cult membership is required."
 		quest_action.disabled=true; quest_action.text="Follow the ash pilgrimage after The Divided Council"
 	elif selected_quest=="roots" and is_instance_valid(world.roots):
-		quest_text.text+="\n\n[b]Progress[/b]\n"+world.roots.objective()+"\n\nWild pact: healing armor. Tended pact: stamina axe. Both grant woodland bow patterns. Coven rank quests remain planned."
+		quest_text.text+="\n\n[b]Progress[/b]\n"+world.roots.objective()+"\n\nWild pact: healing armor. Tended pact: stamina axe. Both grant woodland bow patterns. Return to Maelin after the pact to begin the Coven initiation."
 		quest_action.disabled=true; quest_action.text="Follow the Amberweald trail after Stonewake"
 	elif selected_quest=="lens" and is_instance_valid(world.lens):
 		quest_text.text+="\n\n[b]Progress[/b]\n"+world.lens.objective()+"\n\nReturn the star chart to Veyra for Sunlance, solar-forging patterns and a Horizon Staff. The expedition follows the atlas; earlier space prerequisites remain intact."

@@ -63,6 +63,7 @@ func run() -> void:
 	p.set_paused(false); intro.advance(1)
 	check(intro.arrival==null,"Arrival overlay is removed after fade")
 	var path="user://dark-intro-test.json"
+	for suffix in ["", ".tmp", ".bak", ".bak.tmp"]: DirAccess.remove_absolute(path+suffix)
 	check(state.save_to(path),"Completed opening saves")
 	var loaded=State.new()
 	check(loaded.load_from(path) and loaded.intro_completed,"Completion round-trips")
@@ -71,6 +72,8 @@ func run() -> void:
 	check(loaded.load_from(path) and loaded.intro_completed,"Legacy profiles bypass opening")
 	data.intro_completed="yes"; write(path,data)
 	check(not loaded.load_from(path),"Malformed opening flag is rejected")
+	# Restore the valid fixture; ordinary saves must not overwrite rejected primary data.
+	data.intro_completed=true; write(path,data)
 	state.intro_completed=false; intro.start()
 	var event:=InputEventKey.new(); event.physical_keycode=KEY_TAB; event.pressed=true
 	intro._unhandled_input(event)
@@ -79,7 +82,7 @@ func run() -> void:
 	check(intro.active and p.position==intro.ORIGIN+Vector3(0,.1,8),"Return key recovers within opening")
 	check(state.save_to(path) and loaded.load_from(path) and not loaded.intro_completed and loaded.session.is_empty(),"Incomplete opening saves safely for restart")
 	intro.finish()
-	DirAccess.remove_absolute(path)
+	for suffix in ["", ".tmp", ".bak", ".bak.tmp"]: DirAccess.remove_absolute(path+suffix)
 	w.queue_free(); await process_frame
 	print("DARK_INTRO_COMPLETE checks=%d failures=%d" % [checks,failures]); quit(1 if failures else 0)
 func write(path: String,data: Dictionary) -> void:
