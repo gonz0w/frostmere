@@ -1,5 +1,7 @@
 # A Winter Without Wolves
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 The Hearthbound Lodge's second chapter is playable after the Outrider oath. Open its investigation from the Lodge tab at the Hunters' Board, inspect the abandoned drinking den northwest of Frostmere, collect stained runoff on the west riverbank north of town, and consult grove keeper Senna at the southern village approach. Repair the upstream filter with 2 wood and 2 herbs, choosing whether to expose patron Orven or conceal his responsibility.
 
 The missing drinking-den pack is narrative background, separate from existing live valley wolves and hunt targets. Their combat/loot progress is unchanged. New interaction props and the grove keeper reuse existing world terrain; this does not add dynamic poisoning, wildlife migration or a watershed simulation. Both outcomes visibly install the local filter. Publication/concealment is recorded in dialogue and the journal, not a simulated village political system.

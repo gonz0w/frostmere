@@ -29,7 +29,7 @@ The optional `convergence` save record stores acceptance, evidence, supply colle
 
 **Preview Mirewatch.command** starts an isolated character with all preceding branches complete, a wild woodland pact and harbor-power outcome. Both character and atlas persistence are disabled. E interacts, I opens crafting, M shows the local map, V changes camera and F uses a healing draught. Exploration and combat use the existing music and interaction effects.
 
-The current catalog contains **133 equipment designs and 149 recipes**: 133 gear, eleven material/refining/ammunition and five consumable recipes. Seventeen of 51 atlas quests are playable in normal progression; 34 remain outlines. No timed human pacing study or new M1 performance benchmark has been performed for this chapter.
+See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability. No timed human pacing study or new M1 performance benchmark has been performed for this chapter.
 
 ## Supply-shortage fallback
 

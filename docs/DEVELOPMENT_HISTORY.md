@@ -1,12 +1,12 @@
 # Historical development notes
 
-Archived November 1, 2026 from the original README. Counts and future-work statements are historical, not current support or live assignments. Relative paths in this archived text were written from the repository root.
+Archived November 1, 2026 from the original README. Counts and future-work statements are historical, not current support or live assignments. Inline code paths in this archived text were written from the repository root; Markdown guide links have been repaired.
 
 # SkyrimCraft — Frostmere
 
 A native Mac, single-player Nordic RPG prototype with refined block-built visuals.
 
-Current remaining work is tracked in [the scope roadmap](docs/SCOPE.md#current-remaining-roadmap), including the substantial [visual-detail pass](docs/VISUAL_DETAIL_ROADMAP.md) against the original approved concept.
+Current remaining work is tracked in [the scope roadmap](SCOPE.md#current-remaining-roadmap), including the substantial [visual-detail pass](VISUAL_DETAIL_ROADMAP.md) against the original approved concept.
 
 ## Run
 
@@ -137,13 +137,13 @@ Choose **Begin Oldwatch Survey**, close the map, inspect the forge with **E**, c
 
 Start with the **Smith’s Welcome Cache**, beside the south trail near your spawn. Press **E** to collect materials, an enchanted dagger and steel/chain blueprints. Visit the village forge to smelt ore, forge a new piece, or select **Improve** to temper owned equipment. The Runewright’s Table is east of the north village path; it handles enchantments, learning formulas by consuming enchanted finds, and gem sockets. The Herbalist’s Bench and Hearthfire Cooking Pot make usable potions and food.
 
-Press **I** to browse your bag anywhere. Use the category selector for Gear, Materials, Forge, Improve, Enchant, Salvage, Alchemy, Cooking, Consumables and Collection. Each copy keeps its own name, favorite status, quality, enchantment and gem. Favorites and equipped gear cannot be salvaged or studied. See [crafting details](docs/CRAFTING.md).
+Press **I** to browse your bag anywhere. Use the category selector for Gear, Materials, Forge, Improve, Enchant, Salvage, Alchemy, Cooking, Consumables and Collection. Each copy keeps its own name, favorite status, quality, enchantment and gem. Favorites and equipped gear cannot be salvaged or studied. See [crafting details](CRAFTING.md).
 
 ## First dungeon adventure
 
 Speak to **Edda beside the village forge** with E and accept **An Ember Beneath Oldwatch**. She supplies a bow, arrows and potions. Cross Oldwatch bridge and find the barrow door southeast of the relic. Defeat its guards, archers and Ember Acolytes; explore behind pillars for hidden chests. The Watch-Captain guards a Superior enchanted **Oldwatch Oath** sword and the forge ember. Loot his remains, leave through the entrance, then return to Edda to learn the sword’s forging recipe.
 
-**LMB** attacks with the equipped weapon; bows consume arrows. **RMB** holds a directional block. **Q** casts the selected spell (**B** cycles), **F** uses a healing draught, and **I** pauses to manage supplies. **M** shows an underground plan while in the barrow. Death returns you to the south trail with earned loot and defeated enemies preserved. See [adventure details](docs/ADVENTURE.md).
+**LMB** attacks with the equipped weapon; bows consume arrows. **RMB** holds a directional block. **Q** casts the selected spell (**B** cycles), **F** uses a healing draught, and **I** pauses to manage supplies. **M** shows an underground plan while in the barrow. Death returns you to the south trail with earned loot and defeated enemies preserved. See [adventure details](ADVENTURE.md).
 
 ## Shops and building detail
 
@@ -151,103 +151,103 @@ Enter **The Copper Stag** (Torren, outfitter in the southwest house), **Juniper 
 
 All four village buildings now have deeper timber framing, stone courses, carved gables, ridge caps, sheltered porches, shutters, planters, shop signs, floorboards, ceiling joists, shelves, rugs and hearths. The smallest doorway was raised to make its shop accessible. Fortress towers also have masonry courses, ledges and slit windows. These procedural details bring the buildings closer to the approved concept; the concept's full lighting and art fidelity remain a target.
 
-See [shops and architecture](docs/SHOPS.md). `-- --shops` opens the game at Torren's counter.
+See [shops and architecture](SHOPS.md). `-- --shops` opens the game at Torren's counter.
 
 ## Aeralis and the Crucible
 
 Try **Preview Aeralis.command** for the floating crystal realm or **Preview Crucible.command** for the much later industrial Hell realm. Both are playable temporary profiles; progress does not overwrite your regular game. Defeat the guardian, loot its relic and return to Frostmere. Q casts learned realm magic; B cycles spells. Hold LMB to fire the Crucible machine gun; forge more ammunition from Cinder Alloy and Charcoal.
 
-These slices add 15 realm gear designs, two spells, two enchantments and a portable automatic weapon. Aeralis now opens after returning from the station expedition. The Crucible still requires the later siege and broken-seal chapters. The space expedition still precedes Aeralis; the Crucible comes after a home-world siege and broken seal. See [realm details](docs/REALMS.md).
+These slices add 15 realm gear designs, two spells, two enchantments and a portable automatic weapon. Aeralis now opens after returning from the station expedition. The Crucible still requires the later siege and broken-seal chapters. The space expedition still precedes Aeralis; the Crucible comes after a home-world siege and broken seal. See [realm details](REALMS.md).
 
 
 ## First main chapter: Stonewake
 
 After returning Oldwatch's ember to Edda, speak with **Ilyra** beside the northern village house. Restore three ward stones by deciphering their inscriptions, awaken the central watchstone, then report back for an enchanted pendant and upgrade materials. **M** shows ward markers and the current objective. This introduces the later destination worlds while preserving their story gates.
 
-Use **Preview Stonewake.command** to try the chapter immediately with a temporary post-Oldwatch profile. It does not change your regular save. See [Stonewake details](docs/STORY.md).
+Use **Preview Stonewake.command** to try the chapter immediately with a temporary post-Oldwatch profile. It does not change your regular save. See [Stonewake details](STORY.md).
 
 
 ## Wyrmkeep and joinable clans
 
 After Stonewake, use the **north pass beyond Ember Hall** to visit Wyrmkeep. Investigate the lost road supplies with Speaker Runa, hear both clans and clear the reaver outpost. Settle the council while independent, or subsequently join **Stoneguard** or **Stormweaver**. Each has an initiation, reputation, a first promotion and exclusive weapon/armor/off-hand crafting patterns. Two local merchants and crafting stations support the collection loop.
 
-**Preview Wyrmkeep.command** opens an isolated post-Stonewake profile for immediate play. **E** interacts; **M** shows the town and clan progress. See [Wyrmkeep details](docs/WYRMKEEP.md).
+**Preview Wyrmkeep.command** opens an isolated post-Stonewake profile for immediate play. **E** interacts; **M** shows the town and clan progress. See [Wyrmkeep details](WYRMKEEP.md).
 
 ## Pinehall and The Missing Atlas
 
-After Stonewake, take the western trail from Frostmere. Meet Mereth and Aelin, explore the ruined archive, defeat the Bound Archivist, and choose who receives the recovered atlas. The choice grants either a chain-lightning staff and pattern or healing armor and its pattern. The guardian also carries Echoharvest, a stamina-restoring sword. See [the chapter guide](docs/ARCHIVE.md).
+After Stonewake, take the western trail from Frostmere. Meet Mereth and Aelin, explore the ruined archive, defeat the Bound Archivist, and choose who receives the recovered atlas. The choice grants either a chain-lightning staff and pattern or healing armor and its pattern. The guardian also carries Echoharvest, a stamina-restoring sword. See [the chapter guide](ARCHIVE.md).
 
 Double-click **Preview Pinehall.command** to try this chapter immediately with character and atlas saving disabled. Press E to talk or interact, M for its local map, and I to inspect or craft relics.
 
 ## Background music and sound
 
-Eight original chiptune loops cover wandering, combat, Aeralis, the orbital station and the Crucible, with a separate battle arrangement for each realm. Seventeen effects cover weapons, spells, footsteps, loot, crafting and interactions. Music crossfades automatically. Press **Escape** for **Master / Music / Effects** volume controls. See [AUDIO.md](docs/AUDIO.md).
+Eight original chiptune loops cover wandering, combat, Aeralis, the orbital station and the Crucible, with a separate battle arrangement for each realm. Seventeen effects cover weapons, spells, footsteps, loot, crafting and interactions. Music crossfades automatically. Press **Escape** for **Master / Music / Effects** volume controls. See [AUDIO.md](AUDIO.md).
 
 ## The Wreck on the Black Shore
 
 After The Missing Atlas, take the coastal road southwest of Frostmere to Saltbreak. Hear Keeper Sella and Neris, restore the sea-cave pump and wreck relay, recover the flight recorder and defeat the Hull Warden. The core can power Saltbreak or restore the ship's navigation; report to Sella for your exclusive equipment and pattern.
 
-Recover three damaged relics, identify them with Neris, then restore them at the forge. Further tempering uses alloy and steel rather than another broken relic. Double-click **Preview Black Shore.command** for an isolated post-atlas preview with saving disabled. See [BLACK_SHORE.md](docs/BLACK_SHORE.md).
+Recover three damaged relics, identify them with Neris, then restore them at the forge. Further tempering uses alloy and steel rather than another broken relic. Double-click **Preview Black Shore.command** for an isolated post-atlas preview with saving disabled. See [BLACK_SHORE.md](BLACK_SHORE.md).
 
 ## The Sky Below the Sand
 
 After The Missing Atlas, follow the eastern expedition road to the Sunken Lens. Align three mirror beams, restore the central lens, defeat the Meridian Keeper and return its star chart to Veyra. The chapter adds three solar gear designs and **Sunlance**, a learned spell that pierces one enemy to hit a second. Both Black Shore choices preserve this route.
 
-Double-click **Preview Sunken Lens.command** for a preview that does not change your saved adventure. See [SUNKEN_LENS.md](docs/SUNKEN_LENS.md).
+Double-click **Preview Sunken Lens.command** for a preview that does not change your saved adventure. See [SUNKEN_LENS.md](SUNKEN_LENS.md).
 
 ## Pacts Beneath the Roots
 
 The Stag Shrine woodland chapter is playable after Stonewake via the western Amberweald trail. Restore three blighted roots, defeat the Hollow Warden, and choose between a wild grove or a tended woodland pact. Each choice changes the grove and unlocks different gear. Both recover the woodland account needed for the later space expedition.
 
-Double-click **Preview Stag Shrine.command** for an isolated preview with normal saves disabled. Speak to Maelin or Oren in the lodges; E interacts and M opens the local map. See [the woodland chapter guide](docs/ROOTS.md).
+Double-click **Preview Stag Shrine.command** for an isolated preview with normal saves disabled. Speak to Maelin or Oren in the lodges; E interacts and M opens the local map. See [the woodland chapter guide](ROOTS.md).
 
 ## A Song Through the Stone
 
 After resolving The Divided Council, take the southeastern ash pilgrimage to **Ember Caldera**. Ring the three resonators, repair the receiver, defeat the Dissonant Cantor and bring the first distress signal to Sereth. Three new equipment designs use Resonant Ore and Ash Glass for forging and upgrades.
 
-**Preview Ember Caldera.command** opens an isolated post-council preview with character and atlas saves disabled. See [the Choir chapter guide](docs/CHOIR.md).
+**Preview Ember Caldera.command** opens an isolated post-council preview with character and atlas saves disabled. See [the Choir chapter guide](CHOIR.md).
 
 ## The Roads Converge
 
 The four branch investigations now meet at **Mirewatch**. Assemble their evidence, forge a Transit Regulator at the expedition forge, and install it to begin a combat calibration. A stable return beacon earns a Wayfarer Shield, Pathfinder Sabatons and their patterns. Earlier woodland and harbor choices are preserved; faction membership is not required.
 
-**Preview Mirewatch.command** launches an isolated expedition-ready character. E interacts; M opens the camp map. See [the expedition guide](docs/CONVERGENCE.md). The First Threshold crossing is now playable from the Sunken Lens vault; returning from it unlocks normal Aeralis progression.
+**Preview Mirewatch.command** launches an isolated expedition-ready character. E interacts; M opens the camp map. See [the expedition guide](CONVERGENCE.md). The First Threshold crossing is now playable from the Sunken Lens vault; returning from it unlocks normal Aeralis progression.
 
 ## Beyond the First Threshold
 
 The space expedition is playable after **The Roads Converge**. Use the crossing beside the star chart in the northern Sunken Lens vault. Restore station power and life support, defeat rogue security and bring the command archive through the return beacon. This unlocks **Aeralis** through Frostmere's crystal crossing in normal progression.
 
-The station adds a portable automatic rifle with its own craftable ammunition, two more equipment designs, fabrication supplies and dedicated exploration/battle music. **Preview First Threshold.command** starts an isolated expedition-ready character. Talk to Rook and collect the emergency locker. See [the station guide](docs/THRESHOLD.md).
+The station adds a portable automatic rifle with its own craftable ammunition, two more equipment designs, fabrication supplies and dedicated exploration/battle music. **Preview First Threshold.command** starts an isolated expedition-ready character. Talk to Rook and collect the emergency locker. See [the station guide](THRESHOLD.md).
 
 ## The Winter Siege
 
 After returning from Aeralis, take the **Northwatch supply road south of Frostmere**. Defend the snowy caldera frontier fort with Captain Halla: repel scouts, repair the watchstone ward and ballista, then call the main assault. Recover the Iron Marshal's orders and report for the Northwatch Helm, Northwatch Greatsword and their crafting patterns.
 
-**Preview Winter Siege.command** starts an isolated late-story character with saving disabled. **E** interacts, **M** opens the fort map. The Broken Seal follows this chapter and opens normal Crucible progression. See [the siege guide](docs/WINTER_SIEGE.md).
+**Preview Winter Siege.command** starts an isolated late-story character with saving disabled. **E** interacts, **M** opens the fort map. The Broken Seal follows this chapter and opens normal Crucible progression. See [the siege guide](WINTER_SIEGE.md).
 
 ## The Broken Seal and Crucible descent
 
 The late-game route is now connected. After Winter Siege, take the **caldera service lift south of Frostmere**. Investigate the underworks with Tovan, isolate the furnace pressure lines, recover a containment design, and forge a **Cinder Ward**. Defeat the Sealbreaker, bind the ward and report to open normal Crucible access. The reward includes a forgeable and upgradeable **Wardkeeper's Amulet**.
 
-**Preview Broken Seal.command** opens an isolated late-story character. Talk to Tovan to begin. The northern crossing leads into the Crucible after completion; defeat its defenders, loot the warden, shut down the invasion engine and return home to finish The Last Furnace. See [the chapter guide](docs/BROKEN_SEAL.md).
+**Preview Broken Seal.command** opens an isolated late-story character. Talk to Tovan to begin. The northern crossing leads into the Crucible after completion; defeat its defenders, loot the warden, shut down the invasion engine and return home to finish The Last Furnace. See [the chapter guide](BROKEN_SEAL.md).
 
 ## The Last Furnace: a light brought home
 
 The Crucible now ends with an **invasion-engine shutdown** and a homecoming chronicle. Clear its defenders, recover the Warden's relic, use the shutdown console on the final terrace, then return home. Choose a Dawnforged sword, bow or staff, learn all three patterns, and continue exploring with your equipment and story choices intact.
 
-**Preview Last Furnace.command** launches an isolated infernal character. Read [the ending guide](docs/ENDING.md) for the reward, upgrades and older-save behavior.
+**Preview Last Furnace.command** launches an isolated infernal character. Read [the ending guide](ENDING.md) for the reward, upgrades and older-save behavior.
 
 ## Save and resume
 
 Use **Play Frostmere.command** for your regular adventure. Reopening restores your active region, grounded location, camera, health, magicka, stamina and nearby surviving enemies alongside equipment and quest progress. The game autosaves every 15 seconds and when character progress changes. **Escape → Save adventure** saves immediately; **Save and quit** and closing the game window save before exiting.
 
-Older saves remain compatible. Unsafe positions fall back to the area's entrance. Preview launchers remain temporary and cannot write the regular save. See [save/resume details](docs/SAVE_RESUME.md).
+Older saves remain compatible. Unsafe positions fall back to the area's entrance. Preview launchers remain temporary and cannot write the regular save. See [save/resume details](SAVE_RESUME.md).
 
 ## Skills and perks
 
 Press **K**, or choose **Skills & perks** in the character screen. Successful melee, ranged and spell hits train their skill; forging, tempering and enchanting train Crafting. Each level earns a shared perk point to spend on eight perks, including stronger attacks, cheaper spells, Fine-quality forged gear and reduced tempering costs.
 
-Use **Refund** on a learned perk to recover its points for free and try another build. XP and existing equipment are preserved. Skills and learned perks save with your character. Older saves carry existing crafting XP into the new Crafting skill. See [the skill guide](docs/SKILLS.md).
+Use **Refund** on a learned perk to recover its points for free and try another build. XP and existing equipment are preserved. Skills and learned perks save with your character. Older saves carry existing crafting XP into the new Crafting skill. See [the skill guide](SKILLS.md).
 
 ## Timed parries
 
@@ -299,9 +299,9 @@ The three village shops and main quest services retain their locations. Wildlife
 
 ## The Mossbound Oath
 
-Read the **Hunters’ Board beside the market** with **E** to start an optional hunt. Harvest the three northwest wolves and the Mossbound Colossus, then return for **120 gold** and your choice of a **Fine Mossfang Blade** or **Fine Mossheart Amulet**. Both crafting patterns unlock, so you can forge the other design and improve either through the existing crafting systems. Earlier harvests count. See [the hunt guide](docs/HUNTS.md).
+Read the **Hunters’ Board beside the market** with **E** to start an optional hunt. Harvest the three northwest wolves and the Mossbound Colossus, then return for **120 gold** and your choice of a **Fine Mossfang Blade** or **Fine Mossheart Amulet**. Both crafting patterns unlock, so you can forge the other design and improve either through the existing crafting systems. Earlier harvests count. See [the hunt guide](HUNTS.md).
 
-The Mossbound Colossus now warns with an amber ground-slam ring. Move outside it before impact; below half health, its Awakened phase hits harder and slams more frequently. This optional encounter retains the Mossbound Oath rewards and existing save progress. See [hunt details](docs/HUNTS.md).
+The Mossbound Colossus now warns with an amber ground-slam ring. Move outside it before impact; below half health, its Awakened phase hits harder and slams more frequently. This optional encounter retains the Mossbound Oath rewards and existing save progress. See [hunt details](HUNTS.md).
 
 ## The Frostmaw Hunt
 

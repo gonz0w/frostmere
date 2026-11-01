@@ -22,4 +22,4 @@ Shutdown and heirloom choice save with the character. Invalid reward choices, in
 
 `Preview Last Furnace.command` starts the existing isolated Crucible setup with infernal armor, a machine gun, ammunition and Soulfire. Character and atlas saving stay disabled, including after the ending. `Play Frostmere.command` continues the regular profile.
 
-The game now has 133 equipment designs and 149 crafting recipes. Seventeen of 51 atlas quests are playable; the remaining 34 outlines and further environment, encounter and narrative expansion are still future work. This addition supplies an ending to the connected prototype campaign, not a claim that the full game is finished. No new M1 benchmark or human pacing study was performed.
+See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability. Quest implementation does not establish final campaign balance, world depth or platform qualification. This addition supplies an ending to the connected prototype campaign, not a claim that the full game is finished. No new M1 benchmark or human pacing study was performed.

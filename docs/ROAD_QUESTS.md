@@ -1,5 +1,7 @@
 # The final seven quests
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 All seven remaining atlas quest outlines are playable. The atlas now contains 51 playable quests and zero planned quests. This completes the quest-implementation list; it does not declare all world expansion, polish or release work finished.
 
 These are compact stories at caravan camps, representative outposts and existing settlements. Dunewell, Larksbridge, Three Roads and Reedhollow are represented through their people and facilities in the current playable areas; no additional full towns or continent traversal are claimed.

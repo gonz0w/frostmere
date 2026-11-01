@@ -1,5 +1,7 @@
 # The Price of Safe Passage
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 The Compact's third chapter is playable after becoming Envoy. Ask Vessa to draft the charter, then use the separate charter discussion with Sella, Neris and sheltered Tamsin. Their existing quest and salvage dialogues remain available. Sign at the new charter table west of Saltbreak's southern road after recording all three proposals.
 
 Three permanent terms:

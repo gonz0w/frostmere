@@ -1,5 +1,7 @@
 # A Pilgrim's Empty Shoes
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 A compact optional quest in Ember Caldera, accessible after the council travel gate without accepting the signal quest or joining the Choir. Start at the notice beside the entrance. Inspect abandoned shoes west of the central path, recover a hidden letter by the eastern wall after defeating choir_1, then find Leth opposite the shoes on the east path.
 
 The apparent sacrifice is a staged escape from an unwanted oath. Offer temporary shelter without vows, or supplies for a free departure. Both resolve by moving Leth to camp, where the pilgrim remains available with an updated nameplate, interaction prompt and dialogue title. This is an interaction-resolved safe return, not a walking escort or simulated journey out of the region. The departure choice explicitly has Leth waiting at camp with supplies.

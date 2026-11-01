@@ -1,6 +1,6 @@
-# The Northern Reach — first world atlas
+# The Northern Reach — atlas and faction guide
 
-The home world remains a Nordic-inspired RPG setting. Strong landscape changes make exploration memorable without turning every region into a different genre. This is a proposed geography and story structure for review, not a final scope cap or a claim that all regions are playable.
+The home world remains a Nordic-inspired RPG setting. Strong landscape changes make exploration memorable without turning every region into a different genre. The atlas combines playable chapter regions with schematic geography. Its sixteen place labels do not mean sixteen fully built towns; caravan representatives and outposts stand in for some destinations.
 
 ## Geography
 
@@ -17,7 +17,7 @@ The home world remains a Nordic-inspired RPG setting. Strong landscape changes m
 
 The central mountain spine divides wetter western country from the dry eastern plateau. River systems flow from the northern heights toward the western fjords and southern lowlands. Passes and bridges create places where travel, trade and faction interests meet. The map's travel distances are schematic; physical region dimensions and streaming boundaries are not fixed yet.
 
-Each region should eventually contain a social hub, smaller settlements or camps, at least one distinctive dungeon, wilderness discoveries, and several independent quest entry points. The sixteen named sites are the first anchors, not the final settlement count.
+The geography is an authored design framework. Expansion is selected through [GitHub milestones](https://github.com/gonz0w/frostmere/milestones), rather than assigned by this atlas.
 
 ## Factions and joining
 
@@ -31,15 +31,15 @@ Each region should eventually contain a social hub, smaller settlements or camps
 | Ashen Choir | Volcanic mystery cult | Ember Caldera | Awaken, contain or silence a buried power |
 | Tidemarch Compact | Sailors and merchant houses | Saltbreak | Shared trade law versus a dominant merchant house |
 
-All seven are proposed joinable factions. Joining should be an in-world sequence: encounter a recruiter or discover the group, complete an initiation, then take an explicit oath. Each has three named rank concepts and a three-chapter arc in the catalog. Initiation and promotion mechanics are not implemented yet.
+All seven factions have compact playable initiation and promotion chains. Joining uses in-world tasks and an explicit oath; rank, rewards and story choices persist. See the faction guide links below. Membership is not a simulation of faction patrols, trade or government.
 
-Membership in compatible groups should coexist. Simply meeting or helping a rival should not close an entire quest line. A clearly presented, consequential late allegiance choice may lock a rival capstone, with the consequences explained before commitment. The current rival pairs are Iron Pact/Ashen Choir, Veiled Lantern/Briar Coven, and Sable Concord/Tidemarch Compact. These are story proposals; no reputation, hostility or lockout code runs yet.
+Membership can coexist. The Sable Concord and Tidemarch Compact finales have explicit hostile choices that can close the rival finale; peaceful outcomes work in either order, and completed rival finales cannot be retroactively invalidated. See [Safe Passage](SAFE_PASSAGE.md) and [the Concord road quests](ROAD_QUESTS.md). The [Choir conquest ending](FIRE_INVITE.md) closes an unfinished Iron Pact Clan Voice finale; conquest is unavailable if Clan Voice is already complete. Veiled Lantern/Briar Coven tension does not impose a rival-finale lockout. There is no general automatic hostility system. Individual chapter guides describe their recorded consequences.
 
 The main story should offer ways to work with groups without requiring the player to join every one. Quest availability should be driven by discoveries and relationships, not an arbitrary forced tour through every faction.
 
 ## Primary timeline and parallel adventures
 
-The atlas holds **51 quest entries**: thirteen main-timeline entries, twenty-one faction chapter entries, and seventeen side-quest entries. **The Oldwatch Survey**, **An Ember Beneath Oldwatch** and **Stonewake** are playable in normal progression. The Divided Council and the first two Iron Pact chapters are also playable in Wyrmkeep. The Missing Atlas is playable in Pinehall. The Wreck on the Black Shore is playable in Saltbreak. The Sky Below the Sand is playable at the Sunken Lens. Pacts Beneath the Roots is playable at the Stag Shrine. A Song Through the Stone is playable at Ember Caldera. The Roads Converge is playable at Mirewatch. Beyond the First Threshold and The Returning Light are also playable in normal progression. The other 37 are campaign/faction/side outlines; The Returning Light and The Last Furnace have playable isolated realm slices awaiting their earlier campaign chapters.
+All atlas quests have playable implementations; [current counts](CONTENT_REFERENCE.md) distinguish main, faction and side entries. The main route connects Oldwatch and Stonewake through the branch investigations, station expedition, Aeralis, home-world siege, Broken Seal and Crucible ending. Normal gates enforce prerequisites; isolated previews do not replace the connected campaign.
 
 ```mermaid
 flowchart TD
@@ -60,14 +60,14 @@ flowchart TD
     L --> M[The Last Furnace · Crucible / Hell]
 ```
 
-After the opening, several main branches can advance in parallel. Independent faction chains and local side quests sit alongside this timeline. Quest catalog prerequisites capture the planned dependency graph. Stonewake, The Divided Council, The Missing Atlas, The Wreck on the Black Shore and The Sky Below the Sand now have running chapter controllers; the other main branches remain outlines. The space expedition precedes Aeralis, with the Crucible much later after the home-world siege and broken seal. Destination rewards stay usable at home. See REALMS.md.
+After Stonewake, the council, archive and woodland investigations can advance along their prerequisites. Mirewatch convergence requires the woodland, coastal, lens and choir investigations. The space expedition precedes Aeralis; the Crucible follows Winter Siege and Broken Seal. Destination equipment remains usable at home. See [realm access](REALMS.md).
 
-Side-quest hooks include a missing apprentice, disputed water rights, a forged shipping ledger, a blighted harvest, a broken mill, refugees needing medicine and a lighthouse that was deliberately extinguished. Their initial names, locations and summaries are in `data/world_atlas.json`. Rewards, dialogue, NPC schedules, encounters, alternate objectives and branch resolution require later authoring.
+Side quests include the missing apprentice, disputed water rights, forged shipping records, blighted harvest, stopped mill, refugee rescue and extinguished lighthouse. Their objectives, rewards and choices are implemented in compact authored areas. This does not imply NPC schedules or a simulated continent. [Road quests](ROAD_QUESTS.md) explains the representative camps and outposts.
 
 ## What runs now
 
 - **M** opens the atlas, with world and Frostmere-area views, pan/zoom, markers, landscape selection, faction-seat overlay, route overlay and quest counts.
-- Regional markers expose town/landmark, biome, faction connection and quest information. Frostmere, Wyrmkeep, Pinehall, Saltbreak and the Sunken Lens have playable local maps. Wyrmkeep is reached through the north pass after Stonewake; planned sites cannot trigger travel.
+- Regional markers expose town/landmark, biome, faction connection and quest information. Playable chapter areas have local maps, including the later woodland, caldera, expedition, siege and realm areas. Wyrmkeep is reached through the north pass after Stonewake; planned sites cannot trigger travel.
 - The local map uses the same building footprints and generated tree positions as the current 3D scene, plus the actual player position and heading. Terrain shading is schematic, not an elevation survey. The distant fortress is labeled scenery.
 - Five local sites can receive walking waypoints. There is no fast travel or teleport action.
 - Begin the **Oldwatch Survey** from the map, inspect the forge with E, walk across the bridge, then inspect the relic with E. Objectives advance in order and only through valid in-world actions. It is a small exploration quest; it does not grant faction membership or invented loot.
@@ -75,10 +75,16 @@ Side-quest hooks include a missing apprentice, disputed water rights, a forged s
 - Visited local sites, the waypoint and survey progress save to `user://atlas-progress-v1.json`. The loader validates IDs, stage bounds and schema before applying data. Player location, active area, resources and nearby surviving enemies now save in the character profile; transient projectiles and menu state are not restored.
 - Headless tests, capture runs and benchmarks are isolated from real saved progress.
 
-## Next implementation sequence
+## Faction guides
 
-1. Build a playable Hearthbound recruiter, an initiation conversation and explicit membership choice around the existing survey route.
-2. Add the first dungeon and combat encounter to Stonewake. Establish rewards, NPC state and a reusable branching quest runtime.
-3. Expand Pineward toward one adjacent biome, with a second town and a rival faction representative. Prove traversal, streaming and performance before growing all eight regions.
-4. Add reputation, rank progression and transparent allegiance decisions once two faction chains are playable.
-5. Expand regional content and finally connect the supporting destination-world chapters.
+- [Hearthbound initiation](HEARTHBOUND.md), [Waykeeper](WATERSHED.md), [Warden](WARDEN.md).
+- [Iron Pact initiation and promotions](WYRMKEEP.md).
+- [Veiled Lantern initiation and promotions](LANTERN.md).
+- [Briar Coven initiation and promotions](COVEN.md).
+- [Sable Concord's three road chapters](ROAD_QUESTS.md).
+- [Ashen Choir Listener](CHOIR_LISTENER.md), [Cantor](ASH_MEMORY.md), [Ember Voice](FIRE_INVITE.md).
+- [Tidemarch Decksworn](TIDE_COMPACT.md), [Envoy](HARBOR_LIED.md), [Harbor Speaker](SAFE_PASSAGE.md).
+
+[Milestones](https://github.com/gonz0w/frostmere/milestones) own future selection.
+For earlier development context, see [scope history](SCOPE.md) and
+[development history](DEVELOPMENT_HISTORY.md); neither assigns current work.

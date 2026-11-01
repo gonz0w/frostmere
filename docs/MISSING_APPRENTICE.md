@@ -11,4 +11,4 @@ Either grants 100 gold and protects the reward as a favorite. These are personal
 
 Optional apprentice_stage (0–3) and apprentice_choice fields live in archive progress. Stage order, guard proof, physical proximity and single-use rewards are checked. Missing fields default to unstarted for older profiles; malformed or inconsistent progress is rejected before loading changes. Iven's location derives from saved progress, so revisits and reloads preserve the return.
 
-The atlas now marks side_pinehall playable; 22 planned quest outlines remain.
+The atlas marks `side_pinehall` playable. See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability.

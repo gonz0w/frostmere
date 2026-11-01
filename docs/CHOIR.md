@@ -30,7 +30,7 @@ Acceptance, partial song, receiver repair, copied signal, rewards, caches and en
 
 **Preview Ember Caldera.command** launches a temporary post-council character with a Superior steel sword of Fleet, bow, arrows and healing draughts. Character and atlas saving are both disabled throughout the preview. E interacts, F heals, V changes camera, and M opens the local map.
 
-The current prototype has **133 gear designs, 149 recipes, ten enchantment formulas and seventeen normally playable atlas quests**. Thirty-four atlas entries remain outlines. Ashen Choir membership and rank quests remain planned. There has been no timed human pacing study or new M1 performance benchmark for this chapter.
+The Ashen Choir initiation and both promotions are playable; see [Listener](CHOIR_LISTENER.md), [Cantor](ASH_MEMORY.md) and [Ember Voice](FIRE_INVITE.md). See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability. There has been no timed human pacing study or new M1 performance benchmark for this chapter.
 
 
 ## Voices in the Furnace

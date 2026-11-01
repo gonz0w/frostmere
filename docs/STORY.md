@@ -1,5 +1,7 @@
 # Stonewake — first main chapter
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 Stonewake is playable after **An Ember Beneath Oldwatch**. Return the Captain's forge ember to Edda and claim her quest reward, then speak with **Ilyra**, the watchstone keeper east of the northern village house. The chapter also becomes available to existing profiles that already returned the ember.
 
 Accept Ilyra's request, visit three ward stones around Frostmere, and read their inscriptions. Each offers Hearth, Tide and Sky runes. Invoke the matching rune to restore it; wrong answers consume nothing. Wards can be restored in any order, retain their blue light after saving, and cannot grant duplicate progress. The HUD guides the next uncompleted ward; the Frostmere-area map marks all three and Ilyra. The journal automatically selects Stonewake when accepted.

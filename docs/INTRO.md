@@ -1,5 +1,7 @@
 # Ash Through the Snow
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 A short, playable first arrival for new characters. Move with WASD, look with the mouse, approach the lantern and press E. An eight-second approach, pause and retreat of a horned creature beyond a glowing ward foreshadows the late infernal storyline. Once it withdraws, walk to the arch and press E to reach Frostmere. Tab skips at any unpaused point. Escape retains the ordinary pause menu. Camera switching and character menus remain available.
 
 The scene has snow-tagged collision, layered snow-capped cliffs, pines, shallow snow streaks, broken masonry, an actual roadside sign and a framed lantern. The center route stays clear. The creature approaches through fog, turns its head, opens its jaw, then withdraws before disappearing. Illuminated runes and drifting ash complete the scene. Tremor is suggested by the moving creature and ward rather than forcibly shaking the camera. The creature is scenery and awards no combat loot. A dedicated synth score and two ward cues accompany the reveal. Edda's initial dialogue comments on the warm road stones, then offers the existing first quest and supplies.

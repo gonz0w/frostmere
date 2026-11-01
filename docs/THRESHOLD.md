@@ -1,16 +1,18 @@
 # Beyond the First Threshold
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 The first space expedition is playable after **The Roads Converge**. Return to the Sunken Lens and use the glowing crossing beside the recovered star chart, inside its northern vault. The gate requires completed expedition preparation. It leads to an original orbital-station chapter; the planet outside the observation window is scenery.
 
 ## Station and return
 
-Speak with **engineer Rook** in the southern airlock. The emergency locker holds a Fine Station Rifle, 120 Station Rounds, six Station Alloy and three Navigation Cells. It also teaches station equipment and ammunition recipes. Equip the rifle from the character/inventory interface. The airlock provides fabrication and enchantment benches.
+Speak with **engineer Rook** in the southern airlock. The emergency locker holds a Fine Station Rifle, 120 Station Rounds, six Station Alloy, three Navigation Cells, 36 arrows and two magicka draughts. It also teaches station equipment and ammunition recipes. Equip the rifle from the character/inventory interface. The airlock provides fabrication and enchantment benches.
 
 Isolate the reactor circuit at the western control, then restart life support at the eastern control. The order is enforced without consumable repair costs. Restarting life support opens the physical command shutter and activates its security. Three rogue troopers occupy the maintenance area; two more troopers and the **Hullcarver Broodmother** guard the command deck. Cargo salvage provides additional ammunition and fabrication supplies.
 
 Defeat the Broodmother, loot its blade and copy the command archive. The archive reveals that the home-world watchstones are losing their light and identifies Aeralis's Dawn Prism as the next remedy. **Use the southern return beacon with the archive to complete the expedition.** Merely copying the archive does not unlock the next realm. An early retreat preserves progress but does not award completion.
 
-Returning awards 200 gold, a favorited Superior Station Carapace of Vigor, eight Station Alloy, six Navigation Cells and 100 Station Rounds. It records `threshold` and opens the **Aeralis crystal crossing in Frostmere**, near the Watcher's Stones. Enter normally, attune for realm magic and patterns, defeat the Fractured Regent, loot its remains, and use the return gate to complete **The Returning Light**. The Crucible still requires the later Winter Siege and Broken Seal chapters.
+Returning awards 200 gold, a favorited Superior Station Carapace of Vigor, eight Station Alloy, six Navigation Cells and 100 Station Rounds. It records `threshold` and opens the **Aeralis crystal crossing in Frostmere**, near the Watcher's Stones. Enter normally, attune for realm magic and patterns, defeat Prismwing, the Fractured Wyrm, loot its remains, and use the return gate to complete **The Returning Light**. The Crucible still requires the later Winter Siege and Broken Seal chapters.
 
 ## Portable collection
 
@@ -32,7 +34,7 @@ The optional `threshold` save record stores acceptance, locker/cargo claims, ord
 
 **Preview First Threshold.command** creates a temporary post-convergence character. Both character and atlas saving are disabled, including if you later visit Aeralis from that preview. Talk to Rook, collect the locker, and equip the rifle. E interacts, hold LMB for automatic fire, F heals, V changes camera, and M opens the station map.
 
-The prototype now has **133 equipment designs, 149 recipes, eight music loops and seventeen sound effects**. Seventeen of 51 atlas quests are playable in normal progression; 34 remain outlines. The station and Aeralis are compact playable chapters, with further environment, narrative and encounter expansion still possible. No new M1 benchmark or timed human pacing study was performed.
+See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability. The station and Aeralis are compact playable chapters, with further environment, narrative and encounter expansion still possible. No new M1 benchmark or timed human pacing study was performed.
 
 ## Monster guardian update
 
@@ -40,7 +42,7 @@ The command-deck guardian is now the Hullcarver Broodmother, an eight-legged arm
 
 The Broodmother approaches until within eleven metres, warns for 1.1 seconds, then fires a 26-damage hostile magic projectile. Its plates open for three seconds after firing. Armored hits apply a 0.65 multiplier before normal boss mitigation; exposed hits apply 1.5. The visible green core indicates this timed damage window; it is not a separate precision-hit collider. The attack cycle has a 4.5-second cooldown. Movement and leg animation use a new monster rig rather than humanoid arms and equipment.
 
-Menus, chapter departure, protected story phases and finisher lock cancel the pending attack/core state. The existing weak-health finisher remains lethal through the shell, and defeat, loot, story progression and saves continue through the normal station controller. Space crew/troopers remain humanoid; other realm guardians are still awaiting their monster passes.
+Menus, chapter departure, protected story phases and finisher lock cancel the pending attack/core state. The existing weak-health finisher remains lethal through the shell, and defeat, loot, story progression and saves continue through the normal station controller. Space crew/troopers remain humanoid. Aeralis and the Crucible use the monster guardians described in [Realms](REALMS.md).
 
 
 ## Station supplies for existing builds
@@ -61,7 +63,7 @@ The broodmother now opens articulated mandibles, lowers its body and braces its 
 
 ## Hullcarver corpse pose
 
-The defeated Hullcarver rests low on folded legs with spread mandibles. Its charging effect is hidden and reset, and its plates close. This replaces the generic humanoid side-roll for both combat kills and finishers. Saved defeated guardians reconstruct the same pose without a save migration. Animated collapse transitions remain open.
+The defeated Hullcarver rests low on folded legs with spread mandibles. Its charging effect is hidden and reset, and its plates close. This replaces the generic humanoid side-roll for both combat kills and finishers. Saved defeated guardians reconstruct the same pose without a save migration. New lethal hits also animate into this pose; saved corpses are reconstructed immediately.
 
 
 Hullcarver collapse follow-up: new lethal hits now animate into the folded-leg corpse over 0.6 seconds. Menus freeze the motion and departure settles it. Saved corpses remain immediate, with the same defeat and loot rules.

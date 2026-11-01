@@ -8,4 +8,4 @@ Tovin appears beside the winch after rescue. His moving signal reflection blinks
 
 Reward: 90 gold, six crystals, four rune dust and two healing draughts. Rescue consumes no materials. Rewards are single-use and cannot be claimed before investigation/rescue or remotely from a stale dialogue. Optional rescue_stage in the existing convergence save record stores stages 0–4; missing fields default to unstarted. Invalid stages or progress without Mirewatch access prerequisites are rejected before loading changes.
 
-The atlas now marks side_mirewatch playable; 26 planned quest outlines remain. Further side quests, larger environments and human pacing playtests remain open.
+The atlas marks `side_mirewatch` playable. See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability. Further side quests, larger environments and human pacing playtests remain open.

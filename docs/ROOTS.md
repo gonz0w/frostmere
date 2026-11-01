@@ -10,7 +10,7 @@ Three blightbound keepers defend the Spring, Stone and Seed roots. Defeat each r
 
 Cleansed roots glow green. All three must be restored before the **Hollow Warden** becomes active and vulnerable. Defeat it beneath the hollow tree, loot its named bow, then choose a permanent pact at the **Heart of the Stag**. Copy the woodland memory behind the shrine and report to either keeper.
 
-The memory warns that the first crossing drew power from a living world. This evidence completes `roots`; it does not bypass the other convergence prerequisites or open the space expedition. This is a local woodland agreement. Coven membership and its three rank quests remain planned.
+The memory warns that the first crossing drew power from a living world. This evidence completes `roots`; it does not bypass the other convergence prerequisites or open the space expedition. This is a local woodland agreement. The separate [Briar Coven chain](COVEN.md) offers initiation and two promotions after this pact.
 
 ## Permanent choice and collection
 
@@ -32,7 +32,7 @@ Acceptance, heard proposals, cleansing, pact choice, memory, rewards, caches, de
 
 **Preview Stag Shrine.command** starts with Stonewake completed, a Superior steel sword of Fleet, a bow, arrows and healing supplies. Both character and atlas persistence remain disabled throughout the preview. E interacts, F heals, V switches camera, M opens the map.
 
-The current catalog contains **133 gear designs, 149 recipes and ten enchantment formulas**. Seventeen of the 51 atlas quests are playable in normal progression; 34 remain outlines. This chapter has not had timed human pacing tests or a new M1 performance benchmark.
+See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability. This chapter has not had timed human pacing tests or a new M1 performance benchmark.
 
 
 ## Shadowless stag quest — September 9, 2026

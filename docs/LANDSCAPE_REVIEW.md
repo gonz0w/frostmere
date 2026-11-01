@@ -1,3 +1,5 @@
+> Historical review evidence from September 24, 2026. Local `build/` galleries and reports are not distributed with the source. See [public screenshots](screenshots/README.md) and [GitHub work](https://github.com/gonz0w/frostmere/issues) for current review status.
+
 # Towns and landscapes — review checkpoint
 
 September 24, 2026. Implementation pass ready for visual review; this does not close campaign expansion, human playtesting or M1 performance validation. No release prepared.

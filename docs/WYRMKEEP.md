@@ -1,5 +1,7 @@
 # Wyrmkeep and the Iron Pact clans
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 Wyrmkeep is a second playable settlement, reached through the north pass beyond Ember Hall after completing Stonewake. It has five enterable, furnished buildings: the council hall, two clan halls, Summit Smithy and The High Road. A snowy square, market stalls, lanterns, benches, mountains and a northern reaver outpost give it a distinct setting. Travel is a pass interaction between authored areas, not a seamless continent.
 
 ## The Divided Council
@@ -27,7 +29,7 @@ The two clans belong to the existing **Iron Pact**, preserving the seven-faction
 
 After the three wards, report to your sponsor to become **Sworn**. After both deliveries, report again to become **Shieldbearer**. Each rank adds 25 clan reputation. Joining adds five; promotion also grants 80 gold. Rank rewards are favorited owned instances. Weapon patterns unlock at Sworn; chest and off-hand patterns unlock at Shieldbearer. The final **Clan Voice** capstone remains planned.
 
-These are six new craftable gear designs and two new formulas: 133 equipment designs, 149 recipes and ten enchantments in total. Clan formulas use three rune dust and two crystals. Clan gear, patterns, ranks and reputation travel home with you. Shops use normal Presence-based prices; reputation currently records policy and service standing rather than changing vendor prices or starting automatic hostilities.
+The clan content adds six craftable gear designs and two enchantment formulas. See [the current content reference](CONTENT_REFERENCE.md) for catalog totals and quest availability. Clan formulas use three rune dust and two crystals. Clan gear, patterns, ranks and reputation travel home with you. Shops use normal Presence-based prices; reputation currently records policy and service standing rather than changing vendor prices or starting automatic hostilities.
 
 ## Shops, map and recovery
 

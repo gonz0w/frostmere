@@ -1,5 +1,7 @@
 # The Last Warm Shelter
 
+> Verification counts and capture observations below are historical development evidence, not fresh checks. `build/` paths refer to local output omitted from the source checkout; see [evidence guidance](README.md#screenshots-and-development-evidence).
+
 A compact Rimegate-approach side quest in the existing Wyrmkeep region, available after Stonewake. Read the overdue notice beside the southern road, find Marae's three-person group northeast of town, and restore the new watch hut hearth with 4 wood. Missing materials spend nothing; ordinary wood can be brought from town. No clan oath or council settlement is required.
 
 Lighting the hearth visibly activates its fire and relocates the travelers into the hut. They remain there to rest. Arrange a cleared road home after defeating all three existing northern outpost raiders, or choose shelter until a ridge guide can travel after the thaw. These are saved arrangements, not a walking escort, weather simulation or timed NPC departure.
