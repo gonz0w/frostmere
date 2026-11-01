@@ -37,8 +37,30 @@ suites and appropriate native checks are required. Artwork, controls, audio and
 rendering changes need native inspection; performance claims need hardware,
 renderer, resolution and workload recorded. Do not extrapolate M5 to M1 or Windows.
 
-CI currently runs only repository source checks with Python. Engine test automation
-and platform qualification are tracked separately. No formatter or GDScript linter
+CI runs repository checks, runner rejection tests and the core headless fixtures
+on a clean Ubuntu 24.04 checkout. It downloads the official standard Linux x86_64
+Godot 4.7.2 archive from `godotengine/godot-builds` and verifies the SHA-256 pinned
+in `.github/workflows/source-checks.yml` against the upstream release asset digest.
+Updating that pin requires a reviewed engine-version change. No PR secrets,
+write token or self-hosted runner is used. This is headless regression evidence,
+not native Linux graphics/input/audio qualification.
+
+Run the same bounded fixture runner locally (use your actual engine path):
+
+```sh
+python3 -m unittest discover -s tests -p test_headless_runner.py
+python3 tools/run_headless.py --godot godot
+```
+
+The runner checks the engine version, imports resources, verifies headless save
+isolation, then runs smoke, character and save/session checks. It stops at the
+first failure, including zero-exit Godot errors or missing completion markers.
+Each import/suite has a 180-second timeout (override with `--timeout`, at most
+600 seconds). Logs and `results.json` go to ignored `build/ci/`; CI retains them
+for seven days even after failure. Download/setup failures are in the Actions
+step log. Inspect the failing log before retrying. The six Python tests include
+intentional failing subprocesses; their successful rejection is the expected result.
+Native platform qualification and the wider suite matrix remain separate work. No formatter or GDScript linter
 is enforced yet; match neighboring style and use engine parsing plus focused
 behavior tests. Godot runtime results are not implied by documentation CI.
 
