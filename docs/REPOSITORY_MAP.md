@@ -12,7 +12,8 @@ controllers to character visuals and menus. Check `tests/characters.gd`,
 
 Player input/combat lives in `scripts/player.gd`; enemy/projectile and regional
 controllers implement encounters. `data/world_atlas.json` describes the atlas;
-chapter controllers own actual progression. Stable IDs connect loot, quests and
+chapter controllers own actual progression. The [campaign review matrix](CAMPAIGN_REVIEW.md)
+maps atlas entries, branch fixtures and the human review procedure. Stable IDs connect loot, quests and
 saves. Inspect the chapter guide and matching fixture before editing those IDs.
 
 - `scripts/`, `scenes/`, `shaders/`, `data/`: maintained runtime source.
