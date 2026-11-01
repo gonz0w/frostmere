@@ -27,6 +27,7 @@ saves. Inspect the chapter guide and matching fixture before editing those IDs.
   excluded from source distribution. Historical links into build require local
   regeneration; they are not downloadable release promises.
 
-[CONTRIBUTING.md](../CONTRIBUTING.md) owns checks. [GitHub Issues](https://github.com/gonz0w/frostmere/issues)
+[Presentation review](PRESENTATION_CHECKLIST.md) explains native gallery regeneration
+and the owner listening/visual checks. [CONTRIBUTING.md](../CONTRIBUTING.md) owns checks. [GitHub Issues](https://github.com/gonz0w/frostmere/issues)
 own all live work. The repository retains the historical Godot application name
 to preserve existing user-data locations; the public title is Frostmere.
