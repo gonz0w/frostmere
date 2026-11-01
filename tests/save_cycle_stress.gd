@@ -8,6 +8,7 @@ func check(ok: bool,label: String) -> void:
 	checks+=1
 	if not ok: failures+=1; push_error("FAIL "+label)
 func run() -> void:
+	for suffix in ["", ".tmp", ".bak", ".bak.tmp"]: DirAccess.remove_absolute(SAVE+suffix)
 	var w=load("res://scenes/main.tscn").instantiate(); root.add_child(w)
 	for i in range(6): await physics_frame
 	var p=w.player; var s=p.character; var session=w.session_save
@@ -46,6 +47,6 @@ func run() -> void:
 	check(s.inventory.size()==initial_items+6 and s.gold==initial_gold,"Only six intentional added items exist after repeated loads")
 	w.adventure.leave(); p.set_paused(false); p.position=wolf.global_position+Vector3.BACK
 	check(not w.wilderness.loot() and s.gold==initial_gold,"Returning after roundtrips cannot harvest the same creature again")
-	DirAccess.remove_absolute(SAVE); DirAccess.remove_absolute(SAVE+".tmp")
+	for suffix in ["", ".tmp", ".bak", ".bak.tmp"]: DirAccess.remove_absolute(SAVE+suffix)
 	w.queue_free(); await process_frame
 	print("SAVE_CYCLE_STRESS_COMPLETE cycles=24 checks=%d failures=%d" % [checks,failures]); quit(1 if failures else 0)

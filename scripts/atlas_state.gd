@@ -1,4 +1,5 @@
 extends RefCounted
+var save_store = preload("res://scripts/save_store.gd").new()
 signal changed
 const SAVE_PATH := "user://atlas-progress-v1.json"
 var data: Dictionary
@@ -87,12 +88,15 @@ func quests_at(id: String) -> Array[Dictionary]:
 
 func save_to(path: String) -> bool:
 	path = ProjectSettings.globalize_path(path)
-	var file := FileAccess.open(path + ".tmp", FileAccess.WRITE)
-	if file == null:
-		return false
-	file.store_string(JSON.stringify({"version": 1, "visits": visits, "waypoint": waypoint, "survey_started": survey_started, "survey_stage": survey_stage}, "\t"))
-	file.close()
-	return DirAccess.rename_absolute(path + ".tmp", path) == OK
+	var value={"version":1,"visits":visits,"waypoint":waypoint,"survey_started":survey_started,"survey_stage":survey_stage}
+	return save_store.save(path,JSON.stringify(value,"\t"),Callable(self,"valid_file"),1)
+
+func load_with_recovery(path: String) -> bool:
+	return save_store.load_recover(path, Callable(self,"load_from"), 1)
+
+func valid_file(path: String) -> bool:
+	var candidate = get_script().new()
+	return candidate.load_from(path)
 
 func load_from(path: String) -> bool:
 	if not FileAccess.file_exists(path):
