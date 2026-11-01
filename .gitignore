@@ -1,0 +1,15 @@
+# Local engine, caches, captures and release products
+.godot/
+.tools/
+build/
+dist/
+export_templates/
+*.log
+.DS_Store
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.pem
+*.key

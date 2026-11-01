@@ -1,0 +1,116 @@
+# Frostmere
+
+**A single-player fantasy RPG about exploring strange places, fighting enormous
+things, and bringing home gear worth improving.**
+
+Detailed block-built towns and mountains. A dark Nordic adventure. Crystal skies,
+an abandoned space station, and a furnace world waiting later in the story.
+Built with Godot. Open source under **BSD-3-Clause**.
+
+![Frostmere's timber houses, market green and mountain skyline](docs/screenshots/frostmere.jpg)
+
+## What you can play
+
+- Explore handcrafted regions, enter towns and shops, and follow **51 implemented
+  main, faction and side quests** with choices and persistent progress.
+- Collect, forge, temper, enchant, socket and salvage equipment. Experiment with
+  armor, weapons, skills and four saved equipment loadouts.
+- Switch between first and third person. Fight with melee weapons, bows, magic
+  and later-world firearms; parry, charge power attacks and finish weakened foes.
+- Encounter giant beasts, crystal-winged guardians, alien creatures and a living
+  furnace. Travel through connected destination chapters and return with their gear.
+- Hear original synthesized exploration/battle music and find a little gallows
+  humor among the warm stones, missing names and alarming safety instructions.
+
+**Playable development prototype, not a finished release.** Campaign pacing,
+reliability, content depth and hardware qualification still need work. The current
+world is fixed; this is not a terrain-building sandbox. Existing quest implementation
+does not mean the whole campaign has been human-playtested or balanced.
+
+| Platform | Current status |
+| --- | --- |
+| macOS / Apple Silicon | Native development and review evidence on M5 Max. M1 / 32 GB qualification remains open. |
+| Windows | Target platform; native support is not yet verified. |
+| Linux | Target platform; native support is not yet verified. |
+
+See [issues](https://github.com/gonz0w/frostmere/issues) and
+[capability milestones](https://github.com/gonz0w/frostmere/milestones) for live work.
+This initial source publication does not include a new downloadable game release.
+
+## A few places beyond home
+
+| Aeralis | The Crucible |
+| --- | --- |
+| ![Floating Aeralis gardens beneath a mystical crystal sky](docs/screenshots/aeralis.jpg) | ![The Crucible's industrial foundry beneath a burning cavern roof](docs/screenshots/crucible.jpg) |
+
+| Wyrmkeep | First Threshold |
+| --- | --- |
+| ![Snowy clan halls and mountain approaches in Wyrmkeep](docs/screenshots/wyrmkeep.jpg) | ![The station's block-built salvage corridor](docs/screenshots/station.jpg) |
+
+[More screenshots and capture details](docs/screenshots/README.md). These are
+in-game development captures, not concept renders.
+
+## Get started
+
+Install [Godot 4.7.2](https://github.com/godotengine/godot/releases/tag/4.7.2-stable)
+(the standard build; .NET is not needed) and Git. On a Mac, place Godot in
+`/Applications` or put its executable on PATH. The source contains its original
+assets; you do not need to install audio-generation packages to play.
+
+```sh
+git clone https://github.com/gonz0w/frostmere.git
+cd frostmere
+godot --editor --path .
+```
+
+Let the first import finish, then press **F5**, or run `godot --path .` from this directory. On macOS,
+`Play Frostmere.command` also finds `/Applications/Godot.app`. If `godot` is not
+on PATH, use its full executable path or import `project.godot` from the Godot
+project manager. Windows users should use the Godot console executable for logs.
+Windows/Linux play remains experimental until their qualification issues close.
+
+New characters begin with **Ash Through the Snow**. Walk to the lantern and press
+**E**, or **Tab** to skip. In Frostmere, find Edda at the forge. Your adventure
+autosaves; back up existing profiles before experimenting with development changes.
+The historical application identity remains unchanged to preserve old save paths.
+See [save behavior and recovery limits](docs/SAVE_RESUME.md).
+
+| Key | Action |
+| --- | --- |
+| WASD / mouse, Shift, Space | Move/look, sprint, jump |
+| V / E | Switch camera / interact |
+| Left / right mouse | Attack / block or timed parry |
+| Q / B / F | Cast / cycle spells / heal |
+| G / Shift+G / X | Charged sweep / forward power strike / finisher |
+| I / C / K / M | Inventory/crafting / character / skills / map and journal |
+| Escape / H | Pause and settings / show or hide controls |
+
+## Verify your setup
+
+For source contributors, install Python 3.11+ and run:
+
+```sh
+python3 tools/verify_repo.py
+godot --headless --path . --editor --import --quit
+godot --headless --path . --script tests/smoke.gd
+```
+
+The source checker validates publication hygiene, the pinned method and maintained
+entry-point links. The smoke fixture checks scene/movement behavior with normal
+saving disabled. These checks do not establish visual quality, campaign balance
+or cross-platform support. See [all required contributor checks](CONTRIBUTING.md).
+
+## Help shape the game
+
+Start with an issue: report a reproducible bug, discuss an encounter or contribute
+to an agreed milestone. Useful help includes native Windows/Linux testing, M1
+profiling, accessibility, campaign playtesting and original art/audio improvements.
+Please discuss substantial features before implementing them.
+
+- [Player and developer documentation](docs/README.md)
+- [Contribute](CONTRIBUTING.md) · [Project policy](PROJECT.md) · [Agent instructions](AGENTS.md)
+- [Report a problem](https://github.com/gonz0w/frostmere/issues/new/choose)
+- [Security and sensitive reports](SECURITY.md)
+- [BSD-3-Clause license](LICENSE) · [Third-party and asset notices](THIRD_PARTY_NOTICES.md)
+
+Copyright © 2026 gonz0w. Frostmere is an original independent project.

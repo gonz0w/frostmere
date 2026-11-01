@@ -1,0 +1,17 @@
+name: Source checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  repository:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Check source and pinned method
+        run: python3 tools/verify_repo.py

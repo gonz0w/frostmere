@@ -1,0 +1,512 @@
+{
+  "shops": [
+    {
+      "id": "outfitter",
+      "name": "The Copper Stag",
+      "merchant": "Torren",
+      "role": "Outfitter",
+      "position": [
+        -10,
+        0.3,
+        -7.0
+      ],
+      "npc_position": [
+        -10,
+        0.22,
+        -10.7
+      ],
+      "origin": "frostkin",
+      "armor": "fur",
+      "purse": 650,
+      "stock": [
+        {
+          "id": "gear:iron_sword",
+          "kind": "gear",
+          "item": "iron_sword",
+          "count": 2
+        },
+        {
+          "id": "gear:iron_shield",
+          "kind": "gear",
+          "item": "iron_shield",
+          "count": 2
+        },
+        {
+          "id": "gear:iron_bow",
+          "kind": "gear",
+          "item": "iron_bow",
+          "count": 2
+        },
+        {
+          "id": "gear:steel_dagger",
+          "kind": "gear",
+          "item": "steel_dagger",
+          "count": 2
+        },
+        {
+          "id": "gear:steel_sword",
+          "kind": "gear",
+          "item": "steel_sword",
+          "count": 2
+        },
+        {
+          "id": "gear:steel_chest",
+          "kind": "gear",
+          "item": "steel_chest",
+          "count": 2
+        },
+        {
+          "id": "gear:leather_chest",
+          "kind": "gear",
+          "item": "leather_chest",
+          "count": 2
+        },
+        {
+          "id": "material:arrow",
+          "kind": "material",
+          "item": "arrow",
+          "count": 25
+        },
+        {
+          "id": "material:iron_ingot",
+          "kind": "material",
+          "item": "iron_ingot",
+          "count": 25
+        },
+        {
+          "id": "material:steel_ingot",
+          "kind": "material",
+          "item": "steel_ingot",
+          "count": 25
+        },
+        {
+          "id": "material:leather",
+          "kind": "material",
+          "item": "leather",
+          "count": 25
+        }
+      ],
+      "greetings": [
+        {
+          "requires": "",
+          "text": "A good pack carries your fortune. A cheap one distributes it along the road."
+        },
+        {
+          "requires": "",
+          "text": "I buy old armor. Preferably after its previous owner has finished arguing about it."
+        },
+        {
+          "requires": "stonewake",
+          "text": "Oldwatch is quieter, thanks to you. I can hear my customers complain again. Nature is healing."
+        },
+        {
+          "requires": "threshold",
+          "text": "You went beyond the sky and came back shopping for bags. At last, an expedition I understand."
+        }
+      ]
+    },
+    {
+      "id": "apothecary",
+      "name": "Juniper & Rune",
+      "merchant": "Mira",
+      "role": "Apothecary",
+      "position": [
+        6,
+        0.3,
+        6.0
+      ],
+      "npc_position": [
+        6,
+        0.22,
+        3.5
+      ],
+      "origin": "grove_elf",
+      "armor": "cloth",
+      "purse": 450,
+      "stock": [
+        {
+          "id": "consumable:healing_draught",
+          "kind": "consumable",
+          "item": "healing_draught",
+          "count": 12
+        },
+        {
+          "id": "consumable:stamina_draught",
+          "kind": "consumable",
+          "item": "stamina_draught",
+          "count": 12
+        },
+        {
+          "id": "consumable:magicka_draught",
+          "kind": "consumable",
+          "item": "magicka_draught",
+          "count": 12
+        },
+        {
+          "id": "material:herb",
+          "kind": "material",
+          "item": "herb",
+          "count": 20
+        },
+        {
+          "id": "material:mushroom",
+          "kind": "material",
+          "item": "mushroom",
+          "count": 20
+        },
+        {
+          "id": "material:crystal",
+          "kind": "material",
+          "item": "crystal",
+          "count": 20
+        },
+        {
+          "id": "material:rune_dust",
+          "kind": "material",
+          "item": "rune_dust",
+          "count": 20
+        },
+        {
+          "id": "material:ruby",
+          "kind": "material",
+          "item": "ruby",
+          "count": 2
+        },
+        {
+          "id": "material:sapphire",
+          "kind": "material",
+          "item": "sapphire",
+          "count": 2
+        },
+        {
+          "id": "material:emerald",
+          "kind": "material",
+          "item": "emerald",
+          "count": 2
+        }
+      ],
+      "greetings": [
+        {
+          "requires": "",
+          "text": "Tell me what hurts. If you say everything, I charge by the bottle, not the tragedy."
+        },
+        {
+          "requires": "",
+          "text": "The green bottles heal. The other green bottles are labeled. Read before becoming a cautionary tale."
+        },
+        {
+          "requires": "roots",
+          "text": "The grove is recovering. My herbs are thriving, and the weeds have developed political ambitions."
+        },
+        {
+          "requires": "threshold",
+          "text": "Bring me a sample next time you cross the sky. In a jar. With a lid. We learned the lid part locally."
+        }
+      ]
+    },
+    {
+      "id": "provisions",
+      "name": "Ember Hall Stores",
+      "merchant": "Halvar",
+      "role": "Provisioner",
+      "position": [
+        1,
+        0.3,
+        -43.8
+      ],
+      "npc_position": [
+        1,
+        0.22,
+        -47.5
+      ],
+      "origin": "stoneborn",
+      "armor": "leather",
+      "purse": 500,
+      "stock": [
+        {
+          "id": "consumable:hearty_stew",
+          "kind": "consumable",
+          "item": "hearty_stew",
+          "count": 15
+        },
+        {
+          "id": "consumable:trail_bread",
+          "kind": "consumable",
+          "item": "trail_bread",
+          "count": 15
+        },
+        {
+          "id": "material:grain",
+          "kind": "material",
+          "item": "grain",
+          "count": 25
+        },
+        {
+          "id": "material:raw_meat",
+          "kind": "material",
+          "item": "raw_meat",
+          "count": 25
+        },
+        {
+          "id": "material:water",
+          "kind": "material",
+          "item": "water",
+          "count": 25
+        },
+        {
+          "id": "material:salt",
+          "kind": "material",
+          "item": "salt",
+          "count": 25
+        },
+        {
+          "id": "material:wood",
+          "kind": "material",
+          "item": "wood",
+          "count": 25
+        },
+        {
+          "id": "material:hide",
+          "kind": "material",
+          "item": "hide",
+          "count": 25
+        },
+        {
+          "id": "material:fur",
+          "kind": "material",
+          "item": "fur",
+          "count": 25
+        },
+        {
+          "id": "material:charcoal",
+          "kind": "material",
+          "item": "charcoal",
+          "count": 25
+        },
+        {
+          "id": "material:fiber",
+          "kind": "material",
+          "item": "fiber",
+          "count": 25
+        }
+      ],
+      "greetings": [
+        {
+          "requires": "",
+          "text": "Fresh bread, dried meat, and cheese old enough to have opinions."
+        },
+        {
+          "requires": "",
+          "text": "Buy supper before the road. Heroism is mostly poor planning with witnesses."
+        },
+        {
+          "requires": "stonewake",
+          "text": "The barrow is quiet. Good. The dead never paid, and they kept asking for the old prices."
+        },
+        {
+          "requires": "roots",
+          "text": "The healers say the grove is well again. I asked whether it could spare onions. Apparently that was not the lesson."
+        }
+      ]
+    },
+    {
+      "id": "mountain_smith",
+      "name": "Summit Smithy",
+      "merchant": "Brenna",
+      "role": "Mountain merchant",
+      "position": [
+        782,
+        0.3,
+        16
+      ],
+      "npc_position": [
+        782,
+        0.22,
+        11.5
+      ],
+      "origin": "stoneborn",
+      "armor": "chain",
+      "purse": 900,
+      "stock": [
+        {
+          "id": "material:iron_ingot",
+          "kind": "material",
+          "item": "iron_ingot",
+          "count": 12
+        },
+        {
+          "id": "material:steel_ingot",
+          "kind": "material",
+          "item": "steel_ingot",
+          "count": 8
+        },
+        {
+          "id": "material:wood",
+          "kind": "material",
+          "item": "wood",
+          "count": 18
+        },
+        {
+          "id": "material:crystal",
+          "kind": "material",
+          "item": "crystal",
+          "count": 8
+        },
+        {
+          "id": "material:rune_dust",
+          "kind": "material",
+          "item": "rune_dust",
+          "count": 8
+        },
+        {
+          "id": "consumable:healing_draught",
+          "kind": "consumable",
+          "item": "healing_draught",
+          "count": 6
+        }
+      ],
+      "greetings": [
+        {
+          "requires": "",
+          "text": "A blade should hold an edge. If it starts holding a conversation, take it to the rune table."
+        },
+        {
+          "requires": "",
+          "text": "I guarantee the rivets. Your decisions remain your own."
+        },
+        {
+          "requires": "council",
+          "text": "The council has decided. I will make the repairs while they decide who deserves the credit."
+        },
+        {
+          "requires": "threshold",
+          "text": "Metal from beyond the sky? Put it on the bench. If it starts counting down, put it on somebody else's bench."
+        }
+      ]
+    },
+    {
+      "id": "mountain_trader",
+      "name": "The High Road",
+      "merchant": "Oren",
+      "role": "Mountain merchant",
+      "position": [
+        818,
+        0.3,
+        16
+      ],
+      "npc_position": [
+        818,
+        0.22,
+        11.5
+      ],
+      "origin": "stoneborn",
+      "armor": "chain",
+      "purse": 900,
+      "stock": [
+        {
+          "id": "material:iron_ingot",
+          "kind": "material",
+          "item": "iron_ingot",
+          "count": 12
+        },
+        {
+          "id": "material:steel_ingot",
+          "kind": "material",
+          "item": "steel_ingot",
+          "count": 8
+        },
+        {
+          "id": "material:wood",
+          "kind": "material",
+          "item": "wood",
+          "count": 18
+        },
+        {
+          "id": "material:crystal",
+          "kind": "material",
+          "item": "crystal",
+          "count": 8
+        },
+        {
+          "id": "material:rune_dust",
+          "kind": "material",
+          "item": "rune_dust",
+          "count": 8
+        },
+        {
+          "id": "consumable:healing_draught",
+          "kind": "consumable",
+          "item": "healing_draught",
+          "count": 6
+        }
+      ],
+      "greetings": [
+        {
+          "requires": "",
+          "text": "Every road has a price. Mine is written down, which puts me ahead of most bandits."
+        },
+        {
+          "requires": "",
+          "text": "Travel light. The mountain already has enough people leaving their belongings to the weather."
+        },
+        {
+          "requires": "council",
+          "text": "The clans are speaking again. Excellent. Silence made it difficult to know whom to invoice."
+        },
+        {
+          "requires": "threshold",
+          "text": "A road through the sky. Wonderful. I expect the toll collectors are already breeding wings."
+        }
+      ]
+    }
+  ],
+  "material_values": {
+    "iron_ore": 5,
+    "iron_ingot": 14,
+    "charcoal": 3,
+    "hide": 5,
+    "leather": 8,
+    "fiber": 2,
+    "cloth": 7,
+    "fur": 7,
+    "wood": 4,
+    "steel_ingot": 30,
+    "silver_ore": 9,
+    "silver_ingot": 23,
+    "obsidian_shard": 24,
+    "crystal": 22,
+    "rune_dust": 8,
+    "ember_core": 75,
+    "ruby": 85,
+    "sapphire": 85,
+    "emerald": 85,
+    "herb": 3,
+    "mushroom": 4,
+    "water": 2,
+    "grain": 3,
+    "raw_meat": 7,
+    "salt": 2,
+    "arrow": 2,
+    "aether_shard": 35,
+    "star_alloy": 48,
+    "cinder_alloy": 65,
+    "soul_ember": 70,
+    "hell_round": 3,
+    "memory_shard": 38,
+    "living_resin": 32,
+    "wreck_alloy": 28,
+    "signal_circuit": 40,
+    "fractured_hilt": 20,
+    "pressure_shell": 20,
+    "clouded_lens": 25,
+    "optic_glass": 35,
+    "solar_alloy": 32
+  },
+  "consumable_values": {
+    "healing_draught": 25,
+    "stamina_draught": 20,
+    "magicka_draught": 25,
+    "hearty_stew": 18,
+    "trail_bread": 10
+  }
+}

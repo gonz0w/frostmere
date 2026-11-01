@@ -1,0 +1,50 @@
+FROSTMERE — MAC PLAYTEST 0.1.0 (2026-09-09)
+
+INSTALL AND PLAY
+1. Unzip the download.
+2. Drag Frostmere.app into Applications (or another folder you own).
+3. Open Frostmere.app. No Godot installation, terminal, or internet is needed.
+4. Speak with Edda at the village forge to start the adventure.
+
+This playtest is ad-hoc signed, not Apple-notarized. If macOS blocks the
+first launch, try opening the app once, then open System Settings >
+Privacy & Security and use Open Anyway for Frostmere, if offered.
+Only approve the copy you received from the developer. Do not disable
+Gatekeeper globally. Managed Macs may require administrator assistance.
+https://docs.godotengine.org/en/stable/tutorials/export/running_on_macos.html
+
+REQUIREMENTS
+Apple Silicon Mac (M1 or newer), macOS 13 or later, keyboard and mouse.
+Development baseline: M1 with 32 GB RAM. Native package launch tested on
+M5 Max; M1 performance and the minimum macOS version remain unverified.
+This build does not support Intel Macs, Windows or Linux.
+
+CONTROLS
+WASD / mouse: move / look. Shift: sprint. Space: jump.
+V: first/third person. E: talk, shop, loot, gather or use a workstation.
+Left mouse: attack/fire. Right mouse: block (time the raise to parry).
+G: charged spinning attack. Shift+G: charged overhead strike.
+X: finish a weakened nearby enemy. Q: spell. B: cycle spells. F: heal.
+I: inventory/crafting. C: character/gear. K: skills. M: map/quests.
+Escape: pause, release cursor, audio settings or quit.
+H: show controls. F3: performance display. R: return to starting point.
+
+SAVES
+Progress saves locally in your Mac user account. No developer save is
+included. Existing Frostmere development players use their existing
+profile because this package retains the same game identity.
+Save folder: ~/Library/Application Support/Godot/app_userdata/SkyrimCraft • Frostmere/
+Keep a backup before testing a new build with an existing character.
+
+PLAYTEST STATUS
+Playable alpha with a connected campaign and ending, crafting, shops,
+factions and later space, crystal and Hell chapters. Some map quest
+entries are still outlines. Content, balance, animation and performance
+are in development. The planned cinematic dark intro is not included.
+
+For bug reports include what happened, location/quest, Mac model, macOS
+version, and whether it happens after restarting. Logs are in the logs
+subfolder of the save folder. Share saves only if you choose to.
+
+The engine's license and bundled third-party notices are included in
+THIRD-PARTY-NOTICES.txt. Music and game content are original project work.

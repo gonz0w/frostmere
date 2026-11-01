@@ -1,0 +1,248 @@
+{
+  "wander": {
+    "seconds": 101.053,
+    "peak": 0.78,
+    "rms": 0.1724,
+    "loop": true
+  },
+  "battle": {
+    "seconds": 58.182,
+    "peak": 0.78,
+    "rms": 0.1362,
+    "loop": true
+  },
+  "aeralis": {
+    "seconds": 83.478,
+    "peak": 0.78,
+    "rms": 0.1736,
+    "loop": true
+  },
+  "aeralis_battle": {
+    "seconds": 53.333,
+    "peak": 0.78,
+    "rms": 0.1375,
+    "loop": true
+  },
+  "crucible": {
+    "seconds": 81.702,
+    "peak": 0.78,
+    "rms": 0.1674,
+    "loop": true
+  },
+  "crucible_battle": {
+    "seconds": 50.526,
+    "peak": 0.78,
+    "rms": 0.1347,
+    "loop": true
+  },
+  "interact": {
+    "seconds": 0.56,
+    "peak": 0.78,
+    "rms": 0.2283,
+    "loop": false
+  },
+  "loot": {
+    "seconds": 0.74,
+    "peak": 0.78,
+    "rms": 0.2038,
+    "loop": false
+  },
+  "quest": {
+    "seconds": 0.83,
+    "peak": 0.78,
+    "rms": 0.1343,
+    "loop": false
+  },
+  "enchant": {
+    "seconds": 0.74,
+    "peak": 0.78,
+    "rms": 0.1872,
+    "loop": false
+  },
+  "heal": {
+    "seconds": 0.74,
+    "peak": 0.78,
+    "rms": 0.1795,
+    "loop": false
+  },
+  "portal": {
+    "seconds": 0.92,
+    "peak": 0.78,
+    "rms": 0.1963,
+    "loop": false
+  },
+  "error": {
+    "seconds": 0.56,
+    "peak": 0.78,
+    "rms": 0.1479,
+    "loop": false
+  },
+  "swing": {
+    "seconds": 0.28,
+    "peak": 0.6202,
+    "rms": 0.0928,
+    "loop": false
+  },
+  "hit": {
+    "seconds": 0.28,
+    "peak": 0.5899,
+    "rms": 0.113,
+    "loop": false
+  },
+  "block": {
+    "seconds": 0.28,
+    "peak": 0.6418,
+    "rms": 0.1075,
+    "loop": false
+  },
+  "gun": {
+    "seconds": 0.18,
+    "peak": 0.588,
+    "rms": 0.09,
+    "loop": false
+  },
+  "bow": {
+    "seconds": 0.28,
+    "peak": 0.6135,
+    "rms": 0.1107,
+    "loop": false
+  },
+  "spell": {
+    "seconds": 0.55,
+    "peak": 0.5876,
+    "rms": 0.0815,
+    "loop": false
+  },
+  "step": {
+    "seconds": 0.09,
+    "peak": 0.4227,
+    "rms": 0.09,
+    "loop": false
+  },
+  "forge": {
+    "seconds": 0.28,
+    "peak": 0.5926,
+    "rms": 0.1022,
+    "loop": false
+  },
+  "gather": {
+    "seconds": 0.28,
+    "peak": 0.6364,
+    "rms": 0.1041,
+    "loop": false
+  },
+  "death": {
+    "seconds": 0.9,
+    "peak": 0.7081,
+    "rms": 0.1373,
+    "loop": false
+  },
+  "station": {
+    "seconds": 87.273,
+    "peak": 0.78,
+    "rms": 0.1491,
+    "loop": true
+  },
+  "station_battle": {
+    "seconds": 56.471,
+    "peak": 0.78,
+    "rms": 0.1209,
+    "loop": true
+  },
+  "root_warning": {
+    "seconds": 0.75,
+    "peak": 0.62,
+    "rms": 0.3152,
+    "loop": false
+  },
+  "brine_warning": {
+    "seconds": 0.65,
+    "peak": 0.62,
+    "rms": 0.232,
+    "loop": false
+  },
+  "ash_warning": {
+    "seconds": 0.85,
+    "peak": 0.62,
+    "rms": 0.2102,
+    "loop": false
+  },
+  "solar_warning": {
+    "seconds": 0.8,
+    "peak": 0.62,
+    "rms": 0.3654,
+    "loop": false
+  },
+  "power_impact": {
+    "seconds": 0.32,
+    "peak": 0.62,
+    "rms": 0.152,
+    "loop": false
+  },
+  "step_grass": {
+    "seconds": 0.18,
+    "peak": 0.62,
+    "rms": 0.1204,
+    "loop": false
+  },
+  "step_snow": {
+    "seconds": 0.22,
+    "peak": 0.62,
+    "rms": 0.1423,
+    "loop": false
+  },
+  "step_stone": {
+    "seconds": 0.14,
+    "peak": 0.62,
+    "rms": 0.125,
+    "loop": false
+  },
+  "step_wood": {
+    "seconds": 0.2,
+    "peak": 0.62,
+    "rms": 0.129,
+    "loop": false
+  },
+  "step_metal": {
+    "seconds": 0.24,
+    "peak": 0.62,
+    "rms": 0.1096,
+    "loop": false
+  },
+  "intro": {
+    "seconds": 48.0,
+    "peak": 0.48,
+    "rms": 0.1202,
+    "loop": true
+  },
+  "ward_approach": {
+    "seconds": 2.8,
+    "peak": 0.62,
+    "rms": 0.2231,
+    "loop": false
+  },
+  "ward_holds": {
+    "seconds": 1.8,
+    "peak": 0.62,
+    "rms": 0.1263,
+    "loop": false
+  },
+  "finish_shell": {
+    "seconds": 0.55,
+    "peak": 0.45,
+    "rms": 0.0777,
+    "loop": false
+  },
+  "finish_crystal": {
+    "seconds": 0.7,
+    "peak": 0.45,
+    "rms": 0.0732,
+    "loop": false
+  },
+  "finish_furnace": {
+    "seconds": 0.85,
+    "peak": 0.45,
+    "rms": 0.069,
+    "loop": false
+  }
+}

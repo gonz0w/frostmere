@@ -1,0 +1,2670 @@
+{
+  "version": 1,
+  "attributes": [
+    "strength",
+    "agility",
+    "endurance",
+    "intellect",
+    "willpower",
+    "presence"
+  ],
+  "slots": [
+    "head",
+    "chest",
+    "hands",
+    "legs",
+    "feet",
+    "main_hand",
+    "off_hand",
+    "ring",
+    "amulet"
+  ],
+  "origins": [
+    {
+      "id": "frostkin",
+      "name": "Frostkin",
+      "description": "Hardy people of the northern valleys.",
+      "shape": "human",
+      "skin": "c69c79",
+      "bonuses": {
+        "endurance": 2,
+        "strength": 1
+      }
+    },
+    {
+      "id": "sunborn",
+      "name": "Sunborn",
+      "description": "Versatile travelers and skilled negotiators.",
+      "shape": "human",
+      "skin": "95694f",
+      "bonuses": {
+        "presence": 2,
+        "willpower": 1
+      }
+    },
+    {
+      "id": "grove_elf",
+      "name": "Grove Elf",
+      "description": "Keen-eyed hunters of the old forests.",
+      "shape": "elf",
+      "skin": "c6ac87",
+      "bonuses": {
+        "agility": 2,
+        "willpower": 1
+      }
+    },
+    {
+      "id": "dusk_elf",
+      "name": "Dusk Elf",
+      "description": "Scholars of forgotten magic.",
+      "shape": "elf",
+      "skin": "77708f",
+      "bonuses": {
+        "intellect": 2,
+        "agility": 1
+      }
+    },
+    {
+      "id": "stoneborn",
+      "name": "Stoneborn",
+      "description": "Stout makers with an enduring spirit.",
+      "shape": "dwarf",
+      "skin": "b58e72",
+      "bonuses": {
+        "endurance": 2,
+        "willpower": 1
+      }
+    },
+    {
+      "id": "orckin",
+      "name": "Orckin",
+      "description": "Powerful warriors with a proud craft tradition.",
+      "shape": "orc",
+      "skin": "7e9061",
+      "bonuses": {
+        "strength": 2,
+        "endurance": 1
+      }
+    },
+    {
+      "id": "wildcat",
+      "name": "Wildcat",
+      "description": "Quick-footed wanderers with feline features.",
+      "shape": "cat",
+      "skin": "af885c",
+      "bonuses": {
+        "agility": 2,
+        "presence": 1
+      }
+    },
+    {
+      "id": "scaleborn",
+      "name": "Scaleborn",
+      "description": "Resilient reptilian explorers.",
+      "shape": "lizard",
+      "skin": "648b7b",
+      "bonuses": {
+        "willpower": 2,
+        "endurance": 1
+      }
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "warrior",
+      "name": "Warrior",
+      "description": "Heavy armor and a dependable shield.",
+      "bonuses": {
+        "strength": 3,
+        "endurance": 2
+      },
+      "loadout": {
+        "head": "iron_head",
+        "chest": "iron_chest",
+        "hands": "iron_hands",
+        "legs": "iron_legs",
+        "feet": "iron_feet",
+        "main_hand": "iron_sword",
+        "off_hand": "iron_shield",
+        "ring": "",
+        "amulet": ""
+      }
+    },
+    {
+      "id": "berserker",
+      "name": "Berserker",
+      "description": "Two-handed force and stamina.",
+      "bonuses": {
+        "strength": 4,
+        "endurance": 1
+      },
+      "loadout": {
+        "head": "fur_head",
+        "chest": "fur_chest",
+        "hands": "fur_hands",
+        "legs": "fur_legs",
+        "feet": "fur_feet",
+        "main_hand": "iron_battleaxe",
+        "off_hand": "",
+        "ring": "",
+        "amulet": ""
+      }
+    },
+    {
+      "id": "ranger",
+      "name": "Ranger",
+      "description": "A bow, light armor, and mobility.",
+      "bonuses": {
+        "agility": 3,
+        "endurance": 2
+      },
+      "loadout": {
+        "head": "leather_head",
+        "chest": "leather_chest",
+        "hands": "leather_hands",
+        "legs": "leather_legs",
+        "feet": "leather_feet",
+        "main_hand": "iron_bow",
+        "off_hand": "",
+        "ring": "",
+        "amulet": ""
+      }
+    },
+    {
+      "id": "rogue",
+      "name": "Rogue",
+      "description": "Daggers, precision, and light equipment.",
+      "bonuses": {
+        "agility": 4,
+        "presence": 1
+      },
+      "loadout": {
+        "head": "leather_head",
+        "chest": "leather_chest",
+        "hands": "leather_hands",
+        "legs": "leather_legs",
+        "feet": "leather_feet",
+        "main_hand": "iron_dagger",
+        "off_hand": "iron_dagger",
+        "ring": "",
+        "amulet": ""
+      }
+    },
+    {
+      "id": "mage",
+      "name": "Mage",
+      "description": "Arcane power and a channeling staff.",
+      "bonuses": {
+        "intellect": 4,
+        "willpower": 1
+      },
+      "loadout": {
+        "head": "cloth_head",
+        "chest": "cloth_chest",
+        "hands": "cloth_hands",
+        "legs": "cloth_legs",
+        "feet": "cloth_feet",
+        "main_hand": "iron_staff",
+        "off_hand": "",
+        "ring": "",
+        "amulet": ""
+      }
+    },
+    {
+      "id": "battlemage",
+      "name": "Battlemage",
+      "description": "Steel protection and magical strength.",
+      "bonuses": {
+        "strength": 2,
+        "intellect": 3
+      },
+      "loadout": {
+        "head": "steel_head",
+        "chest": "steel_chest",
+        "hands": "steel_hands",
+        "legs": "steel_legs",
+        "feet": "steel_feet",
+        "main_hand": "iron_sword",
+        "off_hand": "spell_focus",
+        "ring": "",
+        "amulet": ""
+      }
+    },
+    {
+      "id": "warden",
+      "name": "Warden",
+      "description": "Shield, resolve, and protective armor.",
+      "bonuses": {
+        "endurance": 3,
+        "willpower": 2
+      },
+      "loadout": {
+        "head": "chain_head",
+        "chest": "chain_chest",
+        "hands": "chain_hands",
+        "legs": "chain_legs",
+        "feet": "chain_feet",
+        "main_hand": "iron_mace",
+        "off_hand": "iron_shield",
+        "ring": "",
+        "amulet": ""
+      }
+    },
+    {
+      "id": "spellblade",
+      "name": "Spellblade",
+      "description": "Agility and magic in equal measure.",
+      "bonuses": {
+        "agility": 2,
+        "intellect": 3
+      },
+      "loadout": {
+        "head": "leather_head",
+        "chest": "leather_chest",
+        "hands": "leather_hands",
+        "legs": "leather_legs",
+        "feet": "leather_feet",
+        "main_hand": "iron_sword",
+        "off_hand": "spell_focus",
+        "ring": "",
+        "amulet": ""
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "cloth_head",
+      "name": "Woven Hood",
+      "slot": "head",
+      "category": "armor",
+      "family": "cloth",
+      "color": "374c68",
+      "weight_class": "cloth",
+      "armor": 0,
+      "weight": 0.15,
+      "bonuses": {},
+      "tier": 0,
+      "description": "Woven cloth protection for the head."
+    },
+    {
+      "id": "cloth_chest",
+      "name": "Woven Robe",
+      "slot": "chest",
+      "category": "armor",
+      "family": "cloth",
+      "color": "374c68",
+      "weight_class": "cloth",
+      "armor": 0,
+      "weight": 0.5,
+      "bonuses": {
+        "intellect": 1
+      },
+      "tier": 0,
+      "description": "Woven cloth protection for the chest."
+    },
+    {
+      "id": "cloth_hands",
+      "name": "Woven Gloves",
+      "slot": "hands",
+      "category": "armor",
+      "family": "cloth",
+      "color": "374c68",
+      "weight_class": "cloth",
+      "armor": 0,
+      "weight": 0.1,
+      "bonuses": {},
+      "tier": 0,
+      "description": "Woven cloth protection for the hands."
+    },
+    {
+      "id": "cloth_legs",
+      "name": "Woven Leggings",
+      "slot": "legs",
+      "category": "armor",
+      "family": "cloth",
+      "color": "374c68",
+      "weight_class": "cloth",
+      "armor": 0,
+      "weight": 0.25,
+      "bonuses": {},
+      "tier": 0,
+      "description": "Woven cloth protection for the legs."
+    },
+    {
+      "id": "cloth_feet",
+      "name": "Woven Boots",
+      "slot": "feet",
+      "category": "armor",
+      "family": "cloth",
+      "color": "374c68",
+      "weight_class": "cloth",
+      "armor": 0,
+      "weight": 0.12,
+      "bonuses": {},
+      "tier": 0,
+      "description": "Woven cloth protection for the feet."
+    },
+    {
+      "id": "fur_head",
+      "name": "Fur Hood",
+      "slot": "head",
+      "category": "armor",
+      "family": "fur",
+      "color": "9c8e72",
+      "weight_class": "light",
+      "armor": 1,
+      "weight": 0.39,
+      "bonuses": {},
+      "tier": 1,
+      "description": "Fur light protection for the head."
+    },
+    {
+      "id": "fur_chest",
+      "name": "Fur Vest",
+      "slot": "chest",
+      "category": "armor",
+      "family": "fur",
+      "color": "9c8e72",
+      "weight_class": "light",
+      "armor": 4,
+      "weight": 1.3,
+      "bonuses": {
+        "endurance": 1
+      },
+      "tier": 1,
+      "description": "Fur light protection for the chest."
+    },
+    {
+      "id": "fur_hands",
+      "name": "Fur Gloves",
+      "slot": "hands",
+      "category": "armor",
+      "family": "fur",
+      "color": "9c8e72",
+      "weight_class": "light",
+      "armor": 1,
+      "weight": 0.26,
+      "bonuses": {},
+      "tier": 1,
+      "description": "Fur light protection for the hands."
+    },
+    {
+      "id": "fur_legs",
+      "name": "Fur Leggings",
+      "slot": "legs",
+      "category": "armor",
+      "family": "fur",
+      "color": "9c8e72",
+      "weight_class": "light",
+      "armor": 2,
+      "weight": 0.65,
+      "bonuses": {},
+      "tier": 1,
+      "description": "Fur light protection for the legs."
+    },
+    {
+      "id": "fur_feet",
+      "name": "Fur Boots",
+      "slot": "feet",
+      "category": "armor",
+      "family": "fur",
+      "color": "9c8e72",
+      "weight_class": "light",
+      "armor": 1,
+      "weight": 0.33,
+      "bonuses": {},
+      "tier": 1,
+      "description": "Fur light protection for the feet."
+    },
+    {
+      "id": "leather_head",
+      "name": "Leather Hood",
+      "slot": "head",
+      "category": "armor",
+      "family": "leather",
+      "color": "795239",
+      "weight_class": "light",
+      "armor": 2,
+      "weight": 0.48,
+      "bonuses": {},
+      "tier": 2,
+      "description": "Leather light protection for the head."
+    },
+    {
+      "id": "leather_chest",
+      "name": "Leather Vest",
+      "slot": "chest",
+      "category": "armor",
+      "family": "leather",
+      "color": "795239",
+      "weight_class": "light",
+      "armor": 6,
+      "weight": 1.6,
+      "bonuses": {
+        "agility": 1
+      },
+      "tier": 2,
+      "description": "Leather light protection for the chest."
+    },
+    {
+      "id": "leather_hands",
+      "name": "Leather Gloves",
+      "slot": "hands",
+      "category": "armor",
+      "family": "leather",
+      "color": "795239",
+      "weight_class": "light",
+      "armor": 1,
+      "weight": 0.32,
+      "bonuses": {},
+      "tier": 2,
+      "description": "Leather light protection for the hands."
+    },
+    {
+      "id": "leather_legs",
+      "name": "Leather Leggings",
+      "slot": "legs",
+      "category": "armor",
+      "family": "leather",
+      "color": "795239",
+      "weight_class": "light",
+      "armor": 3,
+      "weight": 0.8,
+      "bonuses": {},
+      "tier": 2,
+      "description": "Leather light protection for the legs."
+    },
+    {
+      "id": "leather_feet",
+      "name": "Leather Boots",
+      "slot": "feet",
+      "category": "armor",
+      "family": "leather",
+      "color": "795239",
+      "weight_class": "light",
+      "armor": 2,
+      "weight": 0.4,
+      "bonuses": {},
+      "tier": 2,
+      "description": "Leather light protection for the feet."
+    },
+    {
+      "id": "iron_head",
+      "name": "Iron Helm",
+      "slot": "head",
+      "category": "armor",
+      "family": "iron",
+      "color": "7c858c",
+      "weight_class": "heavy",
+      "armor": 3,
+      "weight": 1.02,
+      "bonuses": {},
+      "tier": 1,
+      "description": "Iron heavy protection for the head."
+    },
+    {
+      "id": "iron_chest",
+      "name": "Iron Cuirass",
+      "slot": "chest",
+      "category": "armor",
+      "family": "iron",
+      "color": "7c858c",
+      "weight_class": "heavy",
+      "armor": 10,
+      "weight": 3.4,
+      "bonuses": {},
+      "tier": 1,
+      "description": "Iron heavy protection for the chest."
+    },
+    {
+      "id": "iron_hands",
+      "name": "Iron Gauntlets",
+      "slot": "hands",
+      "category": "armor",
+      "family": "iron",
+      "color": "7c858c",
+      "weight_class": "heavy",
+      "armor": 2,
+      "weight": 0.68,
+      "bonuses": {},
+      "tier": 1,
+      "description": "Iron heavy protection for the hands."
+    },
+    {
+      "id": "iron_legs",
+      "name": "Iron Greaves",
+      "slot": "legs",
+      "category": "armor",
+      "family": "iron",
+      "color": "7c858c",
+      "weight_class": "heavy",
+      "armor": 5,
+      "weight": 1.7,
+      "bonuses": {},
+      "tier": 1,
+      "description": "Iron heavy protection for the legs."
+    },
+    {
+      "id": "iron_feet",
+      "name": "Iron Sabatons",
+      "slot": "feet",
+      "category": "armor",
+      "family": "iron",
+      "color": "7c858c",
+      "weight_class": "heavy",
+      "armor": 2,
+      "weight": 0.85,
+      "bonuses": {},
+      "tier": 1,
+      "description": "Iron heavy protection for the feet."
+    },
+    {
+      "id": "chain_head",
+      "name": "Chain Hood",
+      "slot": "head",
+      "category": "armor",
+      "family": "chain",
+      "color": "919b9d",
+      "weight_class": "medium",
+      "armor": 2,
+      "weight": 0.69,
+      "bonuses": {},
+      "tier": 2,
+      "description": "Chain medium protection for the head."
+    },
+    {
+      "id": "chain_chest",
+      "name": "Chain Vest",
+      "slot": "chest",
+      "category": "armor",
+      "family": "chain",
+      "color": "919b9d",
+      "weight_class": "medium",
+      "armor": 8,
+      "weight": 2.3,
+      "bonuses": {},
+      "tier": 2,
+      "description": "Chain medium protection for the chest."
+    },
+    {
+      "id": "chain_hands",
+      "name": "Chain Gloves",
+      "slot": "hands",
+      "category": "armor",
+      "family": "chain",
+      "color": "919b9d",
+      "weight_class": "medium",
+      "armor": 2,
+      "weight": 0.46,
+      "bonuses": {},
+      "tier": 2,
+      "description": "Chain medium protection for the hands."
+    },
+    {
+      "id": "chain_legs",
+      "name": "Chain Leggings",
+      "slot": "legs",
+      "category": "armor",
+      "family": "chain",
+      "color": "919b9d",
+      "weight_class": "medium",
+      "armor": 4,
+      "weight": 1.15,
+      "bonuses": {},
+      "tier": 2,
+      "description": "Chain medium protection for the legs."
+    },
+    {
+      "id": "chain_feet",
+      "name": "Chain Boots",
+      "slot": "feet",
+      "category": "armor",
+      "family": "chain",
+      "color": "919b9d",
+      "weight_class": "medium",
+      "armor": 2,
+      "weight": 0.57,
+      "bonuses": {},
+      "tier": 2,
+      "description": "Chain medium protection for the feet."
+    },
+    {
+      "id": "steel_head",
+      "name": "Steel Helm",
+      "slot": "head",
+      "category": "armor",
+      "family": "steel",
+      "color": "afb7ba",
+      "weight_class": "heavy",
+      "armor": 4,
+      "weight": 0.96,
+      "bonuses": {},
+      "tier": 3,
+      "description": "Steel heavy protection for the head."
+    },
+    {
+      "id": "steel_chest",
+      "name": "Steel Cuirass",
+      "slot": "chest",
+      "category": "armor",
+      "family": "steel",
+      "color": "afb7ba",
+      "weight_class": "heavy",
+      "armor": 14,
+      "weight": 3.2,
+      "bonuses": {},
+      "tier": 3,
+      "description": "Steel heavy protection for the chest."
+    },
+    {
+      "id": "steel_hands",
+      "name": "Steel Gauntlets",
+      "slot": "hands",
+      "category": "armor",
+      "family": "steel",
+      "color": "afb7ba",
+      "weight_class": "heavy",
+      "armor": 3,
+      "weight": 0.64,
+      "bonuses": {},
+      "tier": 3,
+      "description": "Steel heavy protection for the hands."
+    },
+    {
+      "id": "steel_legs",
+      "name": "Steel Greaves",
+      "slot": "legs",
+      "category": "armor",
+      "family": "steel",
+      "color": "afb7ba",
+      "weight_class": "heavy",
+      "armor": 7,
+      "weight": 1.6,
+      "bonuses": {},
+      "tier": 3,
+      "description": "Steel heavy protection for the legs."
+    },
+    {
+      "id": "steel_feet",
+      "name": "Steel Sabatons",
+      "slot": "feet",
+      "category": "armor",
+      "family": "steel",
+      "color": "afb7ba",
+      "weight_class": "heavy",
+      "armor": 4,
+      "weight": 0.8,
+      "bonuses": {},
+      "tier": 3,
+      "description": "Steel heavy protection for the feet."
+    },
+    {
+      "id": "obsidian_head",
+      "name": "Obsidian Helm",
+      "slot": "head",
+      "category": "armor",
+      "family": "obsidian",
+      "color": "38384f",
+      "weight_class": "heavy",
+      "armor": 5,
+      "weight": 1.08,
+      "bonuses": {},
+      "tier": 4,
+      "description": "Obsidian heavy protection for the head."
+    },
+    {
+      "id": "obsidian_chest",
+      "name": "Obsidian Cuirass",
+      "slot": "chest",
+      "category": "armor",
+      "family": "obsidian",
+      "color": "38384f",
+      "weight_class": "heavy",
+      "armor": 18,
+      "weight": 3.6,
+      "bonuses": {
+        "strength": 1
+      },
+      "tier": 4,
+      "description": "Obsidian heavy protection for the chest."
+    },
+    {
+      "id": "obsidian_hands",
+      "name": "Obsidian Gauntlets",
+      "slot": "hands",
+      "category": "armor",
+      "family": "obsidian",
+      "color": "38384f",
+      "weight_class": "heavy",
+      "armor": 4,
+      "weight": 0.72,
+      "bonuses": {},
+      "tier": 4,
+      "description": "Obsidian heavy protection for the hands."
+    },
+    {
+      "id": "obsidian_legs",
+      "name": "Obsidian Greaves",
+      "slot": "legs",
+      "category": "armor",
+      "family": "obsidian",
+      "color": "38384f",
+      "weight_class": "heavy",
+      "armor": 9,
+      "weight": 1.8,
+      "bonuses": {},
+      "tier": 4,
+      "description": "Obsidian heavy protection for the legs."
+    },
+    {
+      "id": "obsidian_feet",
+      "name": "Obsidian Sabatons",
+      "slot": "feet",
+      "category": "armor",
+      "family": "obsidian",
+      "color": "38384f",
+      "weight_class": "heavy",
+      "armor": 4,
+      "weight": 0.9,
+      "bonuses": {},
+      "tier": 4,
+      "description": "Obsidian heavy protection for the feet."
+    },
+    {
+      "id": "crystal_head",
+      "name": "Crystal Hood",
+      "slot": "head",
+      "category": "armor",
+      "family": "crystal",
+      "color": "73bfc7",
+      "weight_class": "light",
+      "armor": 4,
+      "weight": 0.48,
+      "bonuses": {},
+      "tier": 4,
+      "description": "Crystal light protection for the head."
+    },
+    {
+      "id": "crystal_chest",
+      "name": "Crystal Vest",
+      "slot": "chest",
+      "category": "armor",
+      "family": "crystal",
+      "color": "73bfc7",
+      "weight_class": "light",
+      "armor": 14,
+      "weight": 1.6,
+      "bonuses": {
+        "intellect": 1
+      },
+      "tier": 4,
+      "description": "Crystal light protection for the chest."
+    },
+    {
+      "id": "crystal_hands",
+      "name": "Crystal Gloves",
+      "slot": "hands",
+      "category": "armor",
+      "family": "crystal",
+      "color": "73bfc7",
+      "weight_class": "light",
+      "armor": 3,
+      "weight": 0.32,
+      "bonuses": {},
+      "tier": 4,
+      "description": "Crystal light protection for the hands."
+    },
+    {
+      "id": "crystal_legs",
+      "name": "Crystal Leggings",
+      "slot": "legs",
+      "category": "armor",
+      "family": "crystal",
+      "color": "73bfc7",
+      "weight_class": "light",
+      "armor": 7,
+      "weight": 0.8,
+      "bonuses": {},
+      "tier": 4,
+      "description": "Crystal light protection for the legs."
+    },
+    {
+      "id": "crystal_feet",
+      "name": "Crystal Boots",
+      "slot": "feet",
+      "category": "armor",
+      "family": "crystal",
+      "color": "73bfc7",
+      "weight_class": "light",
+      "armor": 4,
+      "weight": 0.4,
+      "bonuses": {},
+      "tier": 4,
+      "description": "Crystal light protection for the feet."
+    },
+    {
+      "id": "iron_dagger",
+      "name": "Iron Dagger",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "dagger",
+      "material": "iron",
+      "color": "7c858c",
+      "damage": 7,
+      "weight": 0.8,
+      "two_handed": false,
+      "scaling": "agility",
+      "bonuses": {},
+      "description": "One-handed dagger; scales with agility."
+    },
+    {
+      "id": "iron_sword",
+      "name": "Iron Sword",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "iron",
+      "color": "7c858c",
+      "damage": 12,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "One-handed sword; scales with strength."
+    },
+    {
+      "id": "iron_axe",
+      "name": "Iron War Axe",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "axe",
+      "material": "iron",
+      "color": "7c858c",
+      "damage": 14,
+      "weight": 3.2,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "One-handed war axe; scales with strength."
+    },
+    {
+      "id": "iron_mace",
+      "name": "Iron Mace",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "mace",
+      "material": "iron",
+      "color": "7c858c",
+      "damage": 15,
+      "weight": 3.8,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "One-handed mace; scales with strength."
+    },
+    {
+      "id": "iron_greatsword",
+      "name": "Iron Greatsword",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "greatsword",
+      "material": "iron",
+      "color": "7c858c",
+      "damage": 22,
+      "weight": 5.5,
+      "two_handed": true,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "Two-handed greatsword; scales with strength."
+    },
+    {
+      "id": "iron_battleaxe",
+      "name": "Iron Battleaxe",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "battleaxe",
+      "material": "iron",
+      "color": "7c858c",
+      "damage": 25,
+      "weight": 6.5,
+      "two_handed": true,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "Two-handed battleaxe; scales with strength."
+    },
+    {
+      "id": "iron_bow",
+      "name": "Iron Longbow",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "bow",
+      "material": "iron",
+      "color": "7c858c",
+      "damage": 16,
+      "weight": 2.2,
+      "two_handed": true,
+      "scaling": "agility",
+      "bonuses": {},
+      "description": "Two-handed longbow; scales with agility."
+    },
+    {
+      "id": "iron_staff",
+      "name": "Iron Staff",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "staff",
+      "material": "iron",
+      "color": "7c858c",
+      "damage": 17,
+      "weight": 2.0,
+      "two_handed": true,
+      "scaling": "intellect",
+      "bonuses": {},
+      "description": "Two-handed staff; scales with intellect."
+    },
+    {
+      "id": "iron_shield",
+      "name": "Iron Shield",
+      "slot": "off_hand",
+      "category": "shield",
+      "family": "shield",
+      "color": "7c858c",
+      "armor": 9,
+      "weight": 4,
+      "bonuses": {},
+      "description": "Occupies the off hand. Cannot be paired with a two-handed weapon."
+    },
+    {
+      "id": "steel_dagger",
+      "name": "Steel Dagger",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "dagger",
+      "material": "steel",
+      "color": "afb7ba",
+      "damage": 9,
+      "weight": 0.8,
+      "two_handed": false,
+      "scaling": "agility",
+      "bonuses": {},
+      "description": "One-handed dagger; scales with agility."
+    },
+    {
+      "id": "steel_sword",
+      "name": "Steel Sword",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "steel",
+      "color": "afb7ba",
+      "damage": 15,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "One-handed sword; scales with strength."
+    },
+    {
+      "id": "steel_axe",
+      "name": "Steel War Axe",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "axe",
+      "material": "steel",
+      "color": "afb7ba",
+      "damage": 18,
+      "weight": 3.2,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "One-handed war axe; scales with strength."
+    },
+    {
+      "id": "steel_mace",
+      "name": "Steel Mace",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "mace",
+      "material": "steel",
+      "color": "afb7ba",
+      "damage": 19,
+      "weight": 3.8,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "One-handed mace; scales with strength."
+    },
+    {
+      "id": "steel_greatsword",
+      "name": "Steel Greatsword",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "greatsword",
+      "material": "steel",
+      "color": "afb7ba",
+      "damage": 28,
+      "weight": 5.5,
+      "two_handed": true,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "Two-handed greatsword; scales with strength."
+    },
+    {
+      "id": "steel_battleaxe",
+      "name": "Steel Battleaxe",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "battleaxe",
+      "material": "steel",
+      "color": "afb7ba",
+      "damage": 31,
+      "weight": 6.5,
+      "two_handed": true,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "Two-handed battleaxe; scales with strength."
+    },
+    {
+      "id": "steel_bow",
+      "name": "Steel Longbow",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "bow",
+      "material": "steel",
+      "color": "afb7ba",
+      "damage": 20,
+      "weight": 2.2,
+      "two_handed": true,
+      "scaling": "agility",
+      "bonuses": {},
+      "description": "Two-handed longbow; scales with agility."
+    },
+    {
+      "id": "steel_staff",
+      "name": "Steel Staff",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "staff",
+      "material": "steel",
+      "color": "afb7ba",
+      "damage": 21,
+      "weight": 2.0,
+      "two_handed": true,
+      "scaling": "intellect",
+      "bonuses": {},
+      "description": "Two-handed staff; scales with intellect."
+    },
+    {
+      "id": "steel_shield",
+      "name": "Steel Shield",
+      "slot": "off_hand",
+      "category": "shield",
+      "family": "shield",
+      "color": "afb7ba",
+      "armor": 11,
+      "weight": 4,
+      "bonuses": {},
+      "description": "Occupies the off hand. Cannot be paired with a two-handed weapon."
+    },
+    {
+      "id": "obsidian_dagger",
+      "name": "Obsidian Dagger",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "dagger",
+      "material": "obsidian",
+      "color": "38384f",
+      "damage": 10,
+      "weight": 0.8,
+      "two_handed": false,
+      "scaling": "agility",
+      "bonuses": {},
+      "description": "One-handed dagger; scales with agility."
+    },
+    {
+      "id": "obsidian_sword",
+      "name": "Obsidian Sword",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "obsidian",
+      "color": "38384f",
+      "damage": 18,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "One-handed sword; scales with strength."
+    },
+    {
+      "id": "obsidian_axe",
+      "name": "Obsidian War Axe",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "axe",
+      "material": "obsidian",
+      "color": "38384f",
+      "damage": 21,
+      "weight": 3.2,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "One-handed war axe; scales with strength."
+    },
+    {
+      "id": "obsidian_mace",
+      "name": "Obsidian Mace",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "mace",
+      "material": "obsidian",
+      "color": "38384f",
+      "damage": 22,
+      "weight": 3.8,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "One-handed mace; scales with strength."
+    },
+    {
+      "id": "obsidian_greatsword",
+      "name": "Obsidian Greatsword",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "greatsword",
+      "material": "obsidian",
+      "color": "38384f",
+      "damage": 33,
+      "weight": 5.5,
+      "two_handed": true,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "Two-handed greatsword; scales with strength."
+    },
+    {
+      "id": "obsidian_battleaxe",
+      "name": "Obsidian Battleaxe",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "battleaxe",
+      "material": "obsidian",
+      "color": "38384f",
+      "damage": 38,
+      "weight": 6.5,
+      "two_handed": true,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "Two-handed battleaxe; scales with strength."
+    },
+    {
+      "id": "obsidian_bow",
+      "name": "Obsidian Longbow",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "bow",
+      "material": "obsidian",
+      "color": "38384f",
+      "damage": 24,
+      "weight": 2.2,
+      "two_handed": true,
+      "scaling": "agility",
+      "bonuses": {},
+      "description": "Two-handed longbow; scales with agility."
+    },
+    {
+      "id": "obsidian_staff",
+      "name": "Obsidian Staff",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "staff",
+      "material": "obsidian",
+      "color": "38384f",
+      "damage": 26,
+      "weight": 2.0,
+      "two_handed": true,
+      "scaling": "intellect",
+      "bonuses": {},
+      "description": "Two-handed staff; scales with intellect."
+    },
+    {
+      "id": "obsidian_shield",
+      "name": "Obsidian Shield",
+      "slot": "off_hand",
+      "category": "shield",
+      "family": "shield",
+      "color": "38384f",
+      "armor": 14,
+      "weight": 4,
+      "bonuses": {},
+      "description": "Occupies the off hand. Cannot be paired with a two-handed weapon."
+    },
+    {
+      "id": "crystal_dagger",
+      "name": "Crystal Dagger",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "dagger",
+      "material": "crystal",
+      "color": "73bfc7",
+      "damage": 11,
+      "weight": 0.8,
+      "two_handed": false,
+      "scaling": "agility",
+      "bonuses": {},
+      "description": "One-handed dagger; scales with agility."
+    },
+    {
+      "id": "crystal_sword",
+      "name": "Crystal Sword",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "crystal",
+      "color": "73bfc7",
+      "damage": 19,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "One-handed sword; scales with strength."
+    },
+    {
+      "id": "crystal_axe",
+      "name": "Crystal War Axe",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "axe",
+      "material": "crystal",
+      "color": "73bfc7",
+      "damage": 22,
+      "weight": 3.2,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "One-handed war axe; scales with strength."
+    },
+    {
+      "id": "crystal_mace",
+      "name": "Crystal Mace",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "mace",
+      "material": "crystal",
+      "color": "73bfc7",
+      "damage": 24,
+      "weight": 3.8,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "One-handed mace; scales with strength."
+    },
+    {
+      "id": "crystal_greatsword",
+      "name": "Crystal Greatsword",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "greatsword",
+      "material": "crystal",
+      "color": "73bfc7",
+      "damage": 35,
+      "weight": 5.5,
+      "two_handed": true,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "Two-handed greatsword; scales with strength."
+    },
+    {
+      "id": "crystal_battleaxe",
+      "name": "Crystal Battleaxe",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "battleaxe",
+      "material": "crystal",
+      "color": "73bfc7",
+      "damage": 40,
+      "weight": 6.5,
+      "two_handed": true,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "Two-handed battleaxe; scales with strength."
+    },
+    {
+      "id": "crystal_bow",
+      "name": "Crystal Longbow",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "bow",
+      "material": "crystal",
+      "color": "73bfc7",
+      "damage": 26,
+      "weight": 2.2,
+      "two_handed": true,
+      "scaling": "agility",
+      "bonuses": {},
+      "description": "Two-handed longbow; scales with agility."
+    },
+    {
+      "id": "crystal_staff",
+      "name": "Crystal Staff",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "staff",
+      "material": "crystal",
+      "color": "73bfc7",
+      "damage": 27,
+      "weight": 2.0,
+      "two_handed": true,
+      "scaling": "intellect",
+      "bonuses": {},
+      "description": "Two-handed staff; scales with intellect."
+    },
+    {
+      "id": "crystal_shield",
+      "name": "Crystal Shield",
+      "slot": "off_hand",
+      "category": "shield",
+      "family": "shield",
+      "color": "73bfc7",
+      "armor": 14,
+      "weight": 4,
+      "bonuses": {},
+      "description": "Occupies the off hand. Cannot be paired with a two-handed weapon."
+    },
+    {
+      "id": "spell_focus",
+      "name": "Runic Focus",
+      "slot": "off_hand",
+      "category": "focus",
+      "family": "focus",
+      "color": "73bfc7",
+      "weight": 0.4,
+      "bonuses": {
+        "intellect": 2
+      },
+      "description": "A one-handed magical focus."
+    },
+    {
+      "id": "might_ring",
+      "name": "Ring of Might",
+      "slot": "ring",
+      "category": "jewelry",
+      "family": "ring",
+      "color": "b79a5b",
+      "weight": 0.1,
+      "bonuses": {
+        "strength": 2
+      },
+      "description": "Attribute bonuses apply only while equipped."
+    },
+    {
+      "id": "swift_ring",
+      "name": "Ring of Swiftness",
+      "slot": "ring",
+      "category": "jewelry",
+      "family": "ring",
+      "color": "afb7ba",
+      "weight": 0.1,
+      "bonuses": {
+        "agility": 2
+      },
+      "description": "Attribute bonuses apply only while equipped."
+    },
+    {
+      "id": "mind_ring",
+      "name": "Ring of Insight",
+      "slot": "ring",
+      "category": "jewelry",
+      "family": "ring",
+      "color": "73bfc7",
+      "weight": 0.1,
+      "bonuses": {
+        "intellect": 2
+      },
+      "description": "Attribute bonuses apply only while equipped."
+    },
+    {
+      "id": "vigor_amulet",
+      "name": "Amulet of Vigor",
+      "slot": "amulet",
+      "category": "jewelry",
+      "family": "amulet",
+      "color": "b79a5b",
+      "weight": 0.1,
+      "bonuses": {
+        "endurance": 2
+      },
+      "description": "Attribute bonuses apply only while equipped."
+    },
+    {
+      "id": "resolve_amulet",
+      "name": "Amulet of Resolve",
+      "slot": "amulet",
+      "category": "jewelry",
+      "family": "amulet",
+      "color": "afb7ba",
+      "weight": 0.1,
+      "bonuses": {
+        "willpower": 2
+      },
+      "description": "Attribute bonuses apply only while equipped."
+    },
+    {
+      "id": "voice_amulet",
+      "name": "Amulet of Presence",
+      "slot": "amulet",
+      "category": "jewelry",
+      "family": "amulet",
+      "color": "73bfc7",
+      "weight": 0.1,
+      "bonuses": {
+        "presence": 2
+      },
+      "description": "Attribute bonuses apply only while equipped."
+    },
+    {
+      "id": "oldwatch_oath",
+      "name": "Oldwatch Oath",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "steel",
+      "color": "b3c4d2",
+      "damage": 19,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {
+        "endurance": 1
+      },
+      "description": "The Watch-Captain’s rune-forged sword. A named Oldwatch design that can be tempered, enchanted and socketed."
+    },
+    {
+      "id": "aether_head",
+      "name": "Aetherguard Helm",
+      "slot": "head",
+      "category": "armor",
+      "family": "aether",
+      "color": "80d4dd",
+      "weight_class": "light",
+      "armor": 7,
+      "weight": 0.48,
+      "bonuses": {
+        "intellect": 1
+      },
+      "tier": 4,
+      "description": "Star-metal armor from the suspended cities of Aeralis."
+    },
+    {
+      "id": "aether_chest",
+      "name": "Aetherguard Cuirass",
+      "slot": "chest",
+      "category": "armor",
+      "family": "aether",
+      "color": "80d4dd",
+      "weight_class": "light",
+      "armor": 17,
+      "weight": 1.6,
+      "bonuses": {
+        "intellect": 1
+      },
+      "tier": 4,
+      "description": "Star-metal armor from the suspended cities of Aeralis."
+    },
+    {
+      "id": "aether_hands",
+      "name": "Aetherguard Gauntlets",
+      "slot": "hands",
+      "category": "armor",
+      "family": "aether",
+      "color": "80d4dd",
+      "weight_class": "light",
+      "armor": 6,
+      "weight": 0.32,
+      "bonuses": {
+        "intellect": 1
+      },
+      "tier": 4,
+      "description": "Star-metal armor from the suspended cities of Aeralis."
+    },
+    {
+      "id": "aether_legs",
+      "name": "Aetherguard Greaves",
+      "slot": "legs",
+      "category": "armor",
+      "family": "aether",
+      "color": "80d4dd",
+      "weight_class": "light",
+      "armor": 10,
+      "weight": 0.8,
+      "bonuses": {
+        "intellect": 1
+      },
+      "tier": 4,
+      "description": "Star-metal armor from the suspended cities of Aeralis."
+    },
+    {
+      "id": "aether_feet",
+      "name": "Aetherguard Sabatons",
+      "slot": "feet",
+      "category": "armor",
+      "family": "aether",
+      "color": "80d4dd",
+      "weight_class": "light",
+      "armor": 7,
+      "weight": 0.4,
+      "bonuses": {
+        "intellect": 1
+      },
+      "tier": 4,
+      "description": "Star-metal armor from the suspended cities of Aeralis."
+    },
+    {
+      "id": "cinder_head",
+      "name": "Cinderplate Helm",
+      "slot": "head",
+      "category": "armor",
+      "family": "cinder",
+      "color": "713d3c",
+      "weight_class": "heavy",
+      "armor": 8,
+      "weight": 1.08,
+      "bonuses": {
+        "endurance": 1
+      },
+      "tier": 4,
+      "description": "Heat-scarred armor forged in the industrial depths of the Crucible."
+    },
+    {
+      "id": "cinder_chest",
+      "name": "Cinderplate Cuirass",
+      "slot": "chest",
+      "category": "armor",
+      "family": "cinder",
+      "color": "713d3c",
+      "weight_class": "heavy",
+      "armor": 21,
+      "weight": 3.6,
+      "bonuses": {
+        "endurance": 1
+      },
+      "tier": 4,
+      "description": "Heat-scarred armor forged in the industrial depths of the Crucible."
+    },
+    {
+      "id": "cinder_hands",
+      "name": "Cinderplate Gauntlets",
+      "slot": "hands",
+      "category": "armor",
+      "family": "cinder",
+      "color": "713d3c",
+      "weight_class": "heavy",
+      "armor": 7,
+      "weight": 0.72,
+      "bonuses": {
+        "endurance": 1
+      },
+      "tier": 4,
+      "description": "Heat-scarred armor forged in the industrial depths of the Crucible."
+    },
+    {
+      "id": "cinder_legs",
+      "name": "Cinderplate Greaves",
+      "slot": "legs",
+      "category": "armor",
+      "family": "cinder",
+      "color": "713d3c",
+      "weight_class": "heavy",
+      "armor": 12,
+      "weight": 1.8,
+      "bonuses": {
+        "endurance": 1
+      },
+      "tier": 4,
+      "description": "Heat-scarred armor forged in the industrial depths of the Crucible."
+    },
+    {
+      "id": "cinder_feet",
+      "name": "Cinderplate Sabatons",
+      "slot": "feet",
+      "category": "armor",
+      "family": "cinder",
+      "color": "713d3c",
+      "weight_class": "heavy",
+      "armor": 7,
+      "weight": 0.9,
+      "bonuses": {
+        "endurance": 1
+      },
+      "tier": 4,
+      "description": "Heat-scarred armor forged in the industrial depths of the Crucible."
+    },
+    {
+      "id": "aether_saber",
+      "name": "Dawnweave Saber",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "aether",
+      "color": "b4edf1",
+      "damage": 23,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "A weapon of Aeralis. Can be carried home and improved with aether materials."
+    },
+    {
+      "id": "aether_greatsword",
+      "name": "Skybreaker",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "greatsword",
+      "material": "aether",
+      "color": "88cbdc",
+      "damage": 38,
+      "weight": 5.5,
+      "two_handed": true,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "A weapon of Aeralis. Can be carried home and improved with aether materials."
+    },
+    {
+      "id": "aether_staff",
+      "name": "Starweaver Rod",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "staff",
+      "material": "aether",
+      "color": "bda7ed",
+      "damage": 32,
+      "weight": 2.0,
+      "two_handed": true,
+      "scaling": "intellect",
+      "bonuses": {},
+      "description": "A weapon of Aeralis. Can be carried home and improved with aether materials."
+    },
+    {
+      "id": "cinder_axe",
+      "name": "Furnace Reaver",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "battleaxe",
+      "material": "cinder",
+      "color": "c5774e",
+      "damage": 38,
+      "weight": 6.5,
+      "two_handed": true,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "A Crucible weapon. Works in Frostmere; machine guns require infernal ammunition."
+    },
+    {
+      "id": "cinder_gun",
+      "name": "Ashstorm Machine Gun",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "machine_gun",
+      "material": "cinder",
+      "color": "665e63",
+      "damage": 11,
+      "weight": 7,
+      "two_handed": true,
+      "scaling": "agility",
+      "bonuses": {},
+      "description": "A Crucible weapon. Works in Frostmere; machine guns require infernal ammunition."
+    },
+    {
+      "id": "stoneguard_main_hand",
+      "name": "Stoneguard Oathblade",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "steel",
+      "color": "9baab1",
+      "damage": 15,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {
+        "endurance": 2
+      },
+      "description": "A Wyrmkeep clan pattern earned through service."
+    },
+    {
+      "id": "stoneguard_chest",
+      "name": "Stoneguard Bulwark",
+      "slot": "chest",
+      "category": "armor",
+      "family": "steel",
+      "color": "9baab1",
+      "weight_class": "heavy",
+      "armor": 14,
+      "weight": 3.2,
+      "bonuses": {
+        "endurance": 2
+      },
+      "tier": 3,
+      "description": "A Wyrmkeep clan pattern earned through service."
+    },
+    {
+      "id": "stoneguard_off_hand",
+      "name": "Stoneguard Aegis",
+      "slot": "off_hand",
+      "category": "shield",
+      "family": "shield",
+      "color": "9baab1",
+      "armor": 11,
+      "weight": 4,
+      "bonuses": {
+        "endurance": 2
+      },
+      "description": "A Wyrmkeep clan pattern earned through service."
+    },
+    {
+      "id": "stormweaver_main_hand",
+      "name": "Stormweaver Spire",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "staff",
+      "material": "crystal",
+      "color": "7eabc6",
+      "damage": 27,
+      "weight": 2.0,
+      "two_handed": true,
+      "scaling": "intellect",
+      "bonuses": {
+        "intellect": 2
+      },
+      "description": "A Wyrmkeep clan pattern earned through service."
+    },
+    {
+      "id": "stormweaver_chest",
+      "name": "Stormweaver Mantle",
+      "slot": "chest",
+      "category": "armor",
+      "family": "crystal",
+      "color": "7eabc6",
+      "weight_class": "light",
+      "armor": 14,
+      "weight": 1.6,
+      "bonuses": {
+        "intellect": 2
+      },
+      "tier": 4,
+      "description": "A Wyrmkeep clan pattern earned through service."
+    },
+    {
+      "id": "stormweaver_off_hand",
+      "name": "Stormweaver Lens",
+      "slot": "off_hand",
+      "category": "focus",
+      "family": "focus",
+      "color": "7eabc6",
+      "weight": 0.4,
+      "bonuses": {
+        "intellect": 2
+      },
+      "description": "A Wyrmkeep clan pattern earned through service."
+    },
+    {
+      "id": "echo_blade",
+      "name": "Echoharvest",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "steel",
+      "color": "9bbec1",
+      "damage": 15,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {},
+      "description": "Melee kills with this blade restore 18 stamina. Does not trigger from spells or corpse hits.",
+      "effect": "stamina_on_kill"
+    },
+    {
+      "id": "lantern_conductor",
+      "name": "Lantern Conductor",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "staff",
+      "material": "crystal",
+      "color": "9dc8ee",
+      "damage": 27,
+      "weight": 2.0,
+      "two_handed": true,
+      "scaling": "intellect",
+      "bonuses": {},
+      "description": "Primary attack: Chain Lightning (24 magicka). Jumps to two nearby visible enemies with diminishing damage.",
+      "effect": "chain_lightning"
+    },
+    {
+      "id": "briar_vestment",
+      "name": "Vestment of Renewal",
+      "slot": "chest",
+      "category": "armor",
+      "family": "leather",
+      "color": "82a777",
+      "weight_class": "light",
+      "armor": 6,
+      "weight": 1.6,
+      "bonuses": {
+        "agility": 1
+      },
+      "tier": 2,
+      "description": "While equipped, health potions and healing food restore 25% more health. Other resources are unchanged.",
+      "effect": "healing_bonus"
+    },
+    {
+      "id": "tideglass_saber",
+      "name": "Tideglass Saber",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "steel",
+      "color": "86bcc0",
+      "damage": 22,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {
+        "agility": 2
+      },
+      "description": "Restored from a fractured resonant hilt. A light-balanced salvage blade; +2 Agility. Temper with alloy and steel, not another broken hilt.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "wreck_alloy": 1
+      },
+      "rare_temper_material": "signal_circuit"
+    },
+    {
+      "id": "tideguard_shell",
+      "name": "Tideguard Cuirass",
+      "slot": "chest",
+      "category": "armor",
+      "family": "steel",
+      "color": "607d8b",
+      "weight_class": "heavy",
+      "armor": 18,
+      "weight": 3.2,
+      "bonuses": {
+        "endurance": 2
+      },
+      "tier": 3,
+      "description": "Restored pressure armor, reinforced for the northern coast. +2 Endurance. Uses wreck alloy for further tempering.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "wreck_alloy": 1
+      },
+      "rare_temper_material": "signal_circuit"
+    },
+    {
+      "id": "signal_focus",
+      "name": "Signal Lens",
+      "slot": "off_hand",
+      "category": "focus",
+      "family": "focus",
+      "color": "79cfe0",
+      "weight": 0.4,
+      "bonuses": {
+        "intellect": 3
+      },
+      "description": "A recovered navigator lens restored as an off-hand focus. +3 Intellect; carries ordinary enchantments and gems.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "wreck_alloy": 1
+      },
+      "rare_temper_material": "signal_circuit"
+    },
+    {
+      "id": "breakwater_mantle",
+      "name": "Breakwater Mantle",
+      "slot": "chest",
+      "category": "armor",
+      "family": "leather",
+      "color": "c59359",
+      "weight_class": "light",
+      "armor": 10,
+      "weight": 1.6,
+      "bonuses": {
+        "endurance": 2
+      },
+      "tier": 2,
+      "description": "Reward for powering Saltbreak. Equipped health consumables heal 25% more; +2 Endurance. Its pattern is exclusive to the harbor choice.",
+      "effect": "healing_bonus",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "wreck_alloy": 1
+      },
+      "rare_temper_material": "signal_circuit"
+    },
+    {
+      "id": "starsignal_staff",
+      "name": "Starsignal Staff",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "staff",
+      "material": "crystal",
+      "color": "70c9e4",
+      "damage": 27,
+      "weight": 2.0,
+      "two_handed": true,
+      "scaling": "intellect",
+      "bonuses": {
+        "intellect": 2
+      },
+      "description": "Reward for restoring navigation. Primary: Chain Lightning, 24 magicka, up to two visible jumps. +2 Intellect. Pattern exclusive to navigation.",
+      "effect": "chain_lightning",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "wreck_alloy": 1
+      },
+      "rare_temper_material": "signal_circuit"
+    },
+    {
+      "id": "sunsteel_saber",
+      "name": "Sunsteel Saber",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "steel",
+      "color": "dabb79",
+      "damage": 25,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {
+        "strength": 2
+      },
+      "description": "A restored observatory guardian blade. +2 Strength; tempers with solar alloy.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "solar_alloy": 1
+      },
+      "rare_temper_material": "optic_glass"
+    },
+    {
+      "id": "lenswarden_chest",
+      "name": "Lenswarden Cuirass",
+      "slot": "chest",
+      "category": "armor",
+      "family": "steel",
+      "color": "bdb491",
+      "weight_class": "heavy",
+      "armor": 20,
+      "weight": 3.2,
+      "bonuses": {
+        "intellect": 2
+      },
+      "tier": 3,
+      "description": "Ceramic and solar-alloy plates protect a scholar in the field. +2 Intellect.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "solar_alloy": 1
+      },
+      "rare_temper_material": "optic_glass"
+    },
+    {
+      "id": "horizon_staff",
+      "name": "Horizon Staff",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "staff",
+      "material": "crystal",
+      "color": "e4c57f",
+      "damage": 29,
+      "weight": 2.0,
+      "two_handed": true,
+      "scaling": "intellect",
+      "bonuses": {
+        "intellect": 3
+      },
+      "description": "An observatory staff. +3 Intellect; its primary casts your selected learned spell. Sunlance is learned with the chapter reward.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "solar_alloy": 1
+      },
+      "rare_temper_material": "optic_glass"
+    },
+    {
+      "id": "amberbough_bow",
+      "name": "Amberbough Bow",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "bow",
+      "material": "wood",
+      "color": "c38b48",
+      "damage": 25,
+      "weight": 2.3,
+      "two_handed": true,
+      "scaling": "agility",
+      "bonuses": {
+        "agility": 2
+      },
+      "description": "The Hollow Warden's bow, reclaimed from living heartwood. +2 Agility.",
+      "temper_materials": {
+        "leather": 1,
+        "heartwood": 1
+      },
+      "rare_temper_material": "amber_resin"
+    },
+    {
+      "id": "groveheart_chest",
+      "name": "Groveheart Vest",
+      "slot": "chest",
+      "category": "armor",
+      "family": "leather",
+      "color": "82945f",
+      "weight_class": "light",
+      "armor": 15,
+      "weight": 1.8,
+      "tier": 3,
+      "bonuses": {
+        "endurance": 2
+      },
+      "effect": "healing_bonus",
+      "description": "Wild pact reward. Health potions and healing food restore 25% more health while worn. +2 Endurance; exclusive forging pattern.",
+      "temper_materials": {
+        "leather": 1,
+        "heartwood": 1
+      },
+      "rare_temper_material": "amber_resin"
+    },
+    {
+      "id": "pactkeeper_axe",
+      "name": "Pactkeeper Axe",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "axe",
+      "material": "steel",
+      "color": "b89159",
+      "damage": 25,
+      "weight": 3.0,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {
+        "strength": 2
+      },
+      "effect": "stamina_on_kill",
+      "description": "Tended pact reward. Melee kills restore 18 stamina. +2 Strength; exclusive forging pattern.",
+      "temper_materials": {
+        "leather": 1,
+        "heartwood": 1
+      },
+      "rare_temper_material": "amber_resin"
+    },
+    {
+      "id": "resonance_blade",
+      "name": "Resonance Blade",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "steel",
+      "color": "9291b1",
+      "damage": 25,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {
+        "strength": 3
+      },
+      "description": "A tuned guardian blade. +3 Strength; tempers with Resonant Ore.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "resonant_ore": 1
+      },
+      "rare_temper_material": "ash_glass"
+    },
+    {
+      "id": "cantors_chest",
+      "name": "Cantor's Mantle",
+      "slot": "chest",
+      "category": "armor",
+      "family": "steel",
+      "color": "9291b1",
+      "weight_class": "heavy",
+      "armor": 20,
+      "weight": 3.2,
+      "bonuses": {
+        "willpower": 3,
+        "intellect": 1
+      },
+      "tier": 3,
+      "description": "Layered sanctuary armor. +3 Willpower and +1 Intellect.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "resonant_ore": 1
+      },
+      "rare_temper_material": "ash_glass"
+    },
+    {
+      "id": "cantors_staff",
+      "name": "Cantor's Staff",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "staff",
+      "material": "crystal",
+      "color": "9291b1",
+      "damage": 29,
+      "weight": 2.0,
+      "two_handed": true,
+      "scaling": "intellect",
+      "bonuses": {
+        "intellect": 4
+      },
+      "description": "A restored signal conductor. +4 Intellect; primary casts your selected learned spell.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "resonant_ore": 1
+      },
+      "rare_temper_material": "ash_glass"
+    },
+    {
+      "id": "wayfarer_shield",
+      "name": "Wayfarer Shield",
+      "slot": "off_hand",
+      "category": "shield",
+      "family": "shield",
+      "color": "94b8b3",
+      "armor": 9,
+      "weight": 4,
+      "bonuses": {
+        "endurance": 3
+      },
+      "description": "Expedition equipment; forged and tempered with steel and crystal. High-rank tempering uses Ash Glass.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "crystal": 1
+      },
+      "rare_temper_material": "ash_glass"
+    },
+    {
+      "id": "pathfinder_feet",
+      "name": "Pathfinder Sabatons",
+      "slot": "feet",
+      "category": "armor",
+      "family": "steel",
+      "color": "94b8b3",
+      "weight_class": "heavy",
+      "armor": 4,
+      "weight": 0.8,
+      "bonuses": {
+        "agility": 3
+      },
+      "tier": 3,
+      "description": "Expedition equipment; forged and tempered with steel and crystal. High-rank tempering uses Ash Glass.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "crystal": 1
+      },
+      "rare_temper_material": "ash_glass"
+    },
+    {
+      "id": "station_rifle",
+      "name": "Station Rifle",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "machine_gun",
+      "material": "steel",
+      "color": "82a7bd",
+      "damage": 9,
+      "weight": 7,
+      "two_handed": true,
+      "scaling": "agility",
+      "bonuses": {},
+      "description": "Automatic station rifle. Uses Station Rounds; portable to other worlds. 0.18 seconds between rounds.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "station_alloy": 1
+      },
+      "rare_temper_material": "navigation_cell",
+      "ammo_type": "station_round",
+      "fire_interval": 0.18
+    },
+    {
+      "id": "station_chest",
+      "name": "Station Carapace",
+      "slot": "chest",
+      "category": "armor",
+      "family": "steel",
+      "color": "82a7bd",
+      "weight_class": "heavy",
+      "armor": 22,
+      "weight": 3.2,
+      "bonuses": {
+        "endurance": 3,
+        "agility": 1
+      },
+      "tier": 3,
+      "description": "Armored station equipment. +3 Endurance and +1 Agility.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "station_alloy": 1
+      },
+      "rare_temper_material": "navigation_cell"
+    },
+    {
+      "id": "void_cutter",
+      "name": "Void Cutter",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "steel",
+      "color": "82a7bd",
+      "damage": 27,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {
+        "strength": 3
+      },
+      "description": "An Overseer tool reclaimed as a blade. +3 Strength.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "station_alloy": 1
+      },
+      "rare_temper_material": "navigation_cell"
+    },
+    {
+      "id": "northwatch_head",
+      "name": "Northwatch Helm",
+      "slot": "head",
+      "category": "armor",
+      "family": "steel",
+      "color": "9dc9db",
+      "weight_class": "heavy",
+      "armor": 8,
+      "weight": 0.96,
+      "bonuses": {
+        "endurance": 3
+      },
+      "tier": 3,
+      "description": "Northwatch garrison pattern. Temper with steel and crystal; higher ranks require rune dust.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "crystal": 1
+      },
+      "rare_temper_material": "rune_dust"
+    },
+    {
+      "id": "northwatch_greatsword",
+      "name": "Northwatch Greatsword",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "greatsword",
+      "material": "steel",
+      "color": "9dc9db",
+      "damage": 30,
+      "weight": 5.5,
+      "two_handed": true,
+      "scaling": "strength",
+      "bonuses": {
+        "strength": 4
+      },
+      "description": "Northwatch garrison pattern. Temper with steel and crystal; higher ranks require rune dust.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "crystal": 1
+      },
+      "rare_temper_material": "rune_dust"
+    },
+    {
+      "id": "wardkeeper_amulet",
+      "name": "Wardkeeper's Amulet",
+      "slot": "amulet",
+      "category": "jewelry",
+      "family": "amulet",
+      "color": "87d3cc",
+      "weight": 0.1,
+      "bonuses": {
+        "endurance": 3,
+        "intellect": 3
+      },
+      "description": "A reinforced containment token. 2 armor, +3 Endurance and +3 Intellect. Temper with steel and crystal; higher ranks need Ash Glass.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "crystal": 1
+      },
+      "rare_temper_material": "ash_glass",
+      "armor": 2
+    },
+    {
+      "id": "dawnforged_sword",
+      "name": "Dawnforged Sword",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "steel",
+      "color": "a7ddd3",
+      "damage": 29,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {
+        "strength": 4
+      },
+      "description": "An heirloom forged after the Last Furnace. Temper with steel and cinder alloy; higher ranks require Soul Embers.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "cinder_alloy": 1
+      },
+      "rare_temper_material": "soul_ember"
+    },
+    {
+      "id": "dawnforged_bow",
+      "name": "Dawnforged Bow",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "bow",
+      "material": "steel",
+      "color": "a7ddd3",
+      "damage": 30,
+      "weight": 2.2,
+      "two_handed": true,
+      "scaling": "agility",
+      "bonuses": {
+        "agility": 4
+      },
+      "description": "An heirloom forged after the Last Furnace. Temper with steel and cinder alloy; higher ranks require Soul Embers.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "cinder_alloy": 1
+      },
+      "rare_temper_material": "soul_ember"
+    },
+    {
+      "id": "dawnforged_staff",
+      "name": "Dawnforged Staff",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "staff",
+      "material": "steel",
+      "color": "a7ddd3",
+      "damage": 32,
+      "weight": 2.0,
+      "two_handed": true,
+      "scaling": "intellect",
+      "bonuses": {
+        "intellect": 4
+      },
+      "description": "An heirloom forged after the Last Furnace. Temper with steel and cinder alloy; higher ranks require Soul Embers.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "cinder_alloy": 1
+      },
+      "rare_temper_material": "soul_ember"
+    },
+    {
+      "id": "mossfang_blade",
+      "name": "Mossfang Blade",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "sword",
+      "material": "steel",
+      "color": "8bad79",
+      "damage": 21,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {
+        "strength": 2,
+        "agility": 2
+      },
+      "description": "A hunter’s sword awarded for the Mossbound Oath. Temper with steel and hide; higher ranks require Ember Cores.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "hide": 1
+      },
+      "rare_temper_material": "ember_core"
+    },
+    {
+      "id": "mossheart_amulet",
+      "name": "Mossheart Amulet",
+      "slot": "amulet",
+      "category": "jewelry",
+      "family": "amulet",
+      "color": "89b77e",
+      "weight": 0.1,
+      "armor": 3,
+      "bonuses": {
+        "endurance": 2,
+        "willpower": 3
+      },
+      "description": "The colossus’s mossbound heart, set in silver. Temper with silver and crystal; higher ranks require Ember Cores.",
+      "temper_materials": {
+        "silver_ingot": 1,
+        "crystal": 1
+      },
+      "rare_temper_material": "ember_core"
+    },
+    {
+      "id": "rimefang_maul",
+      "name": "Rimefang Maul",
+      "slot": "main_hand",
+      "category": "weapon",
+      "family": "mace",
+      "material": "steel",
+      "color": "a2dce5",
+      "damage": 26,
+      "weight": 2.5,
+      "two_handed": false,
+      "scaling": "strength",
+      "bonuses": {
+        "strength": 3,
+        "endurance": 2
+      },
+      "description": "A frost beast hunter’s maul, tempered with steel and crystal.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "crystal": 1
+      },
+      "rare_temper_material": "ember_core"
+    },
+    {
+      "id": "frostmaw_chest",
+      "name": "Frostmaw Cuirass",
+      "slot": "chest",
+      "category": "armor",
+      "family": "steel",
+      "color": "aacbd4",
+      "weight_class": "heavy",
+      "armor": 14,
+      "weight": 3.2,
+      "bonuses": {
+        "endurance": 3,
+        "willpower": 2
+      },
+      "tier": 3,
+      "description": "Layered frost-beast hide over steel, made from the Frostmaw hunt pattern.",
+      "temper_materials": {
+        "steel_ingot": 1,
+        "hide": 2
+      },
+      "rare_temper_material": "ember_core"
+    },
+    {
+      "id": "clan_voice_signet",
+      "name": "Clan Voice Signet",
+      "slot": "ring",
+      "category": "jewelry",
+      "family": "ring",
+      "color": "c7b88a",
+      "weight": 0.1,
+      "armor": 2,
+      "bonuses": {
+        "strength": 2,
+        "willpower": 2,
+        "presence": 2
+      },
+      "description": "The seal of a sworn voice of the mountain holds. Temper with silver and crystal.",
+      "temper_materials": {
+        "silver_ingot": 1,
+        "crystal": 1
+      },
+      "rare_temper_material": "ember_core"
+    },
+    {
+      "id": "witness_pendant",
+      "name": "Witness Pendant",
+      "slot": "amulet",
+      "category": "jewelry",
+      "family": "amulet",
+      "color": "d3c491",
+      "weight": 0.1,
+      "armor": 2,
+      "bonuses": {
+        "intellect": 2,
+        "willpower": 2
+      },
+      "description": "A Veiled Lantern Witness keeps every side of the testimony. Temper with silver and memory shards.",
+      "temper_materials": {
+        "silver_ingot": 1,
+        "memory_shard": 1
+      },
+      "rare_temper_material": "memory_shard"
+    },
+    {
+      "id": "memorial_ring",
+      "name": "Memorial Ring",
+      "slot": "ring",
+      "category": "jewelry",
+      "family": "ring",
+      "color": "a6c9cc",
+      "weight": 0.1,
+      "armor": 2,
+      "bonuses": {
+        "presence": 3,
+        "endurance": 2
+      },
+      "description": "A Recordkeeper’s reward for the Mirewatch testimony. Temper with silver and memory shards.",
+      "temper_materials": {
+        "silver_ingot": 1,
+        "memory_shard": 1
+      },
+      "rare_temper_material": "memory_shard"
+    },
+    {
+      "id": "sealed_memory_ring",
+      "name": "Sealed Memory Ring",
+      "slot": "ring",
+      "category": "jewelry",
+      "family": "ring",
+      "color": "a6c9cc",
+      "weight": 0.1,
+      "armor": 2,
+      "bonuses": {
+        "intellect": 3,
+        "willpower": 2
+      },
+      "description": "A Recordkeeper’s reward for the Mirewatch testimony. Temper with silver and memory shards.",
+      "temper_materials": {
+        "silver_ingot": 1,
+        "memory_shard": 1
+      },
+      "rare_temper_material": "memory_shard"
+    },
+    {
+      "id": "lantern_keystone",
+      "name": "Lantern Keystone",
+      "slot": "amulet",
+      "category": "jewelry",
+      "family": "amulet",
+      "color": "b9b9e0",
+      "weight": 0.1,
+      "armor": 3,
+      "bonuses": {
+        "intellect": 3,
+        "willpower": 3,
+        "presence": 2
+      },
+      "description": "A Keeper’s seal earned by deciding the archive’s future. Temper with silver and memory shards.",
+      "temper_materials": {
+        "silver_ingot": 1,
+        "memory_shard": 1
+      },
+      "rare_temper_material": "memory_shard"
+    },
+    {
+      "id": "seedkeeper_charm",
+      "name": "Seedkeeper Charm",
+      "slot": "amulet",
+      "category": "jewelry",
+      "family": "amulet",
+      "color": "91b67c",
+      "weight": 0.1,
+      "armor": 2,
+      "bonuses": {
+        "endurance": 2,
+        "willpower": 2
+      },
+      "description": "A living token of the Coven oath. Temper with heartwood and amber resin.",
+      "temper_materials": {
+        "heartwood": 1,
+        "amber_resin": 1
+      },
+      "rare_temper_material": "amber_resin"
+    },
+    {
+      "id": "pactmender_ring",
+      "name": "Pactmender Ring",
+      "slot": "ring",
+      "category": "jewelry",
+      "family": "ring",
+      "color": "91b67c",
+      "weight": 0.1,
+      "armor": 2,
+      "bonuses": {
+        "endurance": 3,
+        "presence": 2
+      },
+      "description": "A living promise between the lodge and the grove.",
+      "temper_materials": {
+        "heartwood": 1,
+        "amber_resin": 1
+      },
+      "rare_temper_material": "amber_resin"
+    },
+    {
+      "id": "oldpromise_talisman",
+      "name": "Old Promise Talisman",
+      "slot": "amulet",
+      "category": "jewelry",
+      "family": "amulet",
+      "color": "91b67c",
+      "weight": 0.1,
+      "armor": 3,
+      "bonuses": {
+        "endurance": 3,
+        "willpower": 3,
+        "presence": 2
+      },
+      "description": "A living record of the oldest promise, entrusted to a Coven Rootwarden.",
+      "temper_materials": {
+        "heartwood": 1,
+        "amber_resin": 1
+      },
+      "rare_temper_material": "amber_resin"
+    },
+    {
+      "id": "netmender_ring",
+      "name": "Netmender’s Band",
+      "slot": "ring",
+      "category": "jewelry",
+      "family": "ring",
+      "material": "silver",
+      "color": "a7bbc0",
+      "armor": 2,
+      "weight": 0.1,
+      "bonuses": {
+        "endurance": 2,
+        "presence": 2
+      },
+      "description": "A Saltbreak crew’s thank-you for uncovering the silver scheme. +2 Endurance and Presence. Temper, enchant and socket as usual.",
+      "temper_materials": {
+        "silver_ingot": 2,
+        "leather": 1
+      },
+      "rare_temper_material": "crystal"
+    }
+  ]
+}

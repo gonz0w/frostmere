@@ -1,0 +1,3042 @@
+{
+  "version": 1,
+  "materials": [
+    {
+      "id": "iron_ore",
+      "name": "Iron Ore",
+      "color": "81868e"
+    },
+    {
+      "id": "iron_ingot",
+      "name": "Iron Ingot",
+      "color": "a0a6ac"
+    },
+    {
+      "id": "charcoal",
+      "name": "Charcoal",
+      "color": "353537"
+    },
+    {
+      "id": "hide",
+      "name": "Hide",
+      "color": "8f7352"
+    },
+    {
+      "id": "leather",
+      "name": "Leather",
+      "color": "a67b52"
+    },
+    {
+      "id": "fiber",
+      "name": "Flax Fiber",
+      "color": "cbbb8e"
+    },
+    {
+      "id": "cloth",
+      "name": "Woven Cloth",
+      "color": "98949d"
+    },
+    {
+      "id": "fur",
+      "name": "Fur",
+      "color": "b3a88d"
+    },
+    {
+      "id": "wood",
+      "name": "Timber",
+      "color": "846342"
+    },
+    {
+      "id": "steel_ingot",
+      "name": "Steel Ingot",
+      "color": "c7d2d5"
+    },
+    {
+      "id": "silver_ore",
+      "name": "Silver Ore",
+      "color": "a8abbc"
+    },
+    {
+      "id": "silver_ingot",
+      "name": "Silver Ingot",
+      "color": "e1dceb"
+    },
+    {
+      "id": "obsidian_shard",
+      "name": "Obsidian Shard",
+      "color": "4e405f"
+    },
+    {
+      "id": "crystal",
+      "name": "Crystal",
+      "color": "79c9d9"
+    },
+    {
+      "id": "rune_dust",
+      "name": "Rune Dust",
+      "color": "a897e0"
+    },
+    {
+      "id": "ember_core",
+      "name": "Ember Core",
+      "color": "e8a75a"
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "color": "df6570"
+    },
+    {
+      "id": "sapphire",
+      "name": "Sapphire",
+      "color": "648fde"
+    },
+    {
+      "id": "emerald",
+      "name": "Emerald",
+      "color": "6ac98c"
+    },
+    {
+      "id": "herb",
+      "name": "Mountain Herb",
+      "color": "87a86c"
+    },
+    {
+      "id": "mushroom",
+      "name": "Bluecap Mushroom",
+      "color": "7c89b5"
+    },
+    {
+      "id": "water",
+      "name": "Spring Water",
+      "color": "80b6d1"
+    },
+    {
+      "id": "grain",
+      "name": "Grain",
+      "color": "d2ba76"
+    },
+    {
+      "id": "raw_meat",
+      "name": "Raw Meat",
+      "color": "b07368"
+    },
+    {
+      "id": "salt",
+      "name": "Salt",
+      "color": "d6d6c3"
+    },
+    {
+      "id": "arrow",
+      "name": "Iron Arrows",
+      "color": "b5aba0"
+    },
+    {
+      "id": "aether_shard",
+      "name": "Aether Shard",
+      "color": "9adce4"
+    },
+    {
+      "id": "star_alloy",
+      "name": "Star Alloy",
+      "color": "b0c6e4"
+    },
+    {
+      "id": "cinder_alloy",
+      "name": "Cinder Alloy",
+      "color": "a06250"
+    },
+    {
+      "id": "soul_ember",
+      "name": "Soul Ember",
+      "color": "f09a54"
+    },
+    {
+      "id": "hell_round",
+      "name": "Infernal Rounds",
+      "color": "ca945f"
+    },
+    {
+      "id": "memory_shard",
+      "name": "Memory Shard",
+      "description": "Rare component recovered in the ruined archive."
+    },
+    {
+      "id": "living_resin",
+      "name": "Living Resin",
+      "description": "Rare component recovered in the ruined archive."
+    },
+    {
+      "id": "wreck_alloy",
+      "name": "Wreck Alloy",
+      "description": "Unfamiliar ship metal used to restore and temper coastal relics."
+    },
+    {
+      "id": "signal_circuit",
+      "name": "Signal Circuit",
+      "description": "A sealed conductor used in restoration and high-rank tempering."
+    },
+    {
+      "id": "fractured_hilt",
+      "name": "Fractured Hilt",
+      "description": "Damaged weapon salvage. Have Neris identify it before forging a Tideglass Saber."
+    },
+    {
+      "id": "pressure_shell",
+      "name": "Cracked Pressure Shell",
+      "description": "Damaged armor salvage. Neris can identify its restoration pattern."
+    },
+    {
+      "id": "clouded_lens",
+      "name": "Clouded Signal Lens",
+      "description": "Damaged focus salvage recovered from the hull guardian. Ask Neris to identify it."
+    },
+    {
+      "id": "optic_glass",
+      "name": "Optic Glass",
+      "description": "Clear ancient glass for lens restoration and high-rank tempering."
+    },
+    {
+      "id": "solar_alloy",
+      "name": "Solar Alloy",
+      "description": "Golden observatory metal used to forge and improve Sunken Lens gear."
+    },
+    {
+      "id": "heartwood",
+      "name": "Heartwood",
+      "color": "a78251"
+    },
+    {
+      "id": "amber_resin",
+      "name": "Amber Resin",
+      "color": "d5a35c"
+    },
+    {
+      "id": "resonant_ore",
+      "name": "Resonant Ore",
+      "color": "8e889d"
+    },
+    {
+      "id": "ash_glass",
+      "name": "Ash Glass",
+      "color": "c0a6ba"
+    },
+    {
+      "id": "transit_regulator",
+      "name": "Transit Regulator",
+      "color": "8dc8c1"
+    },
+    {
+      "id": "station_round",
+      "name": "Station Rounds",
+      "color": "86a2b8"
+    },
+    {
+      "id": "station_alloy",
+      "name": "Station Alloy",
+      "color": "8baabc"
+    },
+    {
+      "id": "navigation_cell",
+      "name": "Navigation Cell",
+      "color": "83d9d6"
+    },
+    {
+      "id": "cinder_ward",
+      "name": "Cinder Ward",
+      "color": "87d3cc"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "smelt_iron",
+      "name": "Smelt iron ingot",
+      "station": "forge",
+      "cost": {
+        "iron_ore": 2,
+        "charcoal": 1
+      },
+      "output_kind": "material",
+      "output": "iron_ingot",
+      "amount": 1,
+      "unlock": "basic",
+      "xp": 1
+    },
+    {
+      "id": "smelt_steel",
+      "name": "Smelt steel ingot",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 2,
+        "charcoal": 2
+      },
+      "output_kind": "material",
+      "output": "steel_ingot",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 1
+    },
+    {
+      "id": "smelt_silver",
+      "name": "Smelt silver ingot",
+      "station": "forge",
+      "cost": {
+        "silver_ore": 2,
+        "charcoal": 1
+      },
+      "output_kind": "material",
+      "output": "silver_ingot",
+      "amount": 1,
+      "unlock": "silver",
+      "xp": 1
+    },
+    {
+      "id": "tan_hide",
+      "name": "Tan a hide",
+      "station": "forge",
+      "cost": {
+        "hide": 1
+      },
+      "output_kind": "material",
+      "output": "leather",
+      "amount": 2,
+      "unlock": "basic",
+      "xp": 1
+    },
+    {
+      "id": "weave_cloth",
+      "name": "Weave cloth",
+      "station": "forge",
+      "cost": {
+        "fiber": 3
+      },
+      "output_kind": "material",
+      "output": "cloth",
+      "amount": 1,
+      "unlock": "basic",
+      "xp": 1
+    },
+    {
+      "id": "grind_crystal",
+      "name": "Grind rune dust",
+      "station": "enchant",
+      "cost": {
+        "crystal": 1
+      },
+      "output_kind": "material",
+      "output": "rune_dust",
+      "amount": 3,
+      "unlock": "basic",
+      "xp": 1
+    },
+    {
+      "id": "craft_cloth_head",
+      "name": "Forge Woven Hood",
+      "station": "forge",
+      "cost": {
+        "cloth": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "cloth_head",
+      "amount": 1,
+      "unlock": "cloth",
+      "xp": 3
+    },
+    {
+      "id": "craft_cloth_chest",
+      "name": "Forge Woven Robe",
+      "station": "forge",
+      "cost": {
+        "cloth": 3,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "cloth_chest",
+      "amount": 1,
+      "unlock": "cloth",
+      "xp": 3
+    },
+    {
+      "id": "craft_cloth_hands",
+      "name": "Forge Woven Gloves",
+      "station": "forge",
+      "cost": {
+        "cloth": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "cloth_hands",
+      "amount": 1,
+      "unlock": "cloth",
+      "xp": 3
+    },
+    {
+      "id": "craft_cloth_legs",
+      "name": "Forge Woven Leggings",
+      "station": "forge",
+      "cost": {
+        "cloth": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "cloth_legs",
+      "amount": 1,
+      "unlock": "cloth",
+      "xp": 3
+    },
+    {
+      "id": "craft_cloth_feet",
+      "name": "Forge Woven Boots",
+      "station": "forge",
+      "cost": {
+        "cloth": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "cloth_feet",
+      "amount": 1,
+      "unlock": "cloth",
+      "xp": 3
+    },
+    {
+      "id": "craft_fur_head",
+      "name": "Forge Fur Hood",
+      "station": "forge",
+      "cost": {
+        "fur": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "fur_head",
+      "amount": 1,
+      "unlock": "fur",
+      "xp": 3
+    },
+    {
+      "id": "craft_fur_chest",
+      "name": "Forge Fur Vest",
+      "station": "forge",
+      "cost": {
+        "fur": 3,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "fur_chest",
+      "amount": 1,
+      "unlock": "fur",
+      "xp": 3
+    },
+    {
+      "id": "craft_fur_hands",
+      "name": "Forge Fur Gloves",
+      "station": "forge",
+      "cost": {
+        "fur": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "fur_hands",
+      "amount": 1,
+      "unlock": "fur",
+      "xp": 3
+    },
+    {
+      "id": "craft_fur_legs",
+      "name": "Forge Fur Leggings",
+      "station": "forge",
+      "cost": {
+        "fur": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "fur_legs",
+      "amount": 1,
+      "unlock": "fur",
+      "xp": 3
+    },
+    {
+      "id": "craft_fur_feet",
+      "name": "Forge Fur Boots",
+      "station": "forge",
+      "cost": {
+        "fur": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "fur_feet",
+      "amount": 1,
+      "unlock": "fur",
+      "xp": 3
+    },
+    {
+      "id": "craft_leather_head",
+      "name": "Forge Leather Hood",
+      "station": "forge",
+      "cost": {
+        "leather": 2
+      },
+      "output_kind": "gear",
+      "output": "leather_head",
+      "amount": 1,
+      "unlock": "leather",
+      "xp": 3
+    },
+    {
+      "id": "craft_leather_chest",
+      "name": "Forge Leather Vest",
+      "station": "forge",
+      "cost": {
+        "leather": 4
+      },
+      "output_kind": "gear",
+      "output": "leather_chest",
+      "amount": 1,
+      "unlock": "leather",
+      "xp": 3
+    },
+    {
+      "id": "craft_leather_hands",
+      "name": "Forge Leather Gloves",
+      "station": "forge",
+      "cost": {
+        "leather": 2
+      },
+      "output_kind": "gear",
+      "output": "leather_hands",
+      "amount": 1,
+      "unlock": "leather",
+      "xp": 3
+    },
+    {
+      "id": "craft_leather_legs",
+      "name": "Forge Leather Leggings",
+      "station": "forge",
+      "cost": {
+        "leather": 3
+      },
+      "output_kind": "gear",
+      "output": "leather_legs",
+      "amount": 1,
+      "unlock": "leather",
+      "xp": 3
+    },
+    {
+      "id": "craft_leather_feet",
+      "name": "Forge Leather Boots",
+      "station": "forge",
+      "cost": {
+        "leather": 2
+      },
+      "output_kind": "gear",
+      "output": "leather_feet",
+      "amount": 1,
+      "unlock": "leather",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_head",
+      "name": "Forge Iron Helm",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_head",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_chest",
+      "name": "Forge Iron Cuirass",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 3,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_chest",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_hands",
+      "name": "Forge Iron Gauntlets",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_hands",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_legs",
+      "name": "Forge Iron Greaves",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_legs",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_feet",
+      "name": "Forge Iron Sabatons",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_feet",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_chain_head",
+      "name": "Forge Chain Hood",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "chain_head",
+      "amount": 1,
+      "unlock": "chain",
+      "xp": 3
+    },
+    {
+      "id": "craft_chain_chest",
+      "name": "Forge Chain Vest",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 3,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "chain_chest",
+      "amount": 1,
+      "unlock": "chain",
+      "xp": 3
+    },
+    {
+      "id": "craft_chain_hands",
+      "name": "Forge Chain Gloves",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "chain_hands",
+      "amount": 1,
+      "unlock": "chain",
+      "xp": 3
+    },
+    {
+      "id": "craft_chain_legs",
+      "name": "Forge Chain Leggings",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "chain_legs",
+      "amount": 1,
+      "unlock": "chain",
+      "xp": 3
+    },
+    {
+      "id": "craft_chain_feet",
+      "name": "Forge Chain Boots",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "chain_feet",
+      "amount": 1,
+      "unlock": "chain",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_head",
+      "name": "Forge Steel Helm",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_head",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_chest",
+      "name": "Forge Steel Cuirass",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 3,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_chest",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_hands",
+      "name": "Forge Steel Gauntlets",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_hands",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_legs",
+      "name": "Forge Steel Greaves",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_legs",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_feet",
+      "name": "Forge Steel Sabatons",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 1,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_feet",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_head",
+      "name": "Forge Obsidian Helm",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 1,
+        "leather": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_head",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_chest",
+      "name": "Forge Obsidian Cuirass",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 3,
+        "leather": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_chest",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_hands",
+      "name": "Forge Obsidian Gauntlets",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 1,
+        "leather": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_hands",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_legs",
+      "name": "Forge Obsidian Greaves",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 2,
+        "leather": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_legs",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_feet",
+      "name": "Forge Obsidian Sabatons",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 1,
+        "leather": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_feet",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_head",
+      "name": "Forge Crystal Hood",
+      "station": "forge",
+      "cost": {
+        "crystal": 1,
+        "leather": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_head",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_chest",
+      "name": "Forge Crystal Vest",
+      "station": "forge",
+      "cost": {
+        "crystal": 3,
+        "leather": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_chest",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_hands",
+      "name": "Forge Crystal Gloves",
+      "station": "forge",
+      "cost": {
+        "crystal": 1,
+        "leather": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_hands",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_legs",
+      "name": "Forge Crystal Leggings",
+      "station": "forge",
+      "cost": {
+        "crystal": 2,
+        "leather": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_legs",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_feet",
+      "name": "Forge Crystal Boots",
+      "station": "forge",
+      "cost": {
+        "crystal": 1,
+        "leather": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_feet",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_dagger",
+      "name": "Forge Iron Dagger",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 2,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_dagger",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_sword",
+      "name": "Forge Iron Sword",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 2,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_sword",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_axe",
+      "name": "Forge Iron War Axe",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 2,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_axe",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_mace",
+      "name": "Forge Iron Mace",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 2,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_mace",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_greatsword",
+      "name": "Forge Iron Greatsword",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 3,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_greatsword",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_battleaxe",
+      "name": "Forge Iron Battleaxe",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 3,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_battleaxe",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_bow",
+      "name": "Forge Iron Longbow",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 3,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_bow",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_staff",
+      "name": "Forge Iron Staff",
+      "station": "forge",
+      "cost": {
+        "iron_ingot": 3,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_staff",
+      "amount": 1,
+      "unlock": "iron",
+      "xp": 3
+    },
+    {
+      "id": "craft_iron_shield",
+      "name": "Forge Iron Shield",
+      "station": "forge",
+      "cost": {
+        "silver_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "iron_shield",
+      "amount": 1,
+      "unlock": "silver",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_dagger",
+      "name": "Forge Steel Dagger",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 2,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_dagger",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_sword",
+      "name": "Forge Steel Sword",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 2,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_sword",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_axe",
+      "name": "Forge Steel War Axe",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 2,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_axe",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_mace",
+      "name": "Forge Steel Mace",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 2,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_mace",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_greatsword",
+      "name": "Forge Steel Greatsword",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 3,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_greatsword",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_battleaxe",
+      "name": "Forge Steel Battleaxe",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 3,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_battleaxe",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_bow",
+      "name": "Forge Steel Longbow",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 3,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_bow",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_staff",
+      "name": "Forge Steel Staff",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 3,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_staff",
+      "amount": 1,
+      "unlock": "steel",
+      "xp": 3
+    },
+    {
+      "id": "craft_steel_shield",
+      "name": "Forge Steel Shield",
+      "station": "forge",
+      "cost": {
+        "silver_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "steel_shield",
+      "amount": 1,
+      "unlock": "silver",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_dagger",
+      "name": "Forge Obsidian Dagger",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 2,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_dagger",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_sword",
+      "name": "Forge Obsidian Sword",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 2,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_sword",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_axe",
+      "name": "Forge Obsidian War Axe",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 2,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_axe",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_mace",
+      "name": "Forge Obsidian Mace",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 2,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_mace",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_greatsword",
+      "name": "Forge Obsidian Greatsword",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 3,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_greatsword",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_battleaxe",
+      "name": "Forge Obsidian Battleaxe",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 3,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_battleaxe",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_bow",
+      "name": "Forge Obsidian Longbow",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 3,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_bow",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_staff",
+      "name": "Forge Obsidian Staff",
+      "station": "forge",
+      "cost": {
+        "obsidian_shard": 3,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_staff",
+      "amount": 1,
+      "unlock": "obsidian",
+      "xp": 3
+    },
+    {
+      "id": "craft_obsidian_shield",
+      "name": "Forge Obsidian Shield",
+      "station": "forge",
+      "cost": {
+        "silver_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "obsidian_shield",
+      "amount": 1,
+      "unlock": "silver",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_dagger",
+      "name": "Forge Crystal Dagger",
+      "station": "forge",
+      "cost": {
+        "crystal": 2,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_dagger",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_sword",
+      "name": "Forge Crystal Sword",
+      "station": "forge",
+      "cost": {
+        "crystal": 2,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_sword",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_axe",
+      "name": "Forge Crystal War Axe",
+      "station": "forge",
+      "cost": {
+        "crystal": 2,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_axe",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_mace",
+      "name": "Forge Crystal Mace",
+      "station": "forge",
+      "cost": {
+        "crystal": 2,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_mace",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_greatsword",
+      "name": "Forge Crystal Greatsword",
+      "station": "forge",
+      "cost": {
+        "crystal": 3,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_greatsword",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_battleaxe",
+      "name": "Forge Crystal Battleaxe",
+      "station": "forge",
+      "cost": {
+        "crystal": 3,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_battleaxe",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_bow",
+      "name": "Forge Crystal Longbow",
+      "station": "forge",
+      "cost": {
+        "crystal": 3,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_bow",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_staff",
+      "name": "Forge Crystal Staff",
+      "station": "forge",
+      "cost": {
+        "crystal": 3,
+        "wood": 1,
+        "rune_dust": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_staff",
+      "amount": 1,
+      "unlock": "crystal",
+      "xp": 3
+    },
+    {
+      "id": "craft_crystal_shield",
+      "name": "Forge Crystal Shield",
+      "station": "forge",
+      "cost": {
+        "silver_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "crystal_shield",
+      "amount": 1,
+      "unlock": "silver",
+      "xp": 3
+    },
+    {
+      "id": "craft_spell_focus",
+      "name": "Forge Runic Focus",
+      "station": "forge",
+      "cost": {
+        "silver_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "spell_focus",
+      "amount": 1,
+      "unlock": "silver",
+      "xp": 3
+    },
+    {
+      "id": "craft_might_ring",
+      "name": "Forge Ring of Might",
+      "station": "forge",
+      "cost": {
+        "silver_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "might_ring",
+      "amount": 1,
+      "unlock": "silver",
+      "xp": 3
+    },
+    {
+      "id": "craft_swift_ring",
+      "name": "Forge Ring of Swiftness",
+      "station": "forge",
+      "cost": {
+        "silver_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "swift_ring",
+      "amount": 1,
+      "unlock": "silver",
+      "xp": 3
+    },
+    {
+      "id": "craft_mind_ring",
+      "name": "Forge Ring of Insight",
+      "station": "forge",
+      "cost": {
+        "silver_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "mind_ring",
+      "amount": 1,
+      "unlock": "silver",
+      "xp": 3
+    },
+    {
+      "id": "craft_vigor_amulet",
+      "name": "Forge Amulet of Vigor",
+      "station": "forge",
+      "cost": {
+        "silver_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "vigor_amulet",
+      "amount": 1,
+      "unlock": "silver",
+      "xp": 3
+    },
+    {
+      "id": "craft_resolve_amulet",
+      "name": "Forge Amulet of Resolve",
+      "station": "forge",
+      "cost": {
+        "silver_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "resolve_amulet",
+      "amount": 1,
+      "unlock": "silver",
+      "xp": 3
+    },
+    {
+      "id": "craft_voice_amulet",
+      "name": "Forge Amulet of Presence",
+      "station": "forge",
+      "cost": {
+        "silver_ingot": 2,
+        "leather": 1
+      },
+      "output_kind": "gear",
+      "output": "voice_amulet",
+      "amount": 1,
+      "unlock": "silver",
+      "xp": 3
+    },
+    {
+      "id": "make_healing_draught",
+      "name": "Brew Healing Draught",
+      "station": "alchemy",
+      "cost": {
+        "herb": 2,
+        "water": 1
+      },
+      "output_kind": "consumable",
+      "output": "healing_draught",
+      "amount": 1,
+      "unlock": "basic",
+      "xp": 2
+    },
+    {
+      "id": "make_stamina_draught",
+      "name": "Brew Stamina Draught",
+      "station": "alchemy",
+      "cost": {
+        "herb": 1,
+        "mushroom": 1,
+        "water": 1
+      },
+      "output_kind": "consumable",
+      "output": "stamina_draught",
+      "amount": 1,
+      "unlock": "basic",
+      "xp": 2
+    },
+    {
+      "id": "make_magicka_draught",
+      "name": "Brew Magicka Draught",
+      "station": "alchemy",
+      "cost": {
+        "mushroom": 2,
+        "water": 1
+      },
+      "output_kind": "consumable",
+      "output": "magicka_draught",
+      "amount": 1,
+      "unlock": "basic",
+      "xp": 2
+    },
+    {
+      "id": "make_hearty_stew",
+      "name": "Cook Hearty Stew",
+      "station": "cook",
+      "cost": {
+        "raw_meat": 1,
+        "herb": 1,
+        "salt": 1,
+        "water": 1
+      },
+      "output_kind": "consumable",
+      "output": "hearty_stew",
+      "amount": 1,
+      "unlock": "basic",
+      "xp": 2
+    },
+    {
+      "id": "make_trail_bread",
+      "name": "Cook Trail Bread",
+      "station": "cook",
+      "cost": {
+        "grain": 2,
+        "salt": 1,
+        "water": 1
+      },
+      "output_kind": "consumable",
+      "output": "trail_bread",
+      "amount": 1,
+      "unlock": "basic",
+      "xp": 2
+    },
+    {
+      "id": "craft_arrows",
+      "name": "Fletch 12 iron arrows",
+      "station": "forge",
+      "cost": {
+        "wood": 1,
+        "iron_ingot": 1
+      },
+      "output_kind": "material",
+      "output": "arrow",
+      "amount": 12,
+      "unlock": "basic",
+      "xp": 1
+    },
+    {
+      "id": "craft_oldwatch_oath",
+      "name": "Forge Oldwatch Oath",
+      "station": "forge",
+      "cost": {
+        "steel_ingot": 3,
+        "ember_core": 1,
+        "rune_dust": 3
+      },
+      "output_kind": "gear",
+      "output": "oldwatch_oath",
+      "amount": 1,
+      "unlock": "oldwatch",
+      "xp": 6
+    },
+    {
+      "id": "craft_aether_head",
+      "name": "Forge Aetherguard Helm",
+      "station": "forge",
+      "cost": {
+        "star_alloy": 3,
+        "aether_shard": 2
+      },
+      "output_kind": "gear",
+      "output": "aether_head",
+      "amount": 1,
+      "unlock": "aether",
+      "xp": 5
+    },
+    {
+      "id": "craft_aether_chest",
+      "name": "Forge Aetherguard Cuirass",
+      "station": "forge",
+      "cost": {
+        "star_alloy": 3,
+        "aether_shard": 2
+      },
+      "output_kind": "gear",
+      "output": "aether_chest",
+      "amount": 1,
+      "unlock": "aether",
+      "xp": 5
+    },
+    {
+      "id": "craft_aether_hands",
+      "name": "Forge Aetherguard Gauntlets",
+      "station": "forge",
+      "cost": {
+        "star_alloy": 3,
+        "aether_shard": 2
+      },
+      "output_kind": "gear",
+      "output": "aether_hands",
+      "amount": 1,
+      "unlock": "aether",
+      "xp": 5
+    },
+    {
+      "id": "craft_aether_legs",
+      "name": "Forge Aetherguard Greaves",
+      "station": "forge",
+      "cost": {
+        "star_alloy": 3,
+        "aether_shard": 2
+      },
+      "output_kind": "gear",
+      "output": "aether_legs",
+      "amount": 1,
+      "unlock": "aether",
+      "xp": 5
+    },
+    {
+      "id": "craft_aether_feet",
+      "name": "Forge Aetherguard Sabatons",
+      "station": "forge",
+      "cost": {
+        "star_alloy": 3,
+        "aether_shard": 2
+      },
+      "output_kind": "gear",
+      "output": "aether_feet",
+      "amount": 1,
+      "unlock": "aether",
+      "xp": 5
+    },
+    {
+      "id": "craft_cinder_head",
+      "name": "Forge Cinderplate Helm",
+      "station": "forge",
+      "cost": {
+        "cinder_alloy": 3,
+        "soul_ember": 2
+      },
+      "output_kind": "gear",
+      "output": "cinder_head",
+      "amount": 1,
+      "unlock": "cinder",
+      "xp": 5
+    },
+    {
+      "id": "craft_cinder_chest",
+      "name": "Forge Cinderplate Cuirass",
+      "station": "forge",
+      "cost": {
+        "cinder_alloy": 3,
+        "soul_ember": 2
+      },
+      "output_kind": "gear",
+      "output": "cinder_chest",
+      "amount": 1,
+      "unlock": "cinder",
+      "xp": 5
+    },
+    {
+      "id": "craft_cinder_hands",
+      "name": "Forge Cinderplate Gauntlets",
+      "station": "forge",
+      "cost": {
+        "cinder_alloy": 3,
+        "soul_ember": 2
+      },
+      "output_kind": "gear",
+      "output": "cinder_hands",
+      "amount": 1,
+      "unlock": "cinder",
+      "xp": 5
+    },
+    {
+      "id": "craft_cinder_legs",
+      "name": "Forge Cinderplate Greaves",
+      "station": "forge",
+      "cost": {
+        "cinder_alloy": 3,
+        "soul_ember": 2
+      },
+      "output_kind": "gear",
+      "output": "cinder_legs",
+      "amount": 1,
+      "unlock": "cinder",
+      "xp": 5
+    },
+    {
+      "id": "craft_cinder_feet",
+      "name": "Forge Cinderplate Sabatons",
+      "station": "forge",
+      "cost": {
+        "cinder_alloy": 3,
+        "soul_ember": 2
+      },
+      "output_kind": "gear",
+      "output": "cinder_feet",
+      "amount": 1,
+      "unlock": "cinder",
+      "xp": 5
+    },
+    {
+      "id": "craft_aether_saber",
+      "name": "Forge Dawnweave Saber",
+      "station": "forge",
+      "cost": {
+        "star_alloy": 3,
+        "aether_shard": 2
+      },
+      "output_kind": "gear",
+      "output": "aether_saber",
+      "amount": 1,
+      "unlock": "aether",
+      "xp": 5
+    },
+    {
+      "id": "craft_aether_greatsword",
+      "name": "Forge Skybreaker",
+      "station": "forge",
+      "cost": {
+        "star_alloy": 3,
+        "aether_shard": 2
+      },
+      "output_kind": "gear",
+      "output": "aether_greatsword",
+      "amount": 1,
+      "unlock": "aether",
+      "xp": 5
+    },
+    {
+      "id": "craft_aether_staff",
+      "name": "Forge Starweaver Rod",
+      "station": "forge",
+      "cost": {
+        "star_alloy": 3,
+        "aether_shard": 2
+      },
+      "output_kind": "gear",
+      "output": "aether_staff",
+      "amount": 1,
+      "unlock": "aether",
+      "xp": 5
+    },
+    {
+      "id": "craft_cinder_axe",
+      "name": "Forge Furnace Reaver",
+      "station": "forge",
+      "cost": {
+        "cinder_alloy": 3,
+        "soul_ember": 2
+      },
+      "output_kind": "gear",
+      "output": "cinder_axe",
+      "amount": 1,
+      "unlock": "cinder",
+      "xp": 5
+    },
+    {
+      "id": "craft_cinder_gun",
+      "name": "Forge Ashstorm Machine Gun",
+      "station": "forge",
+      "cost": {
+        "cinder_alloy": 3,
+        "soul_ember": 2
+      },
+      "output_kind": "gear",
+      "output": "cinder_gun",
+      "amount": 1,
+      "unlock": "cinder",
+      "xp": 5
+    },
+    {
+      "id": "craft_hell_rounds",
+      "name": "Press 40 infernal rounds",
+      "station": "forge",
+      "cost": {
+        "cinder_alloy": 1,
+        "charcoal": 2
+      },
+      "output_kind": "material",
+      "output": "hell_round",
+      "amount": 40,
+      "unlock": "cinder",
+      "xp": 2
+    },
+    {
+      "id": "craft_stoneguard_main_hand",
+      "name": "Stoneguard Oathblade",
+      "station": "forge",
+      "unlock": "stoneguard",
+      "cost": {
+        "steel_ingot": 3,
+        "leather": 2
+      },
+      "output": "stoneguard_main_hand",
+      "xp": 5,
+      "output_kind": "gear",
+      "amount": 1
+    },
+    {
+      "id": "craft_stoneguard_chest",
+      "name": "Stoneguard Bulwark",
+      "station": "forge",
+      "unlock": "stoneguard_veteran",
+      "cost": {
+        "steel_ingot": 3,
+        "leather": 2
+      },
+      "output": "stoneguard_chest",
+      "xp": 5,
+      "output_kind": "gear",
+      "amount": 1
+    },
+    {
+      "id": "craft_stoneguard_off_hand",
+      "name": "Stoneguard Aegis",
+      "station": "forge",
+      "unlock": "stoneguard_veteran",
+      "cost": {
+        "steel_ingot": 3,
+        "leather": 2
+      },
+      "output": "stoneguard_off_hand",
+      "xp": 5,
+      "output_kind": "gear",
+      "amount": 1
+    },
+    {
+      "id": "craft_stormweaver_main_hand",
+      "name": "Stormweaver Spire",
+      "station": "forge",
+      "unlock": "stormweaver",
+      "cost": {
+        "steel_ingot": 2,
+        "crystal": 3,
+        "rune_dust": 2
+      },
+      "output": "stormweaver_main_hand",
+      "xp": 5,
+      "output_kind": "gear",
+      "amount": 1
+    },
+    {
+      "id": "craft_stormweaver_chest",
+      "name": "Stormweaver Mantle",
+      "station": "forge",
+      "unlock": "stormweaver_veteran",
+      "cost": {
+        "steel_ingot": 2,
+        "crystal": 3,
+        "rune_dust": 2
+      },
+      "output": "stormweaver_chest",
+      "xp": 5,
+      "output_kind": "gear",
+      "amount": 1
+    },
+    {
+      "id": "craft_stormweaver_off_hand",
+      "name": "Stormweaver Lens",
+      "station": "forge",
+      "unlock": "stormweaver_veteran",
+      "cost": {
+        "steel_ingot": 2,
+        "crystal": 3,
+        "rune_dust": 2
+      },
+      "output": "stormweaver_off_hand",
+      "xp": 5,
+      "output_kind": "gear",
+      "amount": 1
+    },
+    {
+      "id": "craft_echo_blade",
+      "name": "Forge Echoharvest",
+      "station": "forge",
+      "unlock": "archive_relic",
+      "cost": {
+        "steel_ingot": 3,
+        "memory_shard": 2,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "echo_blade",
+      "amount": 1,
+      "xp": 5
+    },
+    {
+      "id": "craft_lantern_conductor",
+      "name": "Forge Lantern Conductor",
+      "station": "forge",
+      "unlock": "lantern_relic",
+      "cost": {
+        "steel_ingot": 2,
+        "memory_shard": 3,
+        "crystal": 2
+      },
+      "output_kind": "gear",
+      "output": "lantern_conductor",
+      "amount": 1,
+      "xp": 5
+    },
+    {
+      "id": "craft_briar_vestment",
+      "name": "Forge Vestment of Renewal",
+      "station": "forge",
+      "unlock": "briar_relic",
+      "cost": {
+        "leather": 3,
+        "living_resin": 3,
+        "memory_shard": 1
+      },
+      "output_kind": "gear",
+      "output": "briar_vestment",
+      "amount": 1,
+      "xp": 5
+    },
+    {
+      "id": "craft_tideglass_saber",
+      "name": "Restore Tideglass Saber",
+      "station": "forge",
+      "unlock": "shore_blade",
+      "cost": {
+        "fractured_hilt": 1,
+        "wreck_alloy": 3,
+        "steel_ingot": 2
+      },
+      "output_kind": "gear",
+      "output": "tideglass_saber",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_tideguard_shell",
+      "name": "Restore Tideguard Cuirass",
+      "station": "forge",
+      "unlock": "shore_armor",
+      "cost": {
+        "pressure_shell": 1,
+        "wreck_alloy": 4,
+        "leather": 2
+      },
+      "output_kind": "gear",
+      "output": "tideguard_shell",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_signal_focus",
+      "name": "Restore Signal Lens",
+      "station": "forge",
+      "unlock": "shore_focus",
+      "cost": {
+        "clouded_lens": 1,
+        "signal_circuit": 2,
+        "crystal": 2
+      },
+      "output_kind": "gear",
+      "output": "signal_focus",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_breakwater_mantle",
+      "name": "Forge Breakwater Mantle",
+      "station": "forge",
+      "unlock": "shore_harbor",
+      "cost": {
+        "wreck_alloy": 3,
+        "leather": 3,
+        "signal_circuit": 2
+      },
+      "output_kind": "gear",
+      "output": "breakwater_mantle",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_starsignal_staff",
+      "name": "Forge Starsignal Staff",
+      "station": "forge",
+      "unlock": "shore_navigation",
+      "cost": {
+        "wreck_alloy": 3,
+        "signal_circuit": 3,
+        "wood": 2
+      },
+      "output_kind": "gear",
+      "output": "starsignal_staff",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_sunsteel_saber",
+      "name": "Forge Sunsteel Saber",
+      "station": "forge",
+      "unlock": "sunken_lens",
+      "cost": {
+        "solar_alloy": 3,
+        "steel_ingot": 2,
+        "wood": 1
+      },
+      "output_kind": "gear",
+      "output": "sunsteel_saber",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_lenswarden_chest",
+      "name": "Forge Lenswarden Cuirass",
+      "station": "forge",
+      "unlock": "sunken_lens",
+      "cost": {
+        "solar_alloy": 4,
+        "steel_ingot": 3,
+        "leather": 2
+      },
+      "output_kind": "gear",
+      "output": "lenswarden_chest",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_horizon_staff",
+      "name": "Forge Horizon Staff",
+      "station": "forge",
+      "unlock": "sunken_lens",
+      "cost": {
+        "solar_alloy": 2,
+        "optic_glass": 3,
+        "wood": 2
+      },
+      "output_kind": "gear",
+      "output": "horizon_staff",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_amberbough_bow",
+      "name": "Forge Amberbough Bow",
+      "station": "forge",
+      "unlock": "woodland",
+      "cost": {
+        "heartwood": 4,
+        "amber_resin": 2,
+        "leather": 3
+      },
+      "output_kind": "gear",
+      "output": "amberbough_bow",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_groveheart_chest",
+      "name": "Forge Groveheart Vest",
+      "station": "forge",
+      "unlock": "roots_wild",
+      "cost": {
+        "heartwood": 4,
+        "amber_resin": 2,
+        "leather": 3
+      },
+      "output_kind": "gear",
+      "output": "groveheart_chest",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_pactkeeper_axe",
+      "name": "Forge Pactkeeper Axe",
+      "station": "forge",
+      "unlock": "roots_tended",
+      "cost": {
+        "heartwood": 4,
+        "amber_resin": 2,
+        "leather": 3
+      },
+      "output_kind": "gear",
+      "output": "pactkeeper_axe",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_resonance_blade",
+      "name": "Forge Resonance Blade",
+      "station": "forge",
+      "unlock": "resonance",
+      "cost": {
+        "resonant_ore": 4,
+        "ash_glass": 2,
+        "steel_ingot": 2
+      },
+      "output_kind": "gear",
+      "output": "resonance_blade",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_cantors_chest",
+      "name": "Forge Cantor's Mantle",
+      "station": "forge",
+      "unlock": "resonance",
+      "cost": {
+        "resonant_ore": 4,
+        "ash_glass": 2,
+        "steel_ingot": 2
+      },
+      "output_kind": "gear",
+      "output": "cantors_chest",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_cantors_staff",
+      "name": "Forge Cantor's Staff",
+      "station": "forge",
+      "unlock": "resonance",
+      "cost": {
+        "resonant_ore": 4,
+        "ash_glass": 2,
+        "steel_ingot": 2
+      },
+      "output_kind": "gear",
+      "output": "cantors_staff",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "forge_transit_regulator",
+      "name": "Forge Transit Regulator",
+      "station": "forge",
+      "unlock": "transit_regulator",
+      "cost": {
+        "steel_ingot": 4,
+        "crystal": 3,
+        "rune_dust": 2
+      },
+      "output_kind": "material",
+      "output": "transit_regulator",
+      "amount": 1,
+      "xp": 8
+    },
+    {
+      "id": "craft_wayfarer_shield",
+      "name": "Forge Wayfarer Shield",
+      "station": "forge",
+      "unlock": "expedition",
+      "cost": {
+        "steel_ingot": 4,
+        "crystal": 2
+      },
+      "output_kind": "gear",
+      "output": "wayfarer_shield",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_pathfinder_feet",
+      "name": "Forge Pathfinder Sabatons",
+      "station": "forge",
+      "unlock": "expedition",
+      "cost": {
+        "steel_ingot": 4,
+        "crystal": 2
+      },
+      "output_kind": "gear",
+      "output": "pathfinder_feet",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_station_rifle",
+      "name": "Forge Station Rifle",
+      "station": "forge",
+      "unlock": "station",
+      "cost": {
+        "station_alloy": 4,
+        "navigation_cell": 2,
+        "steel_ingot": 2
+      },
+      "output_kind": "gear",
+      "output": "station_rifle",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_station_chest",
+      "name": "Forge Station Chest",
+      "station": "forge",
+      "unlock": "station",
+      "cost": {
+        "station_alloy": 4,
+        "navigation_cell": 2,
+        "steel_ingot": 2
+      },
+      "output_kind": "gear",
+      "output": "station_chest",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "craft_void_cutter",
+      "name": "Forge Void Cutter",
+      "station": "forge",
+      "unlock": "station",
+      "cost": {
+        "station_alloy": 4,
+        "navigation_cell": 2,
+        "steel_ingot": 2
+      },
+      "output_kind": "gear",
+      "output": "void_cutter",
+      "amount": 1,
+      "xp": 6
+    },
+    {
+      "id": "press_station_rounds",
+      "name": "Press Station Rounds",
+      "station": "forge",
+      "unlock": "station",
+      "cost": {
+        "steel_ingot": 1,
+        "charcoal": 1
+      },
+      "output_kind": "material",
+      "output": "station_round",
+      "amount": 40,
+      "xp": 3
+    },
+    {
+      "id": "craft_northwatch_head",
+      "name": "Forge Northwatch Helm",
+      "station": "forge",
+      "unlock": "northwatch",
+      "cost": {
+        "steel_ingot": 4,
+        "crystal": 3,
+        "rune_dust": 2
+      },
+      "output_kind": "gear",
+      "output": "northwatch_head",
+      "amount": 1,
+      "xp": 8
+    },
+    {
+      "id": "craft_northwatch_greatsword",
+      "name": "Forge Northwatch Greatsword",
+      "station": "forge",
+      "unlock": "northwatch",
+      "cost": {
+        "steel_ingot": 4,
+        "crystal": 3,
+        "rune_dust": 2
+      },
+      "output_kind": "gear",
+      "output": "northwatch_greatsword",
+      "amount": 1,
+      "xp": 8
+    },
+    {
+      "id": "craft_cinder_ward",
+      "name": "Forge Cinder Ward",
+      "station": "forge",
+      "unlock": "cinder_ward",
+      "cost": {
+        "steel_ingot": 4,
+        "crystal": 4,
+        "rune_dust": 2,
+        "ash_glass": 2
+      },
+      "output_kind": "material",
+      "output": "cinder_ward",
+      "amount": 1,
+      "xp": 8
+    },
+    {
+      "id": "craft_wardkeeper_amulet",
+      "name": "Forge Wardkeeper's Amulet",
+      "station": "forge",
+      "unlock": "wardkeeper",
+      "cost": {
+        "steel_ingot": 4,
+        "crystal": 4,
+        "rune_dust": 2,
+        "ash_glass": 2
+      },
+      "output_kind": "gear",
+      "output": "wardkeeper_amulet",
+      "amount": 1,
+      "xp": 8
+    },
+    {
+      "id": "craft_dawnforged_sword",
+      "name": "Forge Dawnforged Sword",
+      "station": "forge",
+      "unlock": "dawnforged",
+      "cost": {
+        "steel_ingot": 4,
+        "cinder_alloy": 3,
+        "crystal": 2,
+        "soul_ember": 2
+      },
+      "output_kind": "gear",
+      "output": "dawnforged_sword",
+      "amount": 1,
+      "xp": 10
+    },
+    {
+      "id": "craft_dawnforged_bow",
+      "name": "Forge Dawnforged Bow",
+      "station": "forge",
+      "unlock": "dawnforged",
+      "cost": {
+        "steel_ingot": 4,
+        "cinder_alloy": 3,
+        "crystal": 2,
+        "soul_ember": 2
+      },
+      "output_kind": "gear",
+      "output": "dawnforged_bow",
+      "amount": 1,
+      "xp": 10
+    },
+    {
+      "id": "craft_dawnforged_staff",
+      "name": "Forge Dawnforged Staff",
+      "station": "forge",
+      "unlock": "dawnforged",
+      "cost": {
+        "steel_ingot": 4,
+        "cinder_alloy": 3,
+        "crystal": 2,
+        "soul_ember": 2
+      },
+      "output_kind": "gear",
+      "output": "dawnforged_staff",
+      "amount": 1,
+      "xp": 10
+    },
+    {
+      "id": "craft_mossfang_blade",
+      "name": "Forge Mossfang Blade",
+      "station": "forge",
+      "unlock": "mossbound",
+      "cost": {
+        "steel_ingot": 3,
+        "hide": 4,
+        "crystal": 1
+      },
+      "output_kind": "gear",
+      "output": "mossfang_blade",
+      "amount": 1,
+      "xp": 8
+    },
+    {
+      "id": "craft_mossheart_amulet",
+      "name": "Forge Mossheart Amulet",
+      "station": "forge",
+      "unlock": "mossbound",
+      "cost": {
+        "silver_ingot": 2,
+        "crystal": 2,
+        "hide": 2
+      },
+      "output_kind": "gear",
+      "output": "mossheart_amulet",
+      "amount": 1,
+      "xp": 8
+    },
+    {
+      "id": "craft_rimefang_maul",
+      "name": "Forge Rimefang Maul",
+      "station": "forge",
+      "unlock": "frostmaw",
+      "cost": {
+        "steel_ingot": 4,
+        "crystal": 3,
+        "hide": 2
+      },
+      "output_kind": "gear",
+      "output": "rimefang_maul",
+      "amount": 1,
+      "xp": 10
+    },
+    {
+      "id": "craft_frostmaw_chest",
+      "name": "Forge Frostmaw Chest",
+      "station": "forge",
+      "unlock": "frostmaw",
+      "cost": {
+        "steel_ingot": 3,
+        "hide": 6,
+        "crystal": 2
+      },
+      "output_kind": "gear",
+      "output": "frostmaw_chest",
+      "amount": 1,
+      "xp": 10
+    },
+    {
+      "id": "craft_clan_voice_signet",
+      "name": "Forge Clan Voice Signet",
+      "station": "forge",
+      "unlock": "clan_voice",
+      "cost": {
+        "steel_ingot": 3,
+        "silver_ingot": 2,
+        "crystal": 2
+      },
+      "output_kind": "gear",
+      "output": "clan_voice_signet",
+      "amount": 1,
+      "xp": 10
+    },
+    {
+      "id": "craft_witness_pendant",
+      "name": "Forge Witness Pendant",
+      "station": "forge",
+      "unlock": "lantern_witness",
+      "cost": {
+        "silver_ingot": 2,
+        "memory_shard": 3,
+        "crystal": 1
+      },
+      "output_kind": "gear",
+      "output": "witness_pendant",
+      "amount": 1,
+      "xp": 8
+    },
+    {
+      "id": "craft_memorial_ring",
+      "name": "Forge Memorial Ring",
+      "station": "forge",
+      "unlock": "names_public",
+      "cost": {
+        "silver_ingot": 3,
+        "memory_shard": 3,
+        "crystal": 2
+      },
+      "output_kind": "gear",
+      "output": "memorial_ring",
+      "amount": 1,
+      "xp": 10
+    },
+    {
+      "id": "craft_sealed_memory_ring",
+      "name": "Forge Sealed Memory Ring",
+      "station": "forge",
+      "unlock": "names_sealed",
+      "cost": {
+        "silver_ingot": 3,
+        "memory_shard": 3,
+        "crystal": 2
+      },
+      "output_kind": "gear",
+      "output": "sealed_memory_ring",
+      "amount": 1,
+      "xp": 10
+    },
+    {
+      "id": "craft_lantern_keystone",
+      "name": "Forge Lantern Keystone",
+      "station": "forge",
+      "unlock": "lantern_keeper",
+      "cost": {
+        "silver_ingot": 3,
+        "memory_shard": 4,
+        "living_resin": 2
+      },
+      "output_kind": "gear",
+      "output": "lantern_keystone",
+      "amount": 1,
+      "xp": 12
+    },
+    {
+      "id": "craft_seedkeeper_charm",
+      "name": "Forge Seedkeeper Charm",
+      "station": "forge",
+      "unlock": "coven_seedkeeper",
+      "cost": {
+        "heartwood": 3,
+        "amber_resin": 2,
+        "silver_ingot": 1
+      },
+      "output_kind": "gear",
+      "output": "seedkeeper_charm",
+      "amount": 1,
+      "xp": 8
+    },
+    {
+      "id": "craft_pactmender_ring",
+      "name": "Forge Pactmender Ring",
+      "station": "forge",
+      "unlock": "coven_pactmender",
+      "cost": {
+        "heartwood": 3,
+        "amber_resin": 2,
+        "silver_ingot": 1
+      },
+      "output_kind": "gear",
+      "output": "pactmender_ring",
+      "amount": 1,
+      "xp": 8
+    },
+    {
+      "id": "craft_oldpromise_talisman",
+      "name": "Forge Old Promise Talisman",
+      "station": "forge",
+      "unlock": "coven_elder",
+      "cost": {
+        "heartwood": 4,
+        "amber_resin": 3,
+        "silver_ingot": 2
+      },
+      "output_kind": "gear",
+      "output": "oldpromise_talisman",
+      "amount": 1,
+      "xp": 8
+    },
+    {
+      "id": "craft_netmender_ring",
+      "name": "Forge Netmender’s Band",
+      "station": "forge",
+      "unlock": "saltbreak_silver",
+      "cost": {
+        "silver_ingot": 2,
+        "leather": 2,
+        "crystal": 1
+      },
+      "output_kind": "gear",
+      "output": "netmender_ring",
+      "amount": 1,
+      "xp": 6
+    }
+  ],
+  "consumables": [
+    {
+      "id": "healing_draught",
+      "name": "Healing Draught",
+      "pool": "health",
+      "restore": 50
+    },
+    {
+      "id": "stamina_draught",
+      "name": "Stamina Draught",
+      "pool": "stamina",
+      "restore": 65
+    },
+    {
+      "id": "magicka_draught",
+      "name": "Magicka Draught",
+      "pool": "magicka",
+      "restore": 50
+    },
+    {
+      "id": "hearty_stew",
+      "name": "Hearty Stew",
+      "pool": "stamina",
+      "restore": 90
+    },
+    {
+      "id": "trail_bread",
+      "name": "Trail Bread",
+      "pool": "health",
+      "restore": 35
+    }
+  ],
+  "enchants": [
+    {
+      "id": "might",
+      "name": "Might",
+      "bonuses": {
+        "strength": 2
+      },
+      "cost": {
+        "rune_dust": 3,
+        "crystal": 1
+      },
+      "description": "Strength +2"
+    },
+    {
+      "id": "fleet",
+      "name": "Fleetfoot",
+      "bonuses": {
+        "agility": 2
+      },
+      "cost": {
+        "rune_dust": 3,
+        "crystal": 1
+      },
+      "description": "Agility +2; improves movement speed"
+    },
+    {
+      "id": "vigor",
+      "name": "Vigor",
+      "bonuses": {
+        "endurance": 2
+      },
+      "cost": {
+        "rune_dust": 3,
+        "crystal": 1
+      },
+      "description": "Endurance +2; improves health, stamina and recovery"
+    },
+    {
+      "id": "insight",
+      "name": "Insight",
+      "bonuses": {
+        "intellect": 2
+      },
+      "cost": {
+        "rune_dust": 3,
+        "crystal": 1
+      },
+      "description": "Intellect +2; improves magicka and magical ratings"
+    },
+    {
+      "id": "resolve",
+      "name": "Resolve",
+      "bonuses": {
+        "willpower": 2
+      },
+      "cost": {
+        "rune_dust": 3,
+        "crystal": 1
+      },
+      "description": "Willpower +2; improves magicka recovery"
+    },
+    {
+      "id": "presence",
+      "name": "Presence",
+      "bonuses": {
+        "presence": 2
+      },
+      "cost": {
+        "rune_dust": 3,
+        "crystal": 1
+      },
+      "description": "Presence +2; improves your barter rating"
+    },
+    {
+      "id": "aether_attunement",
+      "name": "Aether Attunement",
+      "bonuses": {
+        "intellect": 3,
+        "agility": 1
+      },
+      "cost": {
+        "aether_shard": 3,
+        "rune_dust": 2
+      },
+      "description": "Intellect +3; Agility +1"
+    },
+    {
+      "id": "infernal_resolve",
+      "name": "Infernal Resolve",
+      "bonuses": {
+        "endurance": 3,
+        "strength": 1
+      },
+      "cost": {
+        "soul_ember": 3,
+        "rune_dust": 2
+      },
+      "description": "Endurance +3; Strength +1"
+    },
+    {
+      "id": "stoneguard_oath",
+      "name": "Stoneguard Oath",
+      "description": "+3 Endurance / +1 Willpower",
+      "bonuses": {
+        "endurance": 3,
+        "willpower": 1
+      },
+      "cost": {
+        "rune_dust": 3,
+        "crystal": 2
+      }
+    },
+    {
+      "id": "stormweaver_sight",
+      "name": "Stormweaver Sight",
+      "description": "+3 Intellect / +1 Agility",
+      "bonuses": {
+        "intellect": 3,
+        "agility": 1
+      },
+      "cost": {
+        "rune_dust": 3,
+        "crystal": 2
+      }
+    }
+  ],
+  "gems": [
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "bonuses": {
+        "strength": 2
+      }
+    },
+    {
+      "id": "sapphire",
+      "name": "Sapphire",
+      "bonuses": {
+        "intellect": 2
+      }
+    },
+    {
+      "id": "emerald",
+      "name": "Emerald",
+      "bonuses": {
+        "agility": 2
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "smith_cache",
+      "name": "Smith’s Welcome Cache",
+      "kind": "chest",
+      "position": [
+        3,
+        0,
+        13
+      ],
+      "materials": {
+        "iron_ore": 8,
+        "charcoal": 5,
+        "leather": 3,
+        "rune_dust": 3,
+        "crystal": 2,
+        "ruby": 1
+      },
+      "gear": [
+        {
+          "base_id": "iron_dagger",
+          "quality": 1,
+          "enchant": "insight"
+        }
+      ],
+      "blueprints": [
+        "steel",
+        "chain"
+      ]
+    },
+    {
+      "id": "watcher_cache",
+      "name": "Watcher’s Cache",
+      "kind": "chest",
+      "position": [
+        29,
+        0,
+        -40
+      ],
+      "materials": {
+        "crystal": 5,
+        "rune_dust": 5,
+        "obsidian_shard": 5,
+        "silver_ore": 6,
+        "ember_core": 3,
+        "sapphire": 1,
+        "emerald": 1
+      },
+      "gear": [
+        {
+          "base_id": "steel_sword",
+          "quality": 1,
+          "enchant": "might"
+        },
+        {
+          "base_id": "iron_staff",
+          "quality": 0,
+          "enchant": "resolve"
+        },
+        {
+          "base_id": "might_ring",
+          "quality": 0,
+          "enchant": "presence"
+        }
+      ],
+      "blueprints": [
+        "silver",
+        "obsidian",
+        "crystal"
+      ]
+    },
+    {
+      "id": "iron_bank",
+      "name": "Iron Outcrop",
+      "kind": "ore",
+      "position": [
+        23,
+        0,
+        -6
+      ],
+      "materials": {
+        "iron_ore": 5,
+        "charcoal": 2
+      },
+      "cooldown": 90
+    },
+    {
+      "id": "iron_trail",
+      "name": "Iron Outcrop",
+      "kind": "ore",
+      "position": [
+        -20,
+        0,
+        -20
+      ],
+      "materials": {
+        "iron_ore": 5,
+        "charcoal": 2
+      },
+      "cooldown": 90
+    },
+    {
+      "id": "crystal_bank",
+      "name": "Crystal Cluster",
+      "kind": "crystal",
+      "position": [
+        25,
+        0,
+        -27
+      ],
+      "materials": {
+        "crystal": 2,
+        "rune_dust": 1
+      },
+      "cooldown": 120
+    },
+    {
+      "id": "silver_stones",
+      "name": "Silver Vein",
+      "kind": "ore",
+      "position": [
+        38,
+        0,
+        -31
+      ],
+      "materials": {
+        "silver_ore": 4,
+        "obsidian_shard": 2,
+        "ember_core": 1
+      },
+      "cooldown": 120
+    },
+    {
+      "id": "herb_trail",
+      "name": "Mountain Herbs",
+      "kind": "herb",
+      "position": [
+        -3.7,
+        0,
+        10
+      ],
+      "materials": {
+        "herb": 4,
+        "fiber": 3
+      },
+      "cooldown": 60
+    },
+    {
+      "id": "bluecaps",
+      "name": "Bluecap Mushrooms",
+      "kind": "mushroom",
+      "position": [
+        4,
+        0,
+        -22
+      ],
+      "materials": {
+        "mushroom": 4,
+        "herb": 2
+      },
+      "cooldown": 60
+    },
+    {
+      "id": "spring",
+      "name": "Springwater Barrel",
+      "kind": "barrel",
+      "position": [
+        6,
+        0,
+        -12
+      ],
+      "materials": {
+        "water": 6,
+        "salt": 2
+      },
+      "cooldown": 45
+    },
+    {
+      "id": "supplies",
+      "name": "Provision Basket",
+      "kind": "basket",
+      "position": [
+        -3.5,
+        0,
+        -31
+      ],
+      "materials": {
+        "grain": 4,
+        "raw_meat": 2,
+        "salt": 1,
+        "fur": 2,
+        "hide": 2,
+        "wood": 3
+      },
+      "cooldown": 90
+    }
+  ],
+  "stations": [
+    {
+      "id": "forge",
+      "name": "Village Forge",
+      "position": [
+        -5.8,
+        0,
+        -11
+      ]
+    },
+    {
+      "id": "enchant",
+      "name": "Runewright’s Table",
+      "position": [
+        6,
+        0,
+        -29
+      ]
+    },
+    {
+      "id": "alchemy",
+      "name": "Herbalist’s Bench",
+      "position": [
+        -3.8,
+        0,
+        3
+      ]
+    },
+    {
+      "id": "cook",
+      "name": "Hearthfire Cooking Pot",
+      "position": [
+        5.5,
+        0,
+        -4
+      ]
+    }
+  ],
+  "starting_materials": {
+    "iron_ore": 8,
+    "charcoal": 6,
+    "leather": 6,
+    "fiber": 3,
+    "fur": 3,
+    "wood": 6,
+    "herb": 3,
+    "water": 4,
+    "grain": 3,
+    "raw_meat": 2,
+    "salt": 3,
+    "rune_dust": 4,
+    "crystal": 2
+  },
+  "starting_blueprints": [
+    "basic",
+    "iron",
+    "fur",
+    "cloth",
+    "leather"
+  ],
+  "starting_enchants": [
+    "vigor",
+    "fleet"
+  ],
+  "quality_names": [
+    "Standard",
+    "Fine",
+    "Superior",
+    "Exquisite",
+    "Masterwork",
+    "Legendary"
+  ]
+}

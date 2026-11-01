@@ -1,0 +1,846 @@
+{
+  "sites": {
+    "courier": {
+      "area": "home",
+      "position": [
+        23,
+        0,
+        30
+      ],
+      "name": "Nima · Dunewell caravan",
+      "kind": "npc"
+    },
+    "canyon": {
+      "area": "home",
+      "position": [
+        19,
+        0,
+        -62
+      ],
+      "name": "North-pass cargo waymark",
+      "kind": "cargo"
+    },
+    "broker": {
+      "area": "mountain",
+      "position": [
+        -9,
+        0,
+        30
+      ],
+      "name": "Broker Sal · Dunewell trading post",
+      "kind": "npc"
+    },
+    "informant": {
+      "area": "mountain",
+      "position": [
+        -31,
+        0,
+        27
+      ],
+      "name": "Ishra · water-route informant",
+      "kind": "npc"
+    },
+    "water_book": {
+      "area": "mountain",
+      "position": [
+        -14,
+        0,
+        -48
+      ],
+      "name": "Stolen water ledger",
+      "kind": "book"
+    },
+    "route_table": {
+      "area": "mountain",
+      "position": [
+        -17,
+        0,
+        29
+      ],
+      "name": "Concord route charter",
+      "kind": "table"
+    },
+    "well_camp": {
+      "area": "mountain",
+      "position": [
+        26,
+        0,
+        29
+      ],
+      "name": "Osa · caravan water steward",
+      "kind": "npc"
+    },
+    "well_house": {
+      "area": "mountain",
+      "position": [
+        35,
+        0,
+        28
+      ],
+      "name": "Teren · well-house heir",
+      "kind": "npc"
+    },
+    "well_channel": {
+      "area": "mountain",
+      "position": [
+        36,
+        0,
+        -2
+      ],
+      "name": "Buried supply channel",
+      "kind": "well"
+    },
+    "well_claim": {
+      "area": "mountain",
+      "position": [
+        36,
+        0,
+        -28
+      ],
+      "name": "Old road-workers’ water grant",
+      "kind": "book"
+    },
+    "miller": {
+      "area": "home",
+      "position": [
+        -18,
+        0,
+        29
+      ],
+      "name": "Larksbridge mill factor Dena",
+      "kind": "npc"
+    },
+    "mill": {
+      "area": "home",
+      "position": [
+        -19,
+        0,
+        35
+      ],
+      "name": "Larksbridge relief mill",
+      "kind": "mill"
+    },
+    "mill_worker": {
+      "area": "home",
+      "position": [
+        -10,
+        0,
+        35
+      ],
+      "name": "Joss · unpaid millwright",
+      "kind": "npc"
+    },
+    "mill_debris": {
+      "area": "home",
+      "position": [
+        -27,
+        0,
+        30
+      ],
+      "name": "Broken sluice and river debris",
+      "kind": "debris"
+    },
+    "inn_a": {
+      "area": "home",
+      "position": [
+        10,
+        0,
+        28
+      ],
+      "name": "Pell · Three Roads innkeeper",
+      "kind": "npc"
+    },
+    "inn_b": {
+      "area": "shore",
+      "position": [
+        25,
+        0,
+        39
+      ],
+      "name": "Bessa · Saltbreak guesthouse",
+      "kind": "npc"
+    },
+    "inn_c": {
+      "area": "mountain",
+      "position": [
+        5,
+        0,
+        31
+      ],
+      "name": "Corin · pass innkeeper",
+      "kind": "npc"
+    },
+    "inn_records": {
+      "area": "shore",
+      "position": [
+        9,
+        0,
+        -8
+      ],
+      "name": "False-route payment book",
+      "kind": "book"
+    },
+    "traveler": {
+      "area": "shore",
+      "position": [
+        -12,
+        0,
+        -4
+      ],
+      "name": "Venn · missing traveler",
+      "kind": "npc"
+    },
+    "refugees": {
+      "area": "roots",
+      "position": [
+        -5,
+        0,
+        39
+      ],
+      "name": "Rill · Reedhollow refugee healer",
+      "kind": "npc"
+    },
+    "medicine": {
+      "area": "roots",
+      "position": [
+        -16,
+        0,
+        32
+      ],
+      "name": "Refugee medicine bench",
+      "kind": "table"
+    },
+    "marsh": {
+      "area": "roots",
+      "position": [
+        -21,
+        0,
+        -12
+      ],
+      "name": "Marsh crossing cache",
+      "kind": "cargo"
+    },
+    "toll": {
+      "area": "roots",
+      "position": [
+        22,
+        0,
+        32
+      ],
+      "name": "Varo · safe-road provisioner",
+      "kind": "npc"
+    }
+  },
+  "quests": {
+    "sable_concord_1": {
+      "name": "The Unopened Cargo",
+      "gate": "stonewake",
+      "requires": "",
+      "steps": [
+        {
+          "site": "courier",
+          "text": "Nima: Dunewell's Concord needs a runner. Take this sealed case over the north pass to Sal in Wyrmkeep. The stone beast owns the road at present. Its toll policy lacks nuance.",
+          "options": [
+            {
+              "id": "accept",
+              "label": "Accept the sealed cargo"
+            }
+          ]
+        },
+        {
+          "site": "canyon",
+          "text": "The cargo waymark lies beyond the colossus’s patrol. Clear the beast, then decide whether to respect the seal. Both decisions will have to be explained to Sal.",
+          "options": [
+            {
+              "id": "sealed",
+              "label": "Carry the case onward without breaking the seal",
+              "guard": [
+                "wilderness",
+                "wild_11"
+              ]
+            },
+            {
+              "id": "opened",
+              "label": "Inspect the contents before carrying them onward",
+              "guard": [
+                "wilderness",
+                "wild_11"
+              ]
+            }
+          ]
+        },
+        {
+          "site": "broker",
+          "text": "Sal opens the case: water claims and names of families resisting a merchant levy. You report honestly whether you broke the seal. Secrecy protects them, but it can also hide abuses. Sal offers the Runner oath: carry people’s claims without selling their names.",
+          "options": [
+            {
+              "id": "oath",
+              "label": "Swear the Runner oath · 140 gold and Superior enchanted boots",
+              "reward": {
+                "item": "leather_feet",
+                "name": "Runner's Dust",
+                "gold": 140,
+                "quality": 2,
+                "enchant": "fleet",
+                "materials": {
+                  "leather": 6
+                }
+              },
+              "outcome": "Runner oath sworn. The water claims reached Sal, and the families’ names stay off the market."
+            }
+          ]
+        }
+      ]
+    },
+    "sable_concord_2": {
+      "name": "Water for a Secret",
+      "gate": "stonewake",
+      "requires": "sable_concord_1",
+      "steps": [
+        {
+          "site": "broker",
+          "text": "Sal: A stolen water ledger gives a merchant house leverage over Dunewell. Ishra has its hiding place. Offer information about the reavers’ supply route, not the families from your first cargo.",
+          "options": [
+            {
+              "id": "accept",
+              "label": "Investigate the stolen water ledger"
+            }
+          ]
+        },
+        {
+          "site": "informant",
+          "text": "Ishra: Give me the reavers’ abandoned supply route. I can move food through it. I do not want a list of thirsty children; merchants keep offering those as if they were currency.",
+          "options": [
+            {
+              "id": "trade",
+              "label": "Trade the cleared pass route for the ledger location",
+              "guard": [
+                "mountain",
+                "pass_2"
+              ]
+            }
+          ]
+        },
+        {
+          "site": "water_book",
+          "text": "The ledger records invented arrears against households and caravans. A separate appendix maps hidden wells. Publishing the debts defeats the extortion; publishing the appendix also hands every supply route to the houses.",
+          "options": [
+            {
+              "id": "copy",
+              "label": "Recover the ledger and separate its route appendix"
+            }
+          ]
+        },
+        {
+          "site": "broker",
+          "text": "The debt evidence can be published without the route appendix. Decide who keeps the sensitive original. Either settlement cancels the false levy and earns Broker rank.",
+          "options": [
+            {
+              "id": "commons",
+              "label": "Entrust routes to a public water trust · 180 gold and Exquisite armor",
+              "reward": {
+                "item": "groveheart_chest",
+                "name": "Broker's Commons",
+                "gold": 180,
+                "quality": 3,
+                "enchant": "vigor",
+                "materials": {
+                  "water": 8
+                }
+              },
+              "outcome": "False water debts are cancelled. A public water trust holds the route appendix."
+            },
+            {
+              "id": "sealed",
+              "label": "Seal routes with elected caravan stewards · 220 gold and Exquisite focus",
+              "reward": {
+                "item": "signal_focus",
+                "name": "Broker's Confidence",
+                "gold": 220,
+                "quality": 3,
+                "enchant": "insight",
+                "materials": {
+                  "crystal": 6
+                }
+              },
+              "outcome": "False water debts are cancelled. Elected caravan stewards keep the route appendix sealed."
+            }
+          ]
+        }
+      ]
+    },
+    "sable_concord_3": {
+      "name": "The Road Without Kings",
+      "gate": "stonewake",
+      "requires": "sable_concord_2",
+      "steps": [
+        {
+          "site": "broker",
+          "text": "Sal: We have the claims and the leverage. Now set the rules. Hear Nima and Ishra before signing a route charter. A treaty cannot survive being written by the person with the largest purse alone.",
+          "options": [
+            {
+              "id": "accept",
+              "label": "Convene the Concord route charter"
+            }
+          ]
+        },
+        {
+          "site": "courier",
+          "text": "Nima: Publish tolls and let independent carriers vote. Merchants will call it chaos. They call any queue they cannot buy their way around chaos.",
+          "options": [
+            {
+              "id": "hear",
+              "label": "Record the runners’ open-network proposal"
+            }
+          ]
+        },
+        {
+          "site": "informant",
+          "text": "Ishra: A private network can pay for water guards today, but the accounts stay with its owners. Hostility toward the Compact would close your chance to sign its final harbor charter. Profit does not require war.",
+          "options": [
+            {
+              "id": "hear",
+              "label": "Record the private-network proposal and warning"
+            }
+          ]
+        },
+        {
+          "site": "route_table",
+          "text": "Choose a permanent charter. All grant Concord Hand rank and Masterwork equipment. An open network shares routes and tolls. A private monopoly keeps them secret. Declaring war additionally closes the Compact’s final quest; it is unavailable if you already signed that charter.",
+          "options": [
+            {
+              "id": "open",
+              "label": "Open independent network · 240 gold, Vigor amulet",
+              "reward": {
+                "item": "voice_amulet",
+                "name": "Roads Without Kings",
+                "gold": 240,
+                "quality": 4,
+                "enchant": "vigor",
+                "materials": {
+                  "heartwood": 8
+                }
+              },
+              "outcome": "An independent network publishes tolls and shares oversight. Peace with the Compact remains possible."
+            },
+            {
+              "id": "monopoly",
+              "label": "Secret monopoly; peace with Compact · 340 gold, Insight focus",
+              "reward": {
+                "item": "signal_focus",
+                "name": "The Silent Toll",
+                "gold": 340,
+                "quality": 4,
+                "enchant": "insight",
+                "materials": {
+                  "crystal": 8
+                }
+              },
+              "outcome": "The Concord owns a secret route monopoly. Trade with the Compact remains peaceful."
+            },
+            {
+              "id": "war",
+              "label": "Secret monopoly AND war on Compact · closes rival final quest",
+              "reward": {
+                "item": "signal_focus",
+                "name": "The Closed Road",
+                "gold": 340,
+                "quality": 4,
+                "enchant": "insight",
+                "materials": {
+                  "crystal": 8
+                }
+              },
+              "outcome": "The Concord owns the routes and declares war on the Compact. Its final harbor charter is permanently closed."
+            }
+          ]
+        }
+      ]
+    },
+    "side_dunewell": {
+      "name": "One Well, Two Owners",
+      "gate": "stonewake",
+      "requires": "",
+      "steps": [
+        {
+          "site": "well_camp",
+          "text": "Osa: Our caravan paid to repair this outpost’s well. Teren inherited the well-house and says that means he owns the water. His grandfather also owned a bucket. We are still negotiating the sky.",
+          "options": [
+            {
+              "id": "accept",
+              "label": "Investigate the water claims"
+            }
+          ]
+        },
+        {
+          "site": "well_house",
+          "text": "Teren shows a genuine deed to the building. Osa’s receipts cover channel maintenance, not ownership. Neither paper establishes who laid the older buried pipe.",
+          "options": [
+            {
+              "id": "hear",
+              "label": "Record the household deed and caravan repairs"
+            }
+          ]
+        },
+        {
+          "site": "well_channel",
+          "text": "The supply channel is blocked behind a split iron collar. Repairing it requires 2 iron ingots and 3 wood. The old masonry carries a road-workers’ mark.",
+          "options": [
+            {
+              "id": "repair",
+              "label": "Repair the buried channel · 2 iron + 3 wood",
+              "cost": {
+                "iron_ingot": 2,
+                "wood": 3
+              }
+            }
+          ]
+        },
+        {
+          "site": "well_claim",
+          "text": "A sealed grant reserves a third share for road workers and travelers, independent of the house and caravan. Both current claimants omitted this obligation. Take the grant back to Osa.",
+          "options": [
+            {
+              "id": "read",
+              "label": "Recover the road-workers’ water grant"
+            }
+          ]
+        },
+        {
+          "site": "well_camp",
+          "text": "All settlements must honor the third share. Choose shared oversight, or leave the house operating the well under a public access covenant. Both restore the supply; neither excludes travelers.",
+          "options": [
+            {
+              "id": "shared",
+              "label": "Three-party water council · 130 gold and Superior Vigor ring",
+              "reward": {
+                "item": "netmender_ring",
+                "name": "The Third Share",
+                "gold": 130,
+                "quality": 2,
+                "enchant": "vigor",
+                "materials": {
+                  "water": 8
+                }
+              },
+              "outcome": "The repaired well has a three-party water council, including road workers and travelers."
+            },
+            {
+              "id": "covenant",
+              "label": "House operation with enforceable public access · 160 gold and Superior Insight focus",
+              "reward": {
+                "item": "signal_focus",
+                "name": "Wellkeeper's Covenant",
+                "gold": 160,
+                "quality": 2,
+                "enchant": "insight",
+                "materials": {
+                  "iron_ingot": 6
+                }
+              },
+              "outcome": "The house operates the repaired well under a public access covenant that honors the third share."
+            }
+          ]
+        }
+      ]
+    },
+    "side_larksbridge": {
+      "name": "The Mill That Stopped",
+      "gate": "",
+      "requires": "",
+      "steps": [
+        {
+          "site": "miller",
+          "text": "Dena: Our Larksbridge relief mill has stopped with grain waiting. Inspect the sluice and speak to Joss. I would ask him myself, but he keeps answering in overdue invoices.",
+          "options": [
+            {
+              "id": "accept",
+              "label": "Investigate the stopped relief mill"
+            }
+          ]
+        },
+        {
+          "site": "mill_debris",
+          "text": "Flood debris jammed the sluice and snapped a brace. Someone also removed the drive pin carefully; the river did not unscrew it.",
+          "options": [
+            {
+              "id": "inspect",
+              "label": "Record flood damage and the missing pin"
+            }
+          ]
+        },
+        {
+          "site": "mill_worker",
+          "text": "Joss: I removed the pin after three unpaid weeks. A protest, not a flood. I will refit it if Dena signs a wage lien on the next flour sales. Or pay the arrears now: 60 gold. The brace still needs repair.",
+          "options": [
+            {
+              "id": "lien",
+              "label": "Record a wage lien against the next flour sales"
+            },
+            {
+              "id": "pay",
+              "label": "Pay Joss’s 60-gold arrears yourself",
+              "gold_cost": 60
+            }
+          ]
+        },
+        {
+          "site": "mill",
+          "text": "Replace the brace with 3 wood and 1 iron ingot, then refit Joss’s drive pin. He returns to operate the wheel under the agreed wage settlement.",
+          "options": [
+            {
+              "id": "repair",
+              "label": "Repair and restart the mill · 3 wood + 1 iron",
+              "cost": {
+                "wood": 3,
+                "iron_ingot": 1
+              }
+            }
+          ]
+        },
+        {
+          "site": "miller",
+          "text": "The wheel is running and the grain can be milled. Dena acknowledges the wage settlement in writing. Decide where the first flour goes.",
+          "options": [
+            {
+              "id": "relief",
+              "label": "Send the first flour to relief kitchens · 100 gold and Superior Vigor amulet",
+              "reward": {
+                "item": "wardkeeper_amulet",
+                "name": "Bread Before Profit",
+                "gold": 100,
+                "quality": 2,
+                "enchant": "vigor",
+                "materials": {
+                  "herb": 6
+                }
+              },
+              "outcome": "The mill is running. The first flour goes to relief kitchens; the wage settlement is recorded."
+            },
+            {
+              "id": "market",
+              "label": "Sell the first flour to fund worker wages · 150 gold and Superior Fleet axe",
+              "reward": {
+                "item": "pactkeeper_axe",
+                "name": "An Honest Wage",
+                "gold": 150,
+                "quality": 2,
+                "enchant": "fleet",
+                "materials": {
+                  "wood": 8
+                }
+              },
+              "outcome": "The mill is running. The first flour sale funds worker wages under the recorded settlement."
+            }
+          ]
+        }
+      ]
+    },
+    "side_three_roads": {
+      "name": "Three Inns, One Secret",
+      "gate": "archive",
+      "requires": "",
+      "steps": [
+        {
+          "site": "inn_a",
+          "text": "Pell: A traveler named Venn vanished after buying directions. My copy says Saltbreak. Bessa’s guesthouse and Corin’s pass inn sold the other maps. Compare all three. Our sign says Three Roads, not Three Reliable Roads.",
+          "options": [
+            {
+              "id": "accept",
+              "label": "Trace Venn through the three innkeepers"
+            }
+          ]
+        },
+        {
+          "site": "inn_b",
+          "text": "Bessa: Venn asked for the western coast road. My map sent him north to Corin. Its red seal came from a route seller who paid us for every copy.",
+          "options": [
+            {
+              "id": "hear",
+              "label": "Record Bessa’s route and the seller’s seal"
+            }
+          ]
+        },
+        {
+          "site": "inn_c",
+          "text": "Corin: My copy sent Venn back toward the shore. I refunded him. The same seller supplied a payment book to the cache east of Saltbreak’s cave approach. The directions form a trap, not a journey.",
+          "options": [
+            {
+              "id": "hear",
+              "label": "Compare Corin’s map with the other accounts"
+            }
+          ]
+        },
+        {
+          "site": "inn_records",
+          "text": "The payment book links the red-seal seller to the Brinecutters. Clear the approach before recovering its refuge directions.",
+          "options": [
+            {
+              "id": "recover",
+              "label": "Recover the route seller’s payment book",
+              "guard": [
+                "shore",
+                "shore_0"
+              ]
+            }
+          ]
+        },
+        {
+          "site": "traveler",
+          "text": "Venn is hiding on the beach above the tideline. He escaped the ambush and wants to give evidence, provided nobody prints his hiding place. Share the cleared route to the guesthouse.",
+          "options": [
+            {
+              "id": "rescue",
+              "label": "Give Venn the safe route to Bessa’s guesthouse"
+            }
+          ]
+        },
+        {
+          "site": "inn_b",
+          "text": "Venn reaches the guesthouse. Publish the payment trail or hand it to a protected hearing. Both reports omit his refuge and identify the route seller.",
+          "options": [
+            {
+              "id": "public",
+              "label": "Publish the false-route scheme · 140 gold and Superior Fleet saber",
+              "reward": {
+                "item": "tideglass_saber",
+                "name": "The Fourth Road",
+                "gold": 140,
+                "quality": 2,
+                "enchant": "fleet",
+                "materials": {
+                  "leather": 6
+                }
+              },
+              "outcome": "Venn is sheltered at Bessa’s guesthouse. The route seller’s payments are public; his refuge is withheld."
+            },
+            {
+              "id": "hearing",
+              "label": "Protected harbor hearing · 140 gold and Superior Vigor mantle",
+              "reward": {
+                "item": "breakwater_mantle",
+                "name": "A Guest's Shelter",
+                "gold": 140,
+                "quality": 2,
+                "enchant": "vigor",
+                "materials": {
+                  "water": 6
+                }
+              },
+              "outcome": "Venn is sheltered at Bessa’s guesthouse. A protected hearing receives the route seller’s payments."
+            }
+          ]
+        }
+      ]
+    },
+    "side_reedhollow": {
+      "name": "Medicine for the Unwelcome",
+      "gate": "stonewake",
+      "requires": "",
+      "steps": [
+        {
+          "site": "refugees",
+          "text": "Rill: Reedhollow’s families are camped here after the town refused them beds. Fever has no interest in residency papers. Prepare medicine, then find supplies to carry it safely through the wet ground.",
+          "options": [
+            {
+              "id": "accept",
+              "label": "Prepare medicine for the refugee camp"
+            }
+          ]
+        },
+        {
+          "site": "medicine",
+          "text": "Rill’s recipe needs 4 herbs and 3 water. Mix and seal the doses here; ordinary gathering and the woodland supply caches provide ingredients.",
+          "options": [
+            {
+              "id": "mix",
+              "label": "Prepare sealed medicine · 4 herbs + 3 water",
+              "cost": {
+                "herb": 4,
+                "water": 3
+              }
+            }
+          ]
+        },
+        {
+          "site": "toll",
+          "text": "Varo offers a dry-road carrier for 50 gold. Alternatively, recover the sealed boots and carriers at the marsh cache, after clearing the hostile spring approach. The medicine remains yours until delivery.",
+          "options": [
+            {
+              "id": "road",
+              "label": "Hire safe-road carriage · 50 gold",
+              "gold_cost": 50
+            },
+            {
+              "id": "marsh",
+              "label": "Choose the guarded marsh supply cache"
+            }
+          ]
+        },
+        {
+          "site": "marsh",
+          "text": "Recover waterproof carriers from the marsh cache, or collect the hired carrier’s delivery receipt at Varo’s post.",
+          "options": [
+            {
+              "id": "cache",
+              "label": "Recover waterproof carriers after clearing the spring approach",
+              "guard": [
+                "roots",
+                "roots_0"
+              ],
+              "when": [
+                2,
+                "marsh"
+              ]
+            },
+            {
+              "id": "receipt",
+              "label": "Collect the paid safe-road delivery receipt",
+              "site": "toll",
+              "when": [
+                2,
+                "road"
+              ]
+            }
+          ]
+        },
+        {
+          "site": "refugees",
+          "text": "Rill receives the sealed doses and distributes them to the camp. The town’s exclusion remains disputed, but the families have medicine tonight. Choose a reward from the relief stock.",
+          "options": [
+            {
+              "id": "healer",
+              "label": "Accept healer’s equipment · 100 gold and Superior Vigor armor",
+              "reward": {
+                "item": "groveheart_chest",
+                "name": "No Papers Required",
+                "gold": 100,
+                "quality": 2,
+                "enchant": "vigor",
+                "materials": {
+                  "herb": 6
+                }
+              },
+              "outcome": "Rill distributes the medicine to Reedhollow’s families. You accepted the healer’s relief gear."
+            },
+            {
+              "id": "runner",
+              "label": "Accept runner’s equipment · 100 gold and Superior Fleet boots",
+              "reward": {
+                "item": "leather_feet",
+                "name": "Through the Reeds",
+                "gold": 100,
+                "quality": 2,
+                "enchant": "fleet",
+                "materials": {
+                  "water": 6
+                }
+              },
+              "outcome": "Rill distributes the medicine to Reedhollow’s families. You accepted the runner’s relief gear."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

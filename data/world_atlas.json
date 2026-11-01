@@ -1,0 +1,1660 @@
+{
+  "version": 1,
+  "name": "The Northern Reach",
+  "size": [
+    1100,
+    1000
+  ],
+  "regions": [
+    {
+      "id": "frostmarch",
+      "name": "Frostmarch",
+      "biome": "Alpine peaks & glacial tundra",
+      "color": "a6b7be",
+      "polygon": [
+        [
+          200,
+          60
+        ],
+        [
+          420,
+          40
+        ],
+        [
+          600,
+          70
+        ],
+        [
+          730,
+          50
+        ],
+        [
+          770,
+          180
+        ],
+        [
+          690,
+          300
+        ],
+        [
+          500,
+          300
+        ],
+        [
+          370,
+          250
+        ],
+        [
+          150,
+          230
+        ]
+      ],
+      "label": [
+        445,
+        130
+      ],
+      "description": "A glacial mountain crown, buried keeps and windswept passes. Meltwater feeds the valleys below."
+    },
+    {
+      "id": "cinder_coast",
+      "name": "Cinder Coast",
+      "biome": "Volcanic shore & ash fields",
+      "color": "776865",
+      "polygon": [
+        [
+          730,
+          50
+        ],
+        [
+          950,
+          130
+        ],
+        [
+          1040,
+          350
+        ],
+        [
+          850,
+          350
+        ],
+        [
+          770,
+          300
+        ],
+        [
+          690,
+          300
+        ],
+        [
+          770,
+          180
+        ]
+      ],
+      "label": [
+        890,
+        150
+      ],
+      "description": "Black beaches, geothermal vents and basalt towers. A dangerous coast shaped by living fire."
+    },
+    {
+      "id": "westmere",
+      "name": "Westmere",
+      "biome": "Fjords & storm cliffs",
+      "color": "577f88",
+      "polygon": [
+        [
+          150,
+          230
+        ],
+        [
+          370,
+          250
+        ],
+        [
+          320,
+          440
+        ],
+        [
+          210,
+          540
+        ],
+        [
+          80,
+          700
+        ],
+        [
+          82,
+          650
+        ],
+        [
+          115,
+          620
+        ],
+        [
+          90,
+          595
+        ],
+        [
+          72,
+          570
+        ],
+        [
+          122,
+          530
+        ],
+        [
+          78,
+          500
+        ],
+        [
+          70,
+          450
+        ],
+        [
+          90,
+          400
+        ],
+        [
+          148,
+          370
+        ],
+        [
+          100,
+          350
+        ],
+        [
+          110,
+          320
+        ],
+        [
+          130,
+          310
+        ],
+        [
+          110,
+          270
+        ]
+      ],
+      "label": [
+        177,
+        310
+      ],
+      "description": "Deep inlets, exposed sea cliffs, fishing ports and fog-bound islands."
+    },
+    {
+      "id": "pineward",
+      "name": "Pineward",
+      "biome": "Conifer valleys & old ruins",
+      "color": "507a62",
+      "polygon": [
+        [
+          370,
+          250
+        ],
+        [
+          500,
+          300
+        ],
+        [
+          690,
+          300
+        ],
+        [
+          720,
+          480
+        ],
+        [
+          580,
+          570
+        ],
+        [
+          430,
+          530
+        ],
+        [
+          320,
+          440
+        ]
+      ],
+      "label": [
+        520,
+        365
+      ],
+      "description": "The home region: sheltered pine valleys, ancient watch roads and timber villages beneath the peaks."
+    },
+    {
+      "id": "amberweald",
+      "name": "Amberweald",
+      "biome": "Autumn forest & sacred groves",
+      "color": "ab8653",
+      "polygon": [
+        [
+          320,
+          440
+        ],
+        [
+          430,
+          530
+        ],
+        [
+          450,
+          720
+        ],
+        [
+          330,
+          810
+        ],
+        [
+          250,
+          880
+        ],
+        [
+          90,
+          720
+        ],
+        [
+          80,
+          700
+        ],
+        [
+          210,
+          540
+        ]
+      ],
+      "label": [
+        245,
+        620
+      ],
+      "description": "Copper-leaf forests, giant roots, secluded hunting lodges and shrines older than the towns."
+    },
+    {
+      "id": "sunscar",
+      "name": "Sunscar Plateau",
+      "biome": "Dry mesas & salt canyons",
+      "color": "bb9f73",
+      "polygon": [
+        [
+          690,
+          300
+        ],
+        [
+          770,
+          300
+        ],
+        [
+          850,
+          350
+        ],
+        [
+          1040,
+          350
+        ],
+        [
+          980,
+          600
+        ],
+        [
+          1060,
+          800
+        ],
+        [
+          850,
+          780
+        ],
+        [
+          720,
+          480
+        ]
+      ],
+      "label": [
+        880,
+        450
+      ],
+      "description": "The eastern rain shadow: dry highlands, wind-cut canyons, caravan towns and buried observatories."
+    },
+    {
+      "id": "highmeadow",
+      "name": "Highmeadow",
+      "biome": "Green uplands & river farms",
+      "color": "839565",
+      "polygon": [
+        [
+          430,
+          530
+        ],
+        [
+          580,
+          570
+        ],
+        [
+          620,
+          700
+        ],
+        [
+          630,
+          890
+        ],
+        [
+          460,
+          960
+        ],
+        [
+          250,
+          880
+        ],
+        [
+          330,
+          810
+        ],
+        [
+          450,
+          720
+        ]
+      ],
+      "label": [
+        490,
+        715
+      ],
+      "description": "Open hills, grazing land, orchards and contested river crossings that keep the cities supplied."
+    },
+    {
+      "id": "glassfen",
+      "name": "Glassfen",
+      "biome": "Wetlands & drowned stone",
+      "color": "637f76",
+      "polygon": [
+        [
+          580,
+          570
+        ],
+        [
+          720,
+          480
+        ],
+        [
+          850,
+          780
+        ],
+        [
+          1060,
+          800
+        ],
+        [
+          800,
+          930
+        ],
+        [
+          630,
+          890
+        ],
+        [
+          620,
+          700
+        ]
+      ],
+      "label": [
+        770,
+        790
+      ],
+      "description": "Reed seas, mist, luminous pools and half-submerged ruins. Causeways connect isolated settlements."
+    }
+  ],
+  "locations": [
+    {
+      "id": "frostmere",
+      "name": "Frostmere",
+      "region": "pineward",
+      "kind": "town",
+      "point": [
+        445,
+        455
+      ],
+      "faction": "hearthbound",
+      "status": "playable",
+      "description": "Your starting village and the current playable area. The forge, Ember Hall, crossing and Watcher’s Stones are available on the local map."
+    },
+    {
+      "id": "pinehall",
+      "name": "Pinehall",
+      "region": "pineward",
+      "kind": "city",
+      "point": [
+        560,
+        500
+      ],
+      "faction": "lantern",
+      "status": "playable",
+      "description": "A forest settlement and ruined archive reached by the western trail after Stonewake. The Lantern and Coven disagree over who should hold the recovered atlas."
+    },
+    {
+      "id": "wyrmkeep",
+      "name": "Wyrmkeep",
+      "region": "frostmarch",
+      "kind": "fort",
+      "point": [
+        425,
+        190
+      ],
+      "faction": "iron_pact",
+      "status": "playable",
+      "description": "A snowy mountain settlement reached through the north pass after Stonewake. Two rival Iron Pact clans share a council hall and market."
+    },
+    {
+      "id": "rimegate",
+      "name": "Rimegate Pass",
+      "region": "frostmarch",
+      "kind": "pass",
+      "point": [
+        625,
+        263
+      ],
+      "faction": "iron_pact",
+      "status": "planned",
+      "description": "A narrow, strategic pass linking the northern clans and eastern coast."
+    },
+    {
+      "id": "ashport",
+      "name": "Ashport",
+      "region": "cinder_coast",
+      "kind": "town",
+      "point": [
+        892,
+        267
+      ],
+      "faction": "ashen_choir",
+      "status": "planned",
+      "description": "A harbor of black stone, furnace docks and contested pilgrimage routes."
+    },
+    {
+      "id": "ember_caldera",
+      "name": "Ember Caldera",
+      "region": "cinder_coast",
+      "kind": "ruin",
+      "point": [
+        842,
+        183
+      ],
+      "faction": "ashen_choir",
+      "status": "playable",
+      "description": "A playable basalt sanctuary above volcanic channels. Cantor Sereth seeks the truth behind the awakening network; travel here after resolving the council."
+    },
+    {
+      "id": "saltbreak",
+      "name": "Saltbreak",
+      "region": "westmere",
+      "kind": "town",
+      "point": [
+        180,
+        416
+      ],
+      "faction": "tide_compact",
+      "status": "playable",
+      "description": "A playable fishing hamlet on the Black Shore. After The Missing Atlas, take the coastal road from Frostmere to investigate a fallen vessel."
+    },
+    {
+      "id": "hallowcliff",
+      "name": "Hallowcliff",
+      "region": "westmere",
+      "kind": "ruin",
+      "point": [
+        143,
+        578
+      ],
+      "faction": "tide_compact",
+      "status": "planned",
+      "description": "A lighthouse monastery overlooking wreck-strewn waters."
+    },
+    {
+      "id": "alderrest",
+      "name": "Alderrest",
+      "region": "amberweald",
+      "kind": "town",
+      "point": [
+        285,
+        703
+      ],
+      "faction": "briar_coven",
+      "status": "planned",
+      "description": "A forest settlement divided over logging rights and its old woodland vows."
+    },
+    {
+      "id": "stag_shrine",
+      "name": "The Stag Shrine",
+      "region": "amberweald",
+      "kind": "shrine",
+      "point": [
+        318,
+        543
+      ],
+      "faction": "briar_coven",
+      "status": "playable",
+      "description": "A playable woodland chapter after Stonewake: rival keepers, three blighted roots, an ancient hollow-tree shrine and two permanent restoration pacts."
+    },
+    {
+      "id": "dunewell",
+      "name": "Dunewell",
+      "region": "sunscar",
+      "kind": "town",
+      "point": [
+        901,
+        534
+      ],
+      "faction": "sable_concord",
+      "status": "planned",
+      "description": "An oasis caravan town whose water rights are more valuable than gold."
+    },
+    {
+      "id": "sunken_lens",
+      "name": "The Sunken Lens",
+      "region": "sunscar",
+      "kind": "ruin",
+      "point": [
+        955,
+        702
+      ],
+      "faction": "sable_concord",
+      "status": "playable",
+      "description": "A playable buried observatory amid amber dunes. After The Missing Atlas, follow the eastern expedition road from Frostmere."
+    },
+    {
+      "id": "larksbridge",
+      "name": "Larksbridge",
+      "region": "highmeadow",
+      "kind": "town",
+      "point": [
+        504,
+        809
+      ],
+      "faction": "hearthbound",
+      "status": "planned",
+      "description": "A market and farming town at the meeting of the southern roads."
+    },
+    {
+      "id": "three_roads",
+      "name": "Three Roads",
+      "region": "highmeadow",
+      "kind": "town",
+      "point": [
+        517,
+        627
+      ],
+      "faction": "tide_compact",
+      "status": "planned",
+      "description": "An inland trade stop: inns, stables, rumors and rival recruiters."
+    },
+    {
+      "id": "mirewatch",
+      "name": "Mirewatch",
+      "region": "glassfen",
+      "kind": "town",
+      "point": [
+        809,
+        823
+      ],
+      "faction": "lantern",
+      "status": "playable",
+      "description": "A playable expedition camp on timber stilts above the marsh. Four investigations converge here to prepare a safe crossing."
+    },
+    {
+      "id": "reedhollow",
+      "name": "Reedhollow",
+      "region": "glassfen",
+      "kind": "shrine",
+      "point": [
+        705,
+        680
+      ],
+      "faction": "briar_coven",
+      "status": "planned",
+      "description": "A marsh refuge where healers preserve knowledge unwelcome in the cities."
+    }
+  ],
+  "factions": [
+    {
+      "id": "hearthbound",
+      "name": "Hearthbound Lodge",
+      "kind": "Rangers & wardens",
+      "home": "frostmere",
+      "color": "c5b580",
+      "goal": "Protect travelers and the valley settlements.",
+      "initiation": "Restore the watch road and take a lodge oath.",
+      "ranks": [
+        "Outrider",
+        "Waykeeper",
+        "Warden"
+      ],
+      "allies": [
+        "tide_compact",
+        "iron_pact",
+        "briar_coven"
+      ],
+      "rivals": [],
+      "status": "playable",
+      "joinable": true
+    },
+    {
+      "id": "iron_pact",
+      "name": "Iron Pact",
+      "kind": "Mountain clans",
+      "home": "wyrmkeep",
+      "color": "a3b6c3",
+      "goal": "Unite the northern holds without erasing their independence.",
+      "initiation": "Settle the council, choose one of the rival Stoneguard or Stormweaver clans, and restore the road wards.",
+      "ranks": [
+        "Sworn",
+        "Shieldbearer",
+        "Clan Voice"
+      ],
+      "allies": [
+        "hearthbound"
+      ],
+      "rivals": [
+        "ashen_choir"
+      ],
+      "status": "playable",
+      "joinable": true
+    },
+    {
+      "id": "lantern",
+      "name": "Veiled Lantern",
+      "kind": "Secretive scholar order",
+      "home": "pinehall",
+      "color": "91b7bf",
+      "goal": "Recover dangerous knowledge and control who can use it.",
+      "initiation": "Retrieve an archive fragment and submit to the order’s trial.",
+      "ranks": [
+        "Seeker",
+        "Keeper",
+        "Veiled Adept"
+      ],
+      "allies": [],
+      "rivals": [
+        "briar_coven"
+      ],
+      "status": "planned",
+      "joinable": true
+    },
+    {
+      "id": "briar_coven",
+      "name": "Briar Coven",
+      "kind": "Woodland cult & healers",
+      "home": "stag_shrine",
+      "color": "b0bc7b",
+      "goal": "Preserve the old pacts between settlements and living land.",
+      "initiation": "Heal a blighted grove and choose which promise to keep.",
+      "ranks": [
+        "Rootbound",
+        "Thornspeaker",
+        "Grove Elder"
+      ],
+      "allies": [
+        "hearthbound"
+      ],
+      "rivals": [
+        "lantern"
+      ],
+      "status": "planned",
+      "joinable": true
+    },
+    {
+      "id": "sable_concord",
+      "name": "Sable Concord",
+      "kind": "Smugglers & information brokers",
+      "home": "dunewell",
+      "color": "cfb082",
+      "goal": "Keep trade and knowledge outside the reach of rulers.",
+      "initiation": "Carry a sealed cargo through the canyon and answer for its contents.",
+      "ranks": [
+        "Runner",
+        "Broker",
+        "Concord Hand"
+      ],
+      "allies": [],
+      "rivals": [
+        "tide_compact"
+      ],
+      "status": "playable",
+      "joinable": true
+    },
+    {
+      "id": "ashen_choir",
+      "name": "Ashen Choir",
+      "kind": "Volcanic mystery cult",
+      "home": "ember_caldera",
+      "color": "cf8e72",
+      "goal": "Awaken a buried power they believe can remake a failing world.",
+      "initiation": "Survive an ash pilgrimage and uncover what the choir conceals.",
+      "ranks": [
+        "Listener",
+        "Cantor",
+        "Ember Voice"
+      ],
+      "allies": [],
+      "rivals": [
+        "iron_pact"
+      ],
+      "status": "playable",
+      "joinable": true
+    },
+    {
+      "id": "tide_compact",
+      "name": "Tidemarch Compact",
+      "kind": "Sailors & merchant houses",
+      "home": "saltbreak",
+      "color": "83b5c8",
+      "goal": "Secure ports and trade routes through treaties and shared law.",
+      "initiation": "Investigate a missing ship and defend your findings before the houses.",
+      "ranks": [
+        "Decksworn",
+        "Envoy",
+        "Harbor Speaker"
+      ],
+      "allies": [
+        "hearthbound"
+      ],
+      "rivals": [
+        "sable_concord"
+      ],
+      "status": "playable",
+      "joinable": true
+    }
+  ],
+  "quests": [
+    {
+      "id": "oldwatch_survey",
+      "name": "The Oldwatch Survey",
+      "kind": "side",
+      "location": "frostmere",
+      "faction": "hearthbound",
+      "requires": [],
+      "status": "playable",
+      "summary": "Inspect the village forge, survey Oldwatch Crossing, then examine the relic at the Watcher’s Stones. This local exploration quest is playable now."
+    },
+    {
+      "id": "stonewake",
+      "name": "Stonewake",
+      "kind": "main",
+      "location": "frostmere",
+      "faction": "",
+      "requires": [
+        "side_frostmere"
+      ],
+      "status": "playable",
+      "summary": "After returning the forge ember to Edda, help Ilyra restore three ward stones. Decipher their runes, awaken the watchstone, and report echoes of worlds beyond Frostmere."
+    },
+    {
+      "id": "council",
+      "name": "The Divided Council",
+      "kind": "main",
+      "location": "wyrmkeep",
+      "faction": "",
+      "requires": [
+        "stonewake"
+      ],
+      "status": "playable",
+      "summary": "Hear both Wyrmkeep clans, recover the disputed road ledger from raiders, and broker a council settlement. Clan membership is optional."
+    },
+    {
+      "id": "archive",
+      "name": "The Missing Atlas",
+      "kind": "main",
+      "location": "pinehall",
+      "faction": "",
+      "requires": [
+        "stonewake"
+      ],
+      "status": "playable",
+      "summary": "Investigate Pinehall’s ruined archive, hear the Veiled Lantern and Briar Coven, and choose who receives the recovered atlas. The recipient unlocks a distinct relic pattern; either choice advances the main story."
+    },
+    {
+      "id": "roots",
+      "name": "Pacts Beneath the Roots",
+      "kind": "main",
+      "location": "stag_shrine",
+      "faction": "",
+      "requires": [
+        "stonewake"
+      ],
+      "status": "playable",
+      "summary": "Cleanse three blighted roots, defeat the Hollow Warden, and choose a wild or tended woodland pact to recover the ancient memory. Each pact unlocks different equipment."
+    },
+    {
+      "id": "tides",
+      "name": "The Wreck on the Black Shore",
+      "kind": "main",
+      "location": "saltbreak",
+      "faction": "",
+      "requires": [
+        "archive"
+      ],
+      "status": "playable",
+      "summary": "Follow the recovered atlas to Saltbreak. Explore sea caves, restore wreck systems, identify damaged relics and decide whether the power core serves the harbor or the ship. Either outcome leads toward the Sunken Lens."
+    },
+    {
+      "id": "lens",
+      "name": "The Sky Below the Sand",
+      "kind": "main",
+      "location": "sunken_lens",
+      "faction": "",
+      "requires": [
+        "archive"
+      ],
+      "status": "playable",
+      "summary": "Explore the Sunken Lens, align three mirrors from their inscriptions, restore the observatory and defeat its guardian. Recover a star chart, solar-forging patterns and the piercing Sunlance spell. The atlas opens this parallel branch; either Black Shore outcome preserves its lead."
+    },
+    {
+      "id": "choir",
+      "name": "A Song Through the Stone",
+      "kind": "main",
+      "location": "ember_caldera",
+      "faction": "",
+      "requires": [
+        "council"
+      ],
+      "status": "playable",
+      "summary": "Follow the council lead to Ember Caldera. Ring three resonators, repair the buried receiver and defeat its guardian to discover the distress signal behind the Choir's song."
+    },
+    {
+      "id": "convergence",
+      "name": "The Roads Converge",
+      "kind": "main",
+      "location": "mirewatch",
+      "faction": "",
+      "requires": [
+        "roots",
+        "tides",
+        "lens",
+        "choir"
+      ],
+      "status": "playable",
+      "summary": "Bring the four discoveries to Mirewatch, forge a transit regulator and survive its live calibration. Earlier woodland and harbor choices remain valid; no faction membership is required."
+    },
+    {
+      "id": "threshold",
+      "name": "Beyond the First Threshold",
+      "kind": "main",
+      "location": "sunken_lens",
+      "faction": "",
+      "requires": [
+        "convergence"
+      ],
+      "status": "playable",
+      "summary": "Cross from the Sunken Lens after preparing the expedition. Restore an orbital station, defeat rogue security and bring its archive home to unlock Aeralis."
+    },
+    {
+      "id": "returning_light",
+      "name": "The Returning Light",
+      "kind": "main",
+      "location": "reedhollow",
+      "faction": "",
+      "requires": [
+        "threshold"
+      ],
+      "status": "playable",
+      "summary": "After returning from the First Threshold, enter Aeralis through Frostmere's crystal crossing. Recover the Dawn Prism from the fractured regent and return to stabilize the watchstone network."
+    },
+    {
+      "id": "hearthbound_1",
+      "name": "The Old Watch Road",
+      "kind": "faction",
+      "location": "frostmere",
+      "faction": "hearthbound",
+      "requires": [],
+      "status": "playable",
+      "summary": "Restore the watch road and take a lodge oath."
+    },
+    {
+      "id": "hearthbound_2",
+      "name": "A Winter Without Wolves",
+      "kind": "faction",
+      "location": "frostmere",
+      "faction": "hearthbound",
+      "requires": [
+        "hearthbound_1"
+      ],
+      "status": "playable",
+      "summary": "Track a sudden absence of wolves to a poisoned watershed. Work with a rival grove keeper or suppress the evidence to protect a village patron."
+    },
+    {
+      "id": "hearthbound_3",
+      "name": "Who Guards the Pass?",
+      "kind": "faction",
+      "location": "frostmere",
+      "faction": "hearthbound",
+      "requires": [
+        "hearthbound_2"
+      ],
+      "status": "playable",
+      "summary": "Choose whether the restored watch road belongs to a single clan or a neutral lodge. Your decision changes future patrols and village support."
+    },
+    {
+      "id": "iron_pact_1",
+      "name": "Blood at the Snow Line",
+      "kind": "faction",
+      "location": "wyrmkeep",
+      "faction": "iron_pact",
+      "requires": [
+        "council"
+      ],
+      "status": "playable",
+      "summary": "Choose Stoneguard or Stormweaver, then restore three road wards to earn your first rank."
+    },
+    {
+      "id": "iron_pact_2",
+      "name": "The Broken Council",
+      "kind": "faction",
+      "location": "wyrmkeep",
+      "faction": "iron_pact",
+      "requires": [
+        "iron_pact_1"
+      ],
+      "status": "playable",
+      "summary": "Provision two mountain supply posts to earn your first promotion and advanced clan patterns."
+    },
+    {
+      "id": "iron_pact_3",
+      "name": "A Crown of Separate Holds",
+      "kind": "faction",
+      "location": "wyrmkeep",
+      "faction": "iron_pact",
+      "requires": [
+        "iron_pact_2"
+      ],
+      "status": "playable",
+      "summary": "After Shieldbearer promotion, harvest the colossus and Rimefang, then choose shared patrols under independent holds or a central war leader. Earn Clan Voice rank and a forgeable signet. The mandate changes clan reputation; it does not close other faction stories."
+    },
+    {
+      "id": "lantern_1",
+      "name": "The Uncatalogued Door",
+      "kind": "faction",
+      "location": "pinehall",
+      "faction": "lantern",
+      "requires": [
+        "archive"
+      ],
+      "status": "playable",
+      "summary": "After The Missing Atlas, study the archivist’s testimony, solve the Uncatalogued Door and return to Mereth. Take the Lantern oath to become a Witness and earn a forgeable pendant. Your atlas custody decision remains intact."
+    },
+    {
+      "id": "lantern_2",
+      "name": "Names Beneath the Water",
+      "kind": "faction",
+      "location": "pinehall",
+      "faction": "lantern",
+      "requires": [
+        "lantern_1"
+      ],
+      "status": "playable",
+      "summary": "As a Lantern Witness, recover three Mirewatch records. Stabilize the expedition beacon to reach the sealed testimony, then return to Mereth. Publish the names or preserve them under seal to earn Recordkeeper rank and a choice-exclusive ring pattern."
+    },
+    {
+      "id": "lantern_3",
+      "name": "The Price of Knowing",
+      "kind": "faction",
+      "location": "pinehall",
+      "faction": "lantern",
+      "requires": [
+        "lantern_2"
+      ],
+      "status": "playable",
+      "summary": "After resolving the Mirewatch testimony, hear Mereth and Aelin, then choose sealed study, public copying or shared oversight at the archive seal. Earn Keeper rank and a forgeable keystone. The prior testimony decision remains intact; this first pass does not lock out the Coven capstone."
+    },
+    {
+      "id": "briar_coven_1",
+      "name": "The Grove That Refused Spring",
+      "kind": "faction",
+      "location": "stag_shrine",
+      "faction": "briar_coven",
+      "requires": [
+        "roots"
+      ],
+      "status": "playable",
+      "summary": "After restoring the woodland memory, revive three settlement seedbeds and return to Maelin. Promise to shelter renewal or share medicine to become a Coven Seedkeeper and earn a forgeable charm. The earlier grove pact remains intact."
+    },
+    {
+      "id": "briar_coven_2",
+      "name": "A Debt of Sap and Stone",
+      "kind": "faction",
+      "location": "stag_shrine",
+      "faction": "briar_coven",
+      "requires": [
+        "briar_coven_1"
+      ],
+      "status": "playable",
+      "summary": "As a Seedkeeper, inspect the lodge foundation and Spring root, hear Oren, then negotiate a crossing or catchment with Maelin. Repair the settlement without expulsion and earn a forgeable Pactmender Ring."
+    },
+    {
+      "id": "briar_coven_3",
+      "name": "The Last Old Promise",
+      "kind": "faction",
+      "location": "stag_shrine",
+      "faction": "briar_coven",
+      "requires": [
+        "briar_coven_2"
+      ],
+      "status": "playable",
+      "summary": "After resolving the lodge debt, hear Maelin, Oren and the woodland memory. Renew the oldest protections or establish a shared charter at the Stag Heart. Earn Rootwarden rank and a forgeable talisman. Earlier pacts and Lantern records remain intact."
+    },
+    {
+      "id": "sable_concord_1",
+      "name": "The Unopened Cargo",
+      "kind": "faction",
+      "location": "dunewell",
+      "faction": "sable_concord",
+      "requires": [
+        "stonewake"
+      ],
+      "status": "playable",
+      "summary": "Carry a sealed cargo through the canyon and answer for its contents. Playable through Dunewell caravan representatives in Frostmere and Wyrmkeep."
+    },
+    {
+      "id": "sable_concord_2",
+      "name": "Water for a Secret",
+      "kind": "faction",
+      "location": "dunewell",
+      "faction": "sable_concord",
+      "requires": [
+        "sable_concord_1"
+      ],
+      "status": "playable",
+      "summary": "Trade information for access to a stolen water ledger. Free the town from extortion without handing every route to the merchant houses. Playable through Dunewell caravan representatives in Frostmere and Wyrmkeep."
+    },
+    {
+      "id": "sable_concord_3",
+      "name": "The Road Without Kings",
+      "kind": "faction",
+      "location": "dunewell",
+      "faction": "sable_concord",
+      "requires": [
+        "sable_concord_2"
+      ],
+      "status": "playable",
+      "summary": "Choose an open network of independent routes or a profitable secret monopoly. Declaring war on the Compact closes its rival capstone. Playable through Dunewell caravan representatives in Frostmere and Wyrmkeep."
+    },
+    {
+      "id": "ashen_choir_1",
+      "name": "Voices in the Furnace",
+      "kind": "faction",
+      "location": "ember_caldera",
+      "faction": "ashen_choir",
+      "requires": [
+        "choir"
+      ],
+      "status": "playable",
+      "summary": "Survive an ash pilgrimage and uncover what the choir conceals."
+    },
+    {
+      "id": "ashen_choir_2",
+      "name": "Ash Remembers Everything",
+      "kind": "faction",
+      "location": "ember_caldera",
+      "faction": "ashen_choir",
+      "requires": [
+        "ashen_choir_1"
+      ],
+      "status": "playable",
+      "summary": "Enter a sealed furnace sanctuary and learn what happened during the last awakening. Challenge the choir’s account or help conceal the discovery."
+    },
+    {
+      "id": "ashen_choir_3",
+      "name": "The Fire We Invite",
+      "kind": "faction",
+      "location": "ember_caldera",
+      "faction": "ashen_choir",
+      "requires": [
+        "ashen_choir_2"
+      ],
+      "status": "playable",
+      "summary": "Decide whether to awaken, contain, or silence the buried power. Choosing the Choir’s conquest path closes the Iron Pact’s rival capstone."
+    },
+    {
+      "id": "tide_compact_1",
+      "name": "A Ship Without a Name",
+      "kind": "faction",
+      "location": "saltbreak",
+      "faction": "tide_compact",
+      "requires": [
+        "tides"
+      ],
+      "status": "playable",
+      "summary": "Investigate a missing ship and defend your findings before the houses."
+    },
+    {
+      "id": "tide_compact_2",
+      "name": "The Harbor That Lied",
+      "kind": "faction",
+      "location": "saltbreak",
+      "faction": "tide_compact",
+      "requires": [
+        "tide_compact_1"
+      ],
+      "status": "playable",
+      "summary": "Investigate forged harbor records connecting a merchant house to deliberate wrecks. Protect witnesses before presenting the evidence."
+    },
+    {
+      "id": "tide_compact_3",
+      "name": "The Price of Safe Passage",
+      "kind": "faction",
+      "location": "saltbreak",
+      "faction": "tide_compact",
+      "requires": [
+        "tide_compact_2"
+      ],
+      "status": "playable",
+      "summary": "Rebuild the Compact through transparent agreements or let one house take control. Outlawing the Concord closes its rival capstone."
+    },
+    {
+      "id": "side_frostmere",
+      "name": "An Ember Beneath Oldwatch",
+      "kind": "side",
+      "location": "frostmere",
+      "faction": "hearthbound",
+      "requires": [],
+      "status": "playable",
+      "summary": "Speak with Edda at the village forge, descend beneath the Watcher’s Stones, defeat the Watch-Captain and recover the forge ember. Return to Edda for the Oldwatch Oath recipe."
+    },
+    {
+      "id": "side_pinehall",
+      "name": "The Apprentice Who Vanished",
+      "kind": "side",
+      "location": "pinehall",
+      "faction": "lantern",
+      "requires": [
+        "stonewake"
+      ],
+      "status": "playable",
+      "summary": "Follow Iven’s healing research into the archive, help him return to camp and choose supervised college study or independent authorship."
+    },
+    {
+      "id": "side_wyrmkeep",
+      "name": "Letters Above the Snow",
+      "kind": "side",
+      "location": "wyrmkeep",
+      "faction": "iron_pact",
+      "requires": [
+        "stonewake"
+      ],
+      "status": "playable",
+      "summary": "Carry two conflicting family accounts to the passkeepers’ memorial. Discover the shared final watch and choose public remembrance or private replies."
+    },
+    {
+      "id": "side_rimegate",
+      "name": "The Last Warm Shelter",
+      "kind": "side",
+      "location": "rimegate",
+      "faction": "iron_pact",
+      "requires": [
+        "stonewake"
+      ],
+      "status": "playable",
+      "summary": "Find stranded travelers on the Rimegate approach outside Wyrmkeep. Restore the watch hut hearth, then arrange a cleared road home or shelter until a ridge guide can travel."
+    },
+    {
+      "id": "side_ashport",
+      "name": "The Boat That Would Not Burn",
+      "kind": "side",
+      "location": "ashport",
+      "faction": "ashen_choir",
+      "requires": [
+        "archive"
+      ],
+      "status": "playable",
+      "summary": "Investigate an Ashport launch beached at Saltbreak after a furnace fire. Harbor workers and a Choir archivist dispute its surviving cargo."
+    },
+    {
+      "id": "side_ember_caldera",
+      "name": "A Pilgrim’s Empty Shoes",
+      "kind": "side",
+      "location": "ember_caldera",
+      "faction": "ashen_choir",
+      "requires": [
+        "council"
+      ],
+      "status": "playable",
+      "summary": "Track a missing pilgrim along the caldera ash paths. An apparent sacrifice conceals a staged escape; help Leth find shelter or leave freely."
+    },
+    {
+      "id": "side_saltbreak",
+      "name": "Nets Full of Silver",
+      "kind": "side",
+      "location": "saltbreak",
+      "faction": "tide_compact",
+      "requires": [
+        "archive"
+      ],
+      "status": "playable",
+      "summary": "Follow silver coins from a fishing net to a smuggler’s ledger. Locate the missing crew and decide whether to publish the full account or protect their identities."
+    },
+    {
+      "id": "side_hallowcliff",
+      "name": "The Keeper’s Last Light",
+      "kind": "side",
+      "location": "hallowcliff",
+      "faction": "tide_compact",
+      "requires": [
+        "archive"
+      ],
+      "status": "playable",
+      "summary": "Restore an old fjord signal on the Saltbreak shore to guide a Hallowcliff relief ship. Discover the keeper’s bargain and decide how to report it."
+    },
+    {
+      "id": "side_alderrest",
+      "name": "A Harvest of Amber",
+      "kind": "side",
+      "location": "alderrest",
+      "faction": "briar_coven",
+      "requires": [
+        "stonewake"
+      ],
+      "status": "playable",
+      "summary": "Investigate blight at Alderrest’s trial plot in the woodland chapter. Test an herbal treatment, then preserve the grove or authorize limited emergency logging."
+    },
+    {
+      "id": "side_stag_shrine",
+      "name": "The Stag Without a Shadow",
+      "kind": "side",
+      "location": "stag_shrine",
+      "faction": "briar_coven",
+      "requires": [
+        "roots"
+      ],
+      "status": "playable",
+      "summary": "Follow an uncanny stag without harming it. Its trail leads to a broken pact and a hunter who needs forgiveness rather than punishment."
+    },
+    {
+      "id": "side_dunewell",
+      "name": "One Well, Two Owners",
+      "kind": "side",
+      "location": "dunewell",
+      "faction": "sable_concord",
+      "requires": [
+        "stonewake"
+      ],
+      "status": "playable",
+      "summary": "Resolve a water dispute between a caravan camp and an established household. Repairing the buried supply channel reveals a third claimant. Playable through the Dunewell well outpost in Wyrmkeep."
+    },
+    {
+      "id": "side_sunken_lens",
+      "name": "The Astronomer’s Debt",
+      "kind": "side",
+      "location": "sunken_lens",
+      "faction": "sable_concord",
+      "requires": [
+        "archive"
+      ],
+      "status": "playable",
+      "summary": "Recover Veyra’s horizon gauge and weather prism from guarded excavation caches. Sell them to settle her debt, or retain them for public weather research."
+    },
+    {
+      "id": "side_larksbridge",
+      "name": "The Mill That Stopped",
+      "kind": "side",
+      "location": "larksbridge",
+      "faction": "hearthbound",
+      "requires": [],
+      "status": "playable",
+      "summary": "Investigate a stopped mill before the grain spoils. Sabotage, river damage and an unpaid worker’s grievance all point to different solutions. Playable through Larksbridge’s relief mill in Frostmere."
+    },
+    {
+      "id": "side_three_roads",
+      "name": "Three Inns, One Secret",
+      "kind": "side",
+      "location": "three_roads",
+      "faction": "tide_compact",
+      "requires": [
+        "archive"
+      ],
+      "status": "playable",
+      "summary": "Compare contradictory stories from three innkeepers to locate a missing traveler. Someone is selling false routes to bandits. Playable through innkeepers in Frostmere, Saltbreak and Wyrmkeep."
+    },
+    {
+      "id": "side_mirewatch",
+      "name": "Lights Beneath the Boards",
+      "kind": "side",
+      "location": "mirewatch",
+      "faction": "lantern",
+      "requires": [
+        "roots",
+        "tides",
+        "lens",
+        "choir"
+      ],
+      "status": "playable",
+      "summary": "Investigate lights beneath Mirewatch’s western deck, free a trapped scavenger from a sealed service vault, and recover his salvage cache. Speak with Ilyra after the Mirewatch road opens."
+    },
+    {
+      "id": "side_reedhollow",
+      "name": "Medicine for the Unwelcome",
+      "kind": "side",
+      "location": "reedhollow",
+      "faction": "briar_coven",
+      "requires": [
+        "stonewake"
+      ],
+      "status": "playable",
+      "summary": "Gather medicine for refugees whom the nearest town refuses to admit. Choose between a dangerous marsh shortcut and bargaining for safe passage. Playable through Reedhollow’s refugee camp in the woodland chapter."
+    },
+    {
+      "id": "winter_siege",
+      "name": "The Winter Siege",
+      "kind": "main",
+      "location": "ember_caldera",
+      "faction": "",
+      "requires": [
+        "returning_light"
+      ],
+      "status": "playable",
+      "summary": "Defend Northwatch on Ember Caldera’s northern approaches after returning from Aeralis. Repel two waves, repair the fort defenses and recover orders that lead to the Broken Seal."
+    },
+    {
+      "id": "broken_seal",
+      "name": "The Broken Seal",
+      "kind": "main",
+      "location": "ember_caldera",
+      "faction": "",
+      "requires": [
+        "winter_siege"
+      ],
+      "status": "playable",
+      "summary": "Uncover the industrial force behind the invasion and assemble the ward needed to survive the Crucible."
+    },
+    {
+      "id": "last_furnace",
+      "name": "The Last Furnace",
+      "kind": "main",
+      "location": "ember_caldera",
+      "faction": "",
+      "requires": [
+        "broken_seal"
+      ],
+      "status": "playable",
+      "summary": "Much later, a siege and a broken ward expose the engine feeding the invasion. Descend into an industrial hell, defeat the Furnace Maw and recover its heart. Infernal guns and alloys can return home; ammunition remains a resource. Playable mini-world preview exists; earlier story acts remain planned."
+    }
+  ],
+  "routes": [
+    {
+      "start": "saltbreak",
+      "end": "frostmere",
+      "kind": "road"
+    },
+    {
+      "start": "frostmere",
+      "end": "pinehall",
+      "kind": "road"
+    },
+    {
+      "start": "frostmere",
+      "end": "wyrmkeep",
+      "kind": "road"
+    },
+    {
+      "start": "wyrmkeep",
+      "end": "rimegate",
+      "kind": "road"
+    },
+    {
+      "start": "rimegate",
+      "end": "ashport",
+      "kind": "road"
+    },
+    {
+      "start": "ashport",
+      "end": "ember_caldera",
+      "kind": "road"
+    },
+    {
+      "start": "pinehall",
+      "end": "dunewell",
+      "kind": "road"
+    },
+    {
+      "start": "dunewell",
+      "end": "sunken_lens",
+      "kind": "road"
+    },
+    {
+      "start": "saltbreak",
+      "end": "hallowcliff",
+      "kind": "road"
+    },
+    {
+      "start": "frostmere",
+      "end": "stag_shrine",
+      "kind": "road"
+    },
+    {
+      "start": "stag_shrine",
+      "end": "alderrest",
+      "kind": "road"
+    },
+    {
+      "start": "alderrest",
+      "end": "larksbridge",
+      "kind": "road"
+    },
+    {
+      "start": "larksbridge",
+      "end": "three_roads",
+      "kind": "road"
+    },
+    {
+      "start": "three_roads",
+      "end": "pinehall",
+      "kind": "road"
+    },
+    {
+      "start": "three_roads",
+      "end": "reedhollow",
+      "kind": "road"
+    },
+    {
+      "start": "reedhollow",
+      "end": "mirewatch",
+      "kind": "road"
+    },
+    {
+      "start": "mirewatch",
+      "end": "sunken_lens",
+      "kind": "road"
+    }
+  ],
+  "rivers": [
+    [
+      [
+        525,
+        245
+      ],
+      [
+        510,
+        355
+      ],
+      [
+        590,
+        460
+      ],
+      [
+        590,
+        580
+      ],
+      [
+        665,
+        710
+      ],
+      [
+        765,
+        880
+      ]
+    ],
+    [
+      [
+        390,
+        330
+      ],
+      [
+        340,
+        440
+      ],
+      [
+        270,
+        490
+      ],
+      [
+        150,
+        455
+      ]
+    ],
+    [
+      [
+        590,
+        580
+      ],
+      [
+        510,
+        680
+      ],
+      [
+        495,
+        820
+      ],
+      [
+        460,
+        945
+      ]
+    ]
+  ],
+  "mountain_spines": [
+    [
+      [
+        320,
+        155
+      ],
+      [
+        420,
+        210
+      ],
+      [
+        500,
+        285
+      ],
+      [
+        570,
+        355
+      ],
+      [
+        650,
+        420
+      ],
+      [
+        720,
+        500
+      ],
+      [
+        765,
+        570
+      ]
+    ],
+    [
+      [
+        230,
+        220
+      ],
+      [
+        295,
+        260
+      ],
+      [
+        350,
+        330
+      ]
+    ]
+  ],
+  "local_sites": [
+    {
+      "id": "trail",
+      "name": "South Trail",
+      "kind": "trail",
+      "position": [
+        0,
+        0,
+        17
+      ],
+      "description": "The village approach and your starting point."
+    },
+    {
+      "id": "forge",
+      "name": "Village Forge",
+      "kind": "forge",
+      "position": [
+        -5.8,
+        0,
+        -11
+      ],
+      "description": "Inspect the forge with E to begin the Oldwatch survey."
+    },
+    {
+      "id": "hall",
+      "name": "Ember Hall",
+      "kind": "hall",
+      "position": [
+        1,
+        0,
+        -38.5
+      ],
+      "description": "The longhouse at the north end of the village."
+    },
+    {
+      "id": "crossing",
+      "name": "Oldwatch Crossing",
+      "kind": "bridge",
+      "position": [
+        14,
+        0,
+        -16
+      ],
+      "description": "The old stone bridge connects the village to the eastern woods."
+    },
+    {
+      "id": "stones",
+      "name": "Watcher’s Stones",
+      "kind": "ruin",
+      "position": [
+        31,
+        0,
+        -30
+      ],
+      "description": "An ancient stone gateway. Inspect the relic just beyond it with E."
+    }
+  ],
+  "local_quest_steps": [
+    {
+      "site": "forge",
+      "event": "inspect_forge",
+      "text": "Inspect the village forge",
+      "position": [
+        -5.8,
+        0,
+        -11
+      ]
+    },
+    {
+      "site": "crossing",
+      "event": "reach_crossing",
+      "text": "Survey Oldwatch Crossing",
+      "position": [
+        14,
+        0,
+        -16
+      ]
+    },
+    {
+      "site": "stones",
+      "event": "inspect_relic",
+      "text": "Examine the relic at the Watcher’s Stones",
+      "position": [
+        31,
+        0,
+        -33
+      ]
+    }
+  ]
+}

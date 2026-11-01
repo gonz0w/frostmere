@@ -1,0 +1,121 @@
+{
+  "realms": [
+    {
+      "id": "aeralis",
+      "name": "Aeralis · The Shattered Sky",
+      "act": "Act IV · The Returning Light",
+      "requires": [
+        "threshold"
+      ],
+      "quest": "returning_light",
+      "origin": [
+        1200,
+        160,
+        0
+      ],
+      "portal": [
+        35,
+        0,
+        -41
+      ],
+      "armor": "aether",
+      "weapon": "aether_saber",
+      "spell": "starfall",
+      "material": "aether_shard",
+      "alloy": "star_alloy",
+      "enchant": "aether_attunement",
+      "story": "The space expedition reveals that Frostmere’s watchstones are losing their light. Travel to Aeralis to recover the Dawn Prism, guarded by the fractured celestial regent. Its return stabilizes the home-world network."
+    },
+    {
+      "id": "crucible",
+      "name": "The Crucible · Iron Below",
+      "act": "Act VI · The Last Furnace",
+      "requires": [
+        "returning_light",
+        "winter_siege",
+        "broken_seal"
+      ],
+      "quest": "last_furnace",
+      "origin": [
+        1600,
+        0,
+        0
+      ],
+      "portal": [
+        41,
+        0,
+        -40
+      ],
+      "armor": "cinder",
+      "weapon": "cinder_gun",
+      "spell": "soulfire",
+      "material": "soul_ember",
+      "alloy": "cinder_alloy",
+      "enchant": "infernal_resolve",
+      "story": "Much later, a siege and a broken ward expose the engine feeding the invasion. Descend into an industrial hell, defeat the Furnace Maw and recover its heart. Infernal guns and alloys can return home; ammunition remains a resource."
+    }
+  ],
+  "spells": [
+    {
+      "id": "emberbolt",
+      "name": "Emberbolt",
+      "cost": 18,
+      "cooldown": 0.9,
+      "scale": 0.43,
+      "color": "efb278",
+      "description": "A single aimed fire bolt."
+    },
+    {
+      "id": "starfall",
+      "name": "Starfall",
+      "cost": 28,
+      "cooldown": 1.4,
+      "scale": 0.34,
+      "color": "a8dff2",
+      "description": "Three converging crystal bolts; each deals 34% of spell power."
+    },
+    {
+      "id": "soulfire",
+      "name": "Soulfire Lance",
+      "cost": 32,
+      "cooldown": 1.6,
+      "scale": 0.95,
+      "color": "f47a4d",
+      "description": "A powerful infernal bolt. High damage, high magicka cost."
+    },
+    {
+      "id": "chain_lightning",
+      "name": "Chain Lightning",
+      "cost": 24,
+      "cooldown": 1.2,
+      "scale": 0.6,
+      "color": "9bdaf5",
+      "description": "Conductor primary attack. Two jumps within five meters, each retaining 65% of previous damage."
+    },
+    {
+      "id": "sunlance",
+      "name": "Sunlance",
+      "cost": 30,
+      "cooldown": 1.5,
+      "scale": 0.7,
+      "color": "ffe3a1",
+      "pierces": 1,
+      "description": "An aimed ray of sunlight that passes through one enemy to strike a second for 70% of its initial damage. Solid walls stop it."
+    }
+  ],
+  "story_ids": [
+    "stonewake",
+    "council",
+    "archive",
+    "roots",
+    "tides",
+    "lens",
+    "choir",
+    "convergence",
+    "threshold",
+    "returning_light",
+    "winter_siege",
+    "broken_seal",
+    "last_furnace"
+  ]
+}
