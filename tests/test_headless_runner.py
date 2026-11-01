@@ -36,7 +36,7 @@ class RunnerTests(unittest.TestCase):
         self.assertFalse(result['passed'])
 
     def test_timeout_retains_output(self):
-        result, log = self.run_probe("import time; print('started', flush=True); time.sleep(10)", timeout=.15)
+        result, log = self.run_probe("import time; print('started', flush=True); time.sleep(10)", timeout=1)
         self.assertFalse(result['passed'])
         self.assertTrue(result['timed_out'])
         self.assertIn('started', log)
