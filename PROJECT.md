@@ -13,7 +13,7 @@ working conversation become durable through a reviewed policy change. Routine
 implementation choices inside a selected issue are delegated. Unresolved policy
 conflicts stop only the work that depends on them.
 
-Agent Temper pin: `cf928f4120b687f34f1b1f974603a4979b5b874c`. See
+Agent Temper pin: `5222ac45c9edaa23c188816c7727fc70780a95a8`. See
 [provenance](.agent-temper/SOURCE.md). Only the
 [GitHub profile](.agent-temper/profiles/github.md) is selected. No strict-TDD,
 model-routing or other copied profile is implicitly selected. Local policy stays
