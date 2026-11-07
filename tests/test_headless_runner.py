@@ -16,7 +16,7 @@ class RunnerTests(unittest.TestCase):
             # Match the UTF-8 logs emitted by Godot even on legacy Windows consoles.
             source = "import sys; sys.stdout.reconfigure(encoding='utf-8'); " + source
             result = runner.run_check('probe', [sys.executable, '-c', source], path, timeout, marker)
-            return result, path.read_text()
+            return result, path.read_text(encoding='utf-8')
 
     def test_success(self):
         result, log = self.run_probe("print('PROBE_COMPLETE failures=0')")
@@ -62,6 +62,7 @@ class RunnerTests(unittest.TestCase):
         self.assertNotIn(str(runner.ROOT), log)
         self.assertNotIn(str(Path.home()), log)
         self.assertIn('<project>', log)
+        self.assertIn('diagnostic 雪', log)
 
     def test_missing_executable_is_failure(self):
         with tempfile.TemporaryDirectory() as directory:
