@@ -78,6 +78,10 @@ def verify_bundle(archive, name, target):
     else:
         with zipfile.ZipFile(archive) as source:
             files = {n: source.read(n) for n in source.namelist() if not n.endswith('/')}
+            if target == 'macos':
+                binaries = [i for i in source.infolist() if '/Contents/MacOS/' in i.filename and not i.is_dir()]
+                if not binaries or any(not (i.external_attr >> 16) & 0o111 for i in binaries):
+                    raise ValueError('macOS archive binary is not executable')
     manifest = json.loads(files.pop(name + '/BUILD.json'))
     expected = {name + '/' + n: h for n, h in manifest['files'].items()}
     if set(files) != set(expected):
@@ -122,8 +126,9 @@ def main(default_target=None):
         raise ValueError('Godot 4.7.2 stable is required')
     verify_templates(args.templates)
     revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True, encoding='utf-8').strip()
-    if subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=ROOT):
-        raise ValueError('Commit tracked changes before packaging')
+    dirty = subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=ROOT).decode('utf-8')
+    if dirty:
+        raise ValueError('Commit tracked changes before packaging: ' + dirty.strip())
     name = 'Frostmere-' + label + '-' + revision[:12]
     dist = ROOT / 'dist'
     dist.mkdir(exist_ok=True)
@@ -193,8 +198,6 @@ def main(default_target=None):
         pending = Path(temp) / archive.name
         if args.target == 'linux':
             write_linux_archive(package, pending, name)
-        elif args.target == 'macos':
-            subprocess.run(['ditto', '-c', '-k', '--keepParent', '--norsrc', str(package), str(pending)], check=True, timeout=120)
         else:
             with zipfile.ZipFile(pending, 'x', zipfile.ZIP_DEFLATED) as output:
                 for path in sorted(package.rglob('*')):

@@ -80,7 +80,7 @@ runtime tests (including the 41-cue audio fixture) complement it.
 
 Runtime code uses Godot resources and `user://` storage; no runtime process launch
 or shell API was found in this audit. The screenshot fixture uses `TMPDIR` with a
-`user://` fallback. Existing `.command` launchers, macOS packaging (ditto/lipo/codesign) and
+`user://` fallback. Existing `.command` launchers, macOS packaging (lipo/codesign) and
 native-soak RSS sampling (`ps`, macOS-only) remain explicitly host-specific.
 [Source launch/verification](SOURCE_LAUNCH.md) and [packaging](PACKAGING.md) provide
 the portable routes; the full regression matrix remains #28. Native screenshots, audio and timing still

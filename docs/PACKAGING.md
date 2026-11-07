@@ -15,14 +15,15 @@ users may use `python` instead of `python3`. `--target windows` produces a ZIP;
 can be cross-exported from any supported build host. Use `--godot "engine path"`
 to override the verified host setup. Paths with spaces/Unicode are supported.
 
-`--target macos` requires macOS with `lipo`, `codesign` and `ditto`; it preserves
+`--target macos` requires macOS with `lipo` and `codesign`; it preserves
 the existing arm64-only, ad-hoc-signed behavior. It derives the thin template from
 the verified official archive in temporary staging, without modifying a global
 template installation. No signing credentials or notarization are used. The old
 `package_windows.py` and `package_macos.py` commands forward to the shared builder;
 both accept the same explicit `--templates` and optional `--godot` arguments.
 
-Commit tracked changes before building. The builder refuses dirty tracked files
+Build from a clean checkout before editor imports that may rewrite tracked metadata.
+Commit intentional tracked changes before building. The builder refuses dirty tracked files
 and existing output names. It stages only tracked assets/data/scenes/scripts/
 shaders and project/preset configuration, so local profiles, tools, tests, policy,
 history galleries and secrets outside that runtime set never enter the export.
