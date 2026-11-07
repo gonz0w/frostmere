@@ -54,3 +54,12 @@ class LaunchTests(unittest.TestCase):
             self.assertEqual(0, play.main([]))
             check.assert_called_once()
             call.assert_called_once_with(['/engine path/Godot', '--path', str(play.ROOT)], cwd=play.ROOT)
+
+    def test_setup_reports_unicode_path_on_legacy_console(self):
+        import os
+        import subprocess
+        source = "from tools import toolchain as t; from pathlib import Path; import sys; t.install=lambda *a: Path('Frostmere QA 雪/Godot'); sys.argv=['toolchain.py','--install','windows']; t.main()"
+        env = dict(os.environ, PYTHONIOENCODING='cp1252')
+        result = subprocess.run([sys.executable, '-c', source], cwd=play.ROOT, env=env, capture_output=True)
+        self.assertEqual(0, result.returncode, result.stderr)
+        self.assertIn('Frostmere QA 雪', result.stdout.decode('utf-8'))

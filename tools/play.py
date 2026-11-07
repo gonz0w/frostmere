@@ -5,7 +5,7 @@ import shutil
 import subprocess
 import sys
 
-from toolchain import MANIFEST, ROOT, verify_version
+from toolchain import MANIFEST, ROOT, verify_version, configure_console
 from run_headless import run_check
 
 
@@ -45,6 +45,7 @@ def checked_engine(explicit):
 
 
 def main(argv=None):
+    configure_console()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--godot', help='Explicit executable path or PATH command; otherwise use pinned setup, then PATH')
     mode = parser.add_mutually_exclusive_group()
