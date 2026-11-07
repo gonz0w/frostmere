@@ -30,7 +30,7 @@ func _ready() -> void:
 	page.add_child(header)
 	var title := label(header, "THE COLLECTOR'S WORKSHOP", 25)
 	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	button(header, "Return to world  [ I / Esc ]", close)
+	button(header, "Return to world  [ Esc ]", close)
 	banner = label(page, "", 15)
 	tabs = OptionButton.new()
 	for entry: String in MODES:

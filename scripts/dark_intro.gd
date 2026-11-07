@@ -19,6 +19,7 @@ var ward: MeshInstance3D
 var light: OmniLight3D
 var ash: Array[MeshInstance3D] = []
 var overlay: CanvasLayer
+var raw_subtitle:=""
 var subtitle: Label
 var heading: Label
 var previous_environment: Environment
@@ -64,6 +65,8 @@ func solid(at: Vector3, size: Vector3, surface: String="stone") -> void:
 	collider.shape=shape; body.add_child(collider); scene.add_child(body)
 
 func build() -> void:
+	world.controls.changed.connect(func():
+		if is_instance_valid(subtitle): subtitle.text=world.controls.format_prompt(raw_subtitle))
 	scene=Node3D.new(); scene.position=ORIGIN; add_child(scene)
 	static_cube(scene,Vector3(0,-.35,-8),Vector3(24,.7,52),Color("667b88"))
 	solid(Vector3(0,-.35,-4),Vector3(14,.7,36),"snow")
@@ -149,7 +152,7 @@ func start() -> bool:
 		if child is DirectionalLight3D: sun=child; sun_energy=sun.light_energy; sun.light_energy=.08; break
 	previous_controls=world.hud.controls.visible; world.hud.controls.hide()
 	world.hud.notice_time=0
-	subtitle.text="The last road to Frostmere. Ash is falling through the snow.\nWASD · walk to the lantern. Mouse · look. E · inspect.\nTAB · skip opening"
+	_set_subtitle("The last road to Frostmere. Ash is falling through the snow.\nWASD · walk to the lantern. Mouse · look. E · inspect.\nTAB · skip opening")
 	return true
 
 func prompt() -> String:
@@ -161,7 +164,7 @@ func interact() -> bool:
 	if not active or world.player.paused or prompt().is_empty(): return false
 	if stage==0:
 		stage=1; reveal_time=0; heading.hide(); creature.show(); pose_reveal(); world.audio.sfx("ward_approach")
-		subtitle.text="Something moves beyond the ward. Too large for the road.\nThe stone is warm. The snow is not melting.\nTAB · skip opening"
+		_set_subtitle("Something moves beyond the ward. Too large for the road.\nThe stone is warm. The snow is not melting.\nTAB · skip opening")
 	else: finish()
 	return true
 
@@ -183,7 +186,7 @@ func advance(delta: float) -> void:
 		if reveal_time>=REVEAL_DURATION:
 			stage=2; creature.hide(); light.light_energy=3; ward.scale.x=1
 			world.audio.sfx("ward_holds")
-			subtitle.text="The shape withdraws. The ward holds—for now.\nA weathered sign: ‘Frostmere. If the road whispers, do not give it your name.’\nWalk to the arch. E · continue. TAB · skip opening"
+			_set_subtitle("The shape withdraws. The ward holds—for now.\nA weathered sign: ‘Frostmere. If the road whispers, do not give it your name.’\nWalk to the arch. E · continue. TAB · skip opening")
 	# The prelude has no combat or fall penalty; recover safely if displaced.
 	if world.player.position.y < -2 or world.player.position.distance_to(ORIGIN)>60: world.player.respawn()
 
@@ -227,3 +230,7 @@ func finish() -> void:
 	arrival_cover=ColorRect.new(); arrival_cover.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	arrival_cover.mouse_filter=Control.MOUSE_FILTER_IGNORE; arrival_cover.color=Color("101821")
 	arrival.add_child(arrival_cover); arrival_time=.75
+
+func _set_subtitle(text: String) -> void:
+	raw_subtitle=text
+	subtitle.text=world.controls.format_prompt(text)

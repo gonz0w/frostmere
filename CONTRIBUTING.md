@@ -81,6 +81,10 @@ on every native host, using only `build/migration-fixture 雪/`. It verifies cop
 integrity, profile precedence, repeat launches and interrupted migration guards.
 Do not point migration fixtures at real player folders.
 
+Smoke/full runners also include `control_settings.gd` and `control_input.gd` for
+rebinding/conflicts, settings round-trips, UI capture, camera actions and isolated
+look/focus behavior. Native physical input remains a final qualification step.
+
 CI also builds and inspects development packages on each native host using the
 [pinned portable packaging workflow](docs/PACKAGING.md). It retains package logs,
 not game archives, and does not publish releases or qualify native rendering.

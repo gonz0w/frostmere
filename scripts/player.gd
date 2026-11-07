@@ -58,7 +58,7 @@ var phase := 0.0
 var stamina := 100.0
 var spawn_point := Vector3(0, 0.15, 17)
 var migration_status := "isolated"
-var mouse_sensitivity := 0.0023
+
 
 func _ready() -> void:
 	name = "Player"
@@ -101,6 +101,9 @@ func _ready() -> void:
 	elif not isolated:
 		character.load_with_recovery(CharacterState.SAVE_PATH)
 	character.persist = not isolated and character.save_store.status != "blocked"
+	if character.persist:
+		var settings=get_parent().controls
+		if FileAccess.file_exists(settings.PATH) and not settings.load_from(settings.PATH): settings.load_warning="Saved controls are invalid or newer than this build. Defaults are active; edit controls to replace the settings file."
 	derived = character.stats()
 	stamina = derived.stamina
 	health = derived.health
@@ -150,7 +153,8 @@ func _character_changed() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if _automated_render():
 		return
-	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode==KEY_K:
+	if is_instance_valid(get_parent().hud) and is_instance_valid(get_parent().hud.controls_menu) and get_parent().hud.controls_menu.visible: return
+	if event.is_action_pressed("skills"):
 		if get_parent().skills_menu.visible: get_parent().skills_menu.close_menu()
 		else: get_parent().skills_menu.open_menu()
 		get_viewport().set_input_as_handled(); return
@@ -219,14 +223,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	if paused:
 		return
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		rotation.y -= event.relative.x * mouse_sensitivity
-		pivot.rotation.x = clampf(pivot.rotation.x - event.relative.y * mouse_sensitivity, -1.25, 1.15)
+		apply_look(event.relative)
 	if event.is_action_pressed("camera_toggle"):
 		set_third_person(not third_person)
-	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode == KEY_X:
+	if event.is_action_pressed("finisher"):
 		activate_finisher()
-	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode == KEY_G:
-		activate_power("sunder" if event.shift_pressed else "whirlwind")
+	if event.is_action_pressed("power_sunder",false,true):
+		activate_power("sunder")
+	elif event.is_action_pressed("power_spin",false,true):
+		activate_power("whirlwind")
 	if event.is_action_pressed("attack"):
 		attack()
 	if event.is_action_pressed("spell"):
@@ -242,6 +247,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		if get_parent().adventure.inside:
 			get_parent().adventure.leave()
 		respawn()
+
+func apply_look(relative: Vector2) -> void:
+	rotation.y -= relative.x * get_parent().controls.sensitivity
+	pivot.rotation.x = clampf(pivot.rotation.x - relative.y * get_parent().controls.sensitivity * (-1 if get_parent().controls.invert_y else 1), -1.25, 1.15)
 
 func set_paused(value: bool) -> void:
 	if value != paused and is_instance_valid(get_parent().audio): get_parent().audio.sfx("interact")
@@ -264,7 +273,10 @@ func set_third_person(value: bool) -> void:
 func _notification(what: int) -> void:
 	if "--capture" in OS.get_cmdline_user_args() or "--benchmark" in OS.get_cmdline_user_args():
 		return
+	if what == NOTIFICATION_APPLICATION_FOCUS_IN and is_instance_valid(camera): get_parent().controls.apply()
 	if what == NOTIFICATION_APPLICATION_FOCUS_OUT and is_instance_valid(camera):
+		for action in get_parent().controls.bindings: Input.action_release(action)
+		if is_instance_valid(get_parent().hud) and is_instance_valid(get_parent().hud.controls_menu): get_parent().hud.controls_menu.awaiting=""
 		set_paused(true)
 
 func respawn() -> void:

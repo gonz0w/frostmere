@@ -47,8 +47,8 @@ func _ready() -> void:
 	page.add_child(header)
 	var title := _label(header, "CHARACTER  /  ARMORY", 23, INK)
 	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	_button(header, "Skills & perks [ K ]", func(): player.get_parent().skills_menu.open_menu())
-	_button(header, "Return to world   [ C / Esc ]", close)
+	_button(header, "Skills & perks", func(): player.get_parent().skills_menu.open_menu())
+	_button(header, "Return to world   [ Esc ]", close)
 	_label(page, "Experiment with any ancestry, playstyle, and equipment. Equip owned gear; craft and improve items with I or at workstations.", 13, GOLD)
 	var columns := HBoxContainer.new()
 	columns.size_flags_vertical = Control.SIZE_EXPAND_FILL
