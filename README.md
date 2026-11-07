@@ -15,7 +15,7 @@ Built with Godot. Open source under **BSD-3-Clause**.
 · [Windows feedback](https://github.com/gonz0w/frostmere/issues/26)
 
 This unsigned experimental build targets Intel/AMD x64 PCs with Vulkan-capable
-graphics. Native Windows testing is underway; minimum hardware and Windows ARM
+graphics. Native Windows qualification remains open; minimum hardware and Windows ARM
 are not qualified. Back up existing saves before trying development builds.
 
 ![Frostmere's timber houses, market green and mountain skyline](docs/screenshots/frostmere.jpg)
