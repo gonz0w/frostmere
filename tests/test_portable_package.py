@@ -51,9 +51,11 @@ class PortablePackageTests(unittest.TestCase):
     def test_linux_archive_ownership_is_neutral(self):
         with tempfile.TemporaryDirectory() as d:
             root = Path(d); stage = root / 'game'; stage.mkdir()
-            (stage / 'file').write_text('content')
+            (stage / 'Frostmere.x86_64').write_text('content')
+            (stage / 'Frostmere.x86_64').chmod(0o644)
             archive = root / 'game.tar.gz'
             package.write_linux_archive(stage, archive, 'game')
             with tarfile.open(archive) as source:
+                self.assertEqual(0o755, source.getmember('game/Frostmere.x86_64').mode)
                 for member in source.getmembers():
                     self.assertEqual((0, 0, '', ''), (member.uid, member.gid, member.uname, member.gname))

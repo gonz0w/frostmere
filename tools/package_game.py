@@ -95,6 +95,7 @@ def write_linux_archive(package, archive, name):
     def neutral_owner(member):
         member.uid = member.gid = 0
         member.uname = member.gname = ''
+        member.mode = 0o755 if member.isdir() or member.name == name + '/Frostmere.x86_64' else 0o644
         return member
     with tarfile.open(archive, 'w:gz') as output:
         output.add(package, arcname=name, filter=neutral_owner)
@@ -118,7 +119,7 @@ def main(default_target=None):
     parser.add_argument('--templates', required=True, type=Path, help='Official matching export_templates.tpz')
     args = parser.parse_args()
     if args.target == 'macos' and sys.platform != 'darwin':
-        parser.error('macOS arm64 packaging requires macOS lipo/codesign/ditto tools')
+        parser.error('macOS arm64 packaging requires macOS lipo/codesign tools')
     label, preset, binary_name, instructions, template_files = TARGETS[args.target]
     engine = checked_engine(args.godot)
     version = subprocess.check_output([engine, '--version'], text=True, encoding='utf-8', timeout=15).strip()
