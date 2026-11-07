@@ -20,7 +20,7 @@ Left/right mouse: attack/block. Q: cast. B: cycle spells. F: heal.
 I: inventory/crafting. C: character. K: skills. M: map/journal. Esc: pause/settings.
 The opening begins at a lantern: E to interact, Tab to skip. Find Edda at the forge.
 
-Saves use the historical Godot application identity to preserve compatibility:
+New saves use the Frostmere identity, with copy-only migration of old profiles:
 %APPDATA%\Godot\app_userdata\Frostmere\
 Paste %APPDATA%\Godot\app_userdata into Explorer if the name is hard to type.
 Quit before copying that entire game folder as a backup. Do not copy a newer save
