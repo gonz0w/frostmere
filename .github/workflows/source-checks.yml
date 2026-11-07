@@ -16,7 +16,9 @@ jobs:
       - name: Check source and pinned method
         run: python3 tools/verify_repo.py
       - name: Test runner failure detection
-        run: python3 -m unittest discover -s tests -p test_headless_runner.py
+        run: |
+          python3 -m unittest discover -s tests -p test_headless_runner.py
+          python3 -m unittest discover -s tests -p test_windows_package.py
   headless:
     runs-on: ubuntu-24.04
     timeout-minutes: 20

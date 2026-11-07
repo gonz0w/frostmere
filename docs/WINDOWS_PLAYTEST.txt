@@ -1,0 +1,42 @@
+FROSTMERE — EXPERIMENTAL WINDOWS PLAYTEST
+
+Target: Windows 10/11, Intel/AMD 64-bit CPU, Vulkan-capable graphics with current
+drivers. Minimum hardware and Windows ARM are not yet qualified. No Godot editor,
+Python, account or installation is needed. This unsigned development build is
+provided for testing; native Windows rendering/input/audio acceptance is pending.
+
+1. Download the ZIP and its .sha256 file from gonz0w/frostmere GitHub Releases.
+2. In PowerShell, use Get-FileHash .\Frostmere-Windows-x64-<revision>.zip -Algorithm SHA256
+   and compare the hash to the .sha256 file before opening the executable.
+3. Extract ALL files into a writable folder. Do not run inside the ZIP. Keep the
+   EXE, PCK and any DLLs together. Double-click Frostmere.exe.
+   Windows may show an unknown-publisher/reputation prompt because it is unsigned.
+   Verify the download source and checksum; do not disable security software.
+4. If launch fails, run the console wrapper Frostmere.console.exe from PowerShell
+   and include the error text with your report. Update graphics drivers first.
+
+WASD/mouse: move/look. Shift: sprint. Space: jump. E: interact. V: camera.
+Left/right mouse: attack/block. Q: cast. B: cycle spells. F: heal.
+I: inventory/crafting. C: character. K: skills. M: map/journal. Esc: pause/settings.
+The opening begins at a lantern: E to interact, Tab to skip. Find Edda at the forge.
+
+Saves use the historical Godot application identity to preserve compatibility:
+%APPDATA%\Godot\app_userdata\SkyrimCraft • Frostmere\
+Paste %APPDATA%\Godot\app_userdata into Explorer if the name is hard to type.
+Quit before copying that entire game folder as a backup. Do not copy a newer save
+over your only older backup. Replace game files in a new extracted folder for
+updates; deleting the extracted game folder preserves saves. Keep old game ZIPs
+and matching save backups together for rollback. No identity migration is applied.
+
+Please report at https://github.com/gonz0w/frostmere/issues/26:
+- BUILD.json revision, Windows version, GPU/driver, RAM and display resolution.
+- Whether launch, opening, combat, inventory/crafting and travel work.
+- Audio, fullscreen/Alt-Tab, mouse capture and UI scaling observations.
+- Quit/relaunch save restoration; back up before testing recovery.
+- Any error text, reproduction steps and screenshots (remove personal paths).
+Controller support is not part of this tester build. Campaign/balance work remains
+ongoing; a frame stall is tracked in #24. Export success is not Windows approval.
+
+Original game code/art/audio: BSD-3-Clause, copyright gonz0w; see LICENSE.txt.
+Godot and its bundled components: see GODOT-NOTICES.txt. BUILD.json records source,
+template provenance and package-file hashes.

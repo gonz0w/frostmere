@@ -30,12 +30,14 @@ does not mean the whole campaign has been human-playtested or balanced.
 | Platform | Current status |
 | --- | --- |
 | macOS / Apple Silicon | Native development and review evidence on M5 Max. M1 / 32 GB qualification remains open. |
-| Windows | Target platform; native support is not yet verified. |
+| Windows / x86_64 | Experimental tester packaging available; native qualification remains open. |
 | Linux | Target platform; native support is not yet verified. |
 
 See [issues](https://github.com/gonz0w/frostmere/issues) and
 [capability milestones](https://github.com/gonz0w/frostmere/milestones) for live work.
-This initial source publication does not include a new downloadable game release.
+Windows testers: see [tester downloads](https://github.com/gonz0w/frostmere/releases)
+and [extraction, controls and feedback instructions](docs/WINDOWS_PLAYTEST.txt).
+These are experimental builds; see [Windows build reproduction](docs/WINDOWS_BUILD.md).
 
 ## A few places beyond home
 
