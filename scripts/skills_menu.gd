@@ -15,8 +15,8 @@ func _ready() -> void:
 	for skill: String in state.Skills.NAMES:
 		var button:=Button.new(); button.text=state.Skills.NAMES[skill]; button.custom_minimum_size=Vector2(180,42); button.pressed.connect(func(): selected=skill; refresh()); tabs.add_child(button)
 	rows=VBoxContainer.new(); rows.add_theme_constant_override("separation",16); rows.custom_minimum_size.y=260; column.add_child(rows)
-	var close:=Button.new(); close.text="Return to exploration [ K / Esc ]"; close.custom_minimum_size.y=44; close.pressed.connect(close_menu); column.add_child(close)
-	state.skills_changed.connect(refresh); state.skill_advanced.connect(func(skill: String,level: int): world.hud.announce(state.Skills.NAMES[skill]+" increased", "Level %d · %d unspent perk points · K opens skills" % [level,state.perk_points()]))
+	var close:=Button.new(); close.text="Return to exploration [ Esc ]"; close.custom_minimum_size.y=44; close.pressed.connect(close_menu); column.add_child(close)
+	state.skills_changed.connect(refresh); state.skill_advanced.connect(func(skill: String,level: int): world.hud.announce(state.Skills.NAMES[skill]+" increased", "Level %d · %d unspent perk points · %s opens skills" % [level,state.perk_points(),world.controls.label("skills")]))
 	refresh(); hide()
 func refresh() -> void:
 	points.text="Unspent perk points: %d" % state.perk_points()

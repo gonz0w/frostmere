@@ -137,6 +137,10 @@ New builds use the Frostmere save folder and safely copy historical profiles on
 first normal launch. See [migration and conflict recovery](docs/SAVE_MIGRATION.md).
 See [save behavior and recovery limits](docs/SAVE_RESUME.md).
 
+Keyboard/mouse bindings, sensitivity and invert-Y are available under **Esc →
+Controls & mouse settings**. See the [controls guide](docs/CONTROLS.md). The table
+below lists defaults.
+
 | Key | Action |
 | --- | --- |
 | WASD / mouse, Shift, Space | Move/look, sprint, jump |

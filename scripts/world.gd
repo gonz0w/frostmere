@@ -46,6 +46,7 @@ var tree_sites: Array[Dictionary] = []
 var landmarks: Array[Dictionary] = []
 var discovered: Dictionary = {}
 var elapsed := 0.0
+var controls=preload("res://scripts/control_settings.gd").new()
 var capture_done := false
 var intro: Node3D
 var gathering_props: Dictionary = {}
@@ -252,21 +253,7 @@ func _ready() -> void:
 	print("FROSTMERE_READY blocks=%d landmarks=%d" % [block_count, landmarks.size()])
 
 func _inputs() -> void:
-	var bindings := {"move_forward": KEY_W, "move_back": KEY_S, "move_left": KEY_A,
-		"move_right": KEY_D, "jump": KEY_SPACE, "sprint": KEY_SHIFT,
-		"camera_toggle": KEY_V, "pause": KEY_ESCAPE, "respawn": KEY_R,
-		"cycle_spell": KEY_B, "spell": KEY_Q, "heal": KEY_F, "inventory": KEY_I, "interact": KEY_E, "character": KEY_C, "world_map": KEY_M, "help": KEY_H, "performance": KEY_F3}
-	for action: String in bindings:
-		if not InputMap.has_action(action): InputMap.add_action(action)
-		var event := InputEventKey.new()
-		event.physical_keycode = bindings[action]
-		if not InputMap.action_has_event(action, event): InputMap.action_add_event(action, event)
-
-	for action in ["attack", "block"]:
-		if not InputMap.has_action(action): InputMap.add_action(action)
-		var mouse := InputEventMouseButton.new()
-		mouse.button_index = MOUSE_BUTTON_LEFT if action == "attack" else MOUSE_BUTTON_RIGHT
-		if not InputMap.action_has_event(action, mouse): InputMap.action_add_event(action, mouse)
+	controls.apply()
 
 func _environment() -> void:
 	var env := Environment.new()

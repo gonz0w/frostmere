@@ -188,7 +188,7 @@ func enter() -> void:
 			saved_environment = {"ambient": env.ambient_light_energy, "fog": env.fog_enabled}
 			env.ambient_light_energy = 0.19
 			env.fog_enabled = false
-	world.hud.announce("Oldwatch Barrow", "LMB attack · RMB hold block · Q Emberbolt · F healing potion\nRaise guard just before a melee hit to parry and stagger.")
+	world.hud.announce("Oldwatch Barrow", world.controls.format_prompt("LMB attack · RMB hold block · Q Emberbolt · F healing potion\nRaise guard just before a melee hit to parry and stagger."))
 
 func leave() -> void:
 	inside = false
@@ -393,7 +393,7 @@ func open_dialog() -> void:
 		dialog_action.text = "Return forge ember · Learn recipe and claim materials"
 		dialog_action.disabled = false
 	elif state.adventure.accepted:
-		dialog_text.text = "Cross the stone bridge and follow the path to the Watcher's Stones. The barrow entrance stands just southeast of the relic.\n\nThe Captain waits in the deepest chamber. If he offers you a permanent position, decline. Search his remains for our forge ember, then return to me.\n\nLMB: attack or fire bow · RMB: hold block\nQ: Emberbolt · F: healing potion · I: supplies"
+		dialog_text.text = world.controls.format_prompt("Cross the stone bridge and follow the path to the Watcher's Stones. The barrow entrance stands just southeast of the relic.\n\nThe Captain waits in the deepest chamber. If he offers you a permanent position, decline. Search his remains for our forge ember, then return to me.\n\nLMB: attack or fire bow · RMB: hold block\nQ: Emberbolt · F: healing potion · I: supplies")
 		dialog_action.text = "Expedition supplies already received"
 		dialog_action.disabled = true
 	else:

@@ -16,6 +16,8 @@ var prompt: Label
 var notice: VBoxContainer
 var notice_title: Label
 var notice_detail: Label
+var controls_menu: PanelContainer
+var guide_labels: Array[Label]=[]
 var controls: PanelContainer
 var pause_panel: ColorRect
 var finisher_hint: Label
@@ -81,12 +83,9 @@ func _ready() -> void:
 	var guide := VBoxContainer.new()
 	guide.add_theme_constant_override("separation", 7)
 	controls.add_child(guide)
-	_label(guide, "V Camera · E Use / Gather", 12, GOLD)
-	_label(guide, "W A S D   Move       MOUSE   Look", 13, INK)
-	_label(guide, "SHIFT   Sprint       SPACE   Jump", 13, INK)
-	_label(guide, "LMB Attack   RMB Block   Q Spell   F Heal", 13, INK)
-	_label(guide, "Raise guard just before a hit to parry", 12, GOLD)
-	_label(guide, "C Gear   I Bag   K Skills   M Map   ESC Pause", 13, INK)
+	for i in range(6): guide_labels.append(_label(guide,"",12,INK))
+	_refresh_controls()
+	world.controls.changed.connect(_refresh_controls)
 	var bottom := VBoxContainer.new()
 	combat_panel=bottom
 	bottom.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT)
@@ -143,6 +142,17 @@ func _ready() -> void:
 	objective.add_theme_font_size_override("font_size", 14)
 	objective.add_theme_color_override("font_color", INK)
 	root.add_child(objective)
+	controls_menu=preload("res://scripts/controls_menu.gd").new(); controls_menu.world=world; root.add_child(controls_menu)
+
+func _refresh_controls() -> void:
+	var c=world.controls
+	var lines=["%s Camera · %s Use / Gather" % [c.label("camera_toggle"),c.label("interact")],
+		"%s Move · Mouse Look" % c.movement_label(),
+		"%s Sprint · %s Jump" % [c.label("sprint"),c.label("jump")],
+		"%s Attack · %s Block · %s Spell · %s Heal" % [c.label("attack"),c.label("block"),c.label("spell"),c.label("heal")],
+		"Raise guard just before a hit to parry",
+		"%s Gear · %s Bag · %s Skills · %s Map · Esc Pause" % [c.label("character"),c.label("inventory"),c.label("skills"),c.label("world_map")]]
+	for i in range(guide_labels.size()): guide_labels[i].text=lines[i]
 
 func _panel() -> StyleBoxFlat:
 	var style := StyleBoxFlat.new()
@@ -180,13 +190,14 @@ func _build_pause(root: Control) -> void:
 	_label(column, "F R O S T M E R E", 36, INK)
 	_label(column, "Take a breath. The mountains can wait.", 16, GOLD)
 	_button(column, "Resume exploration", func(): world.player.set_paused(false))
-	_button(column, "World map & quests   [ M ]", func():
+	_button(column, "World map & quests", func():
 		world.player.map_open = true
 		world.player.character_menu_open = false
 		world.player.set_paused(true))
-	_button(column, "Character & equipment   [ C ]", func():
+	_button(column, "Character & equipment", func():
 		world.player.character_menu_open = true
 		world.player.set_paused(true))
+	_button(column, "Controls & mouse settings",func(): controls_menu.open_menu())
 	_button(column, "Switch first / third person", func(): world.player.set_third_person(not world.player.third_person))
 	_button(column, "Return to the trail", func():
 		world.player.respawn()
@@ -203,7 +214,7 @@ func _build_pause(root: Control) -> void:
 			var recovery:=recovery_message()
 			world.hud.announce("Saving disabled",recovery if not recovery.is_empty() else "Saving is disabled in this isolated preview."))
 	_button(column, "Save and quit", func(): world.session_save.quit_game())
-	_label(column, "WASD Move · Mouse Look · Shift Sprint · Space Jump\nV Camera · E Inspect · H Controls · F3 Performance", 13, INK)
+	_label(column, "Use Controls & mouse settings to view or change bindings.", 13, INK)
 	pause_panel.visible = false
 
 func recovery_message() -> String:
@@ -263,19 +274,19 @@ func announce(title: String, detail: String) -> void:
 func _process(delta: float) -> void:
 	var player: CharacterBody3D = world.player
 	combat_panel.visible=not (is_instance_valid(world.intro) and world.intro.active)
-	pause_panel.visible = player.paused and not player.character_menu_open and not player.map_open and not player.workshop_open and not player.dialog_open and not player.shop_open
+	pause_panel.visible = player.paused and not player.character_menu_open and not player.map_open and not player.workshop_open and not player.dialog_open and not player.shop_open and not controls_menu.visible
 	if Input.is_action_just_pressed("help") and not player.paused:
 		controls.visible = not controls.visible
-	if Input.is_action_just_pressed("performance"):
+	if Input.is_action_just_pressed("performance") and not controls_menu.visible:
 		show_performance = not show_performance
 	performance.visible = show_performance
 	performance.text = "%d FPS  ·  %s  ·  %s blocks" % [Engine.get_frames_per_second(), RenderingServer.get_video_adapter_name(), world.block_count]
 	var finish_target: CharacterBody3D = player.nearby_finisher()
-	finisher_hint.text = "X · Finish " + finish_target.title if finish_target != null else ""
+	finisher_hint.text = world.controls.label("finisher") + " · Finish " + finish_target.title if finish_target != null else ""
 	finisher_hint.visible = finish_target != null
 	power_bar.value = player.power
-	power_label.text = ("SUNDERING STRIKE" if player.power_move=="sunder" else "WHIRLWIND ACTIVE") if player.power_remaining > 0 else "READY · G Spin / Shift+G Sunder" if player.power >= 100 else "POWER %d / 100 · Damage & parries charge" % player.power
-	mode.text = "THIRD PERSON  /  V" if player.third_person else "FIRST PERSON  /  V"
+	power_label.text = ("SUNDERING STRIKE" if player.power_move=="sunder" else "WHIRLWIND ACTIVE") if player.power_remaining > 0 else ("READY · %s Spin / %s Sunder" % [world.controls.label("power_spin"),world.controls.label("power_sunder")]) if player.power >= 100 else "POWER %d / 100 · Damage & parries charge" % player.power
+	mode.text = ("THIRD PERSON  /  " if player.third_person else "FIRST PERSON  /  ")+world.controls.label("camera_toggle")
 	objective.visible = not player.map_open and not player.character_menu_open and not player.paused
 	if is_instance_valid(world.intro) and world.intro.active: objective.visible=false
 	var next_objective := ""
@@ -318,13 +329,13 @@ func _process(delta: float) -> void:
 	if is_instance_valid(world.session_save):
 		var guidance: String=CampaignGuide.text_for(world)
 		if guidance!="": next_objective=guidance
-	next_vitals += "\nQ: " + spell_hint(player.character.active_spell) + " · B change"
+	next_vitals += "\n"+world.controls.label("spell")+": " + spell_hint(player.character.active_spell) + " · "+world.controls.label("cycle_spell")+" change"
 	if player.character.item_at("main_hand").get("family", "") == "machine_gun":
 		next_vitals += "\nRounds %d" % player.character.materials.get(player.character.item_at("main_hand").get("ammo_type","hell_round"), 0)
-	if player.character.item_at("main_hand").get("effect", "") == "chain_lightning": next_vitals += "\nLMB: " + spell_hint("chain_lightning")
+	if player.character.item_at("main_hand").get("effect", "") == "chain_lightning": next_vitals += "\n"+world.controls.label("attack")+": " + spell_hint("chain_lightning")
 	# Assign each completed string once. Intermediate empty/partial text forced
 	# the labels to invalidate layout even when their final content was unchanged.
-	objective.text = next_objective
+	objective.text = world.controls.format_prompt(next_objective)
 	vitals.text = next_vitals
 	stamina.max_value = player.derived.stamina
 	stamina.value = player.stamina
@@ -335,7 +346,7 @@ func _process(delta: float) -> void:
 		notice_time -= delta
 	notice.modulate.a = clampf(notice_time, 0, 1)
 	notice.visible = notice_time > 0
-	prompt.text = world.interaction_prompt() if not player.paused else ""
+	prompt.text = world.controls.format_prompt(world.interaction_prompt()) if not player.paused else ""
 
 func spell_hint(id: String) -> String:
 	var spell: Dictionary=world.player.character.spell_definition(id)

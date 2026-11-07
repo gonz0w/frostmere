@@ -73,3 +73,5 @@ lists and “next” statements do not assign new work or promise a supported re
 - [Portable development packaging](PACKAGING.md)
 
 - [Save-folder migration](SAVE_MIGRATION.md): current paths and safe recovery from the historical application identity.
+
+- [Controls](CONTROLS.md): keyboard/mouse rebinding, sensitivity and settings recovery.

@@ -44,7 +44,7 @@ func _ready() -> void:
 	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_button(header, "World", func(): set_view(false))
 	_button(header, "Local area", func(): set_view(true))
-	_button(header, "Return   [ M / Esc ]", close)
+	_button(header, "Return   [ Esc ]", close)
 	var tools := HBoxContainer.new()
 	tools.add_theme_constant_override("separation", 10)
 	page.add_child(tools)
