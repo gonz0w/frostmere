@@ -8,7 +8,7 @@ func _process(delta: float) -> void:
 		var outward: Vector3=destinations[i]*(.45+age*1.4)
 		var at:=global_position+outward
 		chips[i].global_position=Vector3(at.x,world.Terrain.height_at(at.x,at.z)+.15+sin(PI*age/lifetime)*(.45+(i%4)*.12),at.z)
-		chips[i].rotation=Vector3(age*3,age*(i%3-1)*4,age*2)
+		chips[i].rotation=Vector3(age*3,age*(i%3-1)*4,age*2)*world.accessibility.motion_factor()
 static func spawn(actor: Node3D, origin: Vector3) -> Node3D:
 	var effect=load("res://scripts/ground_slam_effect.gd").new()
 	effect.world=actor.adventure.world; effect.controller=actor.adventure

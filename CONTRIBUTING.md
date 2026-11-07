@@ -87,7 +87,9 @@ look/focus behavior. Native physical input remains a final qualification step.
 
 The isolated `accessibility.gd` fixture covers preference persistence, menu
 application, opening subtitle styling and cosmetic effects without altering combat
-timing. Native capture previews use `-- --capture` and do not load player profiles.
+timing. The `ui_scaling.gd` fixture additionally checks baseline/dynamic text scaling and
+scrollable menu wrapping; legacy preference files default to 100% UI size.
+Native capture previews use `-- --capture` and do not load player profiles.
 
 CI also builds and inspects development packages on each native host using the
 [pinned portable packaging workflow](docs/PACKAGING.md). It retains package logs,

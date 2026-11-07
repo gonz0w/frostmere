@@ -26,6 +26,8 @@ func _ready() -> void:
 	mat.emission_enabled = magic
 	mat.emission = mat.albedo_color
 	mat.emission_energy_multiplier = 2.0
+	if adventure.world.accessibility.reduced_flashes:
+		mat.emission_enabled=false; mat.albedo_color=mat.albedo_color.darkened(.3)
 	box.material = mat
 	mesh.mesh = box
 	add_child(mesh)

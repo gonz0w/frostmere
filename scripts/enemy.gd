@@ -68,6 +68,9 @@ func _ready() -> void:
 
 func _update_label() -> void:
 	label.text = title + (" — remains" if dead else "  %d / %d" % [ceili(health), maximum_health])
+	if not dead:
+		if stagger_time>0: label.text+=" · STAGGERED"
+		elif windup>0: label.text+=" · ATTACK INCOMING"
 	label.visible = not dead or enemy_id not in progress.looted
 
 func _show_corpse() -> void:
@@ -143,6 +146,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= 18 * delta
 		rig.right_arm.rotation.x = 0.5
 		label.modulate = Color("8de4f0")
+		_update_label()
 		move_and_slide()
 		return
 	var offset := player.global_position - global_position
@@ -181,6 +185,7 @@ func _physics_process(delta: float) -> void:
 		rig.right_leg.rotation.x = -sin(phase) * 0.45
 		rig.right_arm.rotation.x = 0
 	velocity.y -= 18 * delta
+	_update_label()
 	move_and_slide()
 
 func finisher_surface() -> String: return "flesh"
