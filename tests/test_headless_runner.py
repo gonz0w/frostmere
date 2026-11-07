@@ -13,6 +13,8 @@ class RunnerTests(unittest.TestCase):
     def run_probe(self, source, marker='PROBE_COMPLETE failures=0', timeout=3):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / 'probe.log'
+            # Match the UTF-8 logs emitted by Godot even on legacy Windows consoles.
+            source = "import sys; sys.stdout.reconfigure(encoding='utf-8'); " + source
             result = runner.run_check('probe', [sys.executable, '-c', source], path, timeout, marker)
             return result, path.read_text()
 
@@ -55,8 +57,8 @@ class RunnerTests(unittest.TestCase):
         self.assertIn('ending', {entry[0] for entry in chapters})
 
     def test_logs_redact_local_roots(self):
-        result, log = self.run_probe(f"print({str(runner.ROOT)!r}); print({str(Path.home())!r}); print('PROBE_COMPLETE failures=0')")
-        self.assertTrue(result['passed'])
+        result, log = self.run_probe(f"print('diagnostic 雪'); print({str(runner.ROOT)!r}); print({str(Path.home())!r}); print('PROBE_COMPLETE failures=0')")
+        self.assertTrue(result['passed'], log)
         self.assertNotIn(str(runner.ROOT), log)
         self.assertNotIn(str(Path.home()), log)
         self.assertIn('<project>', log)
