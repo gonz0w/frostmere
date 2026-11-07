@@ -2,8 +2,8 @@
 
 These are development/qualification targets, not a claim that every listed
 machine runs Frostmere well. Keep native game acceptance separate from a successful
-headless import or export. The Mobile renderer and historical application/save
-identity remain unchanged.
+headless import or export. The Mobile renderer remains unchanged. The application now uses the Frostmere
+identity with [copy-only save migration](SAVE_MIGRATION.md).
 
 | Target | Initial OS and architecture | Graphics path | Evidence needed |
 | --- | --- | --- | --- |
@@ -84,5 +84,5 @@ or shell API was found in this audit. The screenshot fixture uses `TMPDIR` with 
 native-soak RSS sampling (`ps`, macOS-only) remain explicitly host-specific.
 [Source launch/verification](SOURCE_LAUNCH.md) and [packaging](PACKAGING.md) provide
 the portable routes; the full regression matrix remains #28. Native screenshots, audio and timing still
-require actual hardware. Application identity migration remains #20; do not rename
-save directories as a setup step.
+require actual hardware. See [identity migration](SAVE_MIGRATION.md); do not rename save directories as a
+setup step.

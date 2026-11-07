@@ -26,7 +26,7 @@ I: inventory/crafting. C: character. K: skills. M: map/journal. Esc: settings.
 At the opening lantern use E, or Tab to skip. Find Edda at the village forge.
 
 SAVES AND UPDATES
-Default save folder: ~/.local/share/godot/app_userdata/SkyrimCraft • Frostmere/
+Default save folder: ~/.local/share/godot/app_userdata/Frostmere/
 If XDG_DATA_HOME is set, use that directory instead of ~/.local/share.
 Quit before backing up the entire game save folder. Extract updates into a new
 folder; keep old game archives and matching save backups together for rollback.
@@ -43,3 +43,8 @@ balance testing remain in progress; the known frame-stall investigation is #24.
 Original game code/art/audio: BSD-3-Clause, copyright gonz0w; see LICENSE.txt.
 Godot and bundled components: see GODOT-NOTICES.txt. BUILD.json records source,
 verified template provenance and hashes of every shipped file.
+
+New builds copy the historical SkyrimCraft • Frostmere saves on first normal
+launch. Originals remain unchanged; existing Frostmere profiles take precedence.
+Close older builds first. Migration/recovery instructions:
+https://github.com/gonz0w/frostmere/blob/main/docs/SAVE_MIGRATION.md

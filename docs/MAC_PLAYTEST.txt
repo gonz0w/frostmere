@@ -31,9 +31,9 @@ H: show controls. F3: performance display. R: return to starting point.
 
 SAVES
 Progress saves locally in your Mac user account. No developer save is
-included. Existing Frostmere development players use their existing
-profile because this package retains the same game identity.
-Save folder: ~/Library/Application Support/Godot/app_userdata/SkyrimCraft • Frostmere/
+included. The Frostmere identity copies historical profiles on first normal
+launch; the original files remain untouched.
+Save folder: ~/Library/Application Support/Godot/app_userdata/Frostmere/
 Keep a backup before testing a new build with an existing character.
 
 PLAYTEST STATUS
@@ -49,3 +49,8 @@ The engine's license and bundled third-party notices are included in
 GODOT-NOTICES.txt. Original game content uses BSD-3-Clause (LICENSE.txt).
 BUILD.json records source revision, template provenance and file hashes.
 The adjacent ZIP checksum verifies the archive.
+
+New builds copy the historical SkyrimCraft • Frostmere saves on first normal
+launch. Originals remain unchanged; existing Frostmere profiles take precedence.
+Close older builds first. Migration/recovery instructions:
+https://github.com/gonz0w/frostmere/blob/main/docs/SAVE_MIGRATION.md

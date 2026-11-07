@@ -71,3 +71,5 @@ lists and “next” statements do not assign new work or promise a supported re
 - [Platform targets and pinned toolchain](PLATFORMS.md)
 - [Portable source launch and verification](SOURCE_LAUNCH.md)
 - [Portable development packaging](PACKAGING.md)
+
+- [Save-folder migration](SAVE_MIGRATION.md): current paths and safe recovery from the historical application identity.

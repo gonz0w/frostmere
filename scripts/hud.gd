@@ -207,6 +207,8 @@ func _build_pause(root: Control) -> void:
 	pause_panel.visible = false
 
 func recovery_message() -> String:
+	if world.player.migration_status == "blocked":
+		return "The previous adventure could not be safely copied into Frostmere. Saving is disabled. Quit and back up both user-data folders before recovery; the original SkyrimCraft • Frostmere files have not been changed. See the save migration guide before removing any migration marker or files."
 	var character_status: String=world.player.character.save_store.status
 	var atlas_status: String=world.atlas.save_store.status
 	if character_status=="blocked" or atlas_status=="blocked":
@@ -216,7 +218,12 @@ func recovery_message() -> String:
 		if character_status=="recovered": parts.append("character")
 		if atlas_status=="recovered": parts.append("atlas")
 		return "Restored the previous valid "+" and ".join(parts)+" backup. Some recent progress may be missing. Saving can continue; rejected primary files will be preserved with a .corrupt suffix. Character and atlas backups are separate snapshots."
+	if world.player.migration_status == "migrated":
+		return "Your previous adventure was copied into the Frostmere save folder. The original SkyrimCraft • Frostmere files are unchanged. Future saves belong to Frostmere; older builds will not see new progress."
 	return ""
+
+func character_recovery_clear() -> bool:
+	return world.player.character.persist and world.player.character.save_store.status != "recovered" and world.atlas.save_store.status != "recovered"
 
 func show_recovery_notice() -> void:
 	var message:=recovery_message()
@@ -229,6 +236,7 @@ func show_recovery_notice() -> void:
 	dialog.get_label().custom_minimum_size=Vector2(520,130)
 	dialog.min_size=Vector2i(560,220)
 	dialog.ok_button_text="Continue without saving" if not world.player.character.persist else "Continue with recovered save"
+	if world.player.migration_status == "migrated" and character_recovery_clear(): dialog.ok_button_text="Continue adventure"
 	dialog.add_button("Quit",true,"quit")
 	dialog.custom_action.connect(func(_action: String): get_tree().quit())
 	dialog.confirmed.connect(func(): world.player.set_paused(false); dialog.queue_free())

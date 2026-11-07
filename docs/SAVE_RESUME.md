@@ -4,6 +4,9 @@
 
 The existing character file now includes an optional session record. Position, active area, first/third-person camera, yaw, pitch, health, magicka, stamina and nearby living enemies' positions/health are written in the same atomic file as equipment, crafting and quest progress. Quest-controlled world changes and defeated/looted actors continue using their existing records. Atlas progress remains in its separate file.
 
+See [save-folder migration](SAVE_MIGRATION.md) for Frostmere paths, automatic
+copying from the historical identity, conflicts and interrupted migration recovery.
+
 ## Normal play
 
 Start with `Play Frostmere.command`. After the world and actors are built, the game enters the saved area through its normal entry logic and restores the session. Area prerequisites still apply. Every 15 seconds and on character-progress saves, the live session is captured. Escape offers Save adventure and Save and quit. Closing the main window saves before quitting; a failed save keeps the game open.

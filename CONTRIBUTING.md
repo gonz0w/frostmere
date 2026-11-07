@@ -76,6 +76,11 @@ source smoke and Linux runs the full core suite from fresh checkouts whose paths
 contain spaces and Unicode. This establishes source command portability, not
 native GPU/audio/input qualification.
 
+The two-process `tests/save_migration.gd` fixture also runs in smoke/full modes
+on every native host, using only `build/migration-fixture 雪/`. It verifies copy
+integrity, profile precedence, repeat launches and interrupted migration guards.
+Do not point migration fixtures at real player folders.
+
 CI also builds and inspects development packages on each native host using the
 [pinned portable packaging workflow](docs/PACKAGING.md). It retains package logs,
 not game archives, and does not publish releases or qualify native rendering.

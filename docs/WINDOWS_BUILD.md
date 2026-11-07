@@ -26,8 +26,8 @@ instructions and BUILD.json containing revision/template/file hashes. A separate
 Build logs remain in ignored `build/packages/windows/`. Source identity is reproducible;
 byte-for-byte identical archives across hosts are not promised.
 
-No game session or normal saves are opened by the builder. Keep the historical
-application identity until the separately tested migration in #20. The runtime
+No game session or normal saves are opened by the builder. The Frostmere identity uses
+[copy-only migration](SAVE_MIGRATION.md) at normal game startup. The runtime
 allowlist excludes tests, development policy, tools, galleries and local files.
 The preset's template paths are filled inside staging; an editor-only export
 requires extracting matching templates to those paths manually.
