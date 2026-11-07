@@ -3,17 +3,23 @@ const Settings=preload("res://scripts/accessibility_settings.gd")
 func _initialize() -> void: call_deferred("run")
 func run() -> void:
 	assert(DisplayServer.get_name()=="headless" or "--capture" in OS.get_cmdline_user_args())
-	var s=Settings.new(); s.subtitle_scale=1.5; s.subtitle_backdrop=true; s.reduced_motion=true; s.reduced_flashes=true; s.show_fragments=false
+	var s=Settings.new(); s.ui_scale=1.25; s.subtitle_scale=1.5; s.subtitle_backdrop=true; s.reduced_motion=true; s.reduced_flashes=true; s.show_fragments=false
 	const PATH="res://build/accessibility-fixture.json"
 	assert(DirAccess.make_dir_recursive_absolute("res://build")==OK)
 	assert(s.save_to(PATH))
-	var copy=Settings.new(); assert(copy.load_from(PATH) and copy.subtitle_scale==1.5 and copy.reduced_motion and not copy.show_fragments)
+	var copy=Settings.new(); assert(copy.load_from(PATH) and copy.ui_scale==1.25 and copy.subtitle_scale==1.5 and copy.reduced_motion and not copy.show_fragments)
 	var original=FileAccess.get_file_as_string(PATH)
 	assert(DirAccess.make_dir_absolute(PATH+".tmp")==OK)
 	assert(not s.save_to(PATH) and FileAccess.get_file_as_string(PATH)==original)
 	DirAccess.remove_absolute(PATH+".tmp")
 	var f=FileAccess.open(PATH,FileAccess.WRITE); f.store_string('{"version":999}'); f.close()
 	assert(not copy.load_from(PATH) and copy.subtitle_scale==1.5)
+	var legacy=JSON.parse_string(original); legacy.erase("ui_scale")
+	f=FileAccess.open(PATH,FileAccess.WRITE); f.store_string(JSON.stringify(legacy)); f.close()
+	assert(copy.load_from(PATH) and copy.ui_scale==1.0)
+	legacy.ui_scale=2.0
+	f=FileAccess.open(PATH,FileAccess.WRITE); f.store_string(JSON.stringify(legacy)); f.close()
+	assert(not copy.load_from(PATH) and copy.ui_scale==1.0)
 	DirAccess.remove_absolute(PATH)
 	copy.restore_defaults(); assert(copy.subtitle_scale==1.0 and not copy.reduced_motion and copy.show_fragments)
 	var world=load("res://scenes/main.tscn").instantiate(); root.add_child(world); world.capture_done=true

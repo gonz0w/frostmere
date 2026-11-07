@@ -46,6 +46,7 @@ var tree_sites: Array[Dictionary] = []
 var landmarks: Array[Dictionary] = []
 var discovered: Dictionary = {}
 var elapsed := 0.0
+var ui_accessibility: Node
 var accessibility=preload("res://scripts/accessibility_settings.gd").new()
 var controls=preload("res://scripts/control_settings.gd").new()
 var capture_done := false
@@ -251,6 +252,7 @@ func _ready() -> void:
 	combat_metrics=preload("res://scripts/combat_metrics.gd").new(); combat_metrics.world=self; add_child(combat_metrics)
 	intro=preload("res://scripts/dark_intro.gd").new(); intro.world=self; add_child(intro)
 	preload("res://scripts/regional_landscape.gd").new().build(self)
+	ui_accessibility=preload("res://scripts/ui_accessibility.gd").new(); ui_accessibility.world=self; add_child(ui_accessibility)
 	print("FROSTMERE_READY blocks=%d landmarks=%d" % [block_count, landmarks.size()])
 
 func _inputs() -> void:

@@ -65,6 +65,11 @@ results are the next step. [Delivery evidence #45](https://github.com/gonz0w/fro
 
 Recent completed work:
 
+- **Accessibility preferences:** adjustable HUD/menu/dialogue and opening subtitle
+  sizes, scrollable menus, reduced cosmetic effects and optional finisher fragments.
+  [Preferences and remaining qualification](docs/ACCESSIBILITY.md); final user and
+  display checks remain open in [#22](https://github.com/gonz0w/frostmere/issues/22).
+
 - **Save-folder migration:** copy-only migration to the Frostmere identity preserves
   old adventures and blocks saving after interrupted copies. Existing Frostmere
   profiles take precedence. [#20](https://github.com/gonz0w/frostmere/issues/20)

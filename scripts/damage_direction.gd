@@ -39,7 +39,8 @@ func _draw() -> void:
 		var border:=points.duplicate(); border.append(points[0])
 		draw_polyline(border,Color(0,0,0,tint.a),2,true)
 	var font:=ThemeDB.fallback_font
-	var width:=font.get_string_size(outcome,HORIZONTAL_ALIGNMENT_LEFT,-1,14).x
+	var text_size=roundi(14*player.get_parent().accessibility.ui_scale)
+	var width:=font.get_string_size(outcome,HORIZONTAL_ALIGNMENT_LEFT,-1,text_size).x
 	var at:=center+Vector2(-width*.5,112)
-	draw_string_outline(font,at,outcome,HORIZONTAL_ALIGNMENT_LEFT,-1,14,3,Color(0,0,0,tint.a))
-	draw_string(font,at,outcome,HORIZONTAL_ALIGNMENT_LEFT,-1,14,tint)
+	draw_string_outline(font,at,outcome,HORIZONTAL_ALIGNMENT_LEFT,-1,text_size,3,Color(0,0,0,tint.a))
+	draw_string(font,at,outcome,HORIZONTAL_ALIGNMENT_LEFT,-1,text_size,tint)

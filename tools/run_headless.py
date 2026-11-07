@@ -66,6 +66,7 @@ def main():
     commands += [('control_settings', ['--script', 'tests/control_settings.gd'], 'CONTROL_SETTINGS_COMPLETE failures=0'),
                  ('control_input', ['--script', 'tests/control_input.gd'], 'CONTROL_INPUT_COMPLETE failures=0')]
     commands += [('accessibility', ['--script', 'tests/accessibility.gd'], 'ACCESSIBILITY_COMPLETE failures=0')]
+    commands += [('ui_scaling', ['--script', 'tests/ui_scaling.gd'], 'UI_SCALING_COMPLETE failures=0')]
     if version['passed']:
         for name, flags, marker in commands:
             result = run_check(name, [args.godot, '--headless', '--path', str(ROOT)] + flags,

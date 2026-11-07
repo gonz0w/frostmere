@@ -6,7 +6,7 @@ func _process(delta: float) -> void:
 	if is_queued_for_deletion() or not visible: return
 	for i in range(chips.size()):
 		chips[i].position=destinations[i]*(age/.35)+Vector3.DOWN*2.0*age*age
-		chips[i].rotation=spins[i]*age
+		chips[i].rotation=spins[i]*age*world.accessibility.motion_factor()
 static func spawn(actor: Node3D, motion: String, direction: Vector3) -> Node3D:
 	if not actor.adventure.world.accessibility.show_fragments: return null
 	var surface: String=actor.finisher_surface()

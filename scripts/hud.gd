@@ -144,6 +144,7 @@ func _ready() -> void:
 	objective.add_theme_color_override("font_color", INK)
 	root.add_child(objective)
 	controls_menu=preload("res://scripts/controls_menu.gd").new(); controls_menu.world=world; root.add_child(controls_menu)
+	get_viewport().size_changed.connect(reflow_accessible)
 	accessibility_menu=preload("res://scripts/accessibility_menu.gd").new(); accessibility_menu.world=world; root.add_child(accessibility_menu)
 
 func _refresh_controls() -> void:
@@ -355,3 +356,22 @@ func spell_hint(id: String) -> String:
 	var spell: Dictionary=world.player.character.spell_definition(id)
 	var cost: String=("%.1f" % world.player.character.spell_cost(float(spell.cost))).trim_suffix(".0")
 	return "%s · %s magicka" % [spell.name,cost]
+
+func reflow_accessible() -> void:
+	if not is_instance_valid(objective): return
+	var area=get_viewport().get_visible_rect().size
+	var scale=world.accessibility.ui_scale
+	var width=minf(700*scale,area.x-64)
+	notice.size.x=width; notice.offset_left=-width/2; notice.offset_right=width/2
+	notice_detail.custom_minimum_size.x=0; notice_detail.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+	notice_title.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	controls.size.x=minf(520*scale,area.x*.46)
+	for label in guide_labels: label.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	controls.offset_top=-maxf(187,controls.get_combined_minimum_size().y+32); controls.offset_bottom=-32
+	combat_panel.size.x=minf(370*scale,area.x*.46); combat_panel.offset_left=-combat_panel.size.x-32; combat_panel.offset_right=-32
+	combat_panel.offset_top=-maxf(212,combat_panel.get_combined_minimum_size().y+32); combat_panel.offset_bottom=-32
+	vitals.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART; power_label.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	objective.size.x=minf(400*scale,area.x*.42); objective.offset_left=-objective.size.x-32; objective.offset_right=-32
+	var prompt_width=minf(900*scale,area.x-64)
+	prompt.offset_left=-prompt_width/2; prompt.offset_right=prompt_width/2
+	prompt.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
