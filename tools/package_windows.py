@@ -36,9 +36,9 @@ def verify_pe(path):
 def run(engine, stage, logs, name, *flags):
     result = subprocess.run([engine, '--headless', '--path', str(stage), *map(str, flags)],
                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                            timeout=300, text=True)
+                            timeout=300, text=True, encoding='utf-8', errors='replace')
     output = result.stdout
-    (logs / (name + '.log')).write_text(output.replace(str(ROOT), '<project>').replace(str(Path.home()), '<home>'))
+    (logs / (name + '.log')).write_text(output.replace(str(ROOT), '<project>').replace(str(Path.home()), '<home>'), encoding='utf-8')
     if result.returncode or re.search(r'SCRIPT ERROR:|ERROR:', output):
         raise RuntimeError(f'{name} failed; inspect {logs / (name + ".log")}')
 
@@ -49,11 +49,11 @@ def main():
     parser.add_argument('--templates', required=True, type=Path, help='Official matching export_templates.tpz')
     args = parser.parse_args()
     engine = shutil.which(args.godot) or str(Path(args.godot).resolve())
-    version = subprocess.check_output([engine, '--version'], text=True, timeout=15).strip()
+    version = subprocess.check_output([engine, '--version'], text=True, encoding='utf-8', timeout=15).strip()
     if not re.fullmatch(r'4\.7\.2\.stable(?:\.[A-Za-z0-9_-]+)*', version):
         raise ValueError('Godot 4.7.2 stable is required')
     verify_templates(args.templates)
-    revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True, encoding='utf-8').strip()
     # Refuse mislabeled artifacts: commit source and build tooling before packaging.
     if subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=ROOT):
         raise ValueError('Commit tracked changes before packaging')
@@ -97,11 +97,11 @@ def main():
                       'templates_sha256': TEMPLATE_SHA256, 'target': 'Windows x86_64',
                       'status': 'Experimental tester build; native qualification pending #26',
                       'files': {p.name: digest(p) for p in sorted(package.iterdir())}}
-        (package / 'BUILD.json').write_text(json.dumps(provenance, indent=2) + '\n')
+        (package / 'BUILD.json').write_text(json.dumps(provenance, indent=2) + '\n', encoding='utf-8')
         with zipfile.ZipFile(archive, 'x', zipfile.ZIP_DEFLATED) as output:
             for path in sorted(package.iterdir()):
                 output.write(path, name + '/' + path.name)
-    archive.with_suffix('.zip.sha256').write_text(digest(archive) + '  ' + archive.name + '\n')
+    archive.with_suffix('.zip.sha256').write_text(digest(archive) + '  ' + archive.name + '\n', encoding='utf-8')
     print('WINDOWS_PACKAGE_CREATED', archive)
 
 
