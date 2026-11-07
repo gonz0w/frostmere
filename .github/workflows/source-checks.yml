@@ -3,6 +3,12 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
+    inputs:
+      diagnose_import:
+        description: Run three fresh Linux imports under GDB for issue 52
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -18,6 +24,7 @@ jobs:
       - name: Test runner failure detection
         run: |
           python3 -m unittest discover -s tests -p test_headless_runner.py
+          python3 -m unittest discover -s tests -p test_import_diagnostics.py
           python3 -m unittest discover -s tests -p test_windows_package.py
           python3 -m unittest discover -s tests -p test_portable_package.py
           python3 -m unittest discover -s tests -p test_toolchain.py
@@ -92,7 +99,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
   import-diagnostics:
-    if: github.head_ref == 'codex/import-crash-diagnostics'
+    if: github.event_name == 'workflow_dispatch' && inputs.diagnose_import
     runs-on: ubuntu-24.04
     timeout-minutes: 12
     steps:

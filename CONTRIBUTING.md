@@ -95,6 +95,26 @@ CI also builds and inspects development packages on each native host using the
 [pinned portable packaging workflow](docs/PACKAGING.md). It retains package logs,
 not game archives, and does not publish releases or qualify native rendering.
 
+## Import crash investigation
+
+An intermittent editor-import crash is tracked in
+[#52](https://github.com/gonz0w/frostmere/issues/52). A successful retry does not
+establish a fix. Preserve the original failed run and its diagnostics.
+
+For a selected investigation, the Source checks manual workflow accepts
+`diagnose_import: true`. It runs three fresh tracked-source imports under GDB
+on the pinned Linux runner and retains sanitized verbose logs, backtraces when
+available, and each result for seven days. This is opt-in, never a retry of a
+failed source check. Any failed observation fails the diagnostic job even if a
+later observation passes. Ordinary regression gates remain unchanged.
+
+Locally on Linux with GDB installed, use
+`python3 tools/diagnose_import.py --godot /path/to/pinned/godot`.
+Snapshots contain tracked files only and are removed after each observation;
+normal player profiles are not copied or launched. The debugger may change race
+timing, and the official binary may lack full debug symbols. Three passing
+observations are inconclusive, not native gameplay or crash-fix qualification.
+
 ## Review and integration
 
 Use a focused branch and PR to `main`, linking the selected issues and checks.
