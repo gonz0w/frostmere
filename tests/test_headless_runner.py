@@ -41,6 +41,26 @@ class RunnerTests(unittest.TestCase):
         self.assertTrue(result['timed_out'])
         self.assertIn('started', log)
 
+    def test_group_plans_keep_isolation_and_full_union(self):
+        core = runner.check_commands('core')
+        combat = runner.check_commands('combat')
+        chapters = runner.check_commands('chapters')
+        all_checks = runner.check_commands('all')
+        for plan in [core, combat, chapters, all_checks]:
+            self.assertEqual([entry[0] for entry in plan[:2]], ['import', 'ci_isolation'])
+        expected = {entry[0] for plan in [core, combat, chapters] for entry in plan}
+        self.assertEqual(expected, {entry[0] for entry in all_checks})
+        self.assertEqual(len(all_checks), len(expected))
+        self.assertIn('crafting', {entry[0] for entry in combat})
+        self.assertIn('ending', {entry[0] for entry in chapters})
+
+    def test_logs_redact_local_roots(self):
+        result, log = self.run_probe(f"print({str(runner.ROOT)!r}); print({str(Path.home())!r}); print('PROBE_COMPLETE failures=0')")
+        self.assertTrue(result['passed'])
+        self.assertNotIn(str(runner.ROOT), log)
+        self.assertNotIn(str(Path.home()), log)
+        self.assertIn('<project>', log)
+
     def test_missing_executable_is_failure(self):
         with tempfile.TemporaryDirectory() as directory:
             result = runner.run_check('missing', [str(Path(directory)/'absent')], Path(directory)/'log', 1)

@@ -40,11 +40,11 @@ suites and appropriate native checks are required. Artwork, controls, audio and
 rendering changes need native inspection; performance claims need hardware,
 renderer, resolution and workload recorded. Do not extrapolate M5 to M1 or Windows.
 
-CI runs repository checks, runner rejection tests and the core headless fixtures
+CI runs repository checks, runner rejection tests and the core, combat/economy and chapter headless groups
 on a clean Ubuntu 24.04 checkout. It downloads the official standard Linux x86_64
 Godot 4.7.2 archive and verifies the SHA-256 in `tools/toolchain.json`.
-Separate Windows and macOS jobs verify the same pinned version and clean source
-import, without native graphics/input/audio qualification.
+Windows and macOS jobs run the same groups and deliberate-failure runner checks
+with the pinned version, without native graphics/input/audio qualification.
 Updating that pin requires a reviewed engine-version change. No PR secrets,
 write token or self-hosted runner is used. This is headless regression evidence,
 not native Linux graphics/input/audio qualification.
@@ -56,6 +56,14 @@ python3 -m unittest discover -s tests -p test_headless_runner.py
 python3 tools/run_headless.py --godot godot
 ```
 
+Use `python3 tools/play.py --regression` for the complete CI selection. For a
+focused group, invoke `tools/run_headless.py --godot godot --group combat` or
+`--group chapters`; `--group all` includes core and both groups. Every selection
+starts with import and save isolation. Combat/economy covers combat, power timing,
+finishers, monster effects and crafting. Chapters covers station, realms, siege,
+broken seal, ending and campaign guidance. This is bounded regression coverage,
+not every authored side quest or a substitute for an earned-resource playthrough.
+
 The runner checks the engine version, imports resources, verifies headless save
 isolation, then runs smoke, character, save/session, corruption recovery and two-process
 restart checks. It stops at the
@@ -63,7 +71,7 @@ first failure, including zero-exit Godot errors or missing completion markers.
 Each import/suite has a 180-second timeout (override with `--timeout`, at most
 600 seconds). Logs and `results.json` go to ignored `build/ci/`; CI retains them
 for seven days even after failure. Download/setup failures are in the Actions
-step log. Inspect the failing log before retrying. The six Python tests include
+step log. Inspect the failing log before retrying. The runner tests include
 intentional failing subprocesses; their successful rejection is the expected result.
 Native platform qualification and the wider suite matrix remain separate work. No formatter or GDScript linter
 is enforced yet; match neighboring style and use engine parsing plus focused
@@ -71,8 +79,8 @@ behavior tests. Godot runtime results are not implied by documentation CI.
 
 The portable [source entry point](docs/SOURCE_LAUNCH.md) supports
 `python3 tools/play.py --smoke` for bounded import/isolation/movement checks and
-`python3 tools/play.py --verify` for the full core runner. Windows/macOS CI runs
-source smoke and Linux runs the full core suite from fresh checkouts whose paths
+`python3 tools/play.py --verify` for the full core runner. Windows/macOS/Linux CI runs
+the full core plus selected combat/economy and chapter groups from fresh checkouts whose paths
 contain spaces and Unicode. This establishes source command portability, not
 native GPU/audio/input qualification.
 

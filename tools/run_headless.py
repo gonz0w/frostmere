@@ -40,26 +40,18 @@ def run_check(name, command, log, timeout, marker=None):
             'passed': bool(passed), 'log': log.name}
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--smoke', action='store_true', help='Only import, isolation and movement smoke')
-    parser.add_argument('--godot', required=True, help='Godot 4.7.2 executable or PATH command')
-    parser.add_argument('--logs', type=Path, default=ROOT / 'build/ci')
-    parser.add_argument('--timeout', type=int, default=180, help='Seconds per import/suite (1–600)')
-    args = parser.parse_args()
-    if not 1 <= args.timeout <= 600:
-        parser.error('--timeout must be between 1 and 600 seconds')
-    args.logs.mkdir(parents=True, exist_ok=True)
-    checks = []
-    version = run_check('version', [args.godot, '--version'], args.logs/'version.log', 15)
-    version_text = (args.logs/'version.log').read_text(encoding='utf-8').strip()
-    version['passed'] = version['passed'] and bool(re.fullmatch(r'4\.7\.2\.stable(?:\.[A-Za-z0-9_-]+)*', version_text))
-    checks.append(version)
+GROUPS = {
+    'combat': ['combat', 'power_timing', 'finisher_moves', 'monster_effects', 'crafting'],
+    'chapters': ['threshold', 'realms', 'winter', 'seal', 'ending', 'campaign_guide'],
+}
+
+
+def check_commands(group='core', smoke=False):
     commands = [('import', ['--editor', '--import', '--quit'], None)]
     commands += [(name, ['--script', f'tests/{name}.gd'], marker) for name, marker in SUITES]
     commands += [('recovery_prepare', ['--script', 'tests/recovery_restart.gd', '--', '--prepare'], 'RECOVERY_RESTART_PREPARED'),
                  ('recovery_restart', ['--script', 'tests/recovery_restart.gd'], 'RECOVERY_RESTART_COMPLETE failures=0')]
-    if args.smoke:
+    if smoke:
         commands = commands[:3]
     commands += [('migration_prepare', ['--script', 'tests/save_migration.gd', '--', '--prepare'], 'MIGRATION_PREPARED'),
                  ('migration_restart', ['--script', 'tests/save_migration.gd'], 'MIGRATION_COMPLETE failures=0')]
@@ -67,6 +59,33 @@ def main():
                  ('control_input', ['--script', 'tests/control_input.gd'], 'CONTROL_INPUT_COMPLETE failures=0')]
     commands += [('accessibility', ['--script', 'tests/accessibility.gd'], 'ACCESSIBILITY_COMPLETE failures=0')]
     commands += [('ui_scaling', ['--script', 'tests/ui_scaling.gd'], 'UI_SCALING_COMPLETE failures=0')]
+    if group not in ('core', 'all'):
+        commands = commands[:2]  # Import and save isolation precede every group.
+    for name, suites in GROUPS.items():
+        if group in (name, 'all'):
+            commands += [(suite, ['--script', f'tests/{suite}.gd'], suite.upper()+'_COMPLETE') for suite in suites]
+    return commands
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--smoke', action='store_true', help='Only import, isolation and movement smoke')
+    parser.add_argument('--group', choices=['core', 'combat', 'chapters', 'all'], default='core', help='Bounded regression group; all includes core and both gameplay groups')
+    parser.add_argument('--godot', required=True, help='Godot 4.7.2 executable or PATH command')
+    parser.add_argument('--logs', type=Path, default=ROOT / 'build/ci')
+    parser.add_argument('--timeout', type=int, default=180, help='Seconds per import/suite (1–600)')
+    args = parser.parse_args()
+    if not 1 <= args.timeout <= 600:
+        parser.error('--timeout must be between 1 and 600 seconds')
+    if args.smoke and args.group != 'core':
+        parser.error('--smoke cannot be combined with a non-core group')
+    args.logs.mkdir(parents=True, exist_ok=True)
+    checks = []
+    version = run_check('version', [args.godot, '--version'], args.logs/'version.log', 15)
+    version_text = (args.logs/'version.log').read_text(encoding='utf-8').strip()
+    version['passed'] = version['passed'] and bool(re.fullmatch(r'4\.7\.2\.stable(?:\.[A-Za-z0-9_-]+)*', version_text))
+    checks.append(version)
+    commands = check_commands(args.group, args.smoke)
     if version['passed']:
         for name, flags, marker in commands:
             result = run_check(name, [args.godot, '--headless', '--path', str(ROOT)] + flags,
@@ -76,7 +95,7 @@ def main():
             if not result['passed']:
                 break
     success = len(checks) == len(commands) + 1 and all(check['passed'] for check in checks)
-    (args.logs/'results.json').write_text(json.dumps({'passed': success, 'checks': checks}, indent=2)+'\n')
+    (args.logs/'results.json').write_text(json.dumps({'passed': success, 'group': args.group, 'smoke': args.smoke, 'checks': checks}, indent=2)+'\n')
     print('HEADLESS_CHECKS_PASSED' if success else 'HEADLESS_CHECKS_FAILED (see logs)')
     return 0 if success else 1
 
