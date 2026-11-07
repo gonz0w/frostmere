@@ -7,9 +7,27 @@ Detailed block-built towns and mountains. A dark Nordic adventure. Crystal skies
 an abandoned space station, and a furnace world waiting later in the story.
 Built with Godot. Open source under **BSD-3-Clause**.
 
+**[Download the Windows x64 playtest](https://github.com/gonz0w/frostmere/releases/tag/windows-test-2026-11-07)**
+— a ~48 MiB standalone ZIP for Windows 10/11 testers. Extract all files and run
+`Frostmere.exe`; no editor or programming tools required.
+[Checksum](https://github.com/gonz0w/frostmere/releases/download/windows-test-2026-11-07/Frostmere-Windows-x64-8ab158a5d324.zip.sha256)
+· [Player instructions](docs/WINDOWS_PLAYTEST.txt)
+· [Windows feedback](https://github.com/gonz0w/frostmere/issues/26)
+
+This unsigned experimental build targets Intel/AMD x64 PCs with Vulkan-capable
+graphics. Native Windows testing is underway; minimum hardware and Windows ARM
+are not qualified. Back up existing saves before trying development builds.
+
 ![Frostmere's timber houses, market green and mountain skyline](docs/screenshots/frostmere.jpg)
 
 ## What you can play
+
+Leave town with a quest and a bag of supplies. Explore a mountain route, clear an
+encounter, collect materials and return to the forge with something worth upgrading.
+Join factions, follow side stories and build your character around the weapons,
+armor and spells you enjoy. The later destination chapters bring new enemies and
+gear into the same adventure; the Nordic home world remains its center.
+
 
 - Explore handcrafted regions, enter towns and shops, and follow **51 implemented
   main, faction and side quests** with choices and persistent progress.
@@ -30,14 +48,39 @@ does not mean the whole campaign has been human-playtested or balanced.
 | Platform | Current status |
 | --- | --- |
 | macOS / Apple Silicon | Native development and review evidence on M5 Max. M1 / 32 GB qualification remains open. |
-| Windows / x86_64 | Experimental tester packaging available; native qualification remains open. |
+| Windows / x86_64 | [Experimental ZIP available](https://github.com/gonz0w/frostmere/releases/tag/windows-test-2026-11-07); native qualification remains open in [#26](https://github.com/gonz0w/frostmere/issues/26). |
 | Linux | Target platform; native support is not yet verified. |
 
 See [issues](https://github.com/gonz0w/frostmere/issues) and
 [capability milestones](https://github.com/gonz0w/frostmere/milestones) for live work.
-Windows testers: see [tester downloads](https://github.com/gonz0w/frostmere/releases)
-and [extraction, controls and feedback instructions](docs/WINDOWS_PLAYTEST.txt).
-These are experimental builds; see [Windows build reproduction](docs/WINDOWS_BUILD.md).
+Build contributors can reproduce the package using the
+[Windows build guide](docs/WINDOWS_BUILD.md).
+
+## Development progress
+
+**November 7, 2026 — Windows playtesting is open.** The first experimental Windows
+package includes both game and console launchers, licenses, build provenance and
+checksums. Export/package checks and automated CI passed; native Windows gameplay
+results are the next step. [Delivery evidence #45](https://github.com/gonz0w/frostmere/issues/45)
+
+Recent completed work:
+
+- **Save backup and corruption recovery:** tested restoration and fresh-process
+  recovery paths. [#8](https://github.com/gonz0w/frostmere/issues/8)
+- **Two-hour native M5 stress run:** three verified restarts, 240 crafting operations
+  and 720 travel transitions without save/restart failures. This used a scripted
+  stability workload; one frame stall remains tracked in
+  [#24](https://github.com/gonz0w/frostmere/issues/24).
+  [Run evidence #9](https://github.com/gonz0w/frostmere/issues/9)
+- **Quest and presentation review:** faction/quest ordering qualification and owner
+  review of towns, landscapes, opening and audio completed.
+  [#6](https://github.com/gonz0w/frostmere/issues/6) ·
+  [#7](https://github.com/gonz0w/frostmere/issues/7)
+
+At this snapshot, full warrior/ranger/mage campaign playthroughs and economy tuning
+remain open, alongside Windows/Linux and M1 hardware qualification. The linked
+[issues and milestones](https://github.com/gonz0w/frostmere/milestones) are the
+current work record; these results do not imply a finished or fully balanced game.
 
 ## A few places beyond home
 
@@ -49,10 +92,11 @@ These are experimental builds; see [Windows build reproduction](docs/WINDOWS_BUI
 | --- | --- |
 | ![Snowy clan halls and mountain approaches in Wyrmkeep](docs/screenshots/wyrmkeep.jpg) | ![The station's block-built salvage corridor](docs/screenshots/station.jpg) |
 
-[More screenshots and capture details](docs/screenshots/README.md). These are
-in-game development captures, not concept renders.
+[More screenshots and capture details](docs/screenshots/README.md). These actual
+in-game captures were taken on M5/Metal during the September 24 landscape review;
+they show the game's art direction, not native Windows test evidence.
 
-## Get started
+## Play from source
 
 Install [Godot 4.7.2](https://github.com/godotengine/godot/releases/tag/4.7.2-stable)
 (the standard build; .NET is not needed) and Git. On a Mac, place Godot in
