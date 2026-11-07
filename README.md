@@ -49,12 +49,12 @@ does not mean the whole campaign has been human-playtested or balanced.
 | --- | --- |
 | macOS / Apple Silicon | Native development and review evidence on M5 Max. M1 / 32 GB qualification remains open. |
 | Windows / x86_64 | [Experimental ZIP available](https://github.com/gonz0w/frostmere/releases/tag/windows-test-2026-11-07); native qualification remains open in [#26](https://github.com/gonz0w/frostmere/issues/26). |
-| Linux | Target platform; native support is not yet verified. |
+| Linux / x86_64 | Development tar.gz export available through the [packaging guide](docs/PACKAGING.md); native qualification remains open in [#27](https://github.com/gonz0w/frostmere/issues/27). |
 
 See [issues](https://github.com/gonz0w/frostmere/issues) and
 [capability milestones](https://github.com/gonz0w/frostmere/milestones) for live work.
-Build contributors can reproduce the package using the
-[Windows build guide](docs/WINDOWS_BUILD.md).
+Build contributors can assemble Windows, Linux and macOS archives using the
+[portable packaging guide](docs/PACKAGING.md).
 
 ## Development progress
 
@@ -65,6 +65,10 @@ results are the next step. [Delivery evidence #45](https://github.com/gonz0w/fro
 
 Recent completed work:
 
+- **Portable development packaging:** verified templates, runtime-only exports,
+  archive integrity checks and player instructions across Windows, Linux and
+  macOS. This does not publish a new release or qualify native Linux gameplay.
+  [#19](https://github.com/gonz0w/frostmere/issues/19)
 - **Save backup and corruption recovery:** tested restoration and fresh-process
   recovery paths. [#8](https://github.com/gonz0w/frostmere/issues/8)
 - **Two-hour native M5 stress run:** three verified restarts, 240 crafting operations
