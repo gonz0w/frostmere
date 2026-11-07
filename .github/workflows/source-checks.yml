@@ -101,6 +101,8 @@ jobs:
           persist-credentials: false
       - name: Download verified engine
         run: python3 tools/toolchain.py --install linux
+      - name: Install diagnostic debugger
+        run: sudo apt-get update && sudo apt-get install -y gdb
       - name: Bounded debugger reproduction
         run: python3 tools/diagnose_import.py --godot .tools/pinned/linux/Godot_v4.7.2-stable_linux.x86_64
       - name: Retain debugger evidence
@@ -108,5 +110,7 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: import-debugger
-          path: build/import-diagnostics/*.log
+          path: |
+            build/import-diagnostics/*.log
+            build/import-diagnostics/results.json
           retention-days: 7
