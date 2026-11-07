@@ -66,10 +66,10 @@ jobs:
           path: Frostmere QA 雪
       - name: Verify pinned engine and clean source import
         run: python3 tools/toolchain.py --install ${{ matrix.platform }} --audit
-      - name: Test launcher errors and isolated source smoke
-        run: |
-          python3 -m unittest discover -s tests -p test_launch.py
-          python3 tools/play.py --smoke
+      - name: Test launcher errors
+        run: python3 -m unittest discover -s tests -p test_launch.py
+      - name: Run isolated source smoke
+        run: python3 tools/play.py --smoke
       - name: Retain import diagnostics
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
