@@ -109,6 +109,13 @@ cd frostmere
 godot --editor --path .
 ```
 
+For a portable command-line launch with Python 3.11+, first run the appropriate
+[pinned engine setup](docs/PLATFORMS.md), then `python3 tools/play.py` (`python` on
+Windows if needed). It imports assets, checks the engine version and starts normal
+play. `python3 tools/play.py --smoke` runs isolated checks instead. Use
+`--godot "path to executable"` to select an existing official engine explicitly.
+See [source launch and verification](docs/SOURCE_LAUNCH.md).
+
 Let the first import finish, then press **F5**, or run `godot --path .` from this directory. On macOS,
 `Play Frostmere.command` also finds `/Applications/Godot.app`. If `godot` is not
 on PATH, use its full executable path or import `project.godot` from the Godot

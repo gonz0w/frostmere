@@ -69,6 +69,13 @@ Native platform qualification and the wider suite matrix remain separate work. N
 is enforced yet; match neighboring style and use engine parsing plus focused
 behavior tests. Godot runtime results are not implied by documentation CI.
 
+The portable [source entry point](docs/SOURCE_LAUNCH.md) supports
+`python3 tools/play.py --smoke` for bounded import/isolation/movement checks and
+`python3 tools/play.py --verify` for the full core runner. Windows/macOS CI runs
+source smoke and Linux runs the full core suite from fresh checkouts whose paths
+contain spaces and Unicode. This establishes source command portability, not
+native GPU/audio/input qualification.
+
 ## Review and integration
 
 Use a focused branch and PR to `main`, linking the selected issues and checks.

@@ -42,6 +42,7 @@ def run_check(name, command, log, timeout, marker=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--smoke', action='store_true', help='Only import, isolation and movement smoke')
     parser.add_argument('--godot', required=True, help='Godot 4.7.2 executable or PATH command')
     parser.add_argument('--logs', type=Path, default=ROOT / 'build/ci')
     parser.add_argument('--timeout', type=int, default=180, help='Seconds per import/suite (1–600)')
@@ -51,13 +52,15 @@ def main():
     args.logs.mkdir(parents=True, exist_ok=True)
     checks = []
     version = run_check('version', [args.godot, '--version'], args.logs/'version.log', 15)
-    version_text = (args.logs/'version.log').read_text().strip()
+    version_text = (args.logs/'version.log').read_text(encoding='utf-8').strip()
     version['passed'] = version['passed'] and bool(re.fullmatch(r'4\.7\.2\.stable(?:\.[A-Za-z0-9_-]+)*', version_text))
     checks.append(version)
     commands = [('import', ['--editor', '--import', '--quit'], None)]
     commands += [(name, ['--script', f'tests/{name}.gd'], marker) for name, marker in SUITES]
     commands += [('recovery_prepare', ['--script', 'tests/recovery_restart.gd', '--', '--prepare'], 'RECOVERY_RESTART_PREPARED'),
                  ('recovery_restart', ['--script', 'tests/recovery_restart.gd'], 'RECOVERY_RESTART_COMPLETE failures=0')]
+    if args.smoke:
+        commands = commands[:3]
     if version['passed']:
         for name, flags, marker in commands:
             result = run_check(name, [args.godot, '--headless', '--path', str(ROOT)] + flags,
