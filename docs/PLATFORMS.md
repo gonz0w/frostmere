@@ -57,9 +57,9 @@ To check an already downloaded official template archive:
 python3 tools/toolchain.py --verify-templates /path/to/Godot_v4.7.2-stable_export_templates.tpz
 ```
 
-The [Windows packager](WINDOWS_BUILD.md) consumes this same manifest. macOS's
-historical packager and remaining Linux export/template setup are tracked in #19;
-this verification command does not install all templates globally.
+The [portable packager](PACKAGING.md) consumes this same manifest for Windows,
+Linux and macOS. `--download-templates` downloads and verifies the archive locally;
+verification alone does not install templates globally.
 
 ## Optional audio authoring
 
@@ -80,9 +80,9 @@ runtime tests (including the 41-cue audio fixture) complement it.
 
 Runtime code uses Godot resources and `user://` storage; no runtime process launch
 or shell API was found in this audit. The screenshot fixture uses `TMPDIR` with a
-`user://` fallback. Existing `.command` launchers, `package_macos.py` (ditto/lipo/
-codesign) and native-soak RSS sampling (`ps`, macOS-only) remain explicitly
-host-specific. Portable launch/verification entry points are #18, broader exports
-#19 and the full regression matrix #28. Native screenshots, audio and timing still
+`user://` fallback. Existing `.command` launchers, macOS packaging (ditto/lipo/codesign) and
+native-soak RSS sampling (`ps`, macOS-only) remain explicitly host-specific.
+[Source launch/verification](SOURCE_LAUNCH.md) and [packaging](PACKAGING.md) provide
+the portable routes; the full regression matrix remains #28. Native screenshots, audio and timing still
 require actual hardware. Application identity migration remains #20; do not rename
 save directories as a setup step.

@@ -1,0 +1,45 @@
+FROSTMERE — LINUX DEVELOPMENT PLAYTEST
+
+Target: Ubuntu 22.04 or newer, Intel/AMD x86_64 CPU with SSE4.2, Vulkan-capable
+GPU and current vendor driver. X11 is the initial desktop target. Minimum game
+hardware, other distributions and Wayland remain unqualified. No Godot editor or
+Python is needed to play this archive. Native rendering/audio/input/save acceptance
+is still tracked in https://github.com/gonz0w/frostmere/issues/27 .
+
+EXTRACT AND PLAY
+Verify the archive using its accompanying checksum:
+  sha256sum -c Frostmere-Linux-x64-<revision>.tar.gz.sha256
+Extract using your archive manager or:
+  tar -xzf Frostmere-Linux-x64-<revision>.tar.gz
+Open the extracted folder in a terminal and run:
+  ./Frostmere.x86_64
+Keep the binary, Frostmere.pck and any accompanying libraries together. The archive
+preserves the executable bit; if your extraction tool removed it, run:
+  chmod +x Frostmere.x86_64
+Use a folder you own, not sudo. A filesystem mounted noexec cannot launch it.
+If Vulkan initialization fails, update the GPU driver and include the terminal
+error in your report. Do not assume the Compatibility renderer is qualified.
+
+WASD/mouse: move/look. Shift: sprint. Space: jump. E: interact. V: camera.
+Left/right mouse: attack/block. Q: cast. B: cycle spells. F: heal.
+I: inventory/crafting. C: character. K: skills. M: map/journal. Esc: settings.
+At the opening lantern use E, or Tab to skip. Find Edda at the village forge.
+
+SAVES AND UPDATES
+Default save folder: ~/.local/share/godot/app_userdata/SkyrimCraft • Frostmere/
+If XDG_DATA_HOME is set, use that directory instead of ~/.local/share.
+Quit before backing up the entire game save folder. Extract updates into a new
+folder; keep old game archives and matching save backups together for rollback.
+Deleting the extracted game folder preserves saves. No save identity migration is
+applied. Do not overwrite your only backup when testing development versions.
+
+REPORTING
+Include BUILD.json revision, distribution/version, display server, GPU/driver,
+RAM, resolution and exact reproduction steps. Check opening, combat, crafting,
+travel, focus/fullscreen, audio and quit/relaunch save restoration. Remove personal
+paths from logs before posting. Controller support is not included. Campaign and
+balance testing remain in progress; the known frame-stall investigation is #24.
+
+Original game code/art/audio: BSD-3-Clause, copyright gonz0w; see LICENSE.txt.
+Godot and bundled components: see GODOT-NOTICES.txt. BUILD.json records source,
+verified template provenance and hashes of every shipped file.

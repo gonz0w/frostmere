@@ -76,6 +76,10 @@ source smoke and Linux runs the full core suite from fresh checkouts whose paths
 contain spaces and Unicode. This establishes source command portability, not
 native GPU/audio/input qualification.
 
+CI also builds and inspects development packages on each native host using the
+[pinned portable packaging workflow](docs/PACKAGING.md). It retains package logs,
+not game archives, and does not publish releases or qualify native rendering.
+
 ## Review and integration
 
 Use a focused branch and PR to `main`, linking the selected issues and checks.
