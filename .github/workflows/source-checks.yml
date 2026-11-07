@@ -19,6 +19,8 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p test_headless_runner.py
           python3 -m unittest discover -s tests -p test_windows_package.py
+          python3 -m unittest discover -s tests -p test_toolchain.py
+          python3 tools/toolchain.py --audit
   headless:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
@@ -26,24 +28,40 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
-      - name: Download and verify Godot 4.7.2
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p .tools/ci build/ci
-          curl --fail --location --retry 2 --connect-timeout 20 --max-time 180 \
-            https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip \
-            --output .tools/ci/godot.zip
-          echo 'cadd3204e728a35d3f13adb7fd0d7902636b79f6b95c40c265eb73b6c35329e4  .tools/ci/godot.zip' | sha256sum --check
-          unzip -q .tools/ci/godot.zip -d .tools/ci
-          chmod +x .tools/ci/Godot_v4.7.2-stable_linux.x86_64
+      - name: Download and verify pinned engine
+        run: python3 tools/toolchain.py --install linux
       - name: Import and run isolated core fixtures
-        run: python3 tools/run_headless.py --godot .tools/ci/Godot_v4.7.2-stable_linux.x86_64
+        run: python3 tools/run_headless.py --godot .tools/pinned/linux/Godot_v4.7.2-stable_linux.x86_64
       - name: Retain diagnostics
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: headless-diagnostics
           path: build/ci/
+          if-no-files-found: warn
+          retention-days: 7
+  source-import:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-2022
+            platform: windows
+          - runner: macos-15
+            platform: macos
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Verify pinned engine and clean source import
+        run: python3 tools/toolchain.py --install ${{ matrix.platform }} --audit --import-check
+      - name: Retain import diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: import-${{ matrix.platform }}
+          path: build/toolchain/
           if-no-files-found: warn
           retention-days: 7

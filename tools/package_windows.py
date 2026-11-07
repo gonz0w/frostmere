@@ -10,8 +10,9 @@ import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-TEMPLATE_SHA256 = 'f298490b8d44d934be425a5a65a51bf15f422428b229a06a6e11d9ffea248011'
-TEMPLATE_URL = 'https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz'
+TOOLCHAIN = json.loads((ROOT / 'tools/toolchain.json').read_text(encoding='utf-8'))
+TEMPLATE_SHA256 = TOOLCHAIN['artifacts']['templates']['sha256']
+TEMPLATE_URL = TOOLCHAIN['artifacts']['templates']['url']
 RUNTIME = {'assets', 'data', 'scenes', 'scripts', 'shaders'}
 
 
@@ -50,7 +51,7 @@ def main():
     args = parser.parse_args()
     engine = shutil.which(args.godot) or str(Path(args.godot).resolve())
     version = subprocess.check_output([engine, '--version'], text=True, encoding='utf-8', timeout=15).strip()
-    if not re.fullmatch(r'4\.7\.2\.stable(?:\.[A-Za-z0-9_-]+)*', version):
+    if not re.fullmatch(re.escape(TOOLCHAIN['version']) + r'\.stable\.official\.[A-Za-z0-9]+', version):
         raise ValueError('Godot 4.7.2 stable is required')
     verify_templates(args.templates)
     revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True, encoding='utf-8').strip()

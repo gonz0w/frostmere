@@ -67,3 +67,5 @@ describe opt-in local evidence collection, not automatic telemetry.
 Live work and review status belong only in [GitHub Issues](https://github.com/gonz0w/frostmere/issues)
 and [milestones](https://github.com/gonz0w/frostmere/milestones). Historic unchecked
 lists and “next” statements do not assign new work or promise a supported release.
+
+- [Platform targets and pinned toolchain](PLATFORMS.md)

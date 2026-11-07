@@ -8,6 +8,9 @@ in a Markdown file. Use the issue for progress and evidence.
 
 ## Setup and checks
 
+See [platform targets and verified engine setup](docs/PLATFORMS.md) for the pinned
+engine/template manifest, OS/API boundaries and optional audio authoring tools.
+
 Install Godot 4.7.2 and Python 3.11+. The commands below run from the repository
 root. Use the full path to Godot if it is not on PATH. On macOS that can be
 `/Applications/Godot.app/Contents/MacOS/Godot`; on Windows use the console binary.
@@ -39,8 +42,9 @@ renderer, resolution and workload recorded. Do not extrapolate M5 to M1 or Windo
 
 CI runs repository checks, runner rejection tests and the core headless fixtures
 on a clean Ubuntu 24.04 checkout. It downloads the official standard Linux x86_64
-Godot 4.7.2 archive from `godotengine/godot-builds` and verifies the SHA-256 pinned
-in `.github/workflows/source-checks.yml` against the upstream release asset digest.
+Godot 4.7.2 archive and verifies the SHA-256 in `tools/toolchain.json`.
+Separate Windows and macOS jobs verify the same pinned version and clean source
+import, without native graphics/input/audio qualification.
 Updating that pin requires a reviewed engine-version change. No PR secrets,
 write token or self-hosted runner is used. This is headless regression evidence,
 not native Linux graphics/input/audio qualification.
