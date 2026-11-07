@@ -7,7 +7,7 @@ func run() -> void:
 	var world=load("res://scenes/main.tscn").instantiate()
 	root.add_child(world)
 	for i in range(6): await physics_frame
-	if world.player.character.persist or world.atlas.persist:
+	if world.player.character.persist or world.atlas.persist or world.player.migration_status != "isolated":
 		push_error("Normal profile persistence must be disabled in CI"); quit(1); return
 	world.queue_free()
 	await process_frame

@@ -21,7 +21,7 @@ I: inventory/crafting. C: character. K: skills. M: map/journal. Esc: pause/setti
 The opening begins at a lantern: E to interact, Tab to skip. Find Edda at the forge.
 
 Saves use the historical Godot application identity to preserve compatibility:
-%APPDATA%\Godot\app_userdata\SkyrimCraft • Frostmere\
+%APPDATA%\Godot\app_userdata\Frostmere\
 Paste %APPDATA%\Godot\app_userdata into Explorer if the name is hard to type.
 Quit before copying that entire game folder as a backup. Do not copy a newer save
 over your only older backup. Replace game files in a new extracted folder for
@@ -40,3 +40,8 @@ ongoing; a frame stall is tracked in #24. Export success is not Windows approval
 Original game code/art/audio: BSD-3-Clause, copyright gonz0w; see LICENSE.txt.
 Godot and its bundled components: see GODOT-NOTICES.txt. BUILD.json records source,
 template provenance and package-file hashes.
+
+New builds copy the historical SkyrimCraft • Frostmere saves on first normal
+launch. Originals remain unchanged; existing Frostmere profiles take precedence.
+Close older builds first. Migration/recovery instructions:
+https://github.com/gonz0w/frostmere/blob/main/docs/SAVE_MIGRATION.md

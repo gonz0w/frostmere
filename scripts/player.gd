@@ -57,6 +57,7 @@ var paused := false
 var phase := 0.0
 var stamina := 100.0
 var spawn_point := Vector3(0, 0.15, 17)
+var migration_status := "isolated"
 var mouse_sensitivity := 0.0023
 
 func _ready() -> void:
@@ -94,7 +95,10 @@ func _ready() -> void:
 	spring.add_child(camera)
 	var isolated := _automated_render() or DisplayServer.get_name() == "headless" or "--crystal-preview" in OS.get_cmdline_user_args() or "--hell-preview" in OS.get_cmdline_user_args() or "--story-preview" in OS.get_cmdline_user_args() or "--mountain-preview" in OS.get_cmdline_user_args() or "--archive-preview" in OS.get_cmdline_user_args() or "--shore-preview" in OS.get_cmdline_user_args() or "--lens-preview" in OS.get_cmdline_user_args() or "--roots-preview" in OS.get_cmdline_user_args() or "--choir-preview" in OS.get_cmdline_user_args() or "--convergence-preview" in OS.get_cmdline_user_args() or "--threshold-preview" in OS.get_cmdline_user_args() or "--winter-preview" in OS.get_cmdline_user_args() or "--seal-preview" in OS.get_cmdline_user_args()
 	isolated = isolated or "--intro-preview" in OS.get_cmdline_user_args()
-	if not isolated:
+	migration_status = preload("res://scripts/save_migration.gd").before_load(isolated)
+	if migration_status == "blocked":
+		character.save_store.status = "blocked"
+	elif not isolated:
 		character.load_with_recovery(CharacterState.SAVE_PATH)
 	character.persist = not isolated and character.save_store.status != "blocked"
 	derived = character.stats()

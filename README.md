@@ -65,6 +65,10 @@ results are the next step. [Delivery evidence #45](https://github.com/gonz0w/fro
 
 Recent completed work:
 
+- **Save-folder migration:** copy-only migration to the Frostmere identity preserves
+  old adventures and blocks saving after interrupted copies. Existing Frostmere
+  profiles take precedence. [#20](https://github.com/gonz0w/frostmere/issues/20)
+
 - **Portable development packaging:** verified templates, runtime-only exports,
   archive integrity checks and player instructions across Windows, Linux and
   macOS. This does not publish a new release or qualify native Linux gameplay.
@@ -129,7 +133,8 @@ Windows/Linux play remains experimental until their qualification issues close.
 New characters begin with **Ash Through the Snow**. Walk to the lantern and press
 **E**, or **Tab** to skip. In Frostmere, find Edda at the forge. Your adventure
 autosaves; back up existing profiles before experimenting with development changes.
-The historical application identity remains unchanged to preserve old save paths.
+New builds use the Frostmere save folder and safely copy historical profiles on
+first normal launch. See [migration and conflict recovery](docs/SAVE_MIGRATION.md).
 See [save behavior and recovery limits](docs/SAVE_RESUME.md).
 
 | Key | Action |

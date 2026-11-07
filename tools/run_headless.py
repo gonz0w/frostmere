@@ -61,6 +61,8 @@ def main():
                  ('recovery_restart', ['--script', 'tests/recovery_restart.gd'], 'RECOVERY_RESTART_COMPLETE failures=0')]
     if args.smoke:
         commands = commands[:3]
+    commands += [('migration_prepare', ['--script', 'tests/save_migration.gd', '--', '--prepare'], 'MIGRATION_PREPARED'),
+                 ('migration_restart', ['--script', 'tests/save_migration.gd'], 'MIGRATION_COMPLETE failures=0')]
     if version['passed']:
         for name, flags, marker in commands:
             result = run_check(name, [args.godot, '--headless', '--path', str(ROOT)] + flags,
