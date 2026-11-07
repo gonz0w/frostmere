@@ -81,10 +81,19 @@ def verify_bundle(archive, name, target):
     manifest = json.loads(files.pop(name + '/BUILD.json'))
     expected = {name + '/' + n: h for n, h in manifest['files'].items()}
     if set(files) != set(expected):
-        raise ValueError('Archive inventory mismatch')
+        raise ValueError('Archive inventory mismatch: extra=' + str(sorted(set(files) - set(expected))) + ' missing=' + str(sorted(set(expected) - set(files))))
     for filename, data in files.items():
         if hashlib.sha256(data).hexdigest() != expected[filename]:
             raise ValueError('Archive file hash mismatch: ' + filename)
+
+
+def write_linux_archive(package, archive, name):
+    def neutral_owner(member):
+        member.uid = member.gid = 0
+        member.uname = member.gname = ''
+        return member
+    with tarfile.open(archive, 'w:gz') as output:
+        output.add(package, arcname=name, filter=neutral_owner)
 
 
 TARGETS = {
@@ -183,8 +192,7 @@ def main(default_target=None):
         (package / 'BUILD.json').write_text(json.dumps(provenance, indent=2) + '\n', encoding='utf-8')
         pending = Path(temp) / archive.name
         if args.target == 'linux':
-            with tarfile.open(pending, 'w:gz') as output:
-                output.add(package, arcname=name)
+            write_linux_archive(package, pending, name)
         elif args.target == 'macos':
             subprocess.run(['ditto', '-c', '-k', '--keepParent', '--norsrc', str(package), str(pending)], check=True, timeout=120)
         else:
@@ -192,7 +200,11 @@ def main(default_target=None):
                 for path in sorted(package.rglob('*')):
                     if path.is_file():
                         output.write(path, name + '/' + path.relative_to(package).as_posix())
-        verify_bundle(pending, name, args.target)
+        try:
+            verify_bundle(pending, name, args.target)
+        except (ValueError, KeyError):
+            shutil.copyfile(pending, logs / ('failed-' + archive.name))
+            raise
         shutil.move(str(pending), archive)
     Path(str(archive) + '.sha256').write_text(digest(archive) + '  ' + archive.name + '\n', encoding='utf-8')
     print('PACKAGE_CREATED', archive)

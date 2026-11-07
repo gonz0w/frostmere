@@ -47,3 +47,13 @@ class PortablePackageTests(unittest.TestCase):
                 with self.assertRaises(RuntimeError):
                     package.run('godot', logs, logs, 'export', '--export-release')
             self.assertIn('export started', (logs / 'export.log').read_text())
+
+    def test_linux_archive_ownership_is_neutral(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d); stage = root / 'game'; stage.mkdir()
+            (stage / 'file').write_text('content')
+            archive = root / 'game.tar.gz'
+            package.write_linux_archive(stage, archive, 'game')
+            with tarfile.open(archive) as source:
+                for member in source.getmembers():
+                    self.assertEqual((0, 0, '', ''), (member.uid, member.gid, member.uname, member.gname))
