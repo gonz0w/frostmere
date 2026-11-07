@@ -6,12 +6,20 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import urllib.request
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = json.loads((ROOT / 'tools/toolchain.json').read_text(encoding='utf-8'))
+
+
+def configure_console():
+    # Redirected Windows consoles can default to cp1252; paths are still Unicode.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, 'reconfigure'):
+            stream.reconfigure(encoding='utf-8', errors='backslashreplace')
 
 
 def verify_archive(path, expected):
@@ -82,6 +90,7 @@ def install(platform, archive=None):
 
 
 def main():
+    configure_console()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--install', choices=['macos', 'windows', 'linux'])
     parser.add_argument('--archive', type=Path, help='Optional already downloaded matching engine archive')
