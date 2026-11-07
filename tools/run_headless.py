@@ -19,7 +19,7 @@ def run_check(name, command, log, timeout, marker=None):
     log.parent.mkdir(parents=True, exist_ok=True)
     timed_out = False
     code = None
-    with log.open('w') as output:
+    with log.open('w', encoding='utf-8') as output:
         try:
             result = subprocess.run(command, stdout=output, stderr=subprocess.STDOUT,
                                     timeout=timeout, cwd=ROOT)
@@ -29,10 +29,10 @@ def run_check(name, command, log, timeout, marker=None):
             output.write('\nRUNNER TIMEOUT\n')
         except OSError as exc:
             output.write(f'RUNNER START FAILURE: {exc}\n')
-    text = log.read_text(errors='replace')
+    text = log.read_text(encoding='utf-8', errors='replace')
     # Public logs need diagnostic content, not local account or checkout paths.
     text = text.replace(str(ROOT), '<project>').replace(str(Path.home()), '<home>')
-    log.write_text(text)
+    log.write_text(text, encoding='utf-8')
     passed = code == 0 and not timed_out and not ERROR.search(text)
     if marker is not None:
         passed = passed and marker in text
