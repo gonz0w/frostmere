@@ -85,6 +85,7 @@ def main():
         run(engine, stage, logs, 'import', '--editor', '--import', '--quit')
         run(engine, stage, logs, 'export', '--export-release', 'Windows Playtest', package / 'Frostmere.exe')
         verify_pe(package / 'Frostmere.exe')
+        verify_pe(package / 'Frostmere.console.exe')
         if not (package / 'Frostmere.pck').is_file():
             raise RuntimeError('Missing game PCK')
         # Generate component notices from the matching engine without loading game saves.
