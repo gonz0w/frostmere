@@ -51,13 +51,16 @@ def main(argv=None):
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument('--smoke', action='store_true', help='Import and run isolated save-isolation/movement smoke checks')
     mode.add_argument('--verify', action='store_true', help='Run the full bounded core headless suite')
+    mode.add_argument('--regression', action='store_true', help='Run core, combat/economy and chapter headless groups')
     args = parser.parse_args(argv)
     try:
         engine = checked_engine(args.godot)
-        if args.smoke or args.verify:
+        if args.smoke or args.verify or args.regression:
             command = [sys.executable, str(ROOT / 'tools/run_headless.py'), '--godot', engine]
             if args.smoke:
                 command += ['--smoke']
+            if args.regression:
+                command += ['--group', 'all']
             return subprocess.call(command, cwd=ROOT)
         result = run_check('import', [engine, '--headless', '--path', str(ROOT), '--editor', '--import', '--quit'],
                            ROOT / 'build/launch/import.log', 180)

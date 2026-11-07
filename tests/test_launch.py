@@ -39,6 +39,13 @@ class LaunchTests(unittest.TestCase):
             self.assertIn(str(play.ROOT / 'tools/run_headless.py'), call.call_args.args[0])
             self.assertIn('/engine path/Godot', call.call_args.args[0])
 
+    def test_regression_uses_all_groups_and_propagates_failure(self):
+        with patch.object(play, 'checked_engine', return_value='/engine path/Godot'), patch.object(play.subprocess, 'call', return_value=1) as call:
+            self.assertEqual(1, play.main(['--regression']))
+            command = call.call_args.args[0]
+            self.assertEqual(command[command.index('--group')+1], 'all')
+            self.assertIn(str(play.ROOT / 'tools/run_headless.py'), command)
+
     def test_engine_failure_does_not_enter_game(self):
         with patch.object(play, 'checked_engine', side_effect=ValueError('wrong version')), patch.object(play.subprocess, 'call') as call:
             self.assertEqual(1, play.main([]))

@@ -65,6 +65,11 @@ results are the next step. [Delivery evidence #45](https://github.com/gonz0w/fro
 
 Recent completed work:
 
+- **Cross-platform regression coverage:** core save/control/accessibility checks
+  plus selected combat, crafting and chapter suites run on macOS, Windows and Linux.
+  [Run the same checks locally](docs/SOURCE_LAUNCH.md). Native hardware and human
+  campaign qualification remain separate.
+
 - **Accessibility preferences:** adjustable HUD/menu/dialogue and opening subtitle
   sizes, scrollable menus, reduced cosmetic effects and optional finisher fragments.
   [Preferences and remaining qualification](docs/ACCESSIBILITY.md); final user and

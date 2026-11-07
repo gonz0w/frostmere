@@ -36,11 +36,15 @@ For verification without normal character/atlas persistence:
 ```sh
 python3 tools/play.py --smoke
 python3 tools/play.py --verify
+python3 tools/play.py --regression
 ```
 
-Both use the same engine selection/version check and existing headless runner.
+All three use the same engine selection/version check and headless runner.
 Smoke runs import, save isolation and movement smoke. Verify additionally runs
-character, session, corruption recovery and fresh-process restart checks. Engine
+character, session, corruption recovery and fresh-process restart checks. Both
+also run migration, controls and accessibility fixtures. Regression adds the
+selected combat/economy and chapter groups documented in
+[contributor checks](../CONTRIBUTING.md). Engine
 errors, failed assertions, missing completion markers or timeouts cause a nonzero
 exit. Each check has a bounded timeout (normally 180 seconds); logs/results are
 retained in `build/ci/`. These commands do not enter normal gameplay. Run one suite
@@ -48,6 +52,8 @@ at a time per checkout because they share logs and dedicated QA fixtures.
 
 For custom log locations/timeouts, invoke `tools/run_headless.py` directly with
 `--godot`, `--logs` and `--timeout`; `--smoke` limits it to the short suite.
+`--group core|combat|chapters|all` selects a bounded group (default core); non-core
+groups cannot be combined with `--smoke`. Results record the selection.
 No shell command concatenation is used to launch the engine. CI exercises clean
 space/Unicode checkout paths on Windows/macOS/Linux; native rendering, focus,
 audio and gameplay still require real platform testing.
