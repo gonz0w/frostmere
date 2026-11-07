@@ -37,3 +37,13 @@ class PortablePackageTests(unittest.TestCase):
             binary.chmod(0o755); binary.write_bytes(b'changed')
             with self.assertRaisesRegex(ValueError, 'hash'):
                 package.verify_bundle(archive(), 'Frostmere', 'linux')
+
+    def test_export_timeout_retains_diagnostics(self):
+        import subprocess
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as d:
+            logs = Path(d)
+            with patch.object(package.subprocess, 'run', side_effect=subprocess.TimeoutExpired(['godot'], 300, output=b'export started\n')):
+                with self.assertRaises(RuntimeError):
+                    package.run('godot', logs, logs, 'export', '--export-release')
+            self.assertIn('export started', (logs / 'export.log').read_text())

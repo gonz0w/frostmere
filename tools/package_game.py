@@ -39,12 +39,24 @@ def verify_pe(path):
 
 
 def run(engine, stage, logs, name, *flags):
-    result = subprocess.run([engine, '--headless', '--path', str(stage), *map(str, flags)],
-                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                            timeout=300, text=True, encoding='utf-8', errors='replace')
-    output = result.stdout
+    failed = False
+    try:
+        result = subprocess.run([engine, '--headless', '--path', str(stage), *map(str, flags)],
+                                stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                timeout=300, text=True, encoding='utf-8', errors='replace')
+        output = result.stdout
+        failed = result.returncode != 0
+    except subprocess.TimeoutExpired as exc:
+        output = exc.stdout or b''
+        if isinstance(output, bytes):
+            output = output.decode('utf-8', errors='replace')
+        output += '\nERROR: package step timed out\n'
+        failed = True
+    except OSError as exc:
+        output = 'ERROR: could not start engine: ' + str(exc)
+        failed = True
     (logs / (name + '.log')).write_text(output.replace(str(ROOT), '<project>').replace(str(Path.home()), '<home>'), encoding='utf-8')
-    if result.returncode or re.search(r'SCRIPT ERROR:|ERROR:', output):
+    if failed or re.search(r'SCRIPT ERROR:|ERROR:', output):
         raise RuntimeError(f'{name} failed; inspect {logs / (name + ".log")}')
 
 
