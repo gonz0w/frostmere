@@ -80,7 +80,8 @@ def main():
         templates = stage / '.tools/export_templates/4.7.2.stable'
         templates.mkdir(parents=True)
         with zipfile.ZipFile(args.templates) as source:
-            for filename in ('windows_release_x86_64.exe', 'windows_debug_x86_64.exe'):
+            for filename in ('windows_release_x86_64.exe', 'windows_debug_x86_64.exe',
+                             'windows_release_x86_64_console.exe', 'windows_debug_x86_64_console.exe'):
                 (templates / filename).write_bytes(source.read('templates/' + filename))
         run(engine, stage, logs, 'import', '--editor', '--import', '--quit')
         run(engine, stage, logs, 'export', '--export-release', 'Windows Playtest', package / 'Frostmere.exe')
