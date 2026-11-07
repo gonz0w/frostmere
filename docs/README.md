@@ -75,3 +75,5 @@ lists and “next” statements do not assign new work or promise a supported re
 - [Save-folder migration](SAVE_MIGRATION.md): current paths and safe recovery from the historical application identity.
 
 - [Controls](CONTROLS.md): keyboard/mouse rebinding, sensitivity and settings recovery.
+
+- [Accessibility preferences](ACCESSIBILITY.md): opening text and targeted cosmetic motion/effect options.

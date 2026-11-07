@@ -102,6 +102,8 @@ func _ready() -> void:
 		character.load_with_recovery(CharacterState.SAVE_PATH)
 	character.persist = not isolated and character.save_store.status != "blocked"
 	if character.persist:
+		var preferences=get_parent().accessibility
+		if FileAccess.file_exists(preferences.PATH) and not preferences.load_from(preferences.PATH): preferences.load_warning="Saved accessibility preferences are invalid or newer. Defaults are active; changing a preference replaces the file."
 		var settings=get_parent().controls
 		if FileAccess.file_exists(settings.PATH) and not settings.load_from(settings.PATH): settings.load_warning="Saved controls are invalid or newer than this build. Defaults are active; edit controls to replace the settings file."
 	derived = character.stats()
@@ -154,6 +156,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if _automated_render():
 		return
 	if is_instance_valid(get_parent().hud) and is_instance_valid(get_parent().hud.controls_menu) and get_parent().hud.controls_menu.visible: return
+	if is_instance_valid(get_parent().hud) and is_instance_valid(get_parent().hud.accessibility_menu) and get_parent().hud.accessibility_menu.visible: return
 	if event.is_action_pressed("skills"):
 		if get_parent().skills_menu.visible: get_parent().skills_menu.close_menu()
 		else: get_parent().skills_menu.open_menu()
@@ -339,7 +342,7 @@ func _physics_process(delta: float) -> void:
 	right_arm.rotation.x = -sin(attack_animation / 0.35 * PI) * 1.8 if attack_animation > 0 else swing * 0.55
 	if blocking:
 		left_arm.rotation.x = -1.5
-	first_person_hands.rotation.x = -sin(attack_animation / 0.35 * PI) * 0.65 if attack_animation > 0 else -0.25 if blocking else 0.0
+	first_person_hands.rotation.x = -sin(attack_animation / 0.35 * PI) * 0.65 * get_parent().accessibility.motion_factor() if attack_animation > 0 else -0.25 if blocking else 0.0
 	if is_instance_valid(get_parent().realms) and get_parent().realms.inside:
 		get_parent().realms.check_fall()
 	elif is_instance_valid(get_parent().seal) and get_parent().seal.inside:
@@ -548,6 +551,8 @@ func chain_lightning(first: CharacterBody3D, damage: float, jumps: int) -> void:
 		var flash := MeshInstance3D.new()
 		var mesh := BoxMesh.new(); mesh.size=Vector3(0.07,0.07,from.distance_to(to)); flash.mesh=mesh
 		var material := StandardMaterial3D.new(); material.albedo_color=Color("a4dff7"); material.emission_enabled=true; material.emission=material.albedo_color
+		if get_parent().accessibility.reduced_flashes:
+			material.emission_enabled=false; material.albedo_color=Color("365563")
 		flash.material_override=material; get_parent().add_child(flash); flash.global_position=(from+to)*0.5
 		if from.distance_to(to)>0.001: flash.look_at(to)
 		get_tree().create_timer(0.18).timeout.connect(func(): if is_instance_valid(flash): flash.queue_free())
@@ -613,11 +618,11 @@ func update_power(real_delta: float) -> void:
 		var strike: float=clampf((progress-.25)/.15,0,1)
 		var recovery: float=clampf((progress-.4)/.6,0,1)
 		right_arm.rotation=Vector3(lerpf(-.4,-2.4,lift) if progress<.25 else lerpf(-2.4,.15,strike) if progress<.4 else lerpf(.15,power_arm_rotation.x,recovery),0,-.25)
-		first_person_hands.rotation.z=power_hands_z-sin(progress*PI)*.35
+		first_person_hands.rotation.z=power_hands_z-sin(progress*PI)*.35*get_parent().accessibility.motion_factor()
 	else:
 		avatar.rotation.y = power_avatar_y + TAU * progress
 		right_arm.rotation = Vector3(-1.2, 0, -0.8)
-		first_person_hands.rotation.z = power_hands_z - sin(progress * PI) * 0.9
+		first_person_hands.rotation.z = power_hands_z - sin(progress * PI) * 0.9 * get_parent().accessibility.motion_factor()
 	if remaining <= 0:
 		# cancel_power also owns restoration, so retain the active flag until cleanup.
 		power_remaining = 0.001
@@ -676,8 +681,8 @@ func update_finisher(delta: float) -> void:
 	if not finisher_impact: finisher_target.set_execution_pose(elapsed/finisher_move.impact)
 	var pose: Dictionary = FinisherMoves.pose(finisher_move, elapsed)
 	right_arm.rotation = finisher_arm + pose.arm
-	first_person_hands.rotation = finisher_hands + pose.hands
-	first_person_hands.position = finisher_hand_position + pose.offset
+	first_person_hands.rotation = finisher_hands + pose.hands * get_parent().accessibility.motion_factor()
+	first_person_hands.position = finisher_hand_position + pose.offset * get_parent().accessibility.motion_factor()
 	if not finisher_impact and elapsed >= finisher_move.impact:
 		finisher_impact = true
 		finisher_target.receive_damage(finisher_target.health * 2 + 1, self, character.item_at("main_hand").get("effect", ""), "melee")

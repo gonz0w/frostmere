@@ -85,6 +85,10 @@ Smoke/full runners also include `control_settings.gd` and `control_input.gd` for
 rebinding/conflicts, settings round-trips, UI capture, camera actions and isolated
 look/focus behavior. Native physical input remains a final qualification step.
 
+The isolated `accessibility.gd` fixture covers preference persistence, menu
+application, opening subtitle styling and cosmetic effects without altering combat
+timing. Native capture previews use `-- --capture` and do not load player profiles.
+
 CI also builds and inspects development packages on each native host using the
 [pinned portable packaging workflow](docs/PACKAGING.md). It retains package logs,
 not game archives, and does not publish releases or qualify native rendering.

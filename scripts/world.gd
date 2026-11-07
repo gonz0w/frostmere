@@ -46,6 +46,7 @@ var tree_sites: Array[Dictionary] = []
 var landmarks: Array[Dictionary] = []
 var discovered: Dictionary = {}
 var elapsed := 0.0
+var accessibility=preload("res://scripts/accessibility_settings.gd").new()
 var controls=preload("res://scripts/control_settings.gd").new()
 var capture_done := false
 var intro: Node3D
