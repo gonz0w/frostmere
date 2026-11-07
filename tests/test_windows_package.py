@@ -1,12 +1,11 @@
 """Reject mismatched templates and non-x64 binaries before distribution."""
-import importlib.util
 from pathlib import Path
 import tempfile
 import unittest
 
-spec = importlib.util.spec_from_file_location('package_windows', Path(__file__).resolve().parents[1] / 'tools/package_windows.py')
-package = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(package)
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
+import package_game as package
 
 class PackageTests(unittest.TestCase):
     def test_wrong_archive_digest(self):

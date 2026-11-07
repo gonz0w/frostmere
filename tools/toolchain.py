@@ -95,6 +95,7 @@ def main():
     parser.add_argument('--install', choices=['macos', 'windows', 'linux'])
     parser.add_argument('--archive', type=Path, help='Optional already downloaded matching engine archive')
     parser.add_argument('--verify-templates', type=Path)
+    parser.add_argument('--download-templates', action='store_true', help='Download and verify the pinned template archive into .tools/downloads')
     parser.add_argument('--audit', action='store_true')
     parser.add_argument('--import-check', action='store_true', help='Bounded headless import after install')
     args = parser.parse_args()
@@ -102,10 +103,23 @@ def main():
         parser.error('--import-check requires --install')
     if args.archive and not args.install:
         parser.error('--archive requires --install')
-    if not (args.install or args.verify_templates or args.audit):
+    if not (args.install or args.verify_templates or args.download_templates or args.audit):
         parser.error('Choose --install, --verify-templates or --audit')
     if args.audit:
         audit()
+    if args.download_templates:
+        entry = MANIFEST['artifacts']['templates']
+        path = ROOT / '.tools/downloads' / ('godot-' + MANIFEST['version'] + '-templates.tpz')
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if not path.exists():
+            with tempfile.TemporaryDirectory(prefix='templates-', dir=path.parent) as temp:
+                pending = Path(temp) / 'templates.tpz'
+                with urllib.request.urlopen(entry['url'], timeout=120) as response, pending.open('wb') as output:
+                    shutil.copyfileobj(response, output)
+                verify_archive(pending, entry['sha256'])
+                shutil.move(str(pending), path)
+        verify_archive(path, entry['sha256'])
+        print('TEMPLATES_VERIFIED', path)
     if args.verify_templates:
         verify_archive(args.verify_templates, MANIFEST['artifacts']['templates']['sha256'])
         print('TEMPLATES_VERIFIED')

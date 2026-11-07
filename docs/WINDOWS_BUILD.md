@@ -1,5 +1,8 @@
 # Windows tester builds
 
+The Windows command is a compatibility entry point to the shared
+[portable packager](PACKAGING.md), which also builds Linux and macOS archives.
+
 The Windows x86_64 development package targets Windows 10/11 with current
 Vulkan-capable drivers. Native graphics/input/audio/save acceptance belongs to
 [#26](https://github.com/gonz0w/frostmere/issues/26); export success is not support
@@ -20,7 +23,7 @@ the PE architecture. Export errors fail even with exit code zero. The ZIP under
 `dist/` includes EXE/PCK and engine sidecars, BSD license, component notices, tester
 instructions and BUILD.json containing revision/template/file hashes. A separate
 `.zip.sha256` verifies the archive. Existing archives are never overwritten.
-Build logs remain in ignored `build/windows/`. Source identity is reproducible;
+Build logs remain in ignored `build/packages/windows/`. Source identity is reproducible;
 byte-for-byte identical archives across hosts are not promised.
 
 No game session or normal saves are opened by the builder. Keep the historical

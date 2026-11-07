@@ -19,6 +19,7 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p test_headless_runner.py
           python3 -m unittest discover -s tests -p test_windows_package.py
+          python3 -m unittest discover -s tests -p test_portable_package.py
           python3 -m unittest discover -s tests -p test_toolchain.py
           python3 -m unittest discover -s tests -p test_launch.py
           python3 tools/toolchain.py --audit
@@ -35,6 +36,10 @@ jobs:
           path: Frostmere QA 雪
       - name: Download and verify pinned engine
         run: python3 tools/toolchain.py --install linux
+      - name: Verify templates and build Linux package
+        run: |
+          python3 tools/toolchain.py --download-templates
+          python3 tools/package_game.py --target linux --templates .tools/downloads/godot-4.7.2-templates.tpz
       - name: Import and run isolated core fixtures
         run: python3 tools/play.py --verify
       - name: Retain diagnostics
@@ -42,7 +47,9 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: headless-diagnostics
-          path: Frostmere QA 雪/build/ci/
+          path: |
+            Frostmere QA 雪/build/ci/
+            Frostmere QA 雪/build/packages/**/*.log
           if-no-files-found: warn
           retention-days: 7
   source-import:
@@ -58,7 +65,7 @@ jobs:
           - runner: macos-15
             platform: macos
     runs-on: ${{ matrix.runner }}
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
@@ -66,6 +73,10 @@ jobs:
           path: Frostmere QA 雪
       - name: Verify pinned engine and clean source import
         run: python3 tools/toolchain.py --install ${{ matrix.platform }} --audit
+      - name: Download verified export templates
+        run: python3 tools/toolchain.py --download-templates
+      - name: Build and inspect native-host package
+        run: python3 tools/package_game.py --target ${{ matrix.platform }} --templates .tools/downloads/godot-4.7.2-templates.tpz
       - name: Test launcher errors
         run: python3 -m unittest discover -s tests -p test_launch.py
       - name: Run isolated source smoke
@@ -75,6 +86,8 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: import-${{ matrix.platform }}
-          path: Frostmere QA 雪/build/ci/
+          path: |
+            Frostmere QA 雪/build/ci/
+            Frostmere QA 雪/build/packages/**/*.log
           if-no-files-found: warn
           retention-days: 7
