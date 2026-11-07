@@ -16,6 +16,7 @@ var prompt: Label
 var notice: VBoxContainer
 var notice_title: Label
 var notice_detail: Label
+var accessibility_menu: PanelContainer
 var controls_menu: PanelContainer
 var guide_labels: Array[Label]=[]
 var controls: PanelContainer
@@ -143,6 +144,7 @@ func _ready() -> void:
 	objective.add_theme_color_override("font_color", INK)
 	root.add_child(objective)
 	controls_menu=preload("res://scripts/controls_menu.gd").new(); controls_menu.world=world; root.add_child(controls_menu)
+	accessibility_menu=preload("res://scripts/accessibility_menu.gd").new(); accessibility_menu.world=world; root.add_child(accessibility_menu)
 
 func _refresh_controls() -> void:
 	var c=world.controls
@@ -197,6 +199,7 @@ func _build_pause(root: Control) -> void:
 	_button(column, "Character & equipment", func():
 		world.player.character_menu_open = true
 		world.player.set_paused(true))
+	_button(column,"Accessibility",func(): accessibility_menu.open_menu())
 	_button(column, "Controls & mouse settings",func(): controls_menu.open_menu())
 	_button(column, "Switch first / third person", func(): world.player.set_third_person(not world.player.third_person))
 	_button(column, "Return to the trail", func():
@@ -274,10 +277,10 @@ func announce(title: String, detail: String) -> void:
 func _process(delta: float) -> void:
 	var player: CharacterBody3D = world.player
 	combat_panel.visible=not (is_instance_valid(world.intro) and world.intro.active)
-	pause_panel.visible = player.paused and not player.character_menu_open and not player.map_open and not player.workshop_open and not player.dialog_open and not player.shop_open and not controls_menu.visible
+	pause_panel.visible = player.paused and not player.character_menu_open and not player.map_open and not player.workshop_open and not player.dialog_open and not player.shop_open and not controls_menu.visible and not accessibility_menu.visible
 	if Input.is_action_just_pressed("help") and not player.paused:
 		controls.visible = not controls.visible
-	if Input.is_action_just_pressed("performance") and not controls_menu.visible:
+	if Input.is_action_just_pressed("performance") and not controls_menu.visible and not accessibility_menu.visible:
 		show_performance = not show_performance
 	performance.visible = show_performance
 	performance.text = "%d FPS  ·  %s  ·  %s blocks" % [Engine.get_frames_per_second(), RenderingServer.get_video_adapter_name(), world.block_count]

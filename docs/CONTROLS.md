@@ -29,8 +29,9 @@ Settings are stored separately from adventures in `controls-v1.json` in the
 settings file through a temporary file. Invalid/newer settings load defaults with
 a warning in the controls menu; editing settings explicitly replaces that file.
 Failed writes keep the current session's changes and show that they were not saved.
-Isolated tests/captures and sessions with adventure persistence disabled never load
-or save normal control settings. Test fixtures use dedicated files under `build/`.
+Isolated tests/captures never load or save normal control settings. Blocked
+recovery sessions cannot save settings; preferences may already have been read
+before a later atlas recovery failure disables persistence. Test fixtures use dedicated files under `build/`.
 
 Automated model/UI checks cover conflicts, persistence, invalid data, fixed escape,
 remapped camera input, look calculations and focus loss. Native preview checks cover

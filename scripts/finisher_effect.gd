@@ -8,6 +8,7 @@ func _process(delta: float) -> void:
 		chips[i].position=destinations[i]*(age/.35)+Vector3.DOWN*2.0*age*age
 		chips[i].rotation=spins[i]*age
 static func spawn(actor: Node3D, motion: String, direction: Vector3) -> Node3D:
+	if not actor.adventure.world.accessibility.show_fragments: return null
 	var surface: String=actor.finisher_surface()
 	var colors={"shell":["637a79","c9bca2"],"bark":["79644a","69734c"],"flesh":["8c233a","a72b35"],"stone":["788474","526c40"],"alien":["637c84","80f2a8"],"crystal":["a8e6f4","d7b5f1"],"furnace":["583b3c","ff793e"]}
 	var palette: Array=colors.get(surface,colors.flesh)
@@ -18,6 +19,7 @@ static func spawn(actor: Node3D, motion: String, direction: Vector3) -> Node3D:
 	var flat:=Vector3(direction.x,0,direction.z)
 	if flat.length_squared()>.001: burst.global_rotation.y=atan2(-flat.x,-flat.z)
 	var material := StandardMaterial3D.new(); material.albedo_color = Color(palette[0]); material.emission_enabled = true; material.emission = Color(palette[1]); material.emission_energy_multiplier = 0.5
+	if burst.world.accessibility.reduced_flashes: material.emission_enabled=false
 	for i in range(18):
 		var chip := MeshInstance3D.new(); var mesh := BoxMesh.new(); mesh.size = Vector3(.12,.35,.12) if surface=="crystal" else Vector3.ONE * (0.18 if stone else 0.10); mesh.material = material; chip.mesh = mesh; burst.add_child(chip)
 		var angle := TAU * i / 18.0

@@ -65,6 +65,7 @@ func solid(at: Vector3, size: Vector3, surface: String="stone") -> void:
 	collider.shape=shape; body.add_child(collider); scene.add_child(body)
 
 func build() -> void:
+	if not world.accessibility.changed.is_connected(_subtitle_style): world.accessibility.changed.connect(_subtitle_style)
 	world.controls.changed.connect(func():
 		if is_instance_valid(subtitle): subtitle.text=world.controls.format_prompt(raw_subtitle))
 	scene=Node3D.new(); scene.position=ORIGIN; add_child(scene)
@@ -153,6 +154,7 @@ func start() -> bool:
 	previous_controls=world.hud.controls.visible; world.hud.controls.hide()
 	world.hud.notice_time=0
 	_set_subtitle("The last road to Frostmere. Ash is falling through the snow.\nWASD · walk to the lantern. Mouse · look. E · inspect.\nTAB · skip opening")
+	_subtitle_style()
 	return true
 
 func prompt() -> String:
@@ -204,7 +206,7 @@ func pose_reveal() -> void:
 	creature.position=Vector3(sin(reveal_time*.8)*.2, -retreat*7, -40+approach*11-retreat*19)
 	head.rotation=Vector3(-sin(approach*PI)*.1+retreat*.2,sin(reveal_time*.7)*.12,0)
 	jaw.rotation.x=sin(clampf((reveal_time-2.5)/2.5,0,1)*PI)*.23
-	light.light_energy=2.6+sin(reveal_time*5)*.4
+	light.light_energy=2.6 if world.accessibility.reduced_flashes else 2.6+sin(reveal_time*5)*.4
 	ward.scale.x=1+sin(reveal_time*4)*.018
 
 func _process(delta: float) -> void: advance(delta)
@@ -234,3 +236,14 @@ func finish() -> void:
 func _set_subtitle(text: String) -> void:
 	raw_subtitle=text
 	subtitle.text=world.controls.format_prompt(text)
+
+func _subtitle_style() -> void:
+	if not is_instance_valid(subtitle): return
+	var preferences=world.accessibility
+	subtitle.add_theme_font_size_override("font_size",roundi(18*preferences.subtitle_scale))
+	subtitle.offset_top=-150*preferences.subtitle_scale
+	if preferences.subtitle_backdrop:
+		var style=StyleBoxFlat.new(); style.bg_color=Color(0.015,0.025,0.035,.96)
+		style.content_margin_left=18; style.content_margin_right=18; style.content_margin_top=12; style.content_margin_bottom=12
+		subtitle.add_theme_stylebox_override("normal",style)
+	else: subtitle.remove_theme_stylebox_override("normal")
