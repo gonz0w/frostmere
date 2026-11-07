@@ -38,10 +38,9 @@ python3 tools/toolchain.py --install linux
 ```
 
 Run only your host's command. On Windows, `python` may replace `python3`. This
-downloads and verifies the selected archive, extracts only its CLI executable(s)
+downloads and verifies the selected archive, extracts its CLI executable(s), preserving the signed macOS app bundle
 into `.tools/pinned/<platform>/`, then checks the official engine version.
-macOS installation here is a CLI binary, not a Finder editor application; install
-the official app separately for GUI editing. `--archive "path with spaces/engine.zip"`
+The macOS CLI is `Godot.app/Contents/MacOS/Godot` inside that bundle. `--archive "path with spaces/engine.zip"`
 uses an existing archive with the same checksum check. Mismatch or download failure
 stops setup; it never launches an unverified archive. Existing downloads are not
 trusted by filename alone. System engine installations and player saves are untouched.

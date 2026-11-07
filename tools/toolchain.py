@@ -65,11 +65,18 @@ def install(platform, archive=None):
                 shutil.copyfileobj(response, output)
         verify_archive(source, entry['sha256'])
         with zipfile.ZipFile(source) as zipped:
-            for name in entry['executables']:
-                dest = target / Path(name).name
+            names = entry['executables']
+            if platform == 'macos':
+                names = [n for n in zipped.namelist() if n.startswith('Godot.app/') and not n.endswith('/')]
+            for name in names:
+                if '..' in Path(name).parts or Path(name).is_absolute():
+                    raise ValueError('Unsafe archive member')
+                dest = target / name
+                dest.parent.mkdir(parents=True, exist_ok=True)
                 dest.write_bytes(zipped.read(name))
-                dest.chmod(0o755)
-    engine = target / Path(entry['executables'][0]).name
+                if name in entry['executables']:
+                    dest.chmod(0o755)
+    engine = target / entry['executables'][0]
     verify_version(subprocess.check_output([str(engine), '--version'], text=True, encoding='utf-8', timeout=15))
     return engine
 
