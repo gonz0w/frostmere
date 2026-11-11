@@ -49,14 +49,18 @@ func can_enter(id: String) -> bool:
 func _box(root: Node3D, b: RefCounted, material: String, pos: Vector3, size: Vector3, solid: bool = false) -> void:
 	b.add(material, pos, size)
 	if solid:
-		var body := StaticBody3D.new()
-		body.position = pos
-		var shape := BoxShape3D.new()
-		shape.size = size
-		var collider := CollisionShape3D.new()
-		collider.shape = shape
-		body.add_child(collider)
-		root.add_child(body)
+		_add_collision(root, pos, size)
+
+func _add_collision(root: Node3D, pos: Vector3, size: Vector3) -> void:
+	var body := StaticBody3D.new()
+	body.position = pos
+	var shape := BoxShape3D.new()
+	shape.size = size
+	var collider := CollisionShape3D.new()
+	collider.shape = shape
+	body.add_child(collider)
+	root.add_child(body)
+
 func _crystal(b: RefCounted, pos: Vector3, size: float, key: String) -> void:
 	for i in range(10):
 		var width := size * (1 - absf(float(i) - 4) / 7)
@@ -105,6 +109,8 @@ func _build(entry: Dictionary) -> void:
 	if entry.id == "aeralis":
 		for pos in [Vector3(-7, 0, 10), Vector3(7, 0, -8), Vector3(-8, 0, -33), Vector3(8, 0, -33)]:
 			_crystal(b, pos, 1.4, "realm_glow")
+			# One core collider supports the base of the layered crystal.
+			_add_collision(root, pos + Vector3.UP * .65, Vector3(1.1, 1.65, 1.1))
 		# Layered arcades, blue banners and small tiled pavilions flank the path.
 		for z in [9, -12, -34]:
 			for side in [-1, 1]:
@@ -154,7 +160,7 @@ func _build(entry: Dictionary) -> void:
 				b.add("iron", Vector3(x, 11, z), Vector3(3, 0.6, 3))
 				_crystal(b, Vector3(x, 12, z), 0.8, "realm_glow")
 		for x in [-6, 0, 6]:
-			b.add("iron", Vector3(x, 6, -40), Vector3(1.3, 12, 1.2))
+			_box(root, b, "iron", Vector3(x, 6, -40), Vector3(1.3, 12, 1.2), true)
 			b.add("realm_glow", Vector3(x, 6, -39.3), Vector3(0.25, 8, 0.12))
 		for z in [-2, -24]: b.add("iron", Vector3(0, 6, z), Vector3(27, 0.8, 0.8))
 	if entry.id=="aeralis": preload("res://scripts/landmark_architecture.gd").aeralis(b)

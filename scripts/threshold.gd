@@ -66,7 +66,7 @@ func _build() -> void:
 			for slot in ["head","chest","hands","legs","feet"]: model.equip(model.add_item("steel_"+slot),slot)
 			npc.build(model)
 		elif id!="return":
-			box(p+Vector3.UP*.5,Vector3(1.5,1,1),"station_plate")
+			box(p+Vector3.UP*.5,Vector3(1.5,1,1),"station_plate",true)
 			box(p+Vector3.UP*1.05,Vector3(1.6,.12,1.1),"iron")
 		if id in ["power","air"]: lights[id]=b.piece(self,"station_red",ORIGIN+p+Vector3(0,1.3,0),Vector3(.8,.3,.5))
 	for i in range(8):

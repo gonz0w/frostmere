@@ -47,10 +47,27 @@ func shell() -> void:
 	var lintel:=minf(1.3,h-2.45)
 	add(trim,Vector3(0,h-lintel/2,d/2),Vector3(2,lintel,.45)); solid(Vector3(0,h-lintel/2,d/2),Vector3(2,lintel,.45))
 	solid(Vector3(0,h+.1,0),Vector3(w,.3,d))
-	# The same gentle ramp supports every existing entrance and saved approach.
-	add("path",Vector3(0,.015,d/2+.8),Vector3(2.3,.22,1.4))
-	var body:=StaticBody3D.new(); body.position=o+Vector3(0,-.015,d/2+.7); body.rotation.x=atan(.32/1.4)
-	var shape:=CollisionShape3D.new(); var box:=BoxShape3D.new(); box.size=Vector3(2.3,.16,1.5); shape.shape=box; body.add_child(shape); world.add_child(body)
+	# Draw shallow stone treads over the same smooth entrance ramp used by
+	# player movement and saved approaches.
+	const RAMP_LENGTH := 1.5
+	const RAMP_THICKNESS := .16
+	const TREADS := 8
+	var slope := atan(.32 / 1.4)
+	var ramp_center := Vector3(0, -.015, d / 2 + .7)
+	var ramp_basis := Basis(Vector3.RIGHT, slope)
+	for index in range(TREADS):
+		var local_z := ((index + .5) / TREADS - .5) * RAMP_LENGTH
+		var tread_top := ramp_center + ramp_basis * Vector3(0, RAMP_THICKNESS / 2, local_z)
+		add("path", tread_top - Vector3.UP * .11, Vector3(2.3, .22, RAMP_LENGTH * cos(slope) / TREADS))
+	var body := StaticBody3D.new()
+	body.position = o + ramp_center
+	body.rotation.x = slope
+	var shape := CollisionShape3D.new()
+	var box := BoxShape3D.new()
+	box.size = Vector3(2.3, RAMP_THICKNESS, RAMP_LENGTH)
+	shape.shape = box
+	body.add_child(shape)
+	world.add_child(body)
 func masonry() -> void:
 	var stone_height: float=h if spec.region in ["mountain","sun","ash"] else .9
 	for end in [-1,1]:

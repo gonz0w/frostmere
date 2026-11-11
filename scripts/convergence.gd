@@ -79,7 +79,7 @@ func _build() -> void:
 			for slot in ["head","chest","hands","legs","feet"]: model.equip(model.add_item("cloth_"+slot),slot)
 			npc.build(model)
 		elif id!="return" and not id.begins_with("rescue_"):
-			box(p+Vector3.UP*.45,Vector3(1.5,.9,1.1),"stone_dark" if id in ["rig","beacon"] else "wood")
+			box(p+Vector3.UP*.45,Vector3(1.5,.9,1.1),"stone_dark" if id in ["rig","beacon"] else "wood",id in ["forge","enchant"])
 			box(p+Vector3.UP*.95,Vector3(1.7,.12,1.2),"iron")
 		if id in REQUIRED:
 			box(p+Vector3.UP*1.1,Vector3(.95,.08,.65),"fur")

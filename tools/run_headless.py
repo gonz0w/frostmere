@@ -42,7 +42,8 @@ def run_check(name, command, log, timeout, marker=None):
 
 GROUPS = {
     'combat': ['combat', 'power_timing', 'finisher_moves', 'monster_effects', 'crafting'],
-    'chapters': ['threshold', 'realms', 'winter', 'seal', 'ending', 'campaign_guide'],
+    'chapters': ['threshold', 'realms', 'winter', 'seal', 'ending', 'campaign_guide',
+                 'bridge_collision', 'level_collision'],
 }
 
 
