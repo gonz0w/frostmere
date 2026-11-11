@@ -68,6 +68,7 @@ func _build() -> void:
 			for col in range(12): b.add("stone",ORIGIN+Vector3(side*7.45,0.24+row*0.48,-54-col),Vector3(0.13,0.44,0.92))
 	for x in [-4,4]:
 		b.add("wood",ORIGIN+Vector3(x,0.45,-66),Vector3(1.3,0.9,1.2))
+		world._solid(ORIGIN+Vector3(x,0.45,-66),Vector3(1.3,0.9,1.2),"wood")
 		b.add("iron",ORIGIN+Vector3(x,0.6,-66),Vector3(1.35,0.12,1.25))
 	for z in [-58, -66]:
 		for x in [-8, 8]:
