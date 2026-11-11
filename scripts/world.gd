@@ -573,8 +573,15 @@ func _bridge() -> void:
 		collision.shape = shape
 		body.add_child(collision)
 		add_child(body)
-	for z in [-18.2, -13.8]:
-		_solid(Vector3(14, 0.70, z), Vector3(12, 1.4, 0.4))
+		# Both parapets rise with the deck. Keep their collision in the same
+		# local frame so the low approaches and high crest match the stone.
+		for lateral in [-2.2, 2.2]:
+			var parapet := CollisionShape3D.new()
+			var parapet_box := BoxShape3D.new()
+			parapet_box.size = Vector3(6.1, 0.80, 0.49)
+			parapet.shape = parapet_box
+			parapet.position = Vector3(0, 0.48, lateral)
+			body.add_child(parapet)
 	for x in [10.0, 18.0]:
 		blocks.add("stone_dark", Vector3(x, -0.65, -16), Vector3(1.3, 2.2, 4.5))
 
