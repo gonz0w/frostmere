@@ -18,5 +18,6 @@ with its comments before edits. GitHub Issues own all live work.
   to policy or repository permissions require the owner's explicit authorization.
 - Run `python3 tools/verify_repo.py`; use the focused Godot checks in CONTRIBUTING.md
   for code/configuration changes. Keep actual evidence and continuation in GitHub.
+- Follow the [artifact lifecycle](.agent-temper/docs/reference/artifact-lifecycle.md) and the local retention decisions in PROJECT.md.
 - Never commit local engine binaries, build output, player profiles, credentials,
   private paths or personal data. Historical docs are evidence, not live task lists.

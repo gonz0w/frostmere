@@ -13,11 +13,20 @@ working conversation become durable through a reviewed policy change. Routine
 implementation choices inside a selected issue are delegated. Unresolved policy
 conflicts stop only the work that depends on them.
 
-Agent Temper pin: `5222ac45c9edaa23c188816c7727fc70780a95a8`. See
+Agent Temper pin: `bc4ae7f68ee346b9970f07c7c4bff020120f0278`. See
 [provenance](.agent-temper/SOURCE.md). Only the
 [GitHub profile](.agent-temper/profiles/github.md) is selected. No strict-TDD,
 model-routing or other copied profile is implicitly selected. Local policy stays
 outside the immutable bundle. Source changes require an explicit reviewed update.
+
+## Artifact retention
+
+Follow the adopted [artifact lifecycle](.agent-temper/docs/reference/artifact-lifecycle.md).
+Use the isolated paths and seven-day CI diagnostic retention documented in
+[CONTRIBUTING.md](CONTRIBUTING.md). Keep engine downloads, packages and normal
+player data out of source. Before substantial output, record its location,
+storage bound and retention trigger in the owning issue. Preserve diagnostics,
+active work and recovery assets under existing authority.
 
 ## Technology and product contracts
 

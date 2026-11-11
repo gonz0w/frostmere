@@ -2,10 +2,12 @@
 
 Repository: https://github.com/gonz0w/agent-temper
 
-Revision: `5222ac45c9edaa23c188816c7727fc70780a95a8`
+Revision: `bc4ae7f68ee346b9970f07c7c4bff020120f0278`
 
-Source: https://github.com/gonz0w/agent-temper/tree/5222ac45c9edaa23c188816c7727fc70780a95a8
+Source: https://github.com/gonz0w/agent-temper/tree/bc4ae7f68ee346b9970f07c7c4bff020120f0278
 
 Manifest: `SHA256SUMS`. Imported from the committed revision, not working files.
 
 Adoption: https://github.com/gonz0w/frostmere/issues/1
+
+Refresh: https://github.com/gonz0w/frostmere/issues/67
